@@ -1,0 +1,10 @@
+body {
+         font-family: 'Yantramanav', sans-serif;
+         font-size:14px;
+         font-weight:300;
+         -webkit-font-smoothing: subpixel-antialiased;
+         line-height:1.42857143;
+         color:#000;
+         cursor: default;
+         background-color:#fff;
+         }

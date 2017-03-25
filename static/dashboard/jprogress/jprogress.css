@@ -1,0 +1,46 @@
+
+.progress_single_wrapper {
+  /*border: 3px solid #EAEAEA;*/
+  /*border-radius: 3px;*/
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+}
+
+.progress_single {
+  width: 0;
+  color: white;
+  font-family: inherit;
+  padding: 8px 5px 5px 10px;
+}
+.progress_single_decipher {
+  width: 0;
+  color: white;
+  font-family: inherit;
+  padding: 12px 5px 5px 10px;
+  height: 40px;
+  background: rgb(218, 185, 97)!important;
+}
+.progress_single_decipher_female {
+  width: 0;
+  color: white;
+  font-family: inherit;
+  padding: 12px 5px 5px 10px;
+  height: 40px;
+  background: rgb(237, 81, 140)!important;
+}
+.progress_single_decipher_male {
+  width: 0;
+  color: white;
+  font-family: inherit;
+  padding: 12px 5px 5px 10px;
+  height: 40px;
+  background: rgb(155, 136, 226)!important;
+}
+.progress_bulk_upload {
+    width: 0;
+    color: white;
+    font-family: inherit;
+    padding: 8px 5px 5px 10px;
+    height: 100%;
+    background: rgb(155, 136, 226)!important;
+}
