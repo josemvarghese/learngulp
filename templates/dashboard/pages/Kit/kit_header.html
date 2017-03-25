@@ -1,0 +1,37 @@
+      {%verbatim%}
+      <!---header-->
+        <div class=" navbar-fixed-top border" >
+            <div class=" white text-center ">
+              <div class="col-md-12">
+                    <div class="col-md-1 nav-color main-header-signup10 container-remove-padding " ng-class="{'collaborator-dashboard-menu-remove':!privilege}" style="text-align:left;"><a href="" back-button><img src="../../../../static/dashboard/images/yara_logo.svg?v=ce9e59e2272c030c2954deb7d56f3267"width="100%"/></a></div>
+                   <!--  <div class="col-md-1 nav-color sub-header-border10">&nbsp;</div> -->
+                     <div class="col-md-9 nav-color sub-header-small-collaborator10">
+                        <div class="kit-font10"><div class="header-sh">{{currentval.name}} <div class="bullet01"></div></div>{{headerTitle}}</div>
+                    </div>
+                    <div class="col-md-1" ng-show="privilege">
+                            <ul class="col-md-12 nav navbar-nav navbar-right" style="font-size:15px; margin-right: -140px;">
+                              <li class="dropdown">
+                                  <a  class="dropdown-toggle"style="color:#fff;opacity:5;text-align:center; " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img  src="../../../../static/dashboard/images/menu.png?v=2ba22225bf421f7514d4d07abb043925" style="width:50%;"/></a>
+                                  <ul class="dropdown-menu dropdown-menu1">
+                                        <li><a href="/event/collaborator" ng-hide="locationHref=='/event/collaborator'">Collabrator</a></li>
+                                        <li><a href="/event/sponsor" ng-hide="locationHref=='/event/sponsor'">Sponsors</a></li>
+                                        <li><a href="/event/exhibitor" ng-hide="locationHref=='/event/exhibitor'">Exhibitor</a></li>
+                                        <li><a href="/event/showcase" ng-hide="locationHref=='/event/showcase'">ShowCase</a></li>
+                                        <!-- <li><a href="" ng-if="currentval.kits.GateKeeper.status">GateKeeper</a></li> -->
+                                        <li><a href="/event/sessionengage" ng-hide="locationHref=='/event/sessionengage'">SpeakerEngage</a></li>
+                                        <li><a href="/event/filebank" ng-hide="locationHref=='/event/filebank'">FileBank</a></li>
+                                        <li  ng-if="currentval.kits.Promote.status && currentval.kits.Promote.confirmed"><a href="/event/promote" ng-hide="locationHref=='/event/promote'">Promote</a></li>
+                                        <li><a href="/event/coupon" ng-hide="locationHref=='/event/coupon'">Coupons</a></li>
+                                        <li><a href="/event/vote" ng-hide="locationHref=='/event/vote'">Vote</a></li>
+                                        <li><a href="/event/venue-greet" ng-hide="locationHref=='/event/venue-greet'">VenueGreet</a></li>
+                                        <li><a href="/event/floor-map" ng-hide="locationHref=='/event/floor-map'">FloorMap</a></li>
+                                        <li><a href="/event/wifi" style="border-bottom:1px solid #fff;" ng-hide="locationHref=='/event/wifi'">WiFi Spots</a></li>
+                                  </ul>
+                              </li>
+                            </ul>
+                    </div>
+                    </div>
+                    </div>
+      </div>
+    <!----end header---->
+    {%endverbatim%}

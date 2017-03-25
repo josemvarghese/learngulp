@@ -1,0 +1,448 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <link rel="stylesheet" href="../../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <link rel="stylesheet" href="../../../../static/dashboard/css/customscrollbar.min.css?v=b72d1ff03f5d4322fda530affc8628fd">
+      <link rel="stylesheet" href="../../../static/dashboard/css/animate.css">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <!--<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyBiLVnHVmK-3nm_MZvug6NjZmMdOQX_cm8"></script>-->
+      <script src="../../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> <script src="../../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script> <script src="../../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> <script src="../../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <script src="../../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script>
+      <script src="../../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <script src="../../../../static/dashboard/scripts/customscrollbar.min.js?v=ea9f31b6e94c00a389c0f19bb9a876f2"></script>
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../static/dashboard/scripts/moment.min.js?v=18338685047bb998815d0fce225665f4"></script> 
+
+      <script src="../../../../static/dashboard/scripts/app.js?v=cb63d6447409374df653b8707287ee36"></script>
+      <script src="../../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>         
+      <script src="../../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>         <script src="../../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>                               <script src="../../../../static/dashboard/scripts/ng-infinite-scroll.min.js?v=299bcea502c681c68093eb86f8c1bccf"></script> 
+       <!--UI style---->
+      <link rel="stylesheet" href="../../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+   </head>
+   <body ng-app="yara" ng-controller="EventCollabratorsController" class="overflow-body01">
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      {%verbatim%}
+      <div id="container" class="wrap01">
+         <div ng-include-template="/kit_header"></div>
+         <!----end header---->
+         <div class="col-md-12 nav nav-tabs-coll" ng-show="createcoll">
+            <div class="col-md-1 col-md-offset-1 pulse-button-coll text-hover"  ng-click="scrollTop()">Cancel</div>
+         </div>
+         <div class="well-step1-promote floormap_no" ng-show="!createcoll && Cdata.length<=0" >
+            <div class="dashboardWell">
+               <div class="text-top-index-promote text-center">
+                  <div class="gp-Name" >Collaborator share certain responibilities with Admin.</div>
+                  <br/>
+                  <!-- <div class="event-font ">Adding Collaborator will help users<br/>
+                     to direct with YARA apps</div><br/> -->
+                  <div class="gp-blue cursor-def"   ng-if="!currentval.is_event_over"><a class="text-hover cursor-poi" ng-click="ChangeType('create','',permissionlist)">
+                     Add Collaborator</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container height-top" >
+            <div class="row ">
+               <div class="col-md-12 text-center"  style="padding-right:0px; padding-left:0px;">
+                  <div class="ticket-top " >
+                     <!-- ng-class="{'min-h':!(!createcoll && Cdata.length<=0)}" -->
+                     <div id="active_event" >
+                        <div class="row">
+                           <div class="tab-content ">
+                              <div class="tab-pane fade in active">
+                                 <div class="col-md-12" >
+                                    <div class="cursor-def list-group-item02 border-none text-left " ng-class="{'col-md-12':createcoll, 'col-md-9':!createcoll}"  style="cursor: auto;"  >
+                                       <!--  && Cdata.length>5 -->
+                                    <div ng-show="!createcoll && Cdata.length>5">
+                                       <!-- && Cdata.length>5  -->
+                                    <input type="search" ng-model="collaboratorsearch" class="inputbox hasclear position-absolute z-index8" maxlength="100" placeholder="Search" ng-show="!createcoll && Cdata.length>5 "/>
+                                    <img src="../../../static/dashboard/images/close-search.png" class="clearer position-close z-index8" ng-click="collaboratorsearch=''"><br/><br/><br/>
+                                    </div>
+                                    <!-- searchoncollaborator -->
+                                       <div class="col-md-12 adspace-bottom gp-padding wow animated  fadeInUp" data-wow-delay="0.1s" ng-repeat="c in Cdata|filter:collaboratorsearch" ng-show="!createcoll &&  Cdata.length>0">
+                                          <div class="list-group " >
+                                             <div class="" >
+                                                <div class="row">
+                                                   <div class="col-md-12">
+                                                      <div class="col-md-9  created-top">
+                                                         <!--                                <h4>Logged In or Not</h4>-->
+                                                         <div class="event-font">Created {{setOffset(c.created_at,uo) | timeAgo}}</div>
+                                                         <div class="event-font" ng-if="c.last_login==null">Not Logged In<br/>
+                                                         </div>
+                                                         <div class="event-font" ng-if="c.last_login!=null"> Logged In<br/>
+                                                         </div>
+                                                         <div class="eventName"> <span ng-bind-html="c.first_name|highlight:collaboratorsearch"></span>    <span ng-bind-html="c.middle_name|highlight:collaboratorsearch"></span>     <span ng-bind-html="c.last_name|highlight:collaboratorsearch"></span></div>
+                                                         <div class="event-font">
+                                                            Role: <span ng-bind-html="c.role|highlight:collaboratorsearch"></span><br/>
+                                                            Email: <span ng-bind-html="c.contact_email|highlight:collaboratorsearch"></span><br/>
+                                                            <span ng-if="c.last_login!=null">Access Date: {{setOffset(c.last_login,uo)| date:'MMMM dd, yyyy'}}</span><br/>
+                                                         </div>
+                                                      </div>
+                                                      <div class="col-md-2 created-top">
+                                                         <br/>
+                                                         <div class="btn01 btn-primary-black-collaborator text-hover cursor-def"   ><a class="btn-primary-black-collaborator text-hover cursor-poi" ng-class="c.activities.length==0?'color-coll-gray cursor-def text-hover-act':''" ng-click="c.activities.length!=0? collActivities(c):''">See Activities</a></div>
+                                                         <div class="btn01 btn-primary-black-collaborator-red  text-hover cursor-def" data-toggle="modal" data-target="#myModal-collaborator" ><a class="btn-primary-black-collaborator-red cursor-poi text-hover" ng-click="setrevoke(c.first_name,c.middle_name,c.last_name,c.username)" ng-if="!currentval.is_event_over">Revoke</a></div>
+                                                         <br/><br/>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-md-12 ">
+                                                      <ul class="col-md-9  list-group cursor-def">
+                                                         <div class="event-font font-weight400">Permissions Assigned</div>
+                                                         <!------>
+                                                           <ul class="padding0" >
+                                                               <li class="list-group-item collaborator-box-item border-radius4 wow animated  zoomIn" data-wow-delay=".9s" ng-repeat="p in c.permissions">
+                                                                  <div class="col-md-12 container-remove-padding">
+                                                                     <div class="resizing-input02">
+                                                                        <span style="padding: 7px 6px 6px 5px;" ng-bind="p"></span>
+                                                                        <span style="float: right;width: 24px;"></span>
+                                                                     </div>
+                                                                  </div>
+                                                               </li>
+                                                            </ul>
+                                                         <!----->
+                                                         <!-- <li class="col-md- list-group-ite" ng-repeat="p in c.permissions" style="margin:px 10px px 0;border:none;background:#f2f2f2;position: relative;display: block;padding: 0px 0px;margin-bottom: -1px;">
+                                                            {{p}}
+                                                         </li> -->
+                                                         <li class="col-md-3  list-group-item" ng-if="c.permissions.length==0">
+                                                            No permissions
+                                                         </li>
+                                                      </ul>
+                                                      <div class="col-md-2 created-top" >
+                                                         <div class="btn01 btn-collaborator-color text-hover" ng-if="!currentval.is_event_over" ng-click="ChangeType('update',c,permissionlist)" ng-if="!currentval.isAchieved">Manage Permission</div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class=" gp-width01 text-center"  ng-if="(Cdata|filter:collaboratorsearch).length==0" ng-hide="Cdata.length==0">
+                                           <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                               <div class="gp-Name" >No results found</div>
+                                           </div>
+                                       </div>
+                                       <div ng-show="createcoll">
+                                          <form accessible-form autocomplete="off" novalidate name="collform" ng-submit="collform.$valid && selectedPermission.length > 0 ? addcollfrom() : submitted=true" ng-init="submitted=false" >
+                                             <!-- && (alldayaccess || Datevalid) validateDates();-->
+                                             <div class="col-md-6 col-md-offset-3" style="text-align:center;">
+                                                <div class="row" style="margin-bottom:50px;">
+                                                   <div class="col-md-12">
+                                                      <div class="collaborator_name">{{Title}}</div>
+                                                      <div class="collaborator-gray">Add and assign selected event<br/> responsibilities to a collaborator 
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="row">
+                                                   <div class="col-md-10 col-md-offset-1">
+                                                      <input type="text" class="inputbox text-center auto-fill" placeholder="Collaborator Name" ng-model="collName" name="collName" capitalize-word="true" ng-keydown="keyvalue=$event" required id="collobrator_name" ng-pattern="/\D{1}/">
+                                                      <span class="text-danger text-center" ng-show="submitted && collform.collName.$error.required && !collform.collName.hasFocus" ng-bind="'yara.required' | i18n ">Required</span>
+                                                      <span class="text-danger text-center" ng-show="collform.collName.$error.pattern" ng-bind="'yara.textrequired' | i18n " >textrequired</span>
+                                                      <br/>
+                                                      <input type="text" class="inputbox text-center" placeholder="Collaborator Role" ng-model="role" capitalize-word="true" name="role" ng-keydown="keyvalue=$event" required maxlength="50" ng-pattern="/\D{1}/">
+                                                      <span class="text-danger text-center" ng-show="submitted && collform.role.$error.required && !collform.role.hasFocus">Required</span>
+                                                      <span class="text-danger text-center" ng-show="collform.role.$error.pattern" ng-bind="'yara.textrequired' | i18n " >textrequired</span>
+                                                      <br/><br/>
+                                                      <!-- <div class="collaborator-gray">The login access for collaborator<br/>
+                                                         will be sent to this email -
+                                                      </div> -->
+                                                      <br/><br/>
+                                                      <input type="email" class="inputbox text-center auto-fill" placeholder="Collaborator Email" ng-model="email" validate-email name="cemail" required ng-readonly="selType=='update'?true:false">
+                                                      <div class="error-height" >
+                                                      <span class="text-danger text-center" ng-show="submitted && collform.cemail.$error.required && !collform.cemail.hasFocus">Required</span>
+                                                      <span class="text-danger text-center" ng-show="submitted && collform.cemail.$error.email  && !collform.cemail.hasFocus">Invalid Email</span>
+                                                      </div>
+                                                   </div>
+                                                   <br/>
+                                                   <!--                <div class="col-md-12 container-remove-padding">
+                                                      <div class="nav-size-signup ticket-top">Select Access Dates</div><br/>
+                                                      <div class="gray">Enter ticket title, this will be displayed on pass <br/>
+                                                      Every feature is meticulously crafted in way
+                                                      </div>
+                                                      <div class="col-md-12 list-group-item  tab-click-coll02 container-remove-padding">
+                                                         <ul class="list-group newevent-ticket-top01 pointer01" id="alldays" ng-model="alldayaccess" ng-init="alldayaccess=true" ng-click="dates.length>1 ? alldayaccess=!alldayaccess: '' ;clearDates()">
+                                                             <a  class="col-md-12  list-group-item tab-click-coll01 ">
+                                                               <div class="col-md-10 text-top-coll ">
+                                                                <div class="event-font" ng-show="dates.length>1"><b class="font-weight">All Days</b></div>
+                                                                 <div class="event-font" ng-show="dates.length==1"><b class="font-weight">Day 1 | {{(dates[0])| date:'MMMM dd yyyy'}}</b></div>
+                                                                </div>
+                                                               <div class="col-md-2 "><img ng-show="alldayaccess" src="../../../static/dashboard/images/right-blue.png?v=41202fcbacbf76f5fe8ff7f6c1a066d9" width="80%"/></div>
+                                                             </a>
+                                                           </ul>
+                                                      </div>
+                                                      </div> -->
+                                                   <!--  <div class="row">
+                                                      <div class="col-md-12">
+                                                      
+                                                        <ul class="list-group newevent-ticket-top01 pointer" ng-show="dates.length>1">
+                                                          <a  class="col-md-12 list-group-item  tab-click-coll" ng-repeat="d in dates" ng-click="CS.SelDates[d]=!CS.SelDates[d];validateDates()" ng-init="CS.SelDates[d]=false">
+                                                            <div class="col-md-10 text-top-coll ">
+                                                             <div class="event-font"><b class="font-weight">Day {{$index + 1}} | {{(d)| date:'MMMM dd yyyy'}}</b></div>
+                                                             </div>
+                                                            <div class="col-md-2"><img ng-show="alldayaccess || CS.SelDates[d]==true" src="../../../static/dashboard/images/right-blue.png" width="80%"/></div>
+                                                          </a>
+                                                        </ul>
+                                                        <span class="text-danger text-center" id="errorDate" ng-show="submitted && !alldayaccess && !Datevalid">Required</span>
+                                                      </div>
+                                                      </div> -->
+                                                   <div class="col-md-12 collaborator_name ticket-top-btn">Permission<br/></div>
+                                                      <div class="col-md-12 collaborator-gray margin-bottom40">A collaborator can access and handle the permitted <br/>features of the event. A collaborater must have 1 feature<br/> access and maximum of up to 5 features.</div>
+                                                   
+                                                   <ul class="list-group newevent-ticket-top01 ">
+                                                      <a class="col-md-12 list-group-item  tab-click-coll cursor-poi" ng-repeat="p in permissionlist" ng-class="{'': selectedPermission.indexOf(p)>=0}" ng-init="selectedPermission.indexOf(p)>=0" ng-click="selpermission(p,selectedPermission.indexOf(p)>=0)" >
+                                                         <div class="col-md-8 text-top-coll ">
+                                                            <div class="event-font"><b class="font-weight"> {{p}}</b></div>
+                                                         </div>
+                                                         <div class="col-md-2"><img ng-show="selectedPermission.indexOf(p)>=0" src="../../../static/dashboard/images/right-blue.png" width="80%"/></div>
+                                                         <div class="col-md-2"><img  ng-src="{{(p=='GateKeeper' || p=='People')? '../../../static/dashboard/images/multiple-people.png?v=d542a2c6f92e7ac8ef2a2db405ea59ce' : '../../../static/dashboard/images/single-people.png?v=67f2f10c51013c8de7fe5b11cf5cd006'}}" ng-style="(p=='GateKeeper' || p=='People')? {'width':'80%'}:{'width':'55%'}"/></div>
+                                                      </a>
+                                                   </ul>
+                                                   <div class="error-height">
+                                                       <span class="text-danger text-center" id="errorPr" ng-show="submitted && selectedPermission.length<=0">Required</span>
+                                                   </div>
+                                                </div>
+                                                <br/>
+                                                <div class="col-md-12">
+                                                   <div class="col-md-12 margin-top-bottom">
+                                                      <span class="text-center text-danger" ng-bind="showerror" ng-show="errormsg">error message</span>
+                                                   </div>
+                                                   <div class="col-md-8 col-md-offset-2">
+                                                      <button type="submit" class="btn01 btn-primary-black">{{btntxt}}</button>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </form>
+                                       </div>
+                                    </div>
+                                    <!-- <div class="col-md-2 col-md-offset-1 "  ng-show="!createcoll && Cdata.length>0"  >
+                                       <div style="position:fixed;" class="text-left gp-padding-coll gp-right-coll">
+                                           <div class="col-md-12 collaborator-menu text-hover" ng-click="ChangeType('create','',permissionlist)" ng-if="!currentval.isAchieved">Add New Collaborators</div>
+                                           <div class="col-md-12 gray-color container-remove-padding"  > {{Cdata.length}} Collaborators</div>
+                                       </div>
+                                       </div> -->
+                                    <div class="col-md-2 col-md-offset-1" ng-show="!createcoll && Cdata.length>0" >
+                                       <div class="kit-menu-padding gp-right-showcase-new" style="position:fixed;" >
+                                          <div  class="text-left ">
+                                             <div class="event-font-happy gp-blue text-hover" ng-click="ChangeType('create','',permissionlist)" ng-if="!currentval.is_event_over">Add Collaborator</div>
+                                             <div class="col-md-12 gray-color container-remove-padding" ng-if="Cdata.length==1"  > {{Cdata.length}} Collaborator</div>
+                                             <div class="col-md-12 gray-color container-remove-padding" ng-if="Cdata.length>1"  > {{Cdata.length}} Collaborators</div>
+
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!------Start AdSpace not available---->
+                                 <!-- <div class="col-md-12 gp-width01">
+                                    <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                            <div class="gp-Name" >AdSpace not available</div><br/>
+                                            <div class="event-font ">AdSpace for Day 2, January 21 2016<br/>
+                                                has not been purchased</div><br/>
+                                            <div class="gp-blue" >Buy AdSpace</div>
+                                    </div>
+                                    </div> -->
+                                 <!------End AdSpace not available---->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Upload Cover image Modal window -->
+         <div class="modal fade" id="myModal-activities" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document"  style="width: 90%;">
+               <div class="modal-content" style="min-height: 572px;">
+                  <div class="row modal-header-top collaborator-header-top">
+                     <div class="col-md-12 container-remove-padding">
+                        <div class="col-md-11 container-remove-padding">
+                           <h4 class="modal-title text-left" id="myModalLabel" >{{collabratorAct.first_name+" "+collabratorAct.middle_name+" "+ collabratorAct.last_name}}</h4>
+                           <div>{{collabratorAct.activities.length}} <span ng-bind="collabratorAct.activities.length>1?'Activities':'Activity'"></span></div>
+                        </div>
+                        <div class="col-md-1 container-remove-padding">
+                           <div  class="btn01  cursor-def text-right01"><a data-dismiss="modal" aria-label="Close" class="text-hover cursor-poi"><img src="../../../static/dashboard/images/close-image.png" width="42%"></a></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal-body11" >
+                     <div  >
+                        <form >
+                           <div class="font-names-activities">
+                              <div style="padding:0 40px;">
+                              <div class="col-md-12 border-activities" ng-repeat="act in collabratorAct.activities">
+                                 <div ng-bind="is_time_format_24?(setOffset(act.activity_time,uo)|date:'HH.mm MMMM dd, yyyy'):(setOffset(act.activity_time,uo)|date:'hh:mm a MMMM dd, yyyy')">23:00 January 12, 2016</div>
+                                 <div class="activities-adspace" ng-bind="act.description">Posted AdSpace "Samsung"</div>
+                              </div>
+                             </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+           <!-- Delete Modal window -->
+         <div class="modal fade bg-color010 " id="myModal-alart-collaborator" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top">
+                     <h4 class="modal-title modal-heading" id="myModalLabel">Mail Sent</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form novalidate  >
+                           <div class="row">
+                              <div class="margin-top50-bottom70">
+                              <div class="col-md-12" ng-bind="'yara.mailSended_collaborator'| i18n:(email)">When enabled mail</div>
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-10">
+                                    <div class=" text-danger">&nbsp; </div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</div>
+                                 </div>
+                                 <!-- enabling disabling delegates -->
+                                 <!-- <div class="col-md-2">
+                                    <div  class="btn01 text-hover" ng-class="per=='enable'?'btn-primary-black-pulse01':'btn-primary-black-pulse01-red'" ng-click="DisSponser()">{{per|capitalize}}</div>
+                                 </div> -->
+                                <!--  <div class="col-md-2">
+                                    <div  class="btn01 btn-primary-black-pulse01 text-hover" >Enable</div>
+                                 </div> -->
+                                 <!-- End enabling disabling delegates -->
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Upload Cover image Modal window -->
+         <div class="modal fade" id="myModal-collaborator" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document">
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Revoke Collaborator</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form novalidate ng-submit="addpost(postform)" name="postform" >
+                           <div class="row">
+                              <div class="col-md-12 bg-collaborator text-center" >
+                                 Are you sure to revoke {{namecoll}}?
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-8">
+                                    <div ng-show="errorstatus" ng-init="errorstatus=false" class=" text-danger">{{errormsg}} </div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Cancel</div>
+                                 </div>
+                                 <div class="col-md-2">
+                                    <div  class="btn01 btn-primary-black-pulse01-red text-hover" ng-click="DelColl()">Revoke</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div ng-include-template="/event_footer" copyright="true" id="footer123"></div>
+         <!--- ng-class="{'navbar-fixed-bottom':!createcoll && Cdata.length<=1}"---->
+      </div>
+      <script src="../../../static/dashboard/scripts/wow.min.js"></script>
+      <script>
+          new WOW().init();
+      </script>
+      <script type="text/javascript">
+         $(".hasclear").keyup(function () {
+           var t = $(this);
+           t.next('img').toggle(Boolean(t.val()));
+         });
+
+         $(".clearer").hide($(this).prev('input').val());
+
+         $(".clearer").click(function () {
+           // $(this).prev('input').val('').focus();
+           $(this).hide();
+         });
+         </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+          function resizediv(){
+           var h =$(window).height();
+           $('.height-top').css("height",h+"px");
+          } 
+          resizediv();
+          $(window).resize(function(){
+           resizediv();
+          });
+         });
+      </script>
+      {%endverbatim%}
+      <script>
+         // anurag dont uncomment
+         // $(document).ready(function(){
+         //  $('#loading').hide();
+         //  $('#container').fadeIn();
+         // });
+      </script>
+       <script>
+         (function(jQuery){
+           jQuery(window).load(function(){       
+             jQuery(".font-names-activities").mCustomScrollbar({
+               theme:"dark",
+               scrollInertia: 400,
+               scrollButtons:{enable: true},   
+               autoHideScrollbar: false, 
+         
+               autoExpandScrollbar: true,
+               keyboard:{ enable: true }
+             });       
+           });
+         })(jQuery);
+      </script>
+   </body>
+</html>

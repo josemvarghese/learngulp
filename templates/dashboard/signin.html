@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+	 <head>        <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">       <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">       <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">       <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">       <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">       <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">       <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">       <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">       <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">       <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">       <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">       <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">       <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+		<title>YARA - Sign In</title>
+		<noscript>
+		<META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+		</noscript>
+		<link rel="stylesheet" href="../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+		<script src="../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+		<script src="../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+		<!-- <link rel="stylesheet" href="../../static/dashboard/css/UI-style.css?v=2e2aec9f868dd8ff93f851deb2205270"> -->
+		<script src="../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+		<!--UI style---->
+      <link rel="stylesheet" href="../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+         <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+		
+		
+	</head>
+	<body ng-app="yara" ng-controller="LoginController">
+        {%verbatim%}	
+		<div class="well-1 ">
+			<div class="col-lg- white text-center text-top-index">
+					<div class="nav-color main-header"><a ><img src="../../static/dashboard/images/yara_logo.svg?v=ce9e59e2272c030c2954deb7d56f3267"width="25%"/></a></div>
+					<div class="nav-color sub-header-small">Sign in with your</div>
+					<div class="nav-color sub-header">VORIS IDENTITY</div>
+					<form ng-submit="login(loginForm)" name="loginForm" class="form-width" novalidate>
+						<input type="email" validate-email ng-model="email" class="nav-width" placeholder="Email" name="email" required>
+						<div style="height:25px;">
+						<div class="email-msg" ng-show="loginForm.email.$touched && loginForm.email.$dirty && loginForm.email.$invalid ">
+							<div  ng-show="loginForm.email.$error.required">Email Required</div>
+							<div  ng-show="loginForm.email.$error.email">Invalid Email Id</div>
+						</div>
+						</div>
+						<input type="password" ng-model="password" class="nav-width" placeholder="Password" name="password" required>
+						<div class="pass-msg" ng-show="loginForm.password.$dirty && loginForm.password.$invalid">
+							<div ng-show="loginForm.password.$error.required">Password Required</div>
+						</div>
+						<div class="error-msg" ng-show="errormsg">{{data.message}}</div>
+						<button type="submit" class="btn btn-primary-black" ng-disabled="!loginForm.$valid">Sign in</button>
+					</form>
+			</div>
+		</div>
+		
+	{%endverbatim%}
+	<script type="text/javascript">
+		var app=angular.module('yara',[]);
+		app.directive('validateEmail', function() {
+  			var EMAIL_REGEXP = /^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+		  	return {
+    			require: 'ngModel',
+    			restrict: '',
+    			link: function(scope, elm, attrs, ctrl) {
+      				// only apply the validator if ngModel is present and Angular has added the email validator
+      				if (ctrl && ctrl.$validators.email) {
+        			// this will overwrite the default Angular email validator
+        				ctrl.$validators.email = function(modelValue) {
+          				return ctrl.$isEmpty(modelValue) || EMAIL_REGEXP.test(modelValue);
+        				};
+      	  			}
+    			}
+    		};
+		});
+		app.controller('LoginController',['$scope','$http','$location',function($scope,$http,$location){
+			$scope.shownav=false;  
+  			$scope.login=function(fromlogin){
+			if(fromlogin.$valid){
+				$scope.data="waiting for data";
+				$scope.errormsg=false;
+				$http({
+          			method:'Post',
+          			url:'http://52.74.132.241:8081/api/yara/web/signin/', 
+          			data:{
+            		email:$scope.email,
+            		password:$scope.password
+          		}
+        	}).then(function success(response){
+         	// console.log(response.data);
+				$scope.data=response.data;
+				if($scope.data.result==0||$scope.data.result==undefined){
+					$scope.errormsg=true;
+            		localStorage.setItem("Logininfo",JSON.stringify({isloggedin:false}));
+            		$scope.shownav=false;
+				}
+		        else {
+            		localStorage.setItem("Logininfo",JSON.stringify({isloggedin:true,created_at:new Date()}));
+            		$scope.d=JSON.parse(localStorage.getItem("Logininfo"));
+            //$location.path("/Dashboard");
+              		window.location = "/dashboard";
+            		$scope.shownav=true;
+          		}
+			});
+			}
+		};
+	}]);
+	</script>
+    </body>
+</html>

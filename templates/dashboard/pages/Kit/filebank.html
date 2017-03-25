@@ -1,0 +1,431 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <link rel="stylesheet" href="../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <link rel="stylesheet" href="../../../static/dashboard/css/animate.css">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <!--<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyBiLVnHVmK-3nm_MZvug6NjZmMdOQX_cm8"></script>-->
+      <script src="../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> <script src="../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script> <script src="../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> <script src="../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <script src="../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script>
+      <script src="../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../static/dashboard/scripts/app.js?v=cb63d6447409374df653b8707287ee36"></script>
+      <script src="../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>         
+      <script src="../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>         
+      <script src="../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>                  <script src="../../../static/dashboard/scripts/ng-infinite-scroll.min.js?v=299bcea502c681c68093eb86f8c1bccf"></script>
+       <!--UI style---->
+      <link rel="stylesheet" href="../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+   </head>
+   <body ng-app="yara" ng-controller="EventShareboxController" class="overflow-body01">
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      {%verbatim%}
+      <div id="container" class="wrap01">
+      	 <div ng-hide="nextarea">
+         <!---header-->
+         <div ng-include-template="/kit_header" ng-init="headerTitle='FileBank'"></div>
+         <!----end header---->
+         <!-- <div class="col-md-12 slider-border-sharebox"> -->
+         <div class="col-md-12 slider-border-sharebox" ng-show="eventDaysInfo.length>1">
+            <div class="col-md-2 text-left gp-arrow-left adspace-slider-width2" ><button id="go-left" class="icon-bg-color-people" ng-show="eventDaysInfo.length>3 && dbutton!=(eventDaysInfo.length-3)"  ng-click="dbutton=1+dbutton;" droppable dragenter="movetab('go-left')" dragleave="leavetab()"><img src="../../../static/dashboard/images/arrow-right.png?v=87dc69e36cee2088acaf4e40773d28eb" width="24px"/></button>  </div>
+            <div class="col-md-8 container-remove-padding sharebox-slider-width8">
+               <div class="slider" style="z-index: 9;">
+                  <!-- The slider -->
+                  <div class="gp-adspace-color time-tab01"  >
+                     <div ng-repeat="t in eventDaysInfo"  class="time-tab-adspace " ng-class="{'tab-align-center':eventDaysInfo.length==2}"><a class="nav-people-tab text-center text-hover" data-toggle="tab" ng-class="{'nav-people-tab-hover in':seltab==t.dayID}" ng-click="selecttab(t)" data-target="#{{t.dayID}}">{{t.dayTitle}}</a></div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-2 text-right01 adspace-slider-width2"><button id="go-right" class="icon-bg-color-people" ng-show="eventDaysInfo.length>3 && dbutton!=0" ng-click="dbutton=dbutton-1;"  droppable dragenter="movetab('go-right')" dragleave="leavetab()"><img src="../../../static/dashboard/images/arrow-left.png?v=3f291cc252dfaf3ecfb6ae35fdcb14bd" width="24px"/></button></div>
+         </div>
+         <div class="container  height-top">
+            <div class="row ">
+               <div class="col-md-12 text-center container-remove-padding">
+                  <div class="">
+                     <div id="active_event" >
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="col-md-10 ticket-top-btn">
+                              <div class="ticket-top" ng-hide="(sessionData|filter:seltab|filter:{session_type: true}).length<5">
+                              <input type="search" class="inputbox hasclear position-absolute z-index8" ng-model="filebanksearch" maxlength="100" placeholder="Search"/>
+                              <img src="../../../static/dashboard/images/close-search.png" class="clearer position-close z-index8" ng-click="filebanksearch=''"><br/><br/><br/>
+                              </div>
+                              <div class="tab-content" ng-class="(sessionData|filter:seltab|filter:{session_type: true}).length<5?'ticket-top':''">
+                              <div class="gray color-black font-weight300 text-left" ng-class="(sessionData | filter:seltab|filter:{session_type: true}).length<5?'ticket-top-btn':''" style="line-height: 1.4;">FileBank enables the invities to see or download documents <br/>available in respective session.</div>
+                                    <div class="tab-pane fade " ng-class="{'in active':$index==0}" ng-repeat="d in dates" id="day{{$index}}">
+                                       <div class="col-md-12" >
+                                          <div class="col-md-12 gp-width01 text-center"  ng-show="(sessionData | filter:seltab|filter:{session_type: true}).length==0 && !alternative">
+                                             <div class="col-md-6 col-md-offset-3 gp-width-not" style="padding: 0;">
+                                                <div class="gp-Name" >No sessions added
+                                                   <!-- with {{dName}} -->
+                                                    </div>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-12 gp-width01 text-center"  ng-show="(sessionData | filter:seltab|filter:{session_type: true}).length==0 && alternative">
+                                             <div class="col-md-6 col-md-offset-3 gp-width-not" style="padding: 0;">
+                                                <div class="gp-Name" >No Session {{fileattach}} </div>
+                                             </div>
+                                          </div>
+                                          <!-- <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-spengage"  style="cursor: auto;" ng-show="(sessionData | filter:{date:d}).length<=0">
+                                             No Session associated with {{d}}
+                                             </div> -->
+                                          <div  ng-hide="(sessionData|filter:seltab).length>=5" class=" share-top" ></div>
+                                          <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-spengage wow animated  fadeInUp" data-wow-delay="0.1s"  style="cursor: auto;" ng-repeat="s in sessionData |orderBy:sort |filter:filebanksearch|filter:seltab|filter:{session_type:true}">
+                                             <div class="col-md-12 margin-top-bottom">
+                                                <div  class="col-md-12">
+                                                   <div class="col-md-8">
+                                                      <div class="event-tck" > {{is_time_format_24?(setOffset(s.start_time,eo)|date:'HH:mm'):(setOffset(s.start_time,eo)|date:'hh:mm a')}} to {{is_time_format_24?(setOffset(s.end_time,eo)|date:'HH:mm'):setOffset(s.end_time,eo)|date:'hh:mm a'}}  </div>
+                                                      <div class="gp-Name" ng-bind-html="s.tittle|highlight:filebanksearch" >Session Title</div>
+                                                      <div class="event-font" ><span ng-repeat="speak in s.speakers" ng-if="$index<10" ><span ng-if="$index!=0">,</span><span ng-bind-html="speak.name|highlight:filebanksearch"></span> </span></div>
+                                                      <br/>
+                                                      <div class="event-tck" ng-show="s.file_bank.session_files.length==0">No files attached</div>
+                                                      <!-- <div class="event-tck" ng-repeat="f in s.session_files" style="padding:10px 0;">
+                                                         <span class="cursor-def" >{{f.file_name}}</span>
+                                                         <div class="blue-color text-hover" id="myModalLabel" ><a class="text-hover cursor-poi" ng-click="fdelete(f.share_box_code)">Delete</a></div>
+                                                      </div> -->
+                                                        <div class="col-md-12 border padding-shaerbox-file z-index8" ng-repeat="f in s.file_bank.session_files">
+	                                                         <div class="col-md-8 container-remove-padding">
+	                                                         	<div class="blue-color"  ><a href="{{f.file}}" target="new" class="text-hover"><span ng-bind-html="f.file_name|highlight:filebanksearch"></span></a></div>
+	                                                         </div>
+	                                                         <div class="col-md-4 text-right01 container-remove-padding">
+	                                                         	<div class="event-tck" ><span class="gray-color">
+                                                               {{f.file_name.split('.')[f.file_name.split('.').length-1] | uppercase}}</span> <span ng-if="(f.content_meta.size|number:0)<999">{{f.content_meta.size|number:0}}B</span><span ng-show="(f.content_meta.size/1000|number:0).length<4 && (f.content_meta.size)>999">{{f.content_meta.size/1000|number:0}}KB</span> <span ng-if="(f.content_meta.size/1000|number:0).length>4">{{f.content_meta.size/1000000|number : 1}}MB</span><span ng-if="expday==1 && checkTimeNow(s.end_time)"> | <a class="text-danger cursor-poi"  data-toggle="modal" data-target="#sharebox-delete" ng-click="revokepop(f.share_box_code, f.file_name)">Revoke</a></span> </div>
+	                                                         </div>
+                                                        </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-md-12 text-right-sharebox"  style="z-index: 0;" ng-if="expday==1 && checkTimeNow(s.end_time)">
+                                                <div class="col-md-10">&nbsp;</div>
+                                                <div class="col-md-2">
+                                                   <div class="blue-color pointer01 text-hover"   data-toggle="modal" data-target="#uploadfile" ng-click="uploadFile(s.session_code, s)" ng-if="s.file_bank.session_files.length<5 && expday==1"><br/>Upload File</div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class=" gp-width01 text-center"  ng-if="(sessionData|filter:filebanksearch).length==0" ng-hide="sessionData.length==0">
+                                              <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                                  <div class="gp-Name" >No results found</div>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-12 share-bottom"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-2 ticket-top" ng-show="(sessionData|filter:seltab|filter:{session_type: true}).length>0">
+                                 <div class="gp-padding-people01 gp-right-showcase-new" style="position:fixed;" >
+                                    <div  class="text-left">
+                                       <div class="gp-event-font title-color-new" ng-show="(sessionData|filter:seltab|filter:{session_type: true}).length>=5 || alternative">VIEW OPTION</div>
+                                       <div class="gp-blue text-hover font-weight400" ng-class="allsession" ng-click="shaowall()" ng-show="(sessionData|filter:seltab|filter:{session_type: true}).length>=5 || alternative">Show All</div>
+                                       <div class="gp-blue text-hover" ng-class="attachshowblack" ng-click="attachfile(sessionData)" ng-show="(sessionData|filter:seltab|filter:{session_type: true}).length>=5 || alternative">Show File Attached Session</div>
+                                       <div class="gp-blue text-hover font-weight400" ng-class="showblack" ng-click="notattachfile(sessionData)" ng-show="(sessionData|filter:seltab|filter:{session_type: true}).length>=5 || alternative">Show sessions without file attached</div>
+                                       <br/>
+                                       <div class="gp-event-font title-color-new" ng-show="(sessionData|filter:seltab|filter:{session_type: true}).length>=1">STATUS</div>
+                                       <div class="gp-event-font " ng-show="(sessionData|filter:seltab|filter:{session_type: true}).length>=1">{{(sessionData | filter:seltab |filter:{session_type: true}).length}} Sessions</div>
+                                       <br/>
+                                       <div class="gp-event-font " ng-show="(sessionData|filter:seltab|filter:{session_type: true}).length>=1">{{(attach | filter:seltab).length}} Session File Attached </div>
+                                       <div class="gp-event-font " ng-show="(sessionData|filter:seltab|filter:{session_type: true}).length>=1">{{(notattach | filter:seltab).length}} Sessions without file  </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+         <!------Start Sharebox file name and description------>
+         
+         	<div ng-show="nextarea">
+            <!---header-->
+	         <div ng-include-template="/kit_header_no_menu" ng-init="headerTitle='FileBank'"></div>
+	         <!----end header---->
+	         <form name="validatios" accessible-form autocomplete="off" novalidate  ng-submit="validatios.$valid?addFileSession(sharefiles):submitted=true" ng-init='submitted=false'>
+            <div class="height-top ">
+	         	<div class="well-event-dashboard position-relative" >
+					<div class="" ng-class="filedata.length<=2?'dashboardWell padding0':''">
+						<div class="white text-center ">
+										 <ul class="list-group  text-center">
+										 	<div class="col-md-12 container-remove-padding">
+											 	<div class=" col-md-6 col-md-offset-3 ticket-top-btn1">
+                                       <div class="posting-pin-top01">{{sessionname}}</div>
+                                       <div class="sharebox-top">Upload to FileBank</div>
+													<div class="posting-pin-top01">File Information</div><br/>
+                                    </div>
+                                    <div class="container margin-bottom40 container-remove-padding">
+                                    <div class="col-md-12 bg-color-gray margin-bottom50  container" ng-repeat="fi in filedata">
+                                       <div class="col-md-6 col-md-offset-3">
+   													<input type="text" class="inputbox text-center margin-top20 bg-color-border" placeholder="File Name" ng-model="fi.filevalue" disabled>                                     
+   													<textarea auto-resize type="text" rows="1" class="input_boxtext-happy text-center bg-color-border" name="filedis{{$index}}" placeholder="File Description" maxlength="250" minlength="50" ng-model="fi.discription" required ng-pattern="/\D{1}/"></textarea>
+                                          <div class="error-height font-weight400" style="font-size: 14px;">
+   													  <span class="text-danger" ng-show="validatios.filedis{{$index}}.$error.pattern" ng-bind="'yara.textrequired' | i18n ">textrequired
+   													  </span><br/>
+                                            <span class="text-danger" ng-show="submitted&&validatios.filedis{{$index}}.$error.required&&!validatios.filedis{{$index}}.$error.pattern" ng-bind="'yara. required' | i18n ">required
+                                            </span><br/>
+                                            <span class="text-danger" ng-show="submitted && validatios.filedis{{$index}}.$error.minlength && !validatios.filedis{{$index}}.$error.pattern" ng-bind="'yara.descMinLenght' | i18n:['50','250'] ">Description should be 50 to 250 characters long</span><br/>
+                                            <!-- <span class="text-danger" ng-show="validatios.filedis{{$index}}.$error.required" ng-bind="'yara.required' | i18n ">textrequired
+                                            </span> -->
+                                          </div>
+                                       </div>
+												</div>
+                                    </div>
+											</div>
+										</ul>
+									<div class="error-height font-weight400" style="font-size: 14px;"> <span class="text-danger">{{messages}}</span></div>
+						</div>
+					</div>
+				</div>
+         </div>
+	         <!-- start footer-->
+					<div class="nav  navbar-bottom" id="footer123">
+						<div class="container container-remove-padding">
+                  <div class="col-md-12 footer-color container-remove-padding">
+							<div class="col-md-5 col-md-offset-1">
+							 	<a  href="" class="navbar-text  navbar-brand3-signup event-gatekeeper-footer text-hover font-weight400" ng-click="nextarea=false;filedescription=''; cancelmodel()">Cancel</a>
+							</div>
+							<div class="col-md-2 col-md-offset-4">
+								<!-- <a  class="navbar-text event-gatekeeper-footer text-hover"> -->
+                           <button class=" navbar-text event-gatekeeper-footer text-hover btn-sharebox" type="submit"  >Done</button>
+                        <!-- </a> -->
+							</div>
+                  </div>
+						</div>
+					</div>
+			<!---End footer---->
+			</form>
+		</div>
+         <!----End Sharebox file name and description----->
+        
+   <!-- Delete Modal window -->
+<div class="modal fade bg-color010 " id="sharebox-delete" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog gatekeeper-popup" role="document" >
+    <div class="modal-content modal-padding" >
+      <div class="modal-header-top ">
+        <h4 class="modal-title modal-heading" id="myModalLabel" >Revoke</h4>
+      </div >
+      <div class="modal-body1">
+          <div  >
+         <form  >
+            <div class="row">
+                <div class="col-md-12 bg-collaborator text-center" >
+                   Are you sure to revoke {{fname}}?
+                </div>
+                <div class="col-md-12 border-top">
+                      <div class="col-md-8"><div class=" text-danger">&nbsp; </div></div>
+                     <div class="col-md-2 pulse-margin"><div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Cancel</div></div>
+                     <div class="col-md-2"><div  class="btn01 btn-primary-black-pulse01-red text-hover"  data-dismiss="modal" ng-click="fdelete(share_box_code)">Revoke</div></div>
+                </div>
+            </div>
+          </form>
+
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bg-color010 " id="uploadfile" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog gatekeeper-popup" role="document" >
+    <div class="" >
+    	<div class="modal-body1">
+            <div class="row">
+               <div class=" col-md-8 col-md-offset-2">
+							 <ul class="list-group  text-center">
+								<div class="">
+								 <div  class="logo-update" droplet  ng-model="sharefiles">
+								 	 <div class="modal-header-bottom-share ">
+								        <h4 class="modal-title modal-heading" id="myModalLabel">Upload to FileBank </h4>
+								      </div >
+								      <div class="sub-heading-signup " ng-show=" sharefiles.getFiles(sharefiles.FILE_TYPES.VALID).length>0"  style="margin-bottom:10px;"><!-- list-group-item -->
+								      		<div class="nav-font-invitation" style="text-align: justify; padding:10px 15px 9px 15px;" ng-repeat="model in sharefiles.getFiles(sharefiles.FILE_TYPES.VALID)" >
+											      <!-- <ul class="list-group">
+														<li  class="list-group-item"> -->
+								                        <span class="glyphicon glyphicon-remove-circle cursor-poi text-danger close-icon" ng-click="model.deleteFile(); closefile()"></span>
+								                        <span class="size wrap">{{model.file.name}}</span>
+								                  <!--   </li>
+								                </ul> -->
+								            </div>
+					            	</div>
+									 <div class="sub-heading-signup">
+									 	 <img src="../../../static/dashboard/images/image_upload_placeholder.png?v=7d539c1f656434ceaec3a5ebbe66836f" class="image_upload_placeholder"  ng-hide=" sharefiles.getFiles(sharefiles.FILE_TYPES.VALID).length>0" />
+									 <!-- <div class="sub-nav-size-invitation">Logo</div> -->
+									 <div class="nav-font-invitation" >Drag and drop the file</div>
+									  <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-hide=" sharefiles.getFiles(sharefiles.FILE_TYPES.VALID).length>=5" ng-click="showdat()">
+									 <span ng-click="sam=false; showdat();">Select a File</span>
+									 <!-- <droplet-upload-single ng-model="sharefiles" ng-hide=" sharefiles.getFiles(sharefiles.FILE_TYPES.VALID).length>0" name="sharefiles" ></droplet-upload-single> -->
+                            <droplet-upload-multiple ng-model="sharefiles"  name="sharefiles" ></droplet-upload-multiple>
+									 </div>
+									  <div class="nav-font-invitation01">5 files per session<br/>Uploadable file formats- PDF,doc,.txt <br/>Total file size should not exceed 50 MB</div>
+                             <!-- {{maxfile - sharefiles.getFiles(sharefiles.FILE_TYPES.VALID).length}} -->
+									  <!-- <div class="text-danger" ng-show="dd"  ng-hide="sharefiles.getFiles(sharefiles.FILE_TYPES.VALID).length==0 || sam" ng-bind="'yara.onefile' | i18n"></div> -->
+									  <div class="text-danger"  ng-hide="sss || sharefiles.getFiles(sharefiles.FILE_TYPES.VALID).length==0" ng-bind="'yara.existis' | i18n:existfilename"></div>
+                             <div class="text-danger" ng-hide="sharefiles.getFiles(sharefiles.FILE_TYPES.VALID).length==0 || sizefile" ng-bind="'yara.balancesize' | i18n">You have only</div>
+                             <div class="text-danger" ng-hide="zerofile" ng-bind="'yara.zerozise'|i18n">Zerosize</div>
+                             <div class="text-danger" ng-hide="maxfive || sharefiles.getFiles(sharefiles.FILE_TYPES.VALID).length==0" ng-bind="'yara.maxfile'|i18n">Zerosize</div>
+									 </div>
+									  <div class=" modal-header-top-share ">
+									  	<div class="col-md-7">&nbsp;</div>
+									  	<div class="col-md-2">
+									  	   <div class="blue-color text-hover cursor-poi" id="myModalLabel" data-dismiss="modal" ng-click="cancelmodel()">Cancel</div>
+									    </div>
+									    <div class="col-md-2">
+								        	<div class="blue-color text-hover cursor-poi" id="myModalLabel" ><button ng-click="nextstep();" ng-disabled="statusdisable" class="btn-bg-color">Upload</button></div>
+								        </div>
+								      </div >
+									 </div><br/>				
+									</div>
+							</ul>
+				</div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <!--  Invalid Extension Modal window -->
+<div class="modal fade" id="myModal-invalid" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog gatekeeper-popup" role="document" >
+    <div class="modal-content modal-padding" >
+      <div class="modal-header-top ">
+        <h4 class="modal-title modal-heading" id="myModalLabel" >Invalid Extension</h4>
+      </div >
+      <div class="modal-body1">
+          <div  >
+         <form  novalidate >
+            <div class="row">
+                <div class="col-md-12 bg-collaborator text-center" ng-bind="'yara.invalidFormatFileupload'| i18n">
+                   Invalid Extension Choose Only TXT, XML, XLS, XLSX, CSV Files format.
+                </div>
+                <div class="col-md-12 border-top">
+                      <div class="col-md-10"><div  class=" text-danger">&nbsp;</div></div>
+                     <div class="col-md-2 pulse-margin"><div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</div></div>
+                </div>
+            </div>
+          </form>
+
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+         <!---footer--->
+         <!-- start footer ng-class="{'navbar-fixed-bottom':}" -->
+         <div ng-include-template="/event_footer" copyright="true" id="footer123" ng-hide="nextarea"></div>
+         <!---End footer---->
+      </div>
+      <script src="../../../static/dashboard/scripts/wow.min.js"></script>
+      <script>
+          new WOW().init();
+      </script>
+      <script type="text/javascript">
+         $(".hasclear").keyup(function () {
+           var t = $(this);
+           t.next('img').toggle(Boolean(t.val()));
+         });
+
+         $(".clearer").hide($(this).prev('input').val());
+
+         $(".clearer").click(function () {
+           // $(this).prev('input').val('').focus();
+           $(this).hide();
+         });
+         </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+          function resizediv(){
+           var h =$(window).height();
+           $('.height-top').css("height",h+"px");
+          } 
+          resizediv();
+          $(window).resize(function(){
+           resizediv();
+          });
+         });
+      </script>
+      <script>
+         // $(document).ready(function(){
+         //  $('#loading').hide();
+         //  $('#container').fadeIn();
+         // });
+      </script>
+        <!-- <script>
+         window.setTimeout( function scrollHeight() {
+             $("textarea").height( $("textarea")[0].scrollHeight );
+         }, 1);
+      </script>
+      <script>
+         function h(e) {
+             $(e).css({'height':'auto','overflow-y':'hidden'}).height(e.scrollHeight);
+         }
+         $('textarea').each(function () {
+           h(this);
+         }).on('input', function () {
+           h(this);
+         });
+      </script> -->
+      <script src="../../../static/dashboard/scripts/jquery.diyslider.min.js?v=656471a334cc1a7d1c648f84c82e9d1c"></script>
+      <script>
+         $(document).ready(function(){
+         // $(".slider").diyslider({
+         //     width: "100%", // width of the slider
+         //     height: "51px", // height of the slider
+         //      minSlides: 2, // number of slides you want it to display at once
+         //     loop: false, // disable looping on slides
+         //     moveSlides: 1,
+         // }); // this is all you need!
+         
+         // use buttons to change slide
+         $("#go-left").bind("click", function(){
+             // Go to the previous slide
+             $(".slider").diyslider("move", "back");
+         });
+         $("#go-right").bind("click", function(){
+             // Go to the previous slide
+             $(".slider").diyslider("move", "forth");
+         });
+         });
+      </script>
+      {%endverbatim%}
+   </body>
+</html>

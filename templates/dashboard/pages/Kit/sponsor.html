@@ -1,0 +1,938 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <link rel="stylesheet" href="../../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <link rel="stylesheet" href="../../../static/dashboard/css/animate.css">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyBWS1ixh32IoqlUI91JsGQxYCI_AxUJ8nI"></script>
+      <script src="../../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> <script src="../../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script> <script src="../../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> <script src="../../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <script src="../../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script>
+      <script src="../../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../../static/dashboard/scripts/app.js?v=cb63d6447409374df653b8707287ee36"></script>
+      <script src="../../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>         
+      <script src="../../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>        
+      <script src="../../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script><script src="../../../../static/dashboard/scripts/ng-infinite-scroll.min.js?v=299bcea502c681c68093eb86f8c1bccf"></script> 
+            <script src="../../../static/dashboard/scripts/moment.min.js?v=18338685047bb998815d0fce225665f4"></script> 
+
+      <!---crop image---->
+      <script src="../../../static/dashboard/scripts/jquery.cropit.js?v=b37d29875ced18ede72940fb6b0fba52"></script>
+      <!--UI style---->
+      <link rel="stylesheet" href="../../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+         <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+   </head>
+   <body ng-app="yara" ng-controller="EventSponsorController" class="overflow-body01">
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      {%verbatim%}
+      <div id="container" class="wrap01">
+         <!---header-->
+         <div ng-include-template="/kit_header"></div>
+         <!----end header---->
+         <div class="col-md-12 nav nav-tabs-coll " ng-show="createSp">
+            <div class="col-md-1 col-md-offset-1 pulse-button-coll text-hover"  ng-click="createSp=false;countmails=false;invalidMail=false;invalidSPname=false; cancelscroll()">Cancel</div>
+         </div>
+         <div class="col-md-12 gp-width01 text-center" ng-if="SPdata.length==0 && !createSp">
+            <div class="col-md-6 col-md-offset-3 gp-width-not">
+               <div class="gp-Name" >No Sponsors Available</div>
+               <div class=" gp-blue text-hover space-top20 cursor-def"  ng-if="!currentval.is_event_over"><a class="cursor-poi text-hover" ng-click="changeSP('create','')">Add Sponsor</a></div>
+            </div>
+         </div>
+         <div class="container height-top" >
+            <div class="row">
+               <div  ng-init="createSp=false">
+                  <div class="col-md-12 " >
+                     <!-- div-fix -->
+                     <div ng-show="!createSp" >
+                        <div class="col-md-12">
+                           <div class="col-md-9">
+                              <div class="list-group ticket-top-btn">
+                              <div class="z-index8" ng-hide="SPdata.length<5">
+                                 <!-- ng-hide="SPdata.length<5" -->
+                                 <input type="search" class="inputbox hasclear position-absolute z-index8" ng-model="sponsersearch" maxlength="100" placeholder="Search" >
+                                    <img src="../../../static/dashboard/images/close-search.png" ng-click="sponsersearch=''" class="clearer position-close z-index8">
+                              </div><br/><br/><br/>
+                                 <div class="list-group" >
+                                    <div class="row">
+                                       <ul class="list-group">
+                                          <!-- <div class="col-md-12 gp-width01 text-center" ng-if="SPdata.length==0">
+                                             <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                               <div class="gp-Name" >No Sponsor Add Till Now</div>
+                                             </div>
+                                             </div> -->
+                                          <!-- <a  ng-if="SPdata.length==0" class="" style="position: fixed;">No Sponsor Add Till Now</a> -->
+                                          <div class="list-group-item-pulse wow animated  fadeInUp" data-wow-delay="0.1s" ng-repeat="s in SPdata|orderBy:sort|filter:sponsersearch" ng-style="SPlen=SPdata.length-1;($index==SPlen)?{'border-bottom':'none'}:''">
+                                             <div class="row">
+                                                <div class="col-md-10 container-remove-padding">
+                                                   <div class="col-md-2 col-md-offset-1 bw">
+                                                      <img ng-src="{{s.profile_picture | imagefilterQ1}}" class=" event_logo" > 
+                                                   </div>
+                                                   <div class="col-md-7 col-md-offset-2">
+                                                      <div class="eventName" ng-bind-html="s.name|highlight:sponsersearch"></div>
+                                                      <div class="event-font" ng-bind-html="s.sponsorship_type|highlight:sponsersearch"></div>
+                                                      <div class="event-font">Rank <span ng-bind-html="s.rank"></span></div>
+                                                      <div class="event-font" ng-bind-html="s.email|highlight:sponsersearch" ></div>
+                                                      <div class="event-font" ng-show="s.location!=''" ng-bind-html="s.location.location_name|highlight:sponsersearch">location_name</div>
+                                                      <div class="event-description" n>
+                                                         <pre ng-bind-html="s.description|highlight:sponsersearch">description</pre>
+                                                      </div>
+                                                     <br/>
+                                                      <div class="col-md-12 container-remove-padding">
+                                                         <div class="col-md-1 container-remove-padding social-hide" ng-repeat="so in s.social_providers" style="margin-right: 4%;">
+                                                            <div ng-if="so.social_provider=='Website' && so.link.length>8" class="  " >
+                                                               <a href="{{so.link}}" target="new">
+                                                                  <span class="fa fa-globe bootstrap-font-icon  bootstrap-font-icon-black icon-width company-website 1001"  id="1001" style="width:100%;" aria-hidden="true"></span>
+                                                               </a>
+                                                            </div>
+                                                            <div ng-if="so.social_provider=='Facebook' && so.link.length>25" class=" " >
+                                                               <a href="{{so.link}}" target="new">
+                                                                  <span class="fa fa-facebook bootstrap-font-icon  bootstrap-font-icon-black icon-width company-website 1003" id="1003" style="width:100%;" aria-hidden="true"></span>
+                                                               </a>
+                                                            </div>
+                                                            <div ng-if="so.social_provider=='Twitter' && so.link.length>20" class=" ">
+                                                               <a href="{{so.link}}" target="new">
+                                                                  <span class="fa fa-twitter bootstrap-font-icon  bootstrap-font-icon-black icon-width company-website 1002" id="1002" style="width:100%;" aria-hidden="true"></span>
+                                                               </a>
+                                                            </div>
+                                                            <div ng-if="so.social_provider=='LinkedIn' && so.link.length>25" class=" " >
+                                                               <a href="{{so.link}}" target="new">
+                                                                  <span class="fa fa-linkedin bootstrap-font-icon  bootstrap-font-icon-black icon-width company-website 1004"  id="1004" style="width:100%;"  aria-hidden="true"></span>
+                                                               </a>
+                                                            </div>
+                                                            <div ng-if="so.social_provider=='Pinterest' && so.link.length>26" class="  " >
+                                                               <a href="{{so.link}}" target="new">
+                                                                  <span class="fa fa-pinterest bootstrap-font-icon  bootstrap-font-icon-black icon-width company-website 1005"  id="1005" style="width:100%;" aria-hidden="true"></span>
+                                                               </a>
+                                                            </div>
+                                                            <div ng-if="so.social_provider=='Tumblr' && so.link.length>0" class=" " >
+                                                               <a href="https://{{so.link}}.tumblr.com" target="new">
+                                                                  <span class="fa fa-tumblr bootstrap-font-icon  bootstrap-font-icon-black icon-width company-website 1006" id="1006" style="width:100%;" aria-hidden="true"></span>
+                                                               </a>
+                                                            </div>
+                                                            <div ng-if="so.social_provider=='GitHub' && so.link.length>19" class=" ">
+                                                               <a href="{{so.link}}" target="new">
+                                                                  <span class="fa fa-github bootstrap-font-icon  bootstrap-font-icon-black icon-width company-website 1007" id="1007" style="width:100%;" aria-hidden="true"></span>
+                                                               </a>
+                                                            </div>
+                                                            <div ng-if="so.social_provider=='Instagram' && so.link.length>26" class=" " >
+                                                               <a href="{{so.link}}" target="new">
+                                                                  <span class="fa fa-instagram bootstrap-font-icon  bootstrap-font-icon-black icon-width company-website 1008"  id="1008" style="width:100%;"  aria-hidden="true"></span>
+                                                               </a>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                       <br/>
+                                                      <div class="col-md-12 container-remove-padding text-left border-top-bottom01 sponsor-status01" ng-if="s.preferences.length>0 && s.is_enabled">
+                                                         <span class="cursor-def">EMAIL</span>
+                                                      </div>
+                                                      <div class="col-md-12 border event-font"  style="z-index: 9;padding: 7px;" ng-repeat="accInfo in s.preferences" ng-if="s.preferences.length>0 && s.is_enabled">
+                                                               <div class="col-md-6 container-remove-padding">
+                                                                  <div class="blue-color font-weight400" ng-bind="accInfo.email">Email id</div>
+                                                               </div>
+                                                                <!-- <div class="col-md-4 container-remove-padding ng-hide">
+                                                                  <div class="blue-color" ng-if="accInfo.last_login!=null" ng-bind="setOffset(accInfo.last_login,currentval.eo) | timeAgo">last_login</div>
+                                                               </div> -->
+                                                              <!--  <div class="col-md-6 text-right01 container-remove-padding">
+                                                                  <div class="event-tck">
+                                                                     <span ng-if="accInfo.mail_sent && accInfo.mail_read" class=" btn-primary-black-collaborator font-weight400">Mail Read</span>
+                                                                      <span ng-if="accInfo.mail_sent && accInfo.mail_read==false" class="text-danger font-weight400">Mail Not Read</span>
+                                                                     <span ng-hide="accInfo.mail_sent==false&&accInfo.mail_read==false">|</span> <span ng-click="resendMail(accInfo.email,s.sponsor_code)" class=" btn-primary-black-collaborator font-weight400 cursor-poi text-hover">Resend Mail</span> </div>
+                                                               </div> -->
+                                                      </div>
+                                                      <br/>
+                                                   </div>
+                                                </div>
+                                                <div class="col-md-2 text-right01">
+                                                   <br/>
+                                                   <div class="btn01 btn-primary-black-collaborator text-hover text-right01" ng-click="changeSP('update',s.username,s.preference_opp_count,s.is_showcase_enabled)" ng-show="s.is_enabled" ng-if="!currentval.is_event_over">Edit</div>
+                                                   <br/>
+                                                   <!-- <div class="btn01 btn-primary-black-collaborator-red text-hover" ng-click="setrevoke(s.name,s.username, s.sponsor_code)"  data-toggle="modal" data-target="#myModal-sponsor" ng-if="!currentval.isAchieved">Revoke</div> -->
+                                                   <div class="margin-top20" ng-if="!currentval.is_event_over">
+                                                   <!-- <label class="switch01">
+                                                      <input type="checkbox" ng-model="sponsorswith" ng-checked="s.is_enabled" class="switch01-input" ng-true-value="true" ng-click="disablesponsor(s.sponsor_code, s.name, s.is_enabled, 'sp')" ng-false-value="false">
+                                                      <span class="switch01-label"></span>
+                                                      <span class="switch01-handle"></span>
+                                                   </label> -->
+                                                      <div class="text-danger pointer01 text-hover font-weight400" data-toggle="modal" data-target="#myModal-sponsor-enable" ng-show="s.is_enabled==true" ng-click="disablesponsor(s.sponsor_code, s.name, s.is_enabled, 'sp')">Disable</div>
+                                                      <div class="text-hover cursor-poi gp-blue font-weight400" data-toggle="modal" data-target="#myModal-sponsor-enable" ng-show="s.is_enabled==false" ng-click="disablesponsor(s.sponsor_code, s.name, s.is_enabled, 'sp')">Enable</div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class=" gp-width01 text-center"  ng-if="(SPdata|filter:searchonsponser).length==0" ng-hide="SPdata.length==0">
+                                              <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                                  <div class="gp-Name" >No results found</div>
+                                              </div>
+                                          </div>
+                                          <!-- <div ng-show="(SPdata|filter:searchonsponser).length==0"> No results for Search</div> -->
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <br/><br/>
+                           <div class="col-md-2 col-md-offset-1" ng-if="!(SPdata.length==0 && !createSp)" >
+                              <div class="kit-menu-padding gp-right-showcase-new" style="position:fixed;" >
+                                 <div  class="text-left ">
+                                    <div class="event-font-happy gp-blue text-hover" ng-click="changeSP('create','')" ng-if="!currentval.is_event_over">Add Sponsor</div>
+                                 </div><br/>
+                                 <div class="gp-event-font title-color-new " ng-if="SPdata.length>1">SORT OPTION</div>
+                                 <div class="gp-blue people-list-size cursor-def text-hover" ng-if="SPdata.length>1"><a class="text-hover cursor-poi" ng-click="sorting_list(0)" ng-class="{'gp-black':sort==='name'}">Name</a></div>
+                                 <div class="gp-blue people-list-size cursor-def text-hover"><a class="text-hover cursor-poi" ng-click="sorting_list(1)" ng-class="{'gp-black':sort==='rank'}" ng-if="SPdata.length>1">Rank</a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div ng-show="createSp">
+                        <div ng-show="createSp">
+                           <div class="col-md-12 text-center">
+                              <div class="nav-top">
+                                 <form accessible-form autocomplete="off" novalidate ng-submit="errorScroll(); (sponsorform.$valid  && imageSrc && invalidMail==false && duplicateMail==false && diplicte==false && invalidSPname==false) ? addAttendForm() : submitted=false;"  name="sponsorform" ng-init="submitted=true">
+                                    <div class="row">
+                                       <div class="col-md-4 col-md-offset-4">
+                                          <div class="nav-size-signup02 margin-top20">{{SPTitle}}</div>
+                                          <!-- <div class="sub-nav-size-signup">Sponsor's Information</div> --><br/>
+                                          <!-- <div class="nav-font01">Should be short. a cover image and dimesntions is a 
+                                             Every feature is meticulously crafted in way
+                                          </div> -->
+                                          <!-- capitalize-word="true" -->
+                                          <input type="text" class="inputbox auto-fill" ng-model="name" capitalize-word="true" ng-keydown="keyvalue=$event" placeholder="Sponsor Full Name" required name="name"  ng-change="checkSponsername()" id="sponsorname"  maxlength="50" ng-pattern="/\D{1}/" >
+                                          <span style="color:red;" ng-show="!submitted && sponsorform.name.$invalid && !sponsorform.name.hasFocus">
+                                          <span ng-show="sponsorform.name.$error.required" ng-bind="'yara.required' | i18n ">Required</span>
+                                          </span>
+                                          <span style="color:red;" ng-show="invalidSPname && !sponsorform.name.hasFocus" ng-bind="'yara.invalidsponser' | i18n">Invalid sponsor name</span>
+                                          <span style="color:red;" ng-show="sponsorform.name.$error.pattern" ng-bind="'yara.textrequired' | i18n">textrequired</span>
+                                          <br/>
+                                          <input type="text" class="inputbox" ng-model="SPSHType" placeholder="Sponsorship Type" ng-keydown="keyvalue=$event" capitalize-word="true" required name="SPType" ng-change="updatedisable=false">
+                                          <span style="color:red;" ng-show="!submitted && sponsorform.SPType.$invalid && !sponsorform.SPType.hasFocus" ng-pattern="/\D{1}/">
+                                          <span ng-show="sponsorform.SPType.$error.required" ng-bind="'yara.required' | i18n ">Required</span>
+                                          </span>
+                                          <br/>                
+                                          <input type="text" class="inputbox" ng-model="rank" placeholder="Rank" name="rank" required is-number maxlength="3" ng-change="updatedisable=false">
+                                          <span style="color:red;" ng-show="!submitted  && sponsorform.rank.$invalid && !sponsorform.rank.hasFocus">
+                                          <span ng-show="sponsorform.rank.$error.required" ng-bind="'yara.required' | i18n ">Required</span>
+                                          </span>
+                                          <br/>
+                                          <!-- {{spMailList}} -->
+                                          <div class="col-md-12 container-remove-padding  text-center" ng-repeat="spM in spMailList">
+                                             <input type="email" ng-disabled="SPtype=='update'"  class="inputbox text-left margin-bottom20 auto-fill" placeholder="Sponsor Email"  ng-model="spM.mailSp"  ng-change="checkMail($index, spM.mailSp);invalidMail=false;dupemail()">
+                                             <!-- ng-change="checkTrackname()" -->
+                                             <div class="col-md-2 col-md-offset-10 text-center" style="margin-top: -45px;" >
+                                                <i class="fa fa-trash-o trash-icon" aria-hidden="true"  ng-click="removeEmail(spM,spMailList.indexOf(spM))" ></i>
+                                             </div>
+                                             <div  id="dupe" class="col-md-6 col-md-offset-3 text-center error-height sponsor-emailid-repeated" ng-show="duplicates[spMailList.indexOf(spM)]">
+                                                <div class="text-danger text-center"  ng-bind="'yara.duplicateEmail' | i18n">Duplicate mail</div>
+                                             </div>
+                                             <div class="col-md-6 col-md-offset-3 text-center error-height sponsor-emailid-repeated" ng-show="invalidmails{{$index}}">
+                                                <div class="text-danger text-center"  ng-bind="'yara.invalidEmail' | i18n">invalid mail</div>
+                                             </div>
+                                          </div>    
+                                          <div class="col-md-12 container-remove-padding text-center" ng-hide="spMailList.length>4 || defaultcode==10">
+                                             <input type="email" class="inputbox auto-fill" placeholder="Sponser Email" ng-model="spMail" name="emailx" id="sponserid" ng-change="invalidMail=false;spMail.length!=0 && validateMail(spMail) ? alter() :invalidMail=true; dupemail()">
+                                             <div class="col-md-2 col-md-offset-10 text-center" style="margin-top: -30px;" >
+                                                <!-- before active -->
+                                                <img ng-show="spMail.length==0 || diplicte || invalidMail" ng-if="spMailList.length<4" src="../../../../static/dashboard/images/add-delegate-gray.png?v=d68ed687926fd9ce38cb2d9de37ad7b6" width="80%">
+                                                <!-- after active-->
+                                                <img ng-hide="spMail.length==0 || spMailList.length>3 || diplicte || invalidMail" src="../../../../static/dashboard/images/add-delegate.png?v=8b3a96ca01dcfebad089f6c4e61a9bd7" width="80%" class="cursor-poi" ng-click="spMail.length!=0 && validateMail(spMail) ? addEmail(0) :invalidMail=true"> 
+                                             </div>
+                                          </div>
+                                          <div class="col-md-6 col-md-offset-3 text-center error-height">
+                                             <span class="text-danger text-center" ng-show="invalidMail && !sponsorform.emailx.hasFocus && spMail.length!=0" ng-bind="'yara.invalidEmail' | i18n"></span>
+                                             <span class="text-danger text-center" ng-show="countmails && !sponsorform.emailx.hasFocus" ng-bind="'yara.emailcount' | i18n"></span>
+                                             <span class="text-danger" ng-show="diplicte && !sponsorform.emailx.hasFocus && invalidMail==false"  ng-bind="'yara.duplicateEmail' | i18n"></span>
+                                             <!-- <div class="location-modified "  ng-show="trackdata.result!=1" ng-bind="trackdata.error"> Track already exists</div> -->
+                                             <!-- <div class="text-danger text-center" ng-show="!submitted && spMailList.length==0 ">
+                                                <span  ng-bind="'yara.required' | i18n">Required</span>
+                                             </div> -->
+                                          </div>
+
+                                          <!-- <input type="email" class="inputbox" placeholder="Person Email" ng-model="email" name="email" required validate-email> -->
+                                          <div class="col-md-12 text-danger text-center error-height" ng-show="!submitted && spMailList.length==0 && !sponsorform.emailx.hasFocus">
+                                          <span ng-hide="spMail.length!=0" ng-bind="'yara.required' | i18n">Required</span>
+                                          </div>
+                                          <div id="subtype_dropdown" class="col-md-12  dropdown signup_input subtype_dropdown border-vote-new"  style="margin:-4px 0 26px 0;">
+                                             <nav  class="primary_nav_wrap_div primary_nav_wrap">
+                                                <ul class="over01" >
+                                                   <li>
+                                                      <div  class="col-md-10 col-md-offset-1 text-left container-remove-padding vote-subtitle">
+                                                         <!-- <span  class="subtitle vote-subtitle sponsor-timezone-dropdown"  ng-style="((showTzlist | isEmpty) || showTzlist=='')?{'color':'#000'}:{'color'  :'#A9B1C6'}">Select location</span> -->
+                                                         <input stopccp type="text" id="menutitlesearch" placeholder="Stall Location (Optional)" class="inputbox-signup" autocomplete="off" name="spolocation" ng-model="spoLocation" ng-init="showLoclist=false" capitalize-word="true" ng-keydown="keyvalue=$event" ng-click="showLoclist=true" ng-change="locValidation(spoLocation)" ng-pattern="/\D{1}/">
+                                                      </div>
+                                                      <div class="col-md-1 container-remove-padding" ng-show="evtLoc.length>0">
+                                                         <img src="../../static/dashboard/images/arrow-down.png?v=5e51b404929f5b6be7d35478804ffb57" class="caret01 setup-timezone-arrow" style="float:left;">
+                                                      </div>
+                                                      <div class="col-md-12 text-danger text-center error-height" style="margin-top: 4px;" ng-show="isValidLoc">
+                                                               <span  ng-bind="'yara.invalidLocation' | i18n">invalidLocation</span>
+                                                      </div>
+                                                      <div class="col-md-12 text-danger text-center error-height" style="margin-top: 4px;" >
+                                                               <span  ng-show="sponsorform.spolocation.$error.pattern" ng-bind="'yara.textrequired' | i18n ">textrequired</span>
+                                                      </div>
+                                                      <ul class="font-names " style="margin-top:30px;" ng-if="showLoc&&showLoclist">
+                                                         <li ng-repeat="el in evtLoc|filter:spoLocation|orderBy" ><a ng-click="locationClick(el)" class="sponsor-timezone-dropdown" ng-show="el.location!=''">{{el.location}}</a></li>
+                                                      </ul>
+                                                   </li>
+                                                </ul>
+                                             </nav>
+                                          </div>
+                                          <!--  <input type="text" class="inputbox"  placeholder="Location At Venue" required>
+                                             <span style="color:red;" ng-show="!submitted  && sponsorform.email.$invalid">
+                                                 <span ng-show="sponsorform.email.$error.required">Required</span>
+                                             </span> -->
+                                          <br/>
+                                          <textarea class="textarea-input01" ng-model="desc" rows="1" name="desc"  placeholder="Description" ng-init="desc=''"  required  minlength="50" maxlength="500" style="min-height:26px;" ng-pattern="/\D{1}/" ng-change="updatedisable=false"></textarea>
+                                          <hr/>
+                                          <span style="color:red;" ng-show="!submitted && sponsorform.desc.$invalid && !sponsorform.desc.hasFocus">
+                                         
+                                          <span ng-show="sponsorform.desc.$error.required" ng-bind="'yara.required' | i18n ">Required</span>
+                                          <span ng-show="sponsorform.desc.$error.minlength" ng-bind="'yara.descMinLenght' | i18n:['50','500'] ">Description should be 50 to 500 characters long</span>
+                                          </span>
+                                          <span class="text-danger" ng-show="sponsorform.desc.$error.pattern" ng-bind="'yara.textrequired' | i18n ">Required</span>
+                                          <br/>
+                                          <div class="sub-nav-size-signup ticket-top-btn">Upload Sponsor's Logo</div>
+                                          <!-- <div class="nav-font01">Logo specs and dimesntions is a <br/>Every feature is meticulously crafted in way</div> -->
+                                          <br/> 
+                                          <div ng-hide="imageSrc" class="logo-update" droplet  ng-model="cmpylogo">
+                                             <div class="sub-nav-size-signup icon">
+                                                <!-- <a  data-toggle="tooltip" data-placement="right" title="Upload&nbsp;the&nbsp;Sponsor&nbsp;Logo " >
+                                                <img src="../../static/dashboard/images/info-icon.png?v=a1de70e5d3fedcbe46e85d2d41df189a" width="4%" />
+                                                </a> -->
+                                             </div>
+                                             <div class="sub-heading-signup">
+                                                <img src="../../static/dashboard/images/image_upload_placeholder.png?v=7d539c1f656434ceaec3a5ebbe66836f" class="image_upload_placeholder"/>
+                                                <div class="sub-nav-size-invitation">Logo</div>
+                                                <div class="nav-font-invitation" id="errorImg">Drag and drop the file</div>
+                                                <div class="btn01 btn-primary-black-invitation black-signup01 text-hover">
+                                                   <span>Choose an Image</span>
+                                                   <!-- <input type="file" img-validate ng-file-select="onFileSelect($files)" placeholder="Upload" file-model="cmpylogo" required accept="image/*" name="cmpylogo" class=" " img-validate  ng-model="cmpylogo" > -->
+                                                   <droplet-upload-single ng-model="cmpylogo" accept="image/*" name="cmpylogo" ></droplet-upload-single>
+                                                </div>
+                                                <div class="nav-font-invitation01">Minimum resolution<br/>1024 <a class="cross01">X</a> 1024<br/>Aspect Ratio - 1:1<br/>Max size - 5 MB</div>
+                                             </div>
+                                          </div>
+                                          <br/>
+                                          <img ng-src="{{imageSrc}}" class="image-width" id="img-cmpylogo" ng-show="imageSrc"  />
+                                          <span style="color:red" >
+                                          <span ng-show="sponsorform.cmpylogo.$error.invalidimg">Invalid Image File Type</span>
+                                          <span ng-show="sponsorform.cmpylogo.$error.minsizeval">File size sholud not be Max Of 5MB</span>
+                                          <span ng-show="!sponsorform.cmpylogo.$error.minsizeval && sponsorform.cmpylogo.$error.ratioval">Aspect Ratio Should Be 1 : 1</span>
+                                          <span ng-show="!sponsorform.cmpylogo.$error.minsizeval && sponsorform.cmpylogo.$error.minDimension">Minimum resolution should be 1024 X 1024</span>
+                                          <span ng-show="!submitted && !imageSrc">Required</span>
+                                          </span>
+                                          <br/>
+                                          <div class="col-md-12 signup_margin">
+                                             <div class="col-md-6 ">
+                                                <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in cmpylogo.getFiles(cmpylogo.FILE_TYPES.VALID)" ng-click="model.deleteFile()" ng-show="SPtype!='update'">
+                                                   <span>Remove</span>
+                                                </div>
+                                                <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-show="SPtype=='update'" ng-click="imageSrc=restImage">
+                                                   <span>Reset</span>
+                                                </div>
+                                             </div>
+                                             <div class="col-md-6 ">
+                                                <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in cmpylogo.getFiles(cmpylogo.FILE_TYPES.VALID)" ng-show="SPtype!='update'">
+                                                   <span ng-click="updatedisable=false">Change</span>
+                                                   <droplet-upload-single ng-model="cmpylogo" accept="image/*" name="cmpylogo1" ></droplet-upload-single>
+                                                </div>
+                                                <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-show="SPtype=='update'">
+                                                   <span>Change</span>
+                                                   <droplet-upload-single ng-model="cmpylogo" accept="image/*" name="cmpylogo2" ></droplet-upload-single>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <!--   <br />
+                                             <div ng-hide="imageSrc" class="logo-update">
+                                             <div class="sub-nav-size-signup icon">
+                                                 <a href="" data-toggle="tooltip" data-placement="left" title="Upload Logo " >
+                                             
+                                                 <img src="../../../../static/dashboard/images/info-icon.png" width="4%"  />
+                                             
+                                                 </a>
+                                                 
+                                             </div>
+                                             <div class="sub-heading-logo" >
+                                             <div class="sub-nav-size-signup">Logo</div>
+                                             <div class="nav-font01">Minimum Size<br/>1024*1024<br/>Aspect Ratio:1:1</div>
+                                             </div>
+                                             </div><br/>
+                                             <img ng-src="{{imageSrc}}" class="image-width" id="img-cmpylogo" ng-show="imageSrc"  />
+                                              <span style="color:red" >
+                                                <span ng-show="sponsorform.cmpylogo.$error.invalidimg">Invalid Image File Type</span>
+                                                <span ng-show="sponsorform.cmpylogo.$error.minsizeval">File size sholud not be Max Of 5MB</span>
+                                                <span ng-show="!sponsorform.cmpylogo.$error.minsizeval && sponsorform.cmpylogo.$error.ratioval">Aspect Ratio Should Be 1 : 1</span>
+                                                <span ng-show="!sponsorform.cmpylogo.$error.minsizeval && sponsorform.cmpylogo.$error.minDimension">Minimum Size 1024 * 1024</span>
+                                                <span ng-show="!submitted && sponsorform.cmpylogo.$error.required">Company Logo required</span>
+                                             </span>
+                                             <br/>
+                                             <div class="btn01 btn-primary-black-signup01 black-signup01">
+                                             <span>Upload</span>
+                                             <input type="file" img-validate ng-file-select="onFileSelect($files)" placeholder="Upload" file-model="cmpylogo" accept="image/*" name="cmpylogo" class=" "  ng-model="cmpylogo" ng-required="imgrequired" ng-init="imgrequired=true">
+                                             </div> --><br/>
+                                          
+                                          <div class="col-md-12 container-remove-padding">
+                                             <div class="sub-nav-size-signup">Social</div>
+                                             <div class="nav-font01">Add Sponsor's Social (Optional)
+                                             </div>
+                                          </div>
+                                          <div class="col-lg-3">
+                                             <span class="fa fa-globe bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 001" data-toggle="modal" data-target="#myModal-social" id="001" ng-click="social_type='company-website'" data-container="body" data-toggle="" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." aria-hidden="true"></span>
+                                          </div>
+                                          <div class="col-lg-3" > <span class="fa fa-twitter bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 002" data-toggle="modal" data-target="#myModal-social" id="002" ng-click="social_type='twitter'"  aria-hidden="true"></span></div>
+                                          <div class="col-lg-3"><span class="fa fa-facebook bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 003" data-toggle="modal" data-target="#myModal-social" id="003" ng-click="social_type='facebook'" aria-hidden="true"></span></div>
+                                          <div class="col-lg-3"><span class="fa fa-linkedin bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 004" data-toggle="modal" data-target="#myModal-social" id="004" ng-click="social_type='linkedin'"  aria-hidden="true"></span><br/><br/></div>
+                                          <div class="col-lg-3"><span class="fa fa-pinterest bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 005" data-toggle="modal" data-target="#myModal-social" id="005" ng-click="social_type='pinterest'"  aria-hidden="true"></span></div>
+                                          <div class="col-lg-3"><span class="fa fa-tumblr bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 006" data-toggle="modal" data-target="#myModal-social" id="006" ng-click="social_type='tumblr'"  aria-hidden="true"></span></div>
+                                          <div class="col-lg-3"><span class="fa fa-github bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 007" data-toggle="modal" data-target="#myModal-social" id="007" ng-click="social_type='git-hub'"  aria-hidden="true"></span></div>
+                                          <div class="col-lg-3"><span class="fa fa-instagram bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 008" data-toggle="modal" data-target="#myModal-social" id="008" ng-click="social_type='instagram'"  aria-hidden="true"></span><br/><br/><br/><br/><br/></div>
+                                          <!-- Social Icons Modal Window -->
+                                          <div class="modal fade" id="myModal-social" tabindex="-1" role="dialog" data-backdrop="static"  aria-labelledby="myModalLabel">
+                                             <div class="modal-dialog" role="document" style="margin-top:15%;">
+                                                <div class="modal-content">
+                                                   <div class="modal-header-signup2">
+                                                      <h4 class="modal-title text-left signup2-created" id="myModalLabel" >Add Social</h4>
+                                                   </div>
+                                                   <div class="modal-body-account">
+                                                      <!-- <div ng-show="social_type=='company-website'">
+                                                         <div class="text-left">Website</div>
+                                                         <input type="text" ng-model="Tcmpyweb" name="cmpyweb"  class="inputbox-signup2" maxlength="50" >
+                                                         <div class="border-top-web"></div>
+                                                         <span style="color:red;" ng-show="sponsorform.cmpyweb.$dirty && sponsorform.cmpyweb.$invalid ">
+                                                             <span ng-show="sponsorform.cmpyweb.$error.required">Company Website Required</span>
+                                                         </span>
+                                                         </div> -->
+                                                      <div ng-show="social_type=='company-website'">
+                                                         <div class="text-left account_font">Website</div>
+                                                         <input  type="text" ng-model="Tcmpyweb" name="cmpyweb" placeholder="http://" class="inputbox-signup2 auto-fill" maxlength="100" id="company-website_id" web-url>
+                                                         <div class="border-top-web01"></div>
+                                                         <span style="color:red;" ng-show="sponsorform.cmpyweb.$dirty && sponsorform.cmpyweb.$invalid ">
+                                                         <span ng-show="sponsorform.cmpyweb.$error.required">Company Website Required</span>
+                                                         </span>
+                                                      </div>
+                                                      <div ng-show="social_type=='facebook'">
+                                                         <div class="text-left account_font">Facebook</div>
+                                                         <input type="text" ng-model="Tcmpyfb" name="cmpyfb"  fb-url class="inputbox-signup2 auto-fill"  maxlength="50" id="facebook_id">
+                                                         <div class="border-top-signup2"></div>
+                                                         <span style="color:red;" ng-show="sponsorform.cmpyfb.$dirty && sponsorform.cmpyfb.$invalid ">
+                                                         <span ng-show="sponsorform.cmpyfb.$error.required">Company Facebook Required</span>
+                                                         </span>
+                                                      </div>
+                                                      <div ng-show="social_type=='twitter'">
+                                                         <div class="text-left account_font">Twitter</div>
+                                                         <input type="text" ng-model="Tcmpytwitter" name="cmpytwitter" twitter-url class="inputbox-signup2 auto-fill" maxlength="50" id="twitter_id">
+                                                         <div class="border-top-twitter"></div>
+                                                         <span style="color:red;" ng-show="sponsorform.cmpytwitter.$dirty && sponsorform.cmpytwitter.$invalid ">
+                                                         <span ng-show="sponsorform.cmpytwitter.$error.required">Company Twitter Required</span>
+                                                         </span>
+                                                      </div>
+                                                      <div ng-show="social_type=='linkedin'">
+                                                         <div class="text-left account_font">LinkedIn</div>
+                                                         <input type="text" ng-model="Tcmpylink" name="cmpylink" linkedin-url class="inputbox-signup2 auto-fill" maxlength="50" id="linkedin_id">
+                                                         <div class="border-top-linkedin"></div>
+                                                         <span style="color:red;" ng-show="sponsorform.cmpylink.$dirty && sponsorform.cmpylink.$invalid ">
+                                                         <span ng-show="sponsorform.cmpylink.$error.required">Company LinkedIn Required</span>
+                                                         </span>
+                                                      </div>
+                                                      <div ng-show="social_type=='pinterest'">
+                                                         <div class="text-left account_font">Pinterest</div>
+                                                         <input type="text" ng-model="Tcmpypinterest" name="cmpypinterest" pinterest-url  class="inputbox-signup2 auto-fill" id="pinterest_id">
+                                                         <div class="border-top-pint"></div>
+                                                         <span style="color:red;" ng-show="sponsorform.cmpypinterest.$dirty && sponsorform.cmpypinterest.$invalid ">
+                                                         <span ng-show="sponsorform.cmpypinterest.$error.required">Company Pinterest Required</span>
+                                                         </span>
+                                                      </div>
+                                                      <div ng-show="social_type=='git-hub'">
+                                                         <div class="text-left account_font">Git-Hub</div>
+                                                         <input type="text" ng-model="Tcmpygithub" name="cmpygithub"  github-url class="inputbox-signup2" id="git-hub_id">
+                                                         <div class="border-top-git"></div>
+                                                         <span style="color:red;" ng-show="sponsorform.cmpygithub.$dirty && sponsorform.cmpygithub.$invalid ">
+                                                         <span ng-show="sponsorform.cmpygithub.$error.required">Company Git-Hub Required</span>
+                                                         </span>
+                                                      </div>
+                                                      <!-- <div ng-show="social_type=='tumblr'">
+                                                         <div class="text-left account_font">Tumblr</div>
+                                                         <input type="text" ng-model="Tcmpytumblr" name="cmpytumblr"  class="inputbox-signup2">
+                                                         <div class="border-top-web"></div>
+                                                         <span style="color:red;" ng-show="sponsorform.cmpytumblr.$dirty && sponsorform.cmpytumblr.$invalid ">
+                                                            <span ng-show="sponsorform.cmpytumblr.$error.required">Company Tumblr Required</span>
+                                                         </span>
+                                                         </div> -->
+                                                      <div ng-show="social_type=='tumblr'">
+                                                         <div class="text-left account_font">Tumblr</div>
+                                                         <div class="col-md-12">
+                                                            <!--  <div class="resizing-input">
+                                                               <span>https://</span>
+                                                               <span id="spantext" style="display:none;">https://</span>
+                                                               <input type="text" ng-model="Tcmpytumblr" placeholder="Tumblr Url" tumblr-url class="inputbox-account"  name="cmpytumblr" placeholder=""  class="" id="tumblr_id"/>
+                                                               <span>.tumblr.com</span>
+                                                               </div> -->
+                                                            <div class="resizing-input01">
+                                                               <span id="spantext">https://</span>
+                                                               <input id="tumblr_id" type="text" ng-model="Tcmpytumblr" placeholder="Tumblr Url" tumblr-url class="inputbox-account"  name="cmpytumblr"/> 
+                                                               <span>.tumblr.com</span>
+                                                            </div>
+                                                         </div>
+                                                         <!-- <div class="border-top-web"></div> -->
+                                                         <span style="color:red;" ng-show="sponsorform.cmpytumblr.$dirty && sponsorform.cmpytumblr.$invalid ">
+                                                         <span ng-show="sponsorform.cmpytumblr.$error.required">Company Tumblr Required</span>
+                                                         </span>
+                                                      </div>
+                                                      <div ng-show="social_type=='instagram'">
+                                                         <div class="text-left account_font">Instagram</div>
+                                                         <input type="text" ng-model="Tcmpyinstagram" name="cmpyinstagram" instagram-url class="inputbox-signup2 auto-fill" id="instagram_id">
+                                                         <div class="border-top-signup2"></div>
+                                                         <span style="color:red;" ng-show="sponsorform.cmpyinstagram.$dirty && sponsorform.cmpyinstagram.$invalid ">
+                                                         <span ng-show="sponsorform.cmpyinstagram.$error.required">Company Instagram Required</span>
+                                                         </span>
+                                                      </div>
+                                                   </div>
+                                                   <div class="row" style="margin:0 15px;">
+                                                      <div class="col-md-12 border-top">
+                                                         <div class="col-md-8">&nbsp;</div>
+                                                         <div class="col-md-2 pulse-margin"><button type="button" data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Cancel</button></div>
+                                                         <div class="col-md-2"><button type="button" class="btn01 btn-primary-black-pulse01 text-hover " ng-click="saveSocials()" ng-class="{'gray-color':!isSocialSave}" ng-disabled="!isSocialSave">Add</button></div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          </div>
+                                          <!---modal window End- -->
+                                          <div class="col-md-6 col-md-offset-3">
+                                          <div class="col-md-12 session-bg-color margin-bottom80">
+                                             <div class="col-md-8 text-left session-border-white">
+                                                <div class="gp-Name" >ShowCase Access</div><!-- {{showcaseEnable==1?'Enable':'Disable'}} -->
+                                                <div class="session-gray">Enable this to send a mail with ShowCase access permission to the given Email IDs<br/>&nbsp;
+                                                </div>
+                                             </div>
+                                             <div class="col-md-4 session-check">
+                                                 <label class="switch01">
+                                                      <input type="checkbox" ng-model="showcaseEnable" ng-checked="showcaseEnable" ng-true-value="1"  ng-false-value="0" class="switch01-input" ng-change="updatedisable=false">
+                                                      <span class="switch01-label" ></span><!-- data-on="On" data-off="Off"-->
+                                                      <span class="switch01-handle"></span>
+                                                </label>
+                                             </div>
+                                          </div>
+                                          <br/>
+                                          <div class="col-md-12">
+                                             <span style="color:red;" ng-show="error" ng-init="error=false">{{errormsg}}</span>
+                                          </div>
+                                         </div>
+                                    </div>
+                                          <div class="col-md-4 col-md-offset-4">
+                                             <button type="submit" class="btn btn-primary-black-signup01" ng-disabled="updatedisable" >{{btntxt}}</button>
+                                          </div>
+                                          <br/><br/><br/><br/>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--  Resend mail Modal window -->
+         <div class="modal fade" id="modal-resendMail" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Resend Mail</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form  novalidate >
+                           <div class="row">
+                              <div class="col-md-12 bg-collaborator" ng-bind="'yara.resend'|i18n:(emailid)">
+                                 Mail has been sent to amogh@voris.co.in successfully.
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-10">
+                                    <div  class=" text-danger">&nbsp;</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--  Image  Invalid Modal window -->
+         <div class="modal fade" id="myModal-invalid" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Invalid Extension</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form  novalidate >
+                           <div class="row">
+                              <div class="col-md-12 bg-collaborator" ng-bind="'yara.invalidImg'| i18n">
+                                 Invalid Extension Choose jpg, jpeg and png format.
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-10">
+                                    <div  class=" text-danger">&nbsp;</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Upload Cover image Modal window -->
+         <!-- <div class="modal fade bg-color010" id="myModal-sponsor" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog top-collaborator" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Revoke</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form novalidate >
+                           <div class="row">
+                              <div class="col-md-12 bg-collaborator" >
+                                 Are you sure to revoke ?
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-8">
+                                    <div  class=" text-danger">&nbsp;</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Cancel</div>
+                                 </div>
+                                 <div class="col-md-2">
+                                    <div  class="btn01 btn-primary-black-pulse01-red text-hover" ng-click="delSponsor()">Revoke</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> -->
+         <!----crop image---->
+         <div class="modal fade" id="crop-image" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Crop</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form novalidate  >
+                           <div class="row">
+                              <div class="col-md-12 bg-general crop-popup" >
+                                 <div class="image-editor crop-popup">
+                                    <input type="file" class="cropit-image-input">
+                                    <div class="cropit-preview"></div>
+                                    <div class="image-size-label">
+                                    </div>
+                                    <div class="crop-bottom"></div>
+                                    <div class="slider-wrapper">
+                                       <input type="range" class="cropit-image-zoom-input custom" min="0" max="1" step="0.01">
+                                    </div>
+                                    <div class="crop-top"></div>
+                                 </div>
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-8">
+                                    <div  class=" text-danger">&nbsp; </div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div class="btn01 btn-primary-black-pulse01 text-hover" data-dismiss="modal" aria-label="Close"  ng-click="resetCropImg()">Cancel</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  class="btn01 btn-primary-black-pulse01 text-hover" ng-click="setCropImg()">Crop</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+          <!-- Delete Modal window -->
+         <div class="modal fade bg-color010 " id="myModal-sponsor" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top">
+                     <h4 class="modal-title modal-heading" id="myModalLabel">Mail send</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form novalidate  >
+                           <div class="row">
+                              <div class="margin-top50-bottom70">
+                              <div class="col-md-12" ng-bind="'yara.mailSended'| i18n">When enabled mail</div>
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-10">
+                                    <div class=" text-danger">&nbsp; </div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</div>
+                                 </div>
+                                 <!-- enabling disabling delegates -->
+                                 <!-- <div class="col-md-2">
+                                    <div  class="btn01 text-hover" ng-class="per=='enable'?'btn-primary-black-pulse01':'btn-primary-black-pulse01-red'" ng-click="DisSponser()">{{per|capitalize}}</div>
+                                 </div> -->
+                                <!--  <div class="col-md-2">
+                                    <div  class="btn01 btn-primary-black-pulse01 text-hover" >Enable</div>
+                                 </div> -->
+                                 <!-- End enabling disabling delegates -->
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Enable disable model -->
+         <div class="modal fade bg-color010 " id="myModal-sponsor-enable" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top">
+                     <h4 class="modal-title modal-heading" id="myModalLabel">{{per|capitalize}}</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form novalidate  >
+                           <div class="row">
+                              <div class="margin-top50-bottom70">
+                              <div class="col-md-12" ng-bind="'yara.disable'| i18n:(sponame)" ng-show="per=='disable'">When enabled mail</div>
+                              <div class="col-md-12" ng-bind="'yara.enable'| i18n:(sponame)" ng-show="per=='enable'">When enabled mail</div>
+                              <div class="error-height">
+                                 <span class="text-danger" ng-show="associate" ng-bind="associatesponsor">error message</span>
+                              </div>
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-8 error-height">&nbsp;
+                                 </div>
+                                 <div class="col-md-2 col-md-offset-2 container-remove-padding" ng-if="associate">
+                                       <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover" ng-click="associate=false">OK</div>
+                                 </div>
+                                 <div ng-if="!associate" >
+                                    <div class="col-md-2 pulse-margin">
+                                       <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover" ng-click="associate=false">Close</div>
+                                    </div>
+                                    <!-- enabling disabling delegates -->
+                                    <div class="col-md-2">
+                                       <div  class="btn01 text-hover" ng-class="per=='enable'?'btn-primary-black-pulse01':'btn-primary-black-pulse01-red'" ng-click="DisSponser()">{{per|capitalize}}</div>
+                                    </div>
+                                 </div>
+                                 <!-- <div class="col-md-2">
+                                    <div  class="btn01 btn-primary-black-pulse01 text-hover" >Enable</div>
+                                 </div> -->
+                                 <!-- End enabling disabling delegates -->
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div ng-include-template="/event_footer" copyright="true" id="footer123"></div>
+         <!-- ng-class="{'navbar-fixed-bottom':(SPdata.length<=2 && !createSp)}" -->
+      </div>
+      <script src="../../../static/dashboard/scripts/wow.min.js"></script>
+      <script>
+          new WOW().init();
+      </script>
+      <script type="text/javascript">
+         $(".hasclear").keyup(function () {
+           var t = $(this);
+           t.next('img').toggle(Boolean(t.val()));
+         });
+
+         $(".clearer").hide($(this).prev('input').val());
+
+         $(".clearer").click(function () {
+           // $(this).prev('input').val('').focus();
+           $(this).hide();
+         });
+         </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+          function resizediv(){
+           var h =$(window).height();
+           $('.height-top').css("height",h+"px");
+          } 
+          resizediv();
+          $(window).resize(function(){
+           resizediv();
+          });
+         });
+      </script>
+      <script>
+         // $(document).ready(function(){
+         //  $('#loading').hide();
+         //  $('#container').fadeIn();
+         // });
+      </script>
+      <script>
+         window.setTimeout( function() {
+             $("textarea").height( $("textarea")[0].scrollHeight );
+         }, 1);
+      </script>
+      <!-- <script>
+         function h(e) {
+             $(e).css({'height':'auto','overflow-y':'hidden'}).height(e.scrollHeight);
+         }
+         $('textarea').each(function () {
+           h(this);
+         }).on('input', function () {
+           h(this);
+         });
+      </script> -->
+      <script>
+         $(document).ready(function(){
+             $('[data-toggle="tooltip"]').tooltip();   
+         });
+      </script>
+      <script>
+         $(document).ready(function(){
+          $(document).bind("DOMSubtreeModified", function() {
+            
+           $('.social-hide').each(function () {
+             if($(this).children().length<=0)
+               $(this).hide();
+             else
+               $(this).show();
+              // "this" is the current element in the loop
+           });
+          });
+         });
+      </script>
+      <script type="text/javascript">
+         $.fn.textWidth = function(text, font) {
+           if (!$.fn.textWidth.fakeEl) $.fn.textWidth.fakeEl =      $('<span>').hide().appendTo(document.body);
+           $.fn.textWidth.fakeEl.text(text || this.val() || this.text()).css('font', font || this.css('font'));
+           return $.fn.textWidth.fakeEl.width(); 
+         };
+         
+         $('#tumblr_id, #tumblr_id2, #tumblr_id3').on('input', function() {
+           var padding = 10; //Works as a minimum width
+           var valWidth = ($(this).textWidth() + padding) + 'px';
+           $('#'+this.id+'-width').html(valWidth);
+           $('#tumblr_id').css('width', valWidth);
+         }).trigger('input');
+         
+         $('#tumblr_id4-width').html($.fn.textWidth('Pass string without element', '13px arial') + 'px');
+      </script>
+      <script>
+         $(document).ready(function () {
+             var $inputs = $('.resizing-input');
+         
+             // Resize based on text if text.length > 0
+             // Otherwise resize based on the placeholder
+             function resizeForText(text) {
+                 var $this = $(this);
+                 if (!text.trim()) {
+                     text = $this.attr('placeholder').trim();
+                 }
+                 var $span = $this.parent().find('#spantext');
+                 $span.text(text);
+                 var $inputSize = $span.width();
+                 $this.css("width", $inputSize);
+             }
+         
+             $inputs.find('input').keypress(function (e) {
+                 if (e.which && e.charCode) {
+                     var c = String.fromCharCode(e.keyCode | e.charCode);
+                     var $this = $(this);
+                     resizeForText.call($this, $this.val() + c);
+                 }
+             });
+         
+             // Backspace event only fires for keyup
+             $inputs.find('input').keyup(function (e) { 
+                 if (e.keyCode === 8 || e.keyCode === 46) {
+                     resizeForText.call($(this), $(this).val());
+                 }
+             });
+         
+             $inputs.find('input').each(function () {
+                 var $this = $(this);
+                 resizeForText.call($this, $this.val())
+             });
+         });
+      </script>
+      <script type="text/javascript">
+         $(document).on('click','.subtype_dropdown .primary_nav_wrap ul li',function(){
+            $(".subtype_dropdown img").removeClass();
+            $(".subtype_dropdown img").addClass('caret02'); 
+            $( ".subtype_dropdown .primary_nav_wrap ul li ul").css({
+              display:'list-item',
+              color: '#000',
+              'z-index':100
+            });
+         });
+         $(document).on('click',function(event){
+          var $trigger = $(".subtype_dropdown .primary_nav_wrap ul li");
+              if($trigger !== event.target && !$trigger.has(event.target).length && $(".subtitlesearch").css('display')!='none'){
+                 $( ".subtype_dropdown .primary_nav_wrap ul li ul").hide({
+                display:'none',
+                color: 'none',
+                background: '#fff',
+                'z-index':100
+            });
+               $(".subtype_dropdown img").removeClass();
+               $(".subtype_dropdown img").addClass('caret01'); 
+              }   
+         });
+      </script>
+      {%endverbatim%}
+   </body>
+</html>

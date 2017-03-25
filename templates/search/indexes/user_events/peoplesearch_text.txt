@@ -1,0 +1,17 @@
+{{ object.event.event_code }}
+{{ object.ticket.pk }}
+{{ object.user.pk }}
+{{ object.email }}
+{{ object.invited_email }}
+{{ object.user_event_status }}
+{{ object.delegate_type }}
+{{ object.designation }}
+{{ object.gender }}
+{{ object.first_name }}
+{{ object.middle_name }}
+{{ object.last_name }}
+{{ object.full_name }}
+{{ object.company_name }}
+{{ object.event_sp_delegate.pk }}
+{{ object.event_delegate.pk }}
+

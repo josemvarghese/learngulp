@@ -1,0 +1,605 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <link rel="stylesheet" href="../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <link rel="stylesheet" href="../../static/dashboard/css/customscrollbar.min.css?v=b72d1ff03f5d4322fda530affc8628fd">
+      <link rel="stylesheet" href="../../../static/dashboard/css/animate.css">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyCV9Dg0e7cZQv4kV50S9eDUFQdIUCSN7RM"></script>
+      <script src="../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> <script src="../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script> <script src="../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> <script src="../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <!--  <script src="../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script> -->
+      <script src="../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <script src="../../static/dashboard/scripts/customscrollbar.min.js?v=ea9f31b6e94c00a389c0f19bb9a876f2"></script>
+      <link rel="stylesheet" href="../../../static/dashboard/css/angular-material.min.css?v=324b61820a354c69f275793da4516197">
+      <link rel="stylesheet" href="../../../static/dashboard/css/mdPickers.min.css?v=e7e0022313e47ca44e50fa9b895d77c0">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script src="../../../static/dashboard/scripts/moment.min.js?v=18338685047bb998815d0fce225665f4"></script> 
+      <script src="../../../static/dashboard/scripts/angular-animate.min.js?v=b5cd239b1ae96c9917a03372000dafe8"></script>
+      <script src="../../../static/dashboard/scripts/angular-aria.min.js?v=7f3a52851887f3f03822c9159f8f46ff"></script> 
+      <script src="../../../static/dashboard/scripts/angular-material.min.js?v=1bf69d5d0bcb732e4fa0734e5bd04232"></script> 
+      <script src="../../../static/dashboard/scripts/mdPickers.js?v=d41e5980049501aec6cdf0bc90d81efd"></script>  
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../static/dashboard/scripts/app1.js?v=57fdba9d671ec2f607b71bdad449f34d"></script>
+      <script src="../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>         
+      <script src="../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>         
+      <script src="../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>
+      <script src="../../../static/dashboard/scripts/ng-map.js?v=32f203d7a258c29ca92dd8eea6ad08df"></script>
+      <!---crop image---->
+      <script src="../../../static/dashboard/scripts/jquery.cropit.js?v=b37d29875ced18ede72940fb6b0fba52"></script>
+      <!--UI style---->
+      <link rel="stylesheet" href="../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+         <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+      <script src="../../../static/dashboard/scripts/angular-material-datetimepicker.js?v=14468359f8a6e7b9efb7ae41163bee11"></script>
+      <link rel="stylesheet" href="../../../static/dashboard/css/material-datetimepicker.min.css?v=841697f789974da72ac1053a7aeb3f4f">
+      <style>
+         body {
+         color:#A9A9A9;
+         }
+         li.selected {
+         color: #555;
+         }
+      </style>
+   </head>
+   <body ng-app="yara" ng-controller="EventCouponController" class="overflow-body01" >
+      {%verbatim%}
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      <div id="container" class="wrap01">
+         <!---header-->
+         <div ng-include-template="/kit_header"></div>
+         <!----end header---->
+         <div class="col-md-12 nav nav-tabs-coll" ng-show="add_custom || add_food">
+            <div class="col-md-1 col-md-offset-1 pulse-button-coll text-hover"   ng-click="(add_food)?add_food=false:add_custom=false;addcup()">Cancel</div>
+         </div>
+         <div class="container height-top" ng-hide="add_custom || add_food" ng-init="add_custom=false">
+            <div class="row">
+               <div class="col-md-12 text-center gp-right-showcase-new01 container-remove-padding min-h01">
+                  <div class="row">
+                     <div class="">
+                        <div class="col-md-12"  >
+                           <div class="col-md-10 tab-content ticket-top"  ><br/>
+                           <div class="col-md-12 border-bottom margin-bottom40" ng-hide="CUSTdata.length<5">
+                              <input type="search" class="inputbox hasclear position-absolute no-border background-transparent z-index9" maxlength="100" placeholder="Search" ng-model="cuponsearch"/><img src="../../../static/dashboard/images/close-search.png" class="clearer position-close z-index9" ng-click="cuponsearch=''"><br/><br/>
+                           </div>
+                              <div id="custom" class="tab-pane fade in active" ng-hide="add_custom " >
+                                 <div class="col-md-12 gp-width01 text-center"  ng-hide="CUSTdata.length>0" >
+                                    <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                       <div class="gp-Name" >No Custom Coupons added</div>
+                                       <br/>
+                                       <div class="event-font ">Custom coupon is accessible for selected invitees</div>
+                                       <br/>
+                                       <!-- ng-if="currentval.is_event_over==false" -->
+                                       <div class="col-md-12 pulse-button-coll text-hover cursor-def" ><a class="text-hover cursor-poi" ng-click="add_custom=true;addcup()">Add Custom Coupon</a></div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12  list-group-item02 adspace-bottom text-left"  style="cursor: auto;" ng-repeat="c in CUSTdata|filter:cuponsearch" >
+                                    <div class="col-md-12">
+                                       <div class="col-md-10 col-md-offset-1 black-color">
+                                          <br/>
+                                          <div class="event-coupon ">Date Added: {{setOffset(c.created_at,offsetEo)|date:'MMMM dd, yyyy'}}</div>
+                                          <div class="coupon-font" ng-bind-html="c.name|highlight:cuponsearch">Coupon Title</div>
+                                          <div class="event-coupon" ng-bind-html="c.description|highlight:cuponsearch">Coupon Description</div>
+                                          <br/>
+                                          <div class="event-coupon" ng-if="c.for_all" >To All</div>
+                                          <div class="event-coupon" ng-if="c.random!=null" >Random Coupons: {{c.random}}</div>
+                                          <div class="event-font font-wgt" ng-if="c.tickets.length>0 && c.tickets!=null">
+                                             Tickets: 
+                                             <ANY ng-repeat="t in c.tickets">
+                                                <ANY ng-if="$index!=0">,</ANY>
+                                                <span ng-repeat="tkt in ticketlist" ng-if="tkt.ticket_code==t">
+                                                {{tkt.name}}</span>
+                                             </ANY>
+                                          </div>
+                                          <br/>
+                                           <div class="event-coupon" ng-if="c.coupon_type==1">Type: Stall Redeem Coupon</div>
+                                          <div class="event-coupon" ng-if="c.coupon_type==2">Type: Online Coupon</div>
+                                          <div class="event-coupon" ng-if="c.location!=null">Location: <span ng-bind-html="c.location.location_name|highlight:cuponsearch"></span></div>
+                                          <!-- <div class="event-coupon" ng-if="c.coupon_url!=null">Coupon URL:{{c.coupon_url}}</div> -->
+                                          <div class="event-coupon" ng-if="c.coupon_url_code!=null" ng-show="c.coupon_url_code!=''">Coupon Code: <span ng-bind-html="c.coupon_url_code|highlight:cuponsearch"></span></div>
+                                          <!-- <div class="event-coupon" >Delivery Time:</div> -->
+                                          <div class="event-coupon" >App Time Display: {{is_time_format_24?(setOffset(c.display_time,offsetEo)|date:'MMMM dd, yyyy HH:mm'):setOffset(c.display_time,offsetEo)|date:'MMMM dd, yyyy hh:mm a'}} </div>
+                                          <div class="event-coupon" ng-if="c.expiry_time!=null">App Expiration Time: {{is_time_format_24?(setOffset(c.expiry_time,offsetEo)|date:'MMMM dd, yyyy HH:mm'):setOffset(c.expiry_time,offsetEo)|date:'MMMM dd, yyyy hh:mm a'}} </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-12 ">
+                                       <div class="col-md-3 col-md-offset-8  text-right01"  ><a href="" class="gp-blue text-hover" ng-click="editCustomCoupon(c)" ng-if="c.is_delivered">Edit</a></div>
+                                       <div class="col-md-1" ><a href="" class="revoke-red text-hover" data-toggle="modal" data-target="#adspace-delete" ng-click="removeCouponModal(c.name,c.coupon_code)" ng-if="!currentval.is_event_over" >Revoke</a></div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div id="food" class="tab-pane fade " ng-hide="add_custom " >
+                                 <div class="col-md-12 gp-width01 text-center"   ng-hide="FDdate.length>0" >
+                                    <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                       <div class="gp-Name" >No Food Coupons</div>
+                                       <br/>
+                                       <div class="event-font ">Adding Booking channel will help users to direct buy ticket with YARA apps</div>
+                                       <br/>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12  list-group-item02 adspace-bottom text-left "  style="cursor: auto;" ng-repeat="c in FDdate">
+                                    <div class="col-md-12">
+                                       <div class="col-md-5 col-md-offset-1">
+                                          <br/>
+                                          <div class="event-coupon ">Date Added</div>
+                                          <div class="coupon-font">Dinner Coupon</div>
+                                          <br/>
+                                          <div class="event-coupon" >Dinner Break Sessions</div>
+                                          <div class="event-coupon" >Day1, Day2, Day3</div>
+                                          <br/>
+                                          <div class="event-coupon" >Delivery Time:</div>
+                                          <div class="event-coupon" >App Time Display:</div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-12 ">
+                                       <div class="col-md-3 col-md-offset-8  text-right01" ><a href="" class="gp-blue text-hover"  ng-click="ChannelType('update','')">Edit</a></div>
+                                       <div class="col-md-1 gp-blue " ><a href="" class="revoke-red text-hover" data-toggle="modal" data-target="#adspace-delete" ng-click="delChannel(name,code)" >Revoke</a></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-2"  ng-hide="tab=='Food' || CUSTdata.length<=0">
+                              <div class="gp-padding-people01 gp-right-showcase-new" style="position:fixed;" >
+                                 <div  class="text-left ">
+                                    <div class="col-md-12 validate-coupon container-remove-padding text-hover"  ng-click="add_custom=true; addcup()">Add Custom Coupon</div>                 
+                                    <div class="col-md-12  validate-coupon container-remove-padding text-hover" ><a href="/event/validate-coupon" class="text-hover">Validate Coupon</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 ticket-top-btn">&nbsp;</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container  container-remove-padding" ng-show="add_custom || add_food" style="margin-bottom:30px">
+            <br/>
+            <div ng-show="add_custom">
+               <form accessible-form novalidate name="CPform" ng-submit="errorScroll();(CPform.$invalid || (couponfor=='ticket' && Custtickets.length<=0) ||(couponfor=='users' && currentval.number_of_attendee < attende)||(selectedDayinfo==undefined|| selectedDayinfo==null||selectedDayinfo=='')||(isExpiry && (eDateInfo==undefined|| eDateInfo==null||eDateInfo==''))||(spoLocation==undefined && isOnlineCoupon==false)||(spoLocation!=undefined && isOnlineCoupon==false && isValidLoc) )? CustSubmit=true:CustCoupon()" ng-init="CustSubmit=false">
+                  <!-- coupon changes -->
+                  <div class="col-md-4 col-md-offset-4 top-all text-center margin-bottom80">
+                     <div class="gp-Name" >Select a Coupon Type</div>
+                     <br/>
+                     <div class="nav-font01">Online coupon can be accessed from anywhere, whereas the user should visit the event location to access stall redeemed coupon.
+                     </div>
+                     <div class="col-md-12 ticket-top" style="width:100%">
+                        <!-- Nav tabs -->
+                        <ul id="mytabs" class="nav list-security" role="tablist" >
+                           <li class="bg-color-newevent " ng-class="{'active':isOnlineCoupon==true}" ng-init="isOnlineCoupon=true">
+                              <a  role="tab" data-toggle="tab" ng-click="isOnlineCoupon=true">
+                              Online Coupon
+                              </a>
+                           </li>
+                           <li class="bg-color-newevent " ng-class="{'active':isOnlineCoupon==false}">
+                              <a  role="tab" data-toggle="tab" ng-click="isOnlineCoupon=false;urlvalid=false">
+                              Stall Redeem Coupon
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div ng-show ="isOnlineCoupon">
+                        <div  class="col-md-12 top-all dropdown signup_input subtype_dropdown border-coupon">
+                           <br/>
+                           <input type="text" class="inputbox text-center" ng-model="couponUrl" name="weburls" web-url ng-change="urlvalidation()"   placeholder="Coupon url" required> 
+                           <div class="error-height col-md-12 text-center">
+                           <span class="text-danger text-center" ng-show="urlvalid && mainurl &&!CPform.weburls.hasFocus">Invalid Url</span>
+                           </div>
+                           <textarea type="text" rows="1" class="input_boxtext-happy text-center" ng-model="couponCode" name="CPcode"   placeholder="Coupon Code" maxlength="100" style="min-height: 26px;"></textarea>
+                           <!--  <input type="text" class="inputbox text-center" ng-model="testUrl"  web-url  required  placeholder="Coupon url">   
+                              <br/>
+                              <span class="text-danger text-center" ng-show="CustSubmit && isOnlineCoupon && !CPform.couponurl.hasFocus && CPform.couponurl.$error.required" >Required</span>
+                              
+                              <textarea type="text" rows="1" class="inputbox text-center" ng-model="couponCode" name="CPcode"   placeholder="Coupon Code" maxlength="150" style="min-height: 26px;" required></textarea>
+                              <span class="text-danger text-center" ng-show="CustSubmit && isOnlineCoupon && !CPform.CPcode.hasFocus && CPform.CPcode.$error.required" >Required</span> -->
+                        </div>
+                     </div>
+                     <div ng-hide="isOnlineCoupon" id="locationid">
+                        <div id="subtype_dropdown" class="col-md-12 top-all dropdown signup_input subtype_dropdown border-coupon">
+                           <nav  class="primary_nav_wrap_div primary_nav_wrap">
+                              <ul class="over01" >
+                                 <li>
+                                    <div  class="col-md-10 col-md-offset-1 text-left container-remove-padding vote-subtitle">
+                                       <!-- <span  class="subtitle vote-subtitle sponsor-timezone-dropdown"  ng-style="((showTzlist | isEmpty) || showTzlist=='')?{'color':'#000'}:{'color'  :'#A9B1C6'}">Select location</span> -->
+                                       <input stopccp type="text" id="menutitlesearch" placeholder="Select location" class="inputbox-signup" autocomplete="off" name="spolocation" ng-model="spoLocation" ng-init="showLoclist=false" ng-click="showLoclist=true" ng-change="locValidation(spoLocation)" ng-pattern="/\D{1}/" capitalize-word="true" ng-keydown="keyvalue=$event">
+                                       <div class="col-md-12 text-center error-height margin-top10">
+                                       <span class="text-danger text-center" ng-show="CustSubmit &&!CPform.spolocation.hasFocus && isOnlineCoupon==false &&!CPform.spolocation.$error.pattern &&(spoLocation==undefined ||spoLocation==''||spoLocation==null)" ng-bind="'yara.required' | i18n">Required</span>
+                                       <span class="text-danger text-center" ng-show=" isOnlineCoupon==false && isValidLoc" ng-bind="'yara.invalidLocation' | i18n" >invalidLocation</span>
+                                       <span class="text-danger text-center" ng-show=" isOnlineCoupon==false && CPform.spolocation.$error.pattern" ng-bind="'yara.textrequired' | i18n ">textrequired</span>
+
+                                       </div>
+                                    </div>
+                                    <div class="col-md-1 container-remove-padding" ng-show="evtLoc.length>0">
+                                       <img src="../../static/dashboard/images/arrow-down.png?v=5e51b404929f5b6be7d35478804ffb57" class="caret01 setup-timezone-arrow" style="float:left;">
+                                    </div>
+                                    <ul class="font-names " style="margin-top:27px;" ng-if="showLoc&&showLoclist">
+                                       <li ng-repeat="el in evtLoc|filter:spoLocation|orderBy" ><a ng-click="locationClick(el)" class="sponsor-timezone-dropdown">{{el.location}}</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </nav>
+                        </div>
+                        <!-- <input type="text" class="inputbox text-center ticket-top" name="urltitle"  required placeholder="Time"> -->
+                     </div>
+                  </div>
+                  <!-- end coupon changes -->
+                  <div class="col-md-4 col-md-offset-4  text-left" >
+                     <div class="row top-all">
+                        <div class="col-md-12 top-all text-center ">
+                           <div class="gp-Name" >Fill Coupon Details</div>
+                           <br/>
+                           <!-- <div class="nav-font01">Should be short. a cover image and dimesntions is a <br/>Every feature is meticulously crafted in way
+                           </div> -->
+                           <br/>
+                           <input type="text" class="inputbox text-center margin-bottom10" ng-model="CPname" name="CPname"  required placeholder="Coupon Title" capitalize-word="true" ng-keydown="keyvalue=$event" maxlength="50" ng-pattern="/\D{1}/">
+                           <div class="error-height">
+                           <span class="text-danger" ng-show="CustSubmit && !CPform.CPname.hasFocus && CPform.CPname.$error.required">Required</span>
+                            <span class="text-danger" ng-show="CPform.CPname.$error.pattern" ng-bind="'yara.textrequired' | i18n ">Required</span>
+                           </div>
+                           <textarea type="text" rows="1" class="input_boxtext-happy text-center margin-bottom10" ng-model="CPdesc" name="CPdesc" placeholder="Coupon Description" minlength="50"  required maxlength="250" ng-pattern="/\D{1}/"></textarea>
+                           <div class="error-height">
+                              <span class="text-danger" ng-show="CustSubmit && !CPform.CPdesc.hasFocus && CPform.CPdesc.$error.required">Required</span>
+                              <span class="text-danger" ng-show="CPform.CPdesc.$error.pattern" ng-bind="'yara.textrequired' | i18n ">Required</span>
+                               <span  class="text-danger" ng-show="CustSubmit && CPform.CPdesc.$invalid && CPform.CPdesc.$error.minlength && !CPform.CPdesc.$error.pattern" ng-bind="'yara.descMinLenght' | i18n:['50','250'] " >Description should be 50 to 250 characters long</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-md-offset-4 top-all text-center">
+                     <div class="gp-Name" >Coupon Display Date</div>
+                     <br/>
+                     <div class="nav-font01">This coupon will be displayed on the mobile devices from this day
+                     </div>
+                     <div id="deliverytimeid">
+                        <div id="subtype_dropdown" class="col-md-12 top-all dropdown signup_input subtype_dropdown border-coupon">
+                           <nav  class="primary_nav_wrap_div primary_nav_wrap" >
+                              <ul class="over01" >
+                                 <li>
+                                    <div class="col-md-10 col-md-offset-1 text-center container-remove-padding vote-subtitle">
+                                       <span  class="subtitle vote-subtitle01 subtitle-font"  >Select an event day</span>
+                                    </div>
+                                    <div class="col-md-1 container-remove-padding">
+                                       <img src="../../static/dashboard/images/arrow-down.png" class="caret01">
+                                    </div>
+                                    <ul class="font-names  margin-top30" >
+                                       <li  ng-repeat="c in  eventDaysInfo|filter:{isDayActive:1}|filter:{dayAvailableForCoupon:true}" ng-click="changeSubtype(c)" ><a >{{(c.startTime) | date:'MMMM dd, yyyy'}}</a></li>
+                                       <li ng-show="eventDaysInfo.length<=0" ng-click="changeSubtype('')" ><a>Fetching Event Dates...</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </nav>
+                           <div class="col-md-12 text-center error-height" ng-show="(selectedDayinfo==undefined|| selectedDayinfo==null||selectedDayinfo=='') && CustSubmit" >
+                              <span class="text-danger text-center" ng-bind="'yara.required' | i18n">Required</span>
+                           </div>
+                        </div>
+                        <div>
+                           <!-- <md-input-container class="md-input-has-placeholder md-dialog-container-date" md-no-float >
+                              <label id="time-label">Time</label> -->
+                           <input mdc-datetime-picker="" date="false" time="true" type="text" id="time" short-time="!is_time_format_24?true:false" placeholder="Time" min-date="mindatecoupon" max-date="Etime" format="{{timeformaType}}" ng-model="time" class="md-input inputbox-coupon-new  text-center md-raised md-warn pointer" name="time" ng-hide="subtitlevalue">
+
+                           <!-- <input mdc-datetime-picker="" date="false" time="true" type="text" id="time" short-time="true" placeholder="Time" min-date="minTime" max-date="Etime" format="hh:mm a" ng-model="time" class="md-input inputbox-coupon-new  text-center md-raised md-warn pointer" name="time" ng-hide="subtitlevalue"> -->
+                           <!--  </md-input-container> -->
+                        </div>
+                        <!-- <div class="error-height">
+                           <span class="text-danger text-center">Required</span>
+                        </div> -->
+                  </div>
+                  </div>
+                  <div class="col-md-12 text-center  container-remove-padding margin-bottom80">
+                     <!-- <div class="col-md-4 col-md-offset-4">
+                        <div class="gp-Name" >Expiry</div>
+                        <br/>
+                        <div class="nav-font01">Should be short. a cover image and dimesntions is a <br/>Every feature is meticulously crafted in way
+                        </div>
+                     </div> -->
+                     <div class="col-md-6 col-md-offset-3 top-all">
+                           <div class="col-md-12 session-bg-color">
+                              <div class="col-md-8 text-left session-border-white">
+                                                <div class="gp-Name" >Set expiration date</div><!-- {{showcaseEnable==1?'Enable':'Disable'}} -->
+                                                <div class="session-gray">Coupons will not be available from the day of expiration.Minimum 30 min difference is requred for raising another coupon
+                                                </div>
+                                             </div>
+                              <div class="col-md-4 session-check">
+                                 <label class="switch01">
+                                    <input type="checkbox" class="switch01-input" ng-model="isExpiry" name="isExpiry">
+                                    <span class="switch01-label" ></span><!-- data-on="On" data-off="Off"-->
+                                    <span class="switch01-handle"></span>
+                                 </label>
+                              </div>
+                           </div>
+                     </div>
+                     <!-- <div class="col-md-12 border-bottom">
+                        <div class="col-md-11 subtitle-font">
+                           Expiry
+                        </div>
+                        <div class="col-md-1">
+                           <input type="checkbox" class="inputbox text-center" width="30px" ng-model="isExpiry" name="isExpiry"   placeholder="Coupon Title">
+                        </div>
+                     </div> -->
+                     <div class="col-md-4 col-md-offset-4" id="expiryid">
+                     <div ng-show="isExpiry" >
+                        <div id="eDate_dropdown" class="col-md-12 top-all dropdown signup_input eDate_dropdown border-coupon" >
+                           <nav  class="primary_nav_wrap_div primary_nav_wrap" >
+                              <ul class="over01" >
+                                 <li>
+                                    <div class="col-md-10 col-md-offset-1 text-center container-remove-padding vote-subtitle">
+                                       <span  class="eDatetitle vote-subtitle01 subtitle-font"  >Select an event day</span>
+                                    </div>
+                                    <div class="col-md-1 container-remove-padding">
+                                       <img src="../../static/dashboard/images/arrow-down.png?v=5e51b404929f5b6be7d35478804ffb57" class="caret01">
+                                    </div>
+                                    <ul class="font-names  margin-top30">
+                                       <li  ng-repeat="c in  eventDaysInfo|filter:fromCouponDay()" ng-click="changeEDate(c)" ><a >{{(c.startTime) | date:'MMMM dd, yyyy'}}</a></li>
+                                       <li ng-show="eventDaysInfo.length<=0" ng-click="changeEDate('')" ><a>Fetching Event Dates...</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </nav>
+                           <div class="col-md-12 text-center error-height" ng-show="isExpiry && (eDateInfo==undefined|| eDateInfo==null||eDateInfo=='') && CustSubmit"  >
+                              <span class="text-danger text-center">Required</span>
+                           </div>
+                        </div>
+                        <div>
+                           <!--  <label id="time-label">Time</label> -->
+                           <input mdc-datetime-picker="" date="false" time="true" type="text" id="time" short-time="!is_time_format_24?true:false" placeholder="Time" min-date="Etime" format="{{timeformaType}}" max-date="maxCouponTime" ng-model="Etime" class="md-input inputbox-coupon-new  text-center md-raised md-warn pointer" name="time" ng-hide="eDatetitle==''">
+                           <!--  </md-input-container> -->
+                        </div>
+                     </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-md-offset-4 text-left"> 
+                     <div class="row top-all">
+                        <div class="col-md-12 top-all text-center">
+                           <div class="gp-Name" >Select People</div>
+                           <br/>
+                       <!--     <div class="nav-font01">Should be short. a cover image and dimesntions is a <br/>Every feature is meticulously crafted in way
+                           </div> -->
+                           <br/>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-8 col-md-offset-2">
+                     <ul class="list-group event-top01 pointer" >
+                        <a  class="col-md-12 list-group-item tab-click-ticket ticket-border" ng-click="couponfor='all';Custtickets=[];"  >
+                           <div class="col-md-10 text-top">
+                              <div class="nav-size-signup margin-bottom10">All Attendees</div>
+                              <div class="gray">Coupon will be available to all the attendees 
+                              </div>
+                           </div>
+                           <div class="col-md-2"><img src="../../../static/dashboard/images/right-blue.png?v=41202fcbacbf76f5fe8ff7f6c1a066d9" class="width-coupons-img" ng-show="couponfor=='all'"/></div>
+                        </a>
+                     </ul>
+                  </div>
+                  <div class="col-md-8 col-md-offset-2 ticket-border">
+                  <div class="col-md-12">
+                     <ul class="list-group event-top01 pointer" >
+                        <a  class="col-md-12 list-group-item tab-click-ticket container-remove-padding"  ng-click="couponfor='ticket'" >
+                           <div class="col-md-10 text-top">
+                              <div class="nav-size-signup margin-bottom10">Tickets</div>
+                              <div class="gray">Coupon available only to the invitees <br/>of these tickets 
+                              </div>
+                           </div>
+                           <div class="col-md-2"><img src="../../../static/dashboard/images/right-blue.png" class="width-coupons-img" ng-show="couponfor=='ticket'"/></div>
+                        </a>
+                     </ul>
+                     
+                     <div  class="col-md-12 cursor-def list-group-item tab-click-ticket ticket-border" ng-show="couponfor=='ticket'" >
+                        <a  class="col-md-8 col-md-offset-2 cursor-poi  coupon-top-bottom list-group-item padding-coupon tab-click-ticket ticket-border" ng-repeat="t in ticketlist" ng-click="custtickets(t.ticket_code)" >
+                           <div class="col-md-10 text-top-coupon">
+                              <div class="nav-size-coupon">{{t.ticket_name}}</div>
+                           </div>
+                           <div class="col-md-2"><img src="../../../static/dashboard/images/right-blue.png" class="width-coupons01-img" ng-show="Custtickets.indexOf(t.ticket_code)>=0"/></div>
+                        </a>
+                        <div class="col-md-12 text-center error-height margin-bottom40">
+                           <span class="text-danger" ng-show="couponfor=='ticket' && CustSubmit && Custtickets.length<=0" id="ticketError">Required</span>
+                        </div>
+                     </div>
+                  </div>
+                  </div>
+                  <div class="col-md-8 col-md-offset-2">
+                     <ul class="list-group  pointer" >
+                        <a  class="col-md-12 cursor-poi list-group-item tab-click-ticket ticket-border" ng-click="couponfor='users';Custtickets=[];">
+                           <div class="col-md-10 text-top">
+                              <div class="nav-size-signup margin-bottom10">Random Number of Delegates</div>
+                              <div class="gray">Coupon will be available to random <br/>people invited to the session
+                              </div>
+                           </div>
+                           <div class="col-md-2"><img src="../../../static/dashboard/images/right-blue.png" class="width-coupons-img" ng-show="couponfor=='users'"/></div>
+                        </a>
+                     </ul>
+                     <div  class="col-md-12 cursor-def list-group-item tab-click-ticket" ng-show="couponfor=='users'">
+                        <div class="col-md-8 col-md-offset-2 cursor-poi ticket-top margin-bottom0 list-group-item padding-coupon tab-click-ticket ticket-border" ng-show="couponfor=='users'" >
+                           <input type="text" class="inputbox-coupon text-center " name="attende"  required placeholder="Random number of deligates" ng-required="couponfor=='users'" ng-model="attende" is-number  maxlength="6">                       
+                        </div>
+                        <div class="col-md-12 text-center error-height margin-bottom40">
+                           <span class="text-danger" ng-show="CustSubmit && !CPform.attende.hasFocus && CPform.attende.$error.required">Required </span>
+                           <span class="text-danger" ng-show="couponfor=='users'&& CustSubmit && !CPform.attende.hasFocus && currentval.number_of_attendee < attende" id="attendeError">Number of deligates should not exceed total package</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-md-offset-4 text-center  container-remove-padding margin-bottom80">
+                     <div class="col-md-12 ticket-top-btn">
+                        <div class="error-height col-md-12 margin-bottom40">
+                        <span class="text-center text-danger"  ng-show="errormsg" ng-bind="showerror">error message</span>
+                        </div>
+                        <button class="btn btn-primary-black-signup01" type="submit" ng-disabled="urlvalid">submit</button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <!-- Delete Modal window -->
+         <div class="modal fade bg-color010 " id="adspace-delete" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog top-collaborator" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Revoke</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form novalidate ng-submit="addpost(postform)" name="postform" >
+                           <div class="row">
+                              <div class="col-md-12 bg-collaborator text-center color-black" >
+                                 Are you sure to revoke {{cuoponTitle}}?
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-8" >
+                                    <div class=" text-danger">&nbsp;{{showerror}} </div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</div>
+                                 </div>
+                                 <div class="col-md-2">
+                                    <div  class="btn01 btn-primary-black-pulse01-red text-hover" ng-click="removeCoupon()">Revoke</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- start footer-->
+         <div ng-include-template="/event_footer" copyright="true" id="footer123"></div>
+      </div>
+      <script src="../../../static/dashboard/scripts/wow.min.js"></script>
+      <script>
+          new WOW().init();
+      </script>
+      <script>
+         (function(jQuery){
+           jQuery(window).load(function(){       
+             jQuery(".font-names").mCustomScrollbar({
+               theme:"dark",
+               scrollInertia: 400,
+               scrollButtons:{enable: true},   
+               autoHideScrollbar: false, 
+         
+               autoExpandScrollbar: true,
+               keyboard:{ enable: true }
+             });       
+           });
+         })(jQuery);
+      </script>
+      <script type="text/javascript">
+         $(".hasclear").keyup(function () {
+           var t = $(this);
+           t.next('img').toggle(Boolean(t.val()));
+         });
+
+         $(".clearer").hide($(this).prev('input').val());
+
+         $(".clearer").click(function () {
+           // $(this).prev('input').val('').focus();
+           $(this).hide();
+         });
+         </script>
+      <script>
+         $(document).ready(function(){
+          // $('#loading').hide();
+          // $('#container').fadeIn();
+         });
+      </script>
+      <script src="../../../static/dashboard/scripts/jquery.diyslider.min.js?v=656471a334cc1a7d1c648f84c82e9d1c"></script>
+      <script>
+         $(document).ready(function(){
+           $(document).on('click',".subtype_dropdown .font-names  li",function() {
+            $(".subtype_dropdown img").removeClass();
+            $(".subtype_dropdown img").addClass('caret01');  
+         });   
+         $(document).on('click',".eDate_dropdown .font-names  li",function() {
+            $(".eDate_dropdown img").removeClass();
+            $(".eDate_dropdown img").addClass('caret01');  
+         });   
+         
+         $(".slider").diyslider({
+             width: "100%", // width of the slider
+             height: "51px", // height of the slider
+              minSlides: 2, // number of slides you want it to display at once
+             loop: false, // disable looping on slides
+             moveSlides: 1,
+         }); // this is all you need!
+         
+         // use buttons to change slide
+         $("#go-left").bind("click", function(){
+             // Go to the previous slide
+             $(".slider").diyslider("move", "back");
+         });
+         $("#go-right").bind("click", function(){
+             // Go to the previous slide
+             $(".slider").diyslider("move", "forth");
+         });
+         
+         });
+      </script>
+      <!-- <script>
+         function h(e) {
+             $(e).css({'height':'auto','overflow-y':'hidden'}).height(e.scrollHeight);
+         }
+         $('textarea').each(function () {
+           h(this);
+         }).on('input', function () {
+           h(this);
+         });
+      </script> -->
+      <script type="text/javascript">
+         $(document).ready(function(){
+          function resizediv(){
+           var h =$(window).height();
+           $('.height-top').css("height",h+"px");
+          } 
+          resizediv();
+          $(window).resize(function(){
+           resizediv();
+          });
+         });
+      </script>
+      <script type="text/javascript">
+         var $li = $('.over01 li').click(function() {
+         $(this).addClass('selected');
+         $('.over01 li span').removeClass('vote-subtitle01');
+         
+         });
+      </script>
+      {%endverbatim%}
+   </body>
+</html>

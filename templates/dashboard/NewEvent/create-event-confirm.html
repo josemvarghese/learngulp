@@ -1,0 +1,387 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <title>YARA - Create Event</title>
+      <link rel="stylesheet" href="../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <link rel="stylesheet" href="../../static/dashboard/css/customscrollbar.min.css?v=b72d1ff03f5d4322fda530affc8628fd">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyCV9Dg0e7cZQv4kV50S9eDUFQdIUCSN7RM"></script>
+      <script src="../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> 
+      <script src="../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script>
+      <script src="../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> 
+      <script src="../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <!--  <script src="../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script> -->
+      <script src="../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <script src="../../static/dashboard/scripts/customscrollbar.min.js?v=ea9f31b6e94c00a389c0f19bb9a876f2"></script>
+      <link rel="stylesheet" href="../../../static/dashboard/css/angular-material.min.css?v=324b61820a354c69f275793da4516197">
+      <link rel="stylesheet" href="../../../static/dashboard/css/mdPickers.min.css?v=e7e0022313e47ca44e50fa9b895d77c0">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script src="../../../static/dashboard/scripts/moment.min.js?v=18338685047bb998815d0fce225665f4"></script> 
+      <script src="../../../static/dashboard/scripts/angular-animate.min.js?v=b5cd239b1ae96c9917a03372000dafe8"></script>
+      <script src="../../../static/dashboard/scripts/angular-aria.min.js?v=7f3a52851887f3f03822c9159f8f46ff"></script> 
+      <script src="../../../static/dashboard/scripts/angular-material.min.js?v=1bf69d5d0bcb732e4fa0734e5bd04232"></script> 
+      <script src="../../../static/dashboard/scripts/mdPickers.js?v=d41e5980049501aec6cdf0bc90d81efd"></script>  
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../static/dashboard/scripts/app1.js?v=57fdba9d671ec2f607b71bdad449f34d"></script>
+      <script src="../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>         
+      <script src="../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>         
+      <script src="../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>
+      <script src="../../../static/dashboard/scripts/ng-map.js?v=32f203d7a258c29ca92dd8eea6ad08df"></script>
+      <!---crop image---->
+      <script src="../../../static/dashboard/scripts/jquery.cropit.js?v=b37d29875ced18ede72940fb6b0fba52"></script>
+       <!--UI style---->
+      <link rel="stylesheet" href="../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+      <script src="../../../static/dashboard/scripts/angular-material-datetimepicker.js?v=14468359f8a6e7b9efb7ae41163bee11"></script>
+      <link rel="stylesheet" href="../../../static/dashboard/css/material-datetimepicker.min.css?v=841697f789974da72ac1053a7aeb3f4f">
+      <style>
+         ::-webkit-input-placeholder { color: #333333; opacity: 1 !important; }
+         :-moz-placeholder { color: #333333;}
+         ::-moz-placeholder {color: #333333;}
+         :-ms-input-placeholder {color: #333333;}
+         .gm-style .gm-bundled-control {
+         display: none;
+         }
+         .gm-style .gmnoprint {
+         display: none;
+         }
+         .gm-style-cc{
+         display: none;
+         }
+      </style>
+   </head>
+   <body ng-app="yara" ng-controller="SaveNewEventController" ng-class="{'overflow-body':datepop,'overflow-body-newEvent':!datepop}" >
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      {%verbatim%}
+      <div id="container" class="wrap01">
+         <div class=" navbar-fixed-top bg-new" >&nbsp;</div>
+         <!---header-->
+         <div class="container navbar-fixed-top border" >
+            <div class="col-md-12 white">
+               <div class="col-md-1 nav-color main-header-signup01-new" style="text-align:left;"><a href="" back-button><img src="../../../static/dashboard/images/yara_logo.svg?v=ce9e59e2272c030c2954deb7d56f3267" width="100%"/></a></div>
+               <div class="col-md-1 nav-color sub-header-border-new">&nbsp;</div>
+               <div class="col-md-2 nav-color sub-header-buy-new container-remove-padding">Create New Event</div>
+            </div>
+         </div>
+         <!----end header---->
+         <div class="" >
+            <div class="row remove-margin">
+               <div class="col-md-12 text-center newevent-top">
+                  <div class="col-md-6 col-md-offset-3">
+                     <ul class="col-md-12 create-event-detail-center container-remove-padding com nav nav-tabs-newevent05" id="eventTab">
+                        <li class="col-md-4 width-nav"  id="t1"><a class="gray-color">1</a></li>
+                        <li class="col-md-4 width-nav"  id="t2"><a class="gray-color">2</a></li>
+                        <li class="col-md-4 width-nav active"  id="t3"><a class="gray-color">3</a></li>
+                     </ul>
+                  </div>
+                  <div class=" newevent-top">
+                     <!----End tab 3------>
+                     <div class=" newevent-top">
+                        <div>
+                           <form>
+                              <br/>
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col-md-12 container-remove-padding">
+                                       <div class="newevent">Confirm the Event Details</div>
+                                       <div class="gray">Certain Information cannot be altered<br/> once the event is created
+                                       </div>
+                                       <div class="confirm-border "></div>
+                                       <div class="text-left">
+                                          <!-- style="margin:0 25px;" -->
+                                          <!-------step 1------>
+                                          <div class="col-md-12 container-remove-padding margin-top25 border-bottom">
+                                             <!-- <div class="newevent confirm-left">Event Location</div> -->
+                                             <div class="col-md-12">
+                                                <div class="col-md-6 newevent CEC-heading container-remove-padding">EVENT LOCATION</div>
+                                                <div class="col-md-6 text-right01 create-event-confirm-edit  float-right">
+                                                   <a class="cursor-poi text-hover" ng-click="editEventDetails('location')" >EDIT EVENT LOCATION</a>
+                                                </div>
+                                             </div>
+                                             <div class="confirm-red"><img src="../../../static/dashboard/images/info_white.png?v=f151d0ede1a47e595ff71c4a1f04e10a" class="confirm-info">&nbsp; Event Location cannot be modified once event is created</div>
+                                             <div class="event-confirm-header">Address</div>
+                                             <div class="inputbox-event-confirm">{{locInfo.venu}}</div>
+                                             <div class="inputbox-event-confirm">{{locInfo.addLine1}}</div>
+                                             <div class="inputbox-event-confirm">{{locInfo.addLine2}}</div>
+                                             <div class="inputbox-event-confirm">{{locInfo.city}}</div>
+                                             <div class="inputbox-event-confirm">{{locInfo.state}}</div>
+                                             <div class="inputbox-event-confirm">{{locInfo.country}}</div>
+                                             <div class="inputbox-event-confirm">{{locInfo.zipCode}}</div>
+                                             <div class="col-md-12 general-top-bottom02" >
+                                                <div class="layer-map">&nbsp;</div>
+                                                <div class="cust-map"  height="500px" >
+                                                   <ng-map zoom="15" center="[{{locInfo.geoloc.lat}}, {{locInfo.geoloc.lng}}]" style="height:100%!important"></ng-map>
+                                                </div>
+                                                <!-- <div id="map_canvas" class="cust-map"  height="500px">
+                                                   </div> -->
+                                             </div>
+                                          </div>
+                                          <!-------step 2------>
+                                          <div class="col-md-12 container-remove-padding ticket-top border-bottom">
+                                             <div class="col-md-12">
+                                                <div class="col-md-6 newevent CEC-heading container-remove-padding">EVENT INFO</div>
+                                                <div class="col-md-6 text-right01 create-event-confirm-edit  float-right">
+                                                   <a class="cursor-poi text-hover" ng-click="editEventDetails('info')" >EDIT EVENT INFO</a>
+                                                </div>
+                                             </div>
+                                             <div class="confirm-red"><img src="../../../static/dashboard/images/info_white.png" class="confirm-info">&nbsp; These information cannot be modified once event is created</div>
+                                             <div class="event-confirm-header">Event Type and Sub Type</div>
+                                             <div class="inputbox-event-confirm" ng-bind="eventInfo.type_title">Confrence</div>
+                                             <div class="inputbox-event-confirm" ng-bind="eventInfo.subtitle">News Confrence</div>
+                                             <div class="confirm-top-btn40">
+                                                <div class="event-confirm-header">Event Security</div>
+                                                <div class="inputbox-event-confirm" ng-show="eventInfo.isEventPrvt">Private Event</div>
+                                                <div class="inputbox-event-confirm" ng-show="!eventInfo.isEventPrvt">Public Event</div>
+                                             </div>
+                                             <div class="confirm-bottom-btn40">
+                                                <div class="event-confirm-header">Event Frequency</div>
+                                                <div class="inputbox-event-confirm" ng-bind="eventInfo.evntfreq">Anually</div>
+                                             </div>
+                                             <!-- <div class="col-md-12 text-right01 border-top-bottom01 create-event-btn-color confirm-top-btn">
+                                                <a class="cursor-poi text-hover" ng-click="editEventDetails('info')">EDIT EVENT INFO</a>
+                                             </div> -->
+                                          </div>
+                                          <!-------step 3------>
+                                          <div class="col-md-12 container-remove-padding ticket-top">
+                                             <!-- <div class="newevent CEC-heading confirm-left">Event Details</div> -->
+                                             <div class="col-md-12">
+                                                <div class="col-md-6 newevent CEC-heading container-remove-padding">EVENT DETAILS</div>
+                                                <div class="col-md-6 text-right01 create-event-confirm-edit  float-right">
+                                                   <a class="cursor-poi text-hover" ng-click="editEventDetails('details')" >EDIT EVENT DETAILS</a>
+                                                </div>
+                                             </div>
+                                             <div class="confirm-red"><img src="../../../static/dashboard/images/info_white.png" class="confirm-info">&nbsp; Event full name cannot be changed once event is created</div>
+                                             <div class="event-confirm-header" >Event Full Name</div>
+                                             <div class="inputbox-event-confirm" ng-bind="creatingEventdetails.eventname">Some Event Full Name</div>
+                                             <div class="confirm-top-btn40">
+                                                <div class="event-confirm-header">Event Short Name</div>
+                                                <div class="inputbox-event-confirm" ng-bind="creatingEventdetails.eventshrtname">Some Short Name</div>
+                                             </div>
+                                             <div class="">
+                                                <div class="event-confirm-header">Event Description</div>
+                                                <div class="inputbox-event-confirm" ng-bind="creatingEventdetails.eventdesc" >He was defeated in 843 in battle against the Vikings at Carhampton in Somerset
+                                                   but achieved a major victory at the Battle of Aclea in 851. He went on pilgrimage
+                                                   to Rome in 855, leaving his eldest surviving son Æthelbald to act as King of Wessex
+                                                   in his absence. Æthelwulf stayed a year in Rome; on his way back he married 
+                                                   Judith, the daughter of the West Frankish King Charlesthe Bald. When Æthelwulf
+                                                   returned to England, Æthelbaldrefused to surrender the throne, and Æthelwulf agreed
+                                                   to divide the kingdom, taking the east and leaving the west in Æthelbald's hands. Before
+                                                   the twenty-first centuryhelwulf's reputation among historians was poor: he was seen
+                                                   as excessively pious and impractical, and his pilgrimage was viewed as a desertion.
+                                                </div>
+                                             </div>
+                                             <div class="confirm-top-btn40">
+                                                <div class="event-confirm-header">Event Logo</div>
+                                                <br/>
+                                                <div class="inputbox-event-confirm "><img ng-src="{{creatingEventdetails.event_logo}}" class="confirm-event-logo">
+                                                </div>
+                                             </div>
+                                             <br/>
+                                             <div class="">
+                                                <div class="event-confirm-header">Event Date and Time</div>
+                                                <div class="inputbox-event-confirm" ng-if="creatingEventdetails.evntDate=='single'" >Single Day Event</div>
+                                                <div class="inputbox-event-confirm" ng-if="creatingEventdetails.evntDate=='multi'" >Multi Day Event</div>
+                                             </div>
+                                             <div class="confirm-red"><img src="../../../static/dashboard/images/info_white.png" class="confirm-info">&nbsp; Event duration cannot be modified once event is created</div>
+                                             <div class="confirm-top-btn40">
+                                                <div class="inputbox-event-confirm confirm-border-bottom" ng-repeat="dt in listDatetime" ng-bind="dt.date">Monday 11 March 2016, From 10.00AM to 4.00PM</div>
+                                                <!--  <div class="inputbox-event-confirm confirm-border-bottom">Monday 12, March 2016, From 10.00AM to 4.00PM</div>
+                                                   <div class="inputbox-event-confirm confirm-border-bottom">Monday 13, March 2016, From 10.00AM to <4 class="00PM"></4></div>
+                                                   <div class="inputbox-event-confirm confirm-border-bottom">Monday 14, March 2016, From 10.00AM to 4.00PM</div>
+                                                   <div class="inputbox-event-confirm confirm-border-bottom">Monday 15, March 2016, From 10.00AM to 4.00PM</div>
+                                                   <div class="inputbox-event-confirm confirm-border-bottom">Monday 16, March 2016, From 10.00AM to 4.00PM</div> -->
+                                             </div>
+                                             <div class="confirm-top-btn40" >
+                                                <br/>
+                                                <div class="event-confirm-header">Social and Contact</div>
+                                                <div class="inputbox-event-confirm confirm-border-bottom" >Phone : {{creatingEventdetails.contact.phone_number}}</div>
+                                                <div class="inputbox-event-confirm confirm-border-bottom">Email : {{creatingEventdetails.contact.eventemail}}</div>
+                                                <div class="inputbox-event-confirm confirm-border-bottom" ng-show="creatingEventdetails.contact.eventweb.length>7 && !eventInfo.isEventPrvt">Website : {{creatingEventdetails.contact.eventweb}}</div>
+                                                <div class="inputbox-event-confirm confirm-border-bottom" ng-show="creatingEventdetails.contact.eventfb.length>25 && !eventInfo.isEventPrvt">Facebook : {{creatingEventdetails.contact.eventfb}}</div>
+                                                <div class="inputbox-event-confirm confirm-border-bottom" ng-show="(creatingEventdetails.contact.eventtwitter).length>20 && !eventInfo.isEventPrvt">Twitter : {{creatingEventdetails.contact.eventtwitter}}</div>
+                                             </div>
+                                             <div class="confirm-top-btn40" ng-show="creatingEventdetails.coverimg.length>0">
+                                                <br/>
+                                                <div class="event-confirm-header">Schedule Cover Image</div>
+                                                <br/>
+                                                <div class="inputbox-event-confirm "><img ng-src="{{creatingEventdetails.coverimg}}" class="confirm-event-logo">
+                                                </div>
+                                             </div>
+                                            <!--  <div class="col-md-12 text-right01 border-top-bottom01 create-event-btn-color confirm-top-btn">
+                                                <a class="cursor-poi text-hover" ng-click="editEventDetails('details')">EDIT EVENT DETAILS</a>
+                                             </div> -->
+                                             <div class="inputbox-event-confirm-footer">Once Event is created, details such as (Event Full Name, Event Dates - Including Start Time and End Time, Event Location, Event Frequency, Event Type, Event Sub Type) cannot be modified. Event Package used for creation of this event will be exhausted. Incase of cancellation of the Event, Package may be eligible for Refund. See our <a href="https://yara.io/refund-policy" target="new" class="text-hover"><u>Refund Policy</u></a> for more information.
+                                             </div>
+                                             <div class="row">
+                                                <div class="col-md-12">
+                                                   <div class="col-md-12 button-top-confirm">
+                                                      <span class="col-md-12 text-center text-danger" ng-bind="errmsg"></span>
+                                                      <div class="col-md-2 col-md-offset-5">
+                                                         <button  class="btn btn-primary-black"  type="submit" ng-click="saveNewevent()">Create Event</button>
+                                                      </div>
+                                                      <div class="col-md-2 col-md-offset-5 ticket-top text-center">
+                                                         <a  class="cursor-poi text-hover color-black" ng-click="cancelNewevent()">CANCEL</a>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <!-- End Tab 3 -->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- start footer-->
+         <div ng-include-template="/event_footer" copyright="true"></div>
+         <!---End footer---->
+      </div>
+      <script>
+         $(window).load(function() {
+             //show();
+         });
+         $(document).ready(function(){
+          $('#loading').hide();
+          $('#container').fadeIn();
+         });
+         function show() {
+             $('#loading').hide();
+             $('#container').fadeIn();
+         };
+         
+         //setTimeout(show, 100000);
+      </script>
+      <script>
+         (function(jQuery){
+           jQuery(window).load(function(){       
+             jQuery(".font-names").mCustomScrollbar({
+               theme:"dark",
+               scrollInertia: 400,
+               scrollButtons:{enable: true},   
+               autoHideScrollbar: false, 
+         
+               autoExpandScrollbar: true,
+               keyboard:{ enable: true }
+             });       
+           });
+         })(jQuery);
+      </script> 
+      <script type="text/javascript">
+         function changeMe(sel)
+         {
+           sel.style.color = "#000";              
+         }
+      </script>
+      <script>
+         /*$('.btn-toggle').click(function() {
+             $(this).find('.btn').toggleClass('active');  
+             
+             if ($(this).find('.btn-primary').size()>0) {
+                 $(this).find('.btn').toggleClass('btn-primary');
+             }
+             if ($(this).find('.btn-danger').size()>0) {
+                 $(this).find('.btn').toggleClass('btn-danger');
+             }
+             if ($(this).find('.btn-success').size()>0) {
+                 $(this).find('.btn').toggleClass('btn-success');
+             }
+             if ($(this).find('.btn-info').size()>0) {
+                 $(this).find('.btn').toggleClass('btn-info');
+             }
+             
+             $(this).find('.btn').toggleClass('btn-default');
+                
+         });*/
+      </script>
+      <script>
+         $(document).ready(function(){
+           $(".menutitlesearch").hide();
+           $(".subtitlesearch").hide();
+           $(".menutitlestatesearch").hide();
+         $(document).on('click',".country_dropdown .font-names  li",function() {
+           
+            $(".menutitlesearch").hide();
+            $(".menutitle").show();
+            $(".country_dropdown img").removeClass();
+            $(".country_dropdown img").addClass('caret01');  
+         });  
+         $(document).on('click',".state_dropdown .font-names  li",function() {
+           
+            $(".menutitlestatesearch").hide();
+            $(".menutitlestate").show(); 
+            $(".state_dropdown img").removeClass();
+            $(".state_dropdown img").addClass('caret01'); 
+         });  
+          $(document).on('click',".subtype_dropdown .font-names  li",function() {
+            $(".subtitlesearch").hide();
+            $(".subtitle").show();
+            $(".subtype_dropdown img").removeClass();
+            $(".subtype_dropdown img").addClass('caret01');  
+         });   
+         
+         });
+      </script>
+      <script>
+         $(function(){
+         
+             /*$('#changetabbutton').click(function(e){
+                 e.preventDefault();
+                 $('#mytabs a[href="#second"]').tab('show');
+             })*/
+         
+         })
+      </script>
+      <script>
+         $(document).ready(function(){
+             $('[data-toggle="tooltip"]').tooltip();   
+         });
+      </script>
+      {%endverbatim%}
+   </body>
+</html>

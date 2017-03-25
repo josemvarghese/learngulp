@@ -1,0 +1,973 @@
+<!doctype html>
+<html>
+     <head>        <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">       <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">       <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">       <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">       <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">       <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">       <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">       <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">       <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">       <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">       <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">       <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">       <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+        <link rel="stylesheet" href="../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+        <link rel="stylesheet" href="../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+        <link rel="stylesheet" href="../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+        
+        <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+        <link rel="stylesheet" href="../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+        <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+        <script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyBiLVnHVmK-3nm_MZvug6NjZmMdOQX_cm8"></script>
+       
+        <script src="../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+
+        <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+        <script src="../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> <script src="../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script> <script src="../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> <script src="../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+        <script src="../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+       <!--  <script src="../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script> -->
+        <script src="../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+        <link rel="stylesheet" href="../../../static/dashboard/css/angular-material.min.css?v=324b61820a354c69f275793da4516197">
+        <link rel="stylesheet" href="../../../static/dashboard/css/mdPickers.min.css?v=e7e0022313e47ca44e50fa9b895d77c0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="../../../static/dashboard/scripts/moment.min.js?v=18338685047bb998815d0fce225665f4"></script> 
+        <script src="../../../static/dashboard/scripts/angular-animate.min.js?v=b5cd239b1ae96c9917a03372000dafe8"></script>
+        <script src="../../../static/dashboard/scripts/angular-aria.min.js?v=7f3a52851887f3f03822c9159f8f46ff"></script> 
+        <script src="../../../static/dashboard/scripts/angular-material.min.js?v=1bf69d5d0bcb732e4fa0734e5bd04232"></script> 
+        <script src="../../../static/dashboard/scripts/mdPickers.js?v=d41e5980049501aec6cdf0bc90d81efd"></script>  
+        <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+        <script src="../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+        <script src="../../../static/dashboard/scripts/app1.js?v=57fdba9d671ec2f607b71bdad449f34d"></script>
+        <script src="../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+        <script src="../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+        <script src="../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>
+        <script src="../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>
+        <script src="../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>
+
+        <!--UI style--->
+        <link rel="stylesheet" href="../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+        <!-- Font -->
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Khula:300' rel='stylesheet' type='text/css'>
+        <!--
+        <script src="../../../static/dashboard/scripts/sc-date-time.js"></script>
+        <link rel="stylesheet" href="../../../static/dashboard/css/sc-date-time.css"> 
+      -->
+
+    </head>
+  <body ng-app="yara">
+   {%verbatim%}
+  <!---header-->
+  <div class="container navbar-fixed-top border" style="z-index: 10;">
+    <div class="col-md-12 white text-center ">
+      <div class="col-md-1 nav-color main-header-signup01" style="text-align:left;"><a href="/dashboard"><img src="../../../static/dashboard/images/yara_logo.svg?v=ce9e59e2272c030c2954deb7d56f3267"width="100%"/></a></div>
+      <div class="col-md-1 nav-color sub-header-border">&nbsp;</div>
+      <div class="col-md-2 nav-color sub-header-small-events">Create New Event</div>
+    </div>
+  </div>
+  <!----end header----> 
+  <div class="container col-md-12" ng-controller="CreateNewEventController">
+    <div class="row" style="border-bottom:1px solid #f2f2f2;">
+      <div class="col-md-6 col-md-offset-3 text-center newevent-top">
+        <ul class="col-md-8 col-md-offset-2 com nav nav-tabs-newevent05" id="eventTab">
+          <li class="col-md-3 width-nav" ng-class="{active:1 == tabsel} "   ><a class="gray-color">1</a></li>
+          <li class="col-md-3 width-nav" ng-class="{active:2 == tabsel}" ><a class="gray-color">2</a></li>
+          <li class="col-md-3 width-nav" ng-class="{active:3 == tabsel}" ><a class="gray-color">3</a></li>
+          <li class="col-md-3 width-nav" ng-class="{active:4 == tabsel}"  ><a class="gray-color">4</a></li>
+        </ul>
+        <div class="tab-content newevent-top">
+          <!-- Tab 1 -->
+          <div role="tabpanel" class="tab-pane" ng-class="{active:1 == tabsel}" >
+            <form ng-submit="(selectedval==0 || subtitle=='select') ? submitted=true : tabSelection(2);" ng-init="submitted=false" novalidate >
+              <br/>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="newevent">Select an Event Type</div>
+                  <div class="gray">Password policy Yara is a<br/>
+                  Every feature is meticulously crafted in way</div>
+                  <ul class="list-group newevent-top01 pointer" >
+                    <a  class="col-md-12 list-group-item tab-click" ng-class="{active: eventtype.type_id === selectedval} " ng-repeat="eventtype in eventtypes"  ng-click="selectedtype(eventtype.type_id)">
+                      <div class="col-md-10 text-top">
+                        <div>
+                          <div class="event-font"><b>{{eventtype.type_title}} </b></div>
+                          Example or Definition
+                        </div>
+                      </div>
+                      <div class="col-md-2"><img src="../../../static/dashboard/images/right.png?v=87dc69e36cee2088acaf4e40773d28eb"width="60%"/></div>
+                    </a>
+                  </ul>
+                  <div class="text-danger" ng-show="submitted && selectedval==0"> Select an Event Type</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="newevent-top-bottom">
+                  <div class="newevent">Select an Event Type</div>
+                  <div class="gray">Password policy Yara is a<br/>
+                  Every feature is meticulously crafted in way</div>
+                </div> 
+                <div class="col-md-12 list-group-item inputbox dropdown-height">
+                  <ul class="nav navbar-nav  dropdownwidth">
+                    <select id="myselect" class="drop-select dropdown-menu-width" ng-model="subtitle" ng-init="subtitle='select'"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <option value="select">Select Event Type</option>
+                      <option ng-repeat="s in subtypelist" value="{{s}}">{{s}}</option>
+                    </select>
+                  </ul>
+                  <div class="text-danger" ng-show="submitted && subtitle=='select'"> Select an Event Sub Type</div>
+                </div>
+              </div>
+              <div class="row ">
+                <div class="newevent-top-bottom">
+                  <div class="newevent">Event Security</div>
+                  <div class="gray">Is this event a public event.</div>
+                </div>
+               <div class="col-md-4 col-md-offset-3"style="width:100%">
+                  <!-- Nav tabs -->
+                  <ul id="mytabs" class="nav list" role="tablist" >
+                  <li class="bg-color-newevent " ng-class="{'active':isEventPrvt==true}" ng-init="isEventPrvt=true">
+                      <a  role="tab" data-toggle="tab" ng-click="isEventPrvt=true">
+                        yes
+                      </a>
+                    </li>
+                    <li class="bg-color-newevent " ng-class="{'active':isEventPrvt==false}">
+                      <a  role="tab" data-toggle="tab" ng-click="isEventPrvt=false">
+                        No
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <br/>
+              </div>
+              <div clas="row">
+                <div class="newevent-top-bottom">
+                  <div class="newevent">Select an Event Frequency</div>
+                  <div class="gray">Password policy Yara is a<br/>
+                    Every feature is meticulously crafted in way</div>
+                </div>
+                <div style="width:100%">
+                  <!-- Nav tabs -->
+                  <ul id="mytabs" class="nav list" role="tablist" >
+                    <li class="bg-color-newevent " ng-class="{'active':evntfreq=='Annually'}">
+                      <a  role="tab" data-toggle="tab" ng-click="evntfreq='Annually'">
+                        Annually
+                      </a>
+                    </li>
+                    <li class="bg-color-newevent " ng-class="{'active':evntfreq=='Twice yearly'}">
+                      <a  role="tab" data-toggle="tab" ng-click="evntfreq='Twice yearly'">
+                        Twice Yearly
+                      </a>
+                    </li>
+                    <li class="bg-color-newevent " ng-class="{'active':evntfreq=='2 Years'}">
+                      <a  role="tab" data-toggle="tab" ng-click="evntfreq='2 Years'">
+                        2 Years
+                      </a>
+                    </li>
+                    <li class="bg-color-newevent " ng-class="{'active':evntfreq=='None'}">
+                      <a  role="tab" data-toggle="tab" ng-click="evntfreq='None'">
+                        None
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <br/><br/>
+                <hr/>
+                <div class="row">
+                  <div class="col-md-4 col-md-offset-4 button-top">
+                    <button type="submit" class="btn btn-primary-black" >Continue</button>
+                  </div>  
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- End Tab 1 -->
+
+          <!-- Tab 2 -->
+          <div role="tabpanel" class="tab-pane" ng-class="{active:2 == tabsel}" >
+            <form novalidate name="step2form" ng-submit="(step2form.$invalid || !imageSrc ) ? submitted2=true : tabSelection(3);" ng-init="submitted2=false">
+              <div class="row">
+                <div class="col-md-12 top-nav">
+                  <div class="newevent">Event Information</div>
+                  <div class="gray">Should be short. a cover image and dimesntions is a <br/>
+                    Every feature is meticulously crafted in way
+                  </div>
+                  <div class="col-md-6 col-md-offset-3 text-center newevent-top01">
+                    <input type="text" placeholder="Event Name" class="inputbox" ng-model="eventname" name="eventname" required ng-blur="suggestShrtName()">
+                    <span style="color:red" ng-show=" submitted2 && step2form.eventname.$untouched || step2form.eventname.$dirty && step2form.eventname.$invalid">
+                      <span ng-show=" step2form.eventname.$error.required">Even Full Name </span>
+                    </span>
+                    <input type="text" placeholder="Event Short Name" class="inputbox-res" ng-model="eventshrtname" name="eventshrtname" required >
+                    <span style="color:red" ng-show="submitted2 && step2form.eventshrtname.$untouched || step2form.eventshrtname.$dirty && step2form.eventshrtname.$invalid">
+                      <span ng-show=" step2form.eventshrtname.$error.required">Even Short Name </span>
+                    </span>
+                     <textarea ng-model="eventdesc" rows="1" name="eventdesc"  placeholder="Event Description"  class="input_boxtext-res"  required></textarea>
+                    <span style="color:red" ng-show="submitted2 && step2form.eventdesc.$untouched || step2form.eventdesc.$dirty && step2form.eventdesc.$invalid">
+                      <span ng-show=" step2form.eventdesc.$error.required">Even Description </span>
+                    </span>
+                  </div>  
+                </div>
+              </div>
+              <div class="row"> 
+                <div class="sub-nav-size-signup newevent-top">Event Logo</div>
+                <div class="nav-font01">should be short. a cover image and dimesntions is a <br/><br/>
+                  Every feature is meticulously crafted in way</div>   
+                <br />
+                <div class="col-md-6 col-md-offset-3">
+                  <div ng-hide="imageSrc" class="logo-update">
+                    <div class="sub-nav-size-signup icon">
+                      <a class="pointer" data-toggle="tooltip" data-placement="right" title="Upload&nbsp;the&nbsp;Organization&nbsp;Logo " >
+                        <img src="../../../static/dashboard/images/info-icon.png?v=a1de70e5d3fedcbe46e85d2d41df189a"width="4%"  />
+                      </a>
+                    </div>
+                    <div class="sub-heading-logo" >
+                      <div class="sub-nav-size-signup">Logo</div>
+                      <div class="nav-font01">Minimum Size<br/>1024*1024<br/>Aspect Ratio:1:1</div>
+                    </div>
+                  </div><br/>
+                  <img ng-src="{{imageSrc}}" class="image-width-newevent" id="img-evntlogo" ng-show="imageSrc"  />
+                  <span style="color:red" >
+                    <span ng-show="step2form.evntlogo.$error.invalidimg">Invalid Image File Type</span>
+                    <span ng-show="!step2form.evntlogo.$error.invalidimg && step2form.evntlogo.$error.minsizeval">File size sholud not be Max Of 5MB</span>
+                    <span ng-show="!step2form.evntlogo.$error.minsizeval && step2form.evntlogo.$error.ratioval">Aspect Ratio Should Be 1 : 1</span>
+                    <span ng-show="!step2form.evntlogo.$error.minsizeval && step2form.evntlogo.$error.minDimension">Minimum Size 1024 * 1024</span>
+                    <span ng-show="submitted2 && step2form.evntlogo.$error.required">Event Logo required</span>
+                  </span>
+                  <br/>
+                  <div class="btn01 btn-primary-black-signup01 black-signup01">
+                    <span>Upload</span>
+                    <input type="file" img-validate ng-file-select="onFileSelect($files)" placeholder="Upload" file-model="evntlogo" accept="image/*" name="evntlogo" required  ng-model="evntlogo">
+                  </div>
+                  <br/>
+                </div>
+              </div>
+              <div class="row ">
+                <div class="newevent-top-bottom">
+                  <div class="newevent">Event Date</div>
+                    <div class="gray">Password policy Yara is a<br/> 
+                      Every feature is meticulously crafted in way</div>
+                  </div>
+                   <div class="col-md-4 col-md-offset-3"style="width:100%">
+                  <!-- Nav tabs -->
+                  <ul id="mytabs" class="nav list" role="tablist" >
+                  <li class="bg-color-newevent " ng-class="{'active':evntDate=='single'}" ng-init="evntDate='single'">
+                      <a  role="tab" data-toggle="tab" ng-click="evntDate='single';dates.splice(1)">
+                        Single Day
+                      </a>
+                    </li>
+                    <li class="bg-color-newevent " ng-class="{'active':evntDate=='multi'}">
+                      <a  role="tab" data-toggle="tab" ng-click="evntDate='multi'">
+                        Multiple Days
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                 <!--  <div class="security-event btn-group btn-toggle"> 
+                    <button type="button" class="security-event btn btn-lg  btn-primary " ng-click="evntDate='single';dates.splice(1)" ng-init="evntDate='single'">Single Day</button>
+                    <button type="button" class="security-event btn btn-lg btn-default " ng-click="evntDate='multi'" >Multiple Days</button>
+                  </div> -->
+                </div>
+                <div class="row">
+                  <div class="col-md-12 newevent-top-multi" >
+                    <div class=" list-group-item padding_newevent gray-res "  ng-class="{'col-md-offset-3 col-md-6 ':evntDate=='single','col-md-5 col-md-offset-1 grid-space':evntDate!='single'}" ng-repeat="d in dates">
+                      <div class="text-right"  ng-show="$index!=0 && $index==(dates.length-1)" ng-click="deleteDay()"><img src="../../../static/dashboard/images/close.png?v=b1ce2d1d813d0e16af2d417f4f3644e6"width="10%"/></div>
+                      <p class="col-md-12 input-group">
+                        <input type="text" ng-readonly="true" ng-model="eventstartdate" value="{{eventstartdate}}" ng-click="showDatePicker($event)" ng-show="$index==0" class="inputbox-res01 text-center pointer"/>
+                        <span ng-show="$index!=0" class="inputbox-res01 text-center pointer" >
+                          {{d}}
+                        </span>
+                      </p>
+                      <p class="col-md-12 input-group">
+                        <input type="text" class="inputbox-res01  text-center md-raised md-warn pointer" placeholder="Start Time" ng-click="showTimePicker($event,'evntstarttime'+d,d)" aria-label="show picker" id="evntstarttime{{d}}" ng-model="evntstarttime$index" name="evntstarttime{{d}}" ng-readonly="true" required />
+                        <span style="color:red" ng-show=" submitted2 && step2form['evntstarttime{{d}}'].$untouched || step2form['evntstarttime{{d}}'].$touched && step2form['evntstarttime{{d}}'].$error.required">Start Time required</span>
+                      </p>
+                    
+                      <p class="col-md-12 input-group">
+                        <input  type="text" class="inputbox-res01 md-raised md-warn text-center pointer" placeholder="End Time" ng-click="showTimePicker($event,'evntendtime'+d,d)" aria-label="show picker" id="evntendtime{{d}}" ng-model="evntendtime$index"  ng-readonly="true" name="evntendtime{{d}}" required/>
+
+                        <span style="color:red" ng-show=" submitted2 && step2form['evntendtime{{d}}'].$untouched || step2form['evntendtime{{d}}'].$touched && step2form['evntendtime{{d}}'].$error.required">End Time required</span>
+
+                      </p>
+                      
+                    </div>
+                    <div class="col-md-5 list-group-item padding_newevent1 grid-space" ng-hide="evntDate=='single'" ng-click="addDay()">
+                      <div class="nav-font-new"><img src="../../../static/dashboard/images/plus.png?v=4485a68ee8da31a786ec57a4b0873b74"width="50%"/></div>
+                      <div class="nav-font-new1">Add New Date</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 col-md-offset-4 button-top">
+                    <button  class="btn btn-primary-black" class="btn btn-lg btn-success" type="submit" >Continue</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          
+          <!-- End Tab 2 -->
+
+          <!--  Tab 3 -->
+          <div role="tabpanel" class="tab-pane" ng-class="{active:3 == tabsel}" >
+            <form novalidate name="step3form" ng-init="submitted3=false" ng-submit="step3form.$valid && imageSrc1 ? tabSelection(4) :submitted3=true">      
+
+              <div class="row">
+                <div class="col-md-12 newevent-top02 ">
+                  <div class="newevent">Event Contact Infos</div>
+                  <div class="gray">Should be short. a cover image and dimesntions is a <br/>
+                    Every feature is meticulously crafted in way
+                  </div>
+                  <br/>
+                  <div class="col-lg-2 col-md-offset-1"> <img src="../../../static/dashboard/images/phone-gray.png" class="icon-width phone" data-toggle="modal" data-target="#myModal-social" id="phone" ng-click="social_type='phone';poperror=false" /><br/>Phone<br/>
+                  <span style="color:red;" class="arrow_box" ng-show="submitted3 && step3form.eventph.$error.required ">
+                  Phone Required
+                  </span>     
+                  </div>
+                  <div class="col-lg-2"><img src="../../../static/dashboard/images/message-gray.png" class="icon-width message" data-toggle="modal" data-target="#myModal-social" id="message" ng-click="social_type='message';poperror=false" /><br/>Email<br/>
+                    
+                     <span style="color:red;" class="arrow_box" ng-show="submitted3 && step3form.eventEmail.$error.required">Email Required </span>
+                  </div>
+                  <div class="col-lg-2 ">
+                    <img src="../../../static/dashboard/images/company-website-gray.png" class="icon-width company-website" data-toggle="modal" data-target="#myModal-social" id="company-website" ng-click="social_type='company-website'" data-container="body" data-toggle="" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."/><br/>Web
+                  </div>
+                  <div class="col-lg-2"> <img src="../../../static/dashboard/images/facebook-gray.png" class="icon-width facebook" data-toggle="modal" data-target="#myModal-social" id="facebook" ng-click="social_type='facebook'" /><br/>Facebook</div>
+                  <div class="col-lg-2" > <img src="../../../static/dashboard/images/twitter-gray.png" class="icon-width twitter" data-toggle="modal" data-target="#myModal-social" id="twitter" ng-click="social_type='twitter'" /><br/>Twitter</div>
+
+<!-- Social Icons Modal Window -->
+<div class="modal fade" id="myModal-social" tabindex="-1" role="dialog" data-backdrop="static"  aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" style="margin-top:15%;">
+    <div class="modal-content">
+      <div class="modal-header-signup2">
+        <h4 class="modal-title text-left signup2-created" id="myModalLabel" >Add Social</h4>
+      </div>
+      <div class="modal-body-signup2">
+              <div ng-show="social_type=='phone'">
+             <div class="text-left">Phone</div>
+            <input type="text" ng-model="Teventph" name="eventph" is-number class="inputbox-signup2" maxlength="15"  minlength="10" placeholder="Event Phone" required>
+            <div class="border-top-web"></div>
+            <span style="color:red;" ng-show="poperror && step3form.eventph.$error.minlength">Invalid Phone </span>  
+            <span style="color:red;"  ng-show="poperror && step3form.eventph.$error.required ">
+                  Phone Required
+            </span>  
+            <!-- <span style="color:red;" ng-show="step3form.eventph.$touched && step3form.eventph.$error.minlength">Invalid Phone </span> -->
+            <!-- <span style="color:red;" ng-show="step3form.eventph.$dirty && step3form.eventph.$invalid && step3form.eventph.$touched ">
+                <span ng-show="step3form.eventph.$error.required">Event Phone </span>
+          
+            </span> -->
+            </div>
+            
+            <div ng-show="social_type=='message'">
+             <div class="text-left">Email</div>
+            <input type="email" ng-model="TeventEmail" name="eventEmail" placeholder="Event Email Id" validate-email  class="inputbox-signup2" required>
+            <div class="border-top-web"></div>
+            <span style="color:red;"  ng-show="poperror && step3form.eventEmail.$error.email">Invalid Email </span>
+            <span style="color:red;"  ng-show="poperror && step3form.eventEmail.$error.required">Email Required </span>
+           
+            <!-- <span style="color:red;"  ng-show="step3form.eventEmail.$touched && step3form.eventEmail.$error.email">Invalid Email </span> -->
+            </div>
+            <div ng-show="social_type=='company-website'">
+            <div class="text-left signup_font">Website</div>
+
+            <input type="text" ng-model="Teventweb" name="eventweb" placeholder="Event Website" class="inputbox-signup2" maxlength="50" >
+            <div class="border-top-web"></div>
+            <!-- <span style="color:red;" ng-show="step3form.eventweb.$dirty && step3form.eventweb.$invalid ">
+                <span ng-show="step3form.eventweb.$error.required">Company Website </span>
+            </span> -->
+            </div>
+
+            <div ng-show="social_type=='facebook'">
+            <div class="text-left">Facebook</div>
+            <input type="text" ng-model="Teventfb" name="eventfb"  fb-url class="inputbox-signup2"  maxlength="50">
+            <div class="border-top-signup2"></div>
+           <!--  <span style="color:red;" ng-show="step3form.eventfb.$dirty && step3form.eventfb.$invalid ">
+                <span ng-show="step3form.eventfb.$error.required">Company Facebook </span>
+            </span> -->
+            </div>
+
+            <div ng-show="social_type=='twitter'">
+             <div class="text-left ">Twitter</div>
+            <input type="text" ng-model="Teventtwitter" name="eventtwitter" twitter-url class="inputbox-signup2" maxlength="50">
+            <div class="border-top-twitter"></div>
+           <!--  <span style="color:red;" ng-show="step3form.eventtwitter.$dirty && step3form.eventtwitter.$invalid ">
+                <span ng-show="step3form.eventtwitter.$error.required">Company Twitter </span>
+            </span> -->
+            </div>
+      </div>
+      <div class="row" style="margin:0 15px;">
+         <div class="col-md-12 border-top">
+                    <div class="col-md-8">&nbsp;</div>
+                     <div class="col-md-2 pulse-margin"><button type="button" data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 ">Close</button></div>
+                     <div class="col-md-2"><button ng-show="social_type=='phone'" type="button" class="btn01 btn-primary-black-pulse01 " ng-click="step3form.eventph.$invalid ? poperror=true : saveSocials();">Add</button><button ng-show="social_type=='message'" type="button" class="btn01 btn-primary-black-pulse01 " ng-click="step3form.eventEmail.$invalid? poperror=true : saveSocials();">Add</button><button ng-show="social_type!='phone' && social_type!='message'" type="button" class="btn01 btn-primary-black-pulse01 " ng-click="saveSocials()">Add</button></div>
+                    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---modal window End- -->
+
+           
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 newevent-top03">
+                  <div class="newevent-top04">
+                    <div class="newevent">Event Location</div>
+                    <div class="gray">Should be short. a cover image and dimesntions is a <br/>
+                      Every feature is meticulously crafted in way
+                    </div>
+                  </div><br/>
+                  <div class="col-md-6 col-md-offset-3">
+                    <input type="text" name="venu1" ng-model="venu" class="inputbox" placeholder="venue" required>
+                    <span class="text-danger" ng-show="submitted3  || step3form.venu1.$dirty && step3form.venu1.$invalid">
+                      <span ng-show="step3form.venu1.$error.required">Venue </span>
+                    </span>
+                    <br/>
+                    <div class="text-left inputbox">
+                    <select onchange="changeMe(this)" id="country" class="drop-select01 dropdown-menu-width01 text-left" ng-options="c.name for (key,c) in countries" ng-model="country">
+                      <option value='' selected disabled>Select Country</option>
+                    </select>
+                  </div>
+                    <span class="text-danger text-center" ng-show="submitted3 && (country=='' || country==undefined || country==null)">
+                      Country
+                    </span>
+                    <br/>
+                    <div class="text-left inputbox">
+                    <select onchange="changeMe(this)" id="state" class="drop-select01 dropdown-menu-width01 text-left" ng-disabled="!country" ng-model="state" ng-options="city.name for (state,city) in country.states"><option value='' selected disabled>Select State</option></select> 
+                    <!-- <input type="text" name="venustate1" ng-model="venustate" class="inputbox" placeholder="State or Province" required > -->
+                   </div>
+                    <span class="text-danger text-center" ng-show="submitted3 && (state=='' || state==undefined || state==null)">
+                      State 
+                    </span>
+                    <br/>
+                    <input type="text" name="addrline11" ng-model="addrline1" class="inputbox" placeholder="Address Line 1" required>
+                    <span class="text-danger" ng-show="submitted3 || step3form.addrline11.$dirty && step3form.addrline11.$invalid">
+                      <span ng-show="step3form.addrline11.$error.required">Address Line </span>
+                    </span>
+                    <br/>
+                    <input type="text" name="addrline2" ng-model="addrline2" class="inputbox" placeholder="Address Line 2"><br/>
+                    <input type="text" name="venucity1" ng-model="venucity" class="inputbox" placeholder="City" required >
+                    <span class="text-danger" ng-show="submitted3  || step3form.venucity1.$dirty && step3form.venucity1.$invalid">
+                      <span ng-show="step3form.venucity1.$error.required">City </span>
+                    </span>
+                    <br/>
+                    <input type="text" name="venupincode1" ng-model="venupincode" class="inputbox" placeholder="Zip" required maxlength="16">
+                    <span class="text-danger" ng-show="submitted3 || step3form.venupincode1.$dirty && step3form.venupincode1.$invalid">
+                      <span ng-show="step3form.venupincode1.$error.required">Pincode </span>
+                    </span>
+                  </div>
+                  <div class="col-md-12 newevent-top03">
+                    <div class="newevent-top04">
+                      <div class="newevent">Pin point your location</div>
+                      <div class="gray">Should be short. a cover image and dimesntions is a <br/>
+                        Every feature is meticulously crafted in way
+                      </div>
+                    </div><br/>
+                    <div cust-map ng-model="searchloc" class="cust-map">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div calss="row ">
+                <div class="col-md-12">
+                  <div class="newevent-top04">
+                    <div class="newevent">Fill Schedule Cover Image</div>
+                    <div class="gray">Should be short. a cover image and dimesntions is a <br/>
+                      Every feature is meticulously crafted in way
+                    </div>
+                  </div><br/>
+                  <div class="col-md-6 col-md-offset-3 ">                      
+                    <div ng-hide="imageSrc1" class="logo-update">
+                      <div class="sub-nav-size-signup icon">
+                        <a class="pointer" data-toggle="tooltip" data-placement="right" title="The&nbsp;cover&nbsp;image&nbsp;will&nbsp;be&nbsp;displayed on&nbsp;your&nbsp;profile">
+                          <img src="../../../static/dashboard/images/info-icon.png"width="4%"/>
+                        </a>
+                      </div>
+                      <div class="sub-heading-logo">
+                        <div class="sub-nav-size-signup">Schedule Cover Image</div>
+                        <div class="nav-font01">Minimum Size<br/>2048 X 1024<br/>Aspect Ratio:2:1</div>
+                      </div>
+                    </div><br/>
+                    <img ng-src="{{imageSrc1}}" class="image-width-newevent01" ng-show="imageSrc1" />
+                    <span style="color:red" >
+                      <span ng-show="submitted3 && step3form.coverimg.$error.required">Schedule Cover Image Required</span>
+                      <span ng-show="step3form.coverimg.$error.invalidimg">Invalid Image File Type</span>
+                      <span ng-show="step3form.coverimg.$error.minsizeval">File size sholud not be Max Of 5MB</span>
+                      <span ng-show="!step3form.coverimg.$error.minsizeval && step3form.coverimg.$error.ratioval">Aspect Ratio Should Be 2 : 1</span>
+                      <span ng-show="!step3form.coverimg.$error.minsizeval && step3form.coverimg.$error.minDimension">Minimum Size 2048 X 1024</span>                
+                    </span>
+                    <br/>
+                    <div class="btn01 btn-primary-black-signup01 black-signup01">
+                      <span>Upload</span>
+                      <input type="file" ng-file-selected="onFileSelect($files)" file-model="coverimg" required accept="image/*" name="coverimg" img-validate ng-model="coverimg"  class="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br/>
+              <div class="col-md-4 col-md-offset-4 button-top">
+                <button type="submit"  class="btn btn-primary-black">Continue</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- End Tab 3 -->
+
+          <!-- Tab 4 -->
+          <div role="tabpanel" class="tab-pane" ng-class="{active:4 == tabsel}" >
+            <form novalidate name="step4form" ng-init="submitted4=false" ng-submit="step4form.$valid && imageSrc1 && selectedval!=0 && subtitle!='select' && imageSrc ? createform(step4form) :submitted4=true">   
+              <br/>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="newevent">Select an Event Type</div>
+                  <div class="gray">Password policy Yara is a<br/>
+                  Every feature is meticulously crafted in way</div>
+                  <ul class="list-group newevent-top01 pointer">
+                    <a  class="col-md-12 list-group-item tab-click" ng-class="{active: eventtype.type_id === selectedval} " ng-repeat="eventtype in eventtypes"  ng-click="selectedtype(eventtype.type_id)">
+                      <div class="col-md-10 text-top">
+                        <div>
+                          <div class="event-font"><b>{{eventtype.type_title}} </b></div>
+                          Example or Definition
+                        </div>
+                      </div>
+                      <div class="col-md-2"><img src="../../../static/dashboard/images/right.png"width="60%"/></div>
+                    </a>
+                  </ul>
+                  <div class="text-danger" ng-show="submitted4 && selectedval==0"> Select an Event Type</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="newevent-top-bottom">
+                  <div class="newevent">Select an Event Type</div>
+                  <div class="gray">Password policy Yara is a<br/>
+                  Every feature is meticulously crafted in way</div>
+                </div> 
+                  <div class="col-md-12 list-group-item inputbox dropdown-height">
+                  <ul class="nav navbar-nav  dropdownwidth">
+                    <select id="myselect" class="drop-select dropdown-menu-width" ng-model="subtitle" ng-init="subtitle='select'"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <option value="select">Select Event Type</option>
+                      <option ng-repeat="s in subtypelist" value="{{s}}">{{s}}</option>
+                    </select>
+                  </ul>
+                  <div class="text-danger" ng-show="submitted4 && subtitle=='select'"> Select an Event Sub Type</div>
+                </div>
+           
+              </div>
+              <div class="row ">
+                <div class="newevent-top-bottom">
+                  <div class="newevent">Event Security</div>
+                  <div class="gray">Is this event a public event.</div>
+                </div>
+                 <div class="col-md-4 col-md-offset-3"style="width:100%">
+                  <!-- Nav tabs -->
+                  <ul id="mytabs" class="nav list" role="tablist" >
+                  <li class="bg-color-newevent " ng-class="{'active':isEventPrvt==true}">
+                      <a  role="tab" data-toggle="tab" ng-click="isEventPrvt=true">
+                        yes
+                      </a>
+                    </li>
+                    <li class="bg-color-newevent " ng-class="{'active':isEventPrvt==false}">
+                      <a  role="tab" data-toggle="tab" ng-click="isEventPrvt=false">
+                        No
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <br/>
+              </div>
+              <div clas="row">
+                <div class="newevent-top-bottom">
+                  <div class="newevent">Select an Event Frequency</div>
+                  <div class="gray">Password policy Yara is a<br/>
+                    Every feature is meticulously crafted in way</div>
+                </div>
+                <div style="width:100%">
+                  <!-- Nav tabs -->
+                  <ul id="mytabs" class="nav list" role="tablist" ng-init="evntfreq='None'">
+                    <li class="bg-color-newevent " ng-class="{'active':evntfreq=='Annually'}">
+                      <a  role="tab" data-toggle="tab" ng-click="evntfreq='Annually'">
+                        Annually
+                      </a>
+                    </li>
+                    <li class="bg-color-newevent " ng-class="{'active':evntfreq=='Twice yearly'}">
+                      <a  role="tab" data-toggle="tab" ng-click="evntfreq='Twice yearly'">
+                        Twice Yearly
+                      </a>
+                    </li>
+                    <li class="bg-color-newevent " ng-class="{'active':evntfreq=='2 Years'}">
+                      <a  role="tab" data-toggle="tab" ng-click="evntfreq='2 Years'">
+                        2 Years
+                      </a>
+                    </li>
+                    <li class="bg-color-newevent " ng-class="{'active':evntfreq=='None'}">
+                      <a  role="tab" data-toggle="tab" ng-click="evntfreq='None'">
+                        None
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <br/><br/>
+                <hr/>
+              </div>
+              <div class="row">
+                <div class="col-md-12 top-nav">
+                  <div class="newevent">Event Information</div>
+                  <div class="gray">Should be short. a cover image and dimesntions is a <br/>
+                    Every feature is meticulously crafted in way
+                  </div>
+                     <div class="col-md-6 col-md-offset-3 text-center newevent-top01">
+                    <input type="text" placeholder="Event Name" class="inputbox" ng-model="eventname" name="eventname" required >
+                    <span style="color:red" ng-show=" submitted4 && step4form.eventname.$untouched || step4form.eventname.$dirty && step4form.eventname.$invalid">
+                      <span ng-show=" step4form.eventname.$error.required">Even Full Name </span>
+                    </span>
+                    <input type="text" placeholder="Event Short Name" class="inputbox-res" ng-model="eventshrtname" name="eventshrtname" required ng-click="suggestShrtName()" >
+                    <span style="color:red" ng-show="submitted4 && step4form.eventshrtname.$untouched || step4form.eventshrtname.$dirty && step4form.eventshrtname.$invalid">
+                      <span ng-show=" step4form.eventshrtname.$error.required">Even Short Name </span>
+                    </span>
+                     <textarea ng-model="eventdesc" rows="1" name="eventdesc"  placeholder="Event Description"  class="input_boxtext-res"  required></textarea>
+                    <span style="color:red" ng-show="submitted4 && step4form.eventdesc.$untouched || step4form.eventdesc.$dirty && step4form.eventdesc.$invalid">
+                      <span ng-show=" step4form.eventdesc.$error.required">Even Description </span>
+                    </span>
+                  </div> 
+           
+                </div>
+              </div>
+              <div class="row"> 
+                <div class="sub-nav-size-signup newevent-top">Event Logo</div>
+                <div class="nav-font01">should be short. a cover image and dimesntions is a <br/><br/>
+                  Every feature is meticulously crafted in way</div>   
+                <br />
+                <div class="col-md-6 col-md-offset-3">
+                  <div ng-hide="imageSrc" class="logo-update">
+                    <div class="sub-nav-size-signup icon">
+                      <a class="pointer" data-toggle="tooltip" data-placement="right" title="Upload&nbsp;the&nbsp;Organization&nbsp;Logo " >
+                        <img src="../../../static/dashboard/images/info-icon.png"width="4%"  />
+                      </a>
+                    </div>
+                    <div class="sub-heading-logo" >
+                      <div class="sub-nav-size-signup">Logo</div>
+                      <div class="nav-font01">Minimum Size<br/>1024*1024<br/>Aspect Ratio:1:1</div>
+                    </div>
+                  </div><br/>
+                  <img ng-src="{{imageSrc}}" class="image-width-newevent" id="img-evntlogo" ng-show="imageSrc"  />
+                  <span style="color:red" >
+                    <span ng-show="step4form.evntlogo.$error.invalidimg">Invalid Image File Type</span>
+                    <span ng-show="!step4form.evntlogo.$error.invalidimg && step4form.evntlogo.$error.minsizeval">File size sholud not be Max Of 5MB</span>
+                    <span ng-show="!step4form.evntlogo.$error.minsizeval && step4form.evntlogo.$error.ratioval">Aspect Ratio Should Be 1 : 1</span>
+                    <span ng-show="!step4form.evntlogo.$error.minsizeval && step4form.evntlogo.$error.minDimension">Minimum Size 1024 * 1024</span>
+                    <span ng-show="submitted4 && step4form.evntlogo.$error.required">Event Logo required</span>
+                  </span>
+                  <br/>
+                  <div class="btn01 btn-primary-black-signup01 black-signup01">
+                    <span>Upload</span>
+                    <input type="file" img-validate ng-file-selected1="onFileSelect($files)" placeholder="Upload" file-model="evntlogo" accept="image/*" name="evntlogo" required  ng-model="evntlogo">
+                  </div>
+                  <br/>
+                </div>
+              </div>
+              <div class="row ">
+                <div class="newevent-top-bottom">
+                  <div class="newevent">Event Date</div>
+                    <div class="gray">Password policy Yara is a<br/> 
+                      Every feature is meticulously crafted in way</div>
+                  </div>
+                     <div class="col-md-4 col-md-offset-3"style="width:100%">
+                  <!-- Nav tabs -->
+                  <ul id="mytabs" class="nav list" role="tablist" >
+                  <li class="bg-color-newevent " ng-class="{'active':evntDate=='single'}" >
+                      <a  role="tab" data-toggle="tab" ng-click="evntDate='single';dates.splice(1)">
+                        Single Day
+                      </a>
+                    </li>
+                    <li class="bg-color-newevent " ng-class="{'active':evntDate=='multi'}">
+                      <a  role="tab" data-toggle="tab" ng-click="evntDate='multi'">
+                        Multiple Days
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 newevent-top" >
+                        <div class=" list-group-item padding_newevent gray-res "  ng-class="{'col-md-offset-3 col-md-6 ':evntDate=='single','col-md-5 col-md-offset-1 grid-space':evntDate!='single'}" ng-repeat="d in dates">
+                      <div class="text-right"  ng-show="$index!=0 && $index==(dates.length-1)" ng-click="deleteDay()"><img src="../../../static/dashboard/images/close.png"width="10%"/></div>
+                      <p class="col-md-12 input-group">
+                        <input type="text" ng-readonly="true" ng-model="eventstartdate" value="{{eventstartdate}}" ng-click="showDatePicker($event)" ng-show="$index==0" class="inputbox-res01 text-center pointer"/>
+                        <span ng-show="$index!=0" class="inputbox-res01 text-center pointer" >
+                          {{d}}
+                        </span>
+                      </p>
+                      <p class="col-md-12 input-group">
+                        <input type="text" class="inputbox-res01  text-center md-raised md-warn pointer" placeholder="Start Time" ng-click="showTimePicker1($event,'evntstarttime'+d,d)" aria-label="show picker" id="4evntstarttime{{d}}" ng-model="evntstarttime$index" name="4evntstarttime{{d}}" ng-readonly="true" required />
+                        <span style="color:red" ng-show=" submitted4 && step4form['4evntstarttime{{d}}'].$untouched || step4form['4evntstarttime{{d}}'].$touched && step4form['4evntstarttime{{d}}'].$error.required">Start Time required</span>
+                      </p>
+                    
+                      <p class="col-md-12 input-group">
+                        <input  type="text" class="inputbox-res01 md-raised md-warn text-center pointer" placeholder="End Time" ng-click="showTimePicker1($event,'evntendtime'+d,d)" aria-label="show picker" id="4evntendtime{{d}}" ng-model="evntendtime$index"  ng-readonly="true" name="4evntendtime{{d}}" required/>
+
+                        <span style="color:red" ng-show=" submitted4 && step4form['4evntendtime{{d}}'].$untouched || step4form['4evntendtime{{d}}'].$touched && step4form['4evntendtime{{d}}'].$error.required">End Time required</span>
+
+                      </p>
+                      
+                    </div>
+                  <div class="col-md-5 list-group-item padding_newevent1 grid-space" ng-hide="evntDate=='single'" ng-click="addDay()">
+                      <div class="nav-font-new"><img src="../../../static/dashboard/images/plus.png"width="50%"/></div>
+                      <div class="nav-font-new1">Add New Date</div>
+                    </div>
+                   
+                  </div>
+                </div>
+                
+              
+               <div class="row">
+                <div class="col-md-12 newevent-top10 ">
+                  <div class="newevent">Event Contact Infos</div>
+                  <div class="gray">Should be short. a cover image and dimesntions is a <br/>
+                    Every feature is meticulously crafted in way
+                  </div>
+                  <br/>
+                  <div class="col-lg-2 col-md-offset-1"> <img src="../../../static/dashboard/images/phone-gray.png" class="icon-width phone" data-toggle="modal" data-target="#myModal-social4" id="phone" ng-click="social_type='phone';poperror4=false" /><br/>Phone<br/>
+                    <span style="color:red;" class="arrow_box" ng-show="submitted4 && step4form.eventph.$error.required ">
+                  Phone Required
+                  </span>  
+                  </div>
+                  <div class="col-lg-2"><img src="../../../static/dashboard/images/message-gray.png" class="icon-width message" data-toggle="modal" data-target="#myModal-social4" id="message" ng-click="social_type='message';poperror4=false" /><br/>Email<br/>
+                    
+                     <span style="color:red;" class="arrow_box" ng-show="submitted4 && step4form.eventEmail.$error.required">Email Required </span></div>
+                  <div class="col-lg-2 ">
+                    <img src="../../../static/dashboard/images/company-website-gray.png" class="icon-width company-website" data-toggle="modal" data-target="#myModal-social4" id="company-website" ng-click="social_type='company-website'" data-container="body" data-toggle="" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."/><br/>Web
+                  </div>
+                  <div class="col-lg-2"> <img src="../../../static/dashboard/images/facebook-gray.png" class="icon-width facebook" data-toggle="modal" data-target="#myModal-social4" id="facebook" ng-click="social_type='facebook'" /><br/>Facebook</div>
+                  <div class="col-lg-2" > <img src="../../../static/dashboard/images/twitter-gray.png" class="icon-width twitter" data-toggle="modal" data-target="#myModal-social4" id="twitter" ng-click="social_type='twitter'" /><br/>Twitter</div>
+
+<!-- Social Icons Modal Window -->
+<div class="modal fade" id="myModal-social4" tabindex="-1" role="dialog" data-backdrop="static"  aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" style="margin-top:15%;">
+    <div class="modal-content">
+      <div class="modal-header-signup2">
+        <h4 class="modal-title text-left signup2-created" id="myModalLabel" >Add Social</h4>
+      </div>
+      <div class="modal-body-signup2">
+              <div ng-show="social_type=='phone'">
+             <div class="text-left">Phone</div>
+            <input type="text" ng-model="Teventph" name="eventph" is-number class="inputbox-signup2" maxlength="15"  minlength="10" placeholder="Event Phone" required>
+            <div class="border-top-web"></div>
+            <span style="color:red;" ng-show="poperror4 && step4form.eventph.$error.minlength">Invalid Phone </span>  
+            <span style="color:red;"  ng-show="poperror4 && step4form.eventph.$error.required ">
+                  Phone Required
+            </span>
+            <!-- <span style="color:red;" ng-show="step4form.eventph.$dirty && step4form.eventph.$invalid && step4form.eventph.$touched ">
+                <span ng-show="step4form.eventph.$error.required">Event Phone </span>
+          
+            </span> -->
+            </div>
+            
+            <div ng-show="social_type=='message'">
+             <div class="text-left">Email</div>
+            <input type="email" ng-model="TeventEmail" name="eventEmail" placeholder="Event Email Id" validate-email  class="inputbox-signup2" required>
+            <div class="border-top-web"></div>
+             <span style="color:red;"  ng-show="poperror4 && step4form.eventEmail.$error.email">Invalid Email </span>
+            <span style="color:red;"  ng-show="poperror4 && step4form.eventEmail.$error.required">Email Required </span>
+            </div>
+            <div ng-show="social_type=='company-website'">
+            <div class="text-left signup_font">Website</div>
+
+            <input type="text" ng-model="Teventweb" name="eventweb" placeholder="Event Website" class="inputbox-signup2" maxlength="50" >
+            <div class="border-top-web"></div>
+            <!-- <span style="color:red;" ng-show="step4form.eventweb.$dirty && step4form.eventweb.$invalid ">
+                <span ng-show="step4form.eventweb.$error.required">Company Website </span>
+            </span> -->
+            </div>
+
+            <div ng-show="social_type=='facebook'">
+            <div class="text-left">Facebook</div>
+            <input type="text" ng-model="Teventfb" name="eventfb"  fb-url class="inputbox-signup2"  maxlength="50">
+            <div class="border-top-signup2"></div>
+           <!--  <span style="color:red;" ng-show="step4form.eventfb.$dirty && step4form.eventfb.$invalid ">
+                <span ng-show="step4form.eventfb.$error.required">Company Facebook </span>
+            </span> -->
+            </div>
+
+            <div ng-show="social_type=='twitter'">
+             <div class="text-left ">Twitter</div>
+            <input type="text" ng-model="Teventtwitter" name="eventtwitter" twitter-url class="inputbox-signup2" maxlength="50">
+            <div class="border-top-twitter"></div>
+           <!--  <span style="color:red;" ng-show="step4form.eventtwitter.$dirty && step4form.eventtwitter.$invalid ">
+                <span ng-show="step4form.eventtwitter.$error.required">Company Twitter </span>
+            </span> -->
+            </div>
+      </div>
+      <div class="row" style="margin:0 15px;">
+         <div class="col-md-12 border-top">
+                    <div class="col-md-8">&nbsp;</div>
+                     <div class="col-md-2 pulse-margin"><button type="button" data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 ">Close</button></div>
+                     <div class="col-md-2"><button ng-show="social_type=='phone'" type="button" class="btn01 btn-primary-black-pulse01 " ng-click="step4form.eventph.$invalid ? poperror4=true : saveSocials();">Add</button><button ng-show="social_type=='message'" type="button" class="btn01 btn-primary-black-pulse01 " ng-click="step4form.eventEmail.$invalid ? poperror4=true : saveSocials();">Add</button><button ng-show="social_type!='phone' && social_type!='message'" type="button" class="btn01 btn-primary-black-pulse01 " ng-click="saveSocials()">Add</button></div>
+                    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---modal window End- -->
+
+           
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 newevent-top03">
+                  <div class="newevent-top04">
+                    <div class="newevent">Event Location</div>
+                    <div class="gray">Should be short. a cover image and dimesntions is a <br/>
+                      Every feature is meticulously crafted in way
+                    </div>
+                  </div><br/>
+                  <div class="col-md-6 col-md-offset-3">
+                    <input type="text" name="venu1" ng-model="venu" class="inputbox" placeholder="venue" required>
+                    <span class="text-danger" ng-show="submitted4 || step4form.venu1.$dirty && step4form.venu1.$invalid">
+                      <span ng-show="step4form.venu1.$error.required">Venue </span>
+                    </span>
+                    <br/>
+                      <div class="text-left inputbox">
+                    <select onchange="changeMe(this)" id="country" class="drop-select03 dropdown-menu-width01 text-left" ng-options="c.name for (key,c) in countries" ng-model="country">
+                      <option value='' >Select Country</option>
+                    </select>
+                    <span class="text-danger text-center" ng-show="submitted4 && (country=='' || country==undefined || country==null)">
+                      Country
+                    </span>
+                  </div>
+                   <br/> 
+                    <div class="text-left inputbox">
+                    <select onchange="changeMe(this)" id="state" class="drop-select03 dropdown-menu-width01 text-left" ng-disabled="!country" ng-model="state" ng-options="city.name for (state,city) in country.states"><option value='' selected disabled>Select State</option></select> 
+                    <!-- <input type="text" name="venustate1" ng-model="venustate" class="inputbox" placeholder="State or Province" required > -->
+                    <span class="text-danger text-center" ng-show="submitted4 && (state=='' || state==undefined || state==null)">
+                      State 
+                    </span>
+                  </div>
+                    
+                    <br/>
+                    <input type="text" name="addrline11" ng-model="addrline1" class="inputbox" placeholder="Address Line 1" required>
+                    <span class="text-danger" ng-show="submitted4  || step4form.addrline11.$dirty && step4form.addrline11.$invalid">
+                      <span ng-show="step4form.addrline11.$error.required">Address Line </span>
+                    </span>
+                    <br/>
+                    <input type="text" name="addrline2" ng-model="addrline2" class="inputbox" placeholder="Address Line 2"><br/>
+                    <input type="text" name="venucity1" ng-model="venucity" class="inputbox" placeholder="City" required >
+                    <span class="text-danger" ng-show="submitted4  || step4form.venucity1.$dirty && step4form.venucity1.$invalid">
+                      <span ng-show="step4form.venucity1.$error.required">City </span>
+                    </span>
+                    <br/>
+                    <input type="text" name="venupincode1" ng-model="venupincode" class="inputbox" placeholder="Zip" required maxlength="16">
+                    <span class="text-danger" ng-show="submitted4  || step4form.venupincode1.$dirty && step4form.venupincode1.$invalid">
+                      <span ng-show="step4form.venupincode1.$error.required">Pincode </span>
+                    </span>
+                  </div>
+                  <div class="col-md-12 newevent-top03">
+                    <div class="newevent-top04">
+                      <div class="newevent">Pin point your location</div>
+                      <div class="gray">Should be short. a cover image and dimesntions is a <br/>
+                        Every feature is meticulously crafted in way
+                      </div>
+                    </div><br/>
+                    <div cust-map ng-model="searchloc" class="cust-map">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div calss="row ">
+                <div class="col-md-12">
+                  <div class="newevent-top04">
+                    <div class="newevent">Fill Schedule Cover Image</div>
+                    <div class="gray">Should be short. a cover image and dimesntions is a <br/>
+                      Every feature is meticulously crafted in way
+                    </div>
+                  </div><br/>
+                  <div class="col-md-6 col-md-offset-3 ">                      
+                    <div ng-hide="imageSrc1" class="logo-update">
+                      <div class="sub-nav-size-signup icon">
+                        <a class="pointer" data-toggle="tooltip" data-placement="right" title="The&nbsp;cover&nbsp;image&nbsp;will&nbsp;be&nbsp;displayed on&nbsp;your&nbsp;profile">
+                          <img src="../../../static/dashboard/images/info-icon.png"width="4%"/>
+                        </a>
+                      </div>
+                      <div class="sub-heading-logo">
+                        <div class="sub-nav-size-signup">Schedule Cover Image</div>
+                        <div class="nav-font01">Minimum Size<br/>2048 X 1024<br/>Aspect Ratio:2:1</div>
+                      </div>
+                    </div><br/>
+                    <img ng-src="{{imageSrc1}}" class="image-width-newevent01" ng-show="imageSrc1" />
+                    <span style="color:red" >
+                      <span ng-show="submitted4 && step4form.coverimg.$error.required">Schedule Cover Image Required</span>
+                      <span ng-show="step4form.coverimg.$error.invalidimg">Invalid Image File Type</span>
+                      <span ng-show="step4form.coverimg.$error.minsizeval">File size sholud not be Max Of 5MB</span>
+                      <span ng-show="!step4form.coverimg.$error.minsizeval && step4form.coverimg.$error.ratioval">Aspect Ratio Should Be 2 : 1</span>
+                      <span ng-show="!step4form.coverimg.$error.minsizeval && step4form.coverimg.$error.minDimension">Minimum Size 2048 X 1024</span>                
+                    </span>
+                    <br/>
+                    <div class="btn01 btn-primary-black-signup01 black-signup01">
+                      <span>Upload</span>
+                      <input type="file" ng-file-selected="onFileSelect($files)" file-model="coverimg" required accept="image/*" name="coverimg" img-validate ng-model="coverimg"  class="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br/>
+              <div class="col-md-4 col-md-offset-4 button-top">
+                <button type="submit"  class="btn btn-primary-black">Continue</button>
+              </div>
+            </form>
+          </div>
+          <!-- End Tab 4 -->
+        </div>
+        </div>
+      </div>
+    </div>
+<!-- start footer-->
+    <div class="nav  navbar-bottom" >
+      <div class="container1">
+         <div class="pull-left">
+          <a href="http://www.thevoris.com/"><img src="../../../static/dashboard/images/voris_logo.svg?v=832100d9bf0cb067154b2708cfeef744"  class="navbar-brand-signup1"/></a>
+         </div>
+         <div class="navbar-text  navbar-brand3-signup pull-right">
+           &#169; 2014 - 2015 Voris Systems Pvt Ltd. All right reserved. <u>Privacy</u>
+         </div>
+      </div>
+    </div>
+    <!---End footer---->
+  <script>
+function h(e) {
+    $(e).css({'height':'auto','overflow-y':'hidden'}).height(e.scrollHeight);
+}
+$('textarea').each(function () {
+  h(this);
+}).on('input', function () {
+  h(this);
+});
+</script>
+<script type="text/javascript">
+    function changeMe(sel)
+    {
+      sel.style.color = "#555";              
+    }
+</script>
+<script>
+/*$('.btn-toggle').click(function() {
+    $(this).find('.btn').toggleClass('active');  
+    
+    if ($(this).find('.btn-primary').size()>0) {
+        $(this).find('.btn').toggleClass('btn-primary');
+    }
+    if ($(this).find('.btn-danger').size()>0) {
+        $(this).find('.btn').toggleClass('btn-danger');
+    }
+    if ($(this).find('.btn-success').size()>0) {
+        $(this).find('.btn').toggleClass('btn-success');
+    }
+    if ($(this).find('.btn-info').size()>0) {
+        $(this).find('.btn').toggleClass('btn-info');
+    }
+    
+    $(this).find('.btn').toggleClass('btn-default');
+       
+});*/
+</script>
+<script>
+$(function(){
+
+    $('#changetabbutton').click(function(e){
+        e.preventDefault();
+        $('#mytabs a[href="#second"]').tab('show');
+    })
+
+})
+</script>
+ <script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+  {%endverbatim%}
+  </body>
+</html>

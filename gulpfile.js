@@ -1,4 +1,4 @@
-var gulp = require('gulp'),uglify = require('gulp-uglify'),uglifycss = require('gulp-uglifycss');
+var gulp = require('gulp'),uglify = require('gulp-uglify'),uglifycss = require('gulp-uglifycss'),cssbust = require('gulp-css-cache-bust');
 
 gulp.task('scripts', function() {
   // place code for your default task here
@@ -23,6 +23,12 @@ gulp.task('css', function () {
       "uglyComments": true
     }))
     .pipe(gulp.dest('static/css'));
+});
+
+gulp.task('cachebust', function () {
+  return gulp.src('static/dashboard/css/*.css')
+  .pipe(cssbust())
+  .pipe(gulp.dest('static/csscache'));
 });
 
 gulp.task('compress',['scripts','jprogress','css']);

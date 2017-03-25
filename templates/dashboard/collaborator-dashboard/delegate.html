@@ -1,0 +1,570 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <link rel="stylesheet" href="../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <!--<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyBiLVnHVmK-3nm_MZvug6NjZmMdOQX_cm8"></script>-->
+      <script src="../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> <script src="../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script> <script src="../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> <script src="../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <script src="../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script>
+      <script src="../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../static/dashboard/scripts/app.js?v=cb63d6447409374df653b8707287ee36"></script>
+      <script src="../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>
+      <script src="../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>
+      <script src="../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>      <script src="../../../static/dashboard/scripts/ng-infinite-scroll.min.js?v=299bcea502c681c68093eb86f8c1bccf"></script>
+      <!--UI style---->
+      <link rel="stylesheet" href="../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+   </head>
+   <body ng-app="yara" ng-controller="CollabratorPeopleController"  class="overflow-body01" ng-init="setTitle('Add Delegate')">
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      {%verbatim%}
+      <div id="container" class="wrap01">
+         <!---header-->
+         <div class=" navbar-fixed-top border" >
+            <div class=" white text-center ">
+               <div class="col-md-12">
+                  <div class="col-md-1 nav-color main-header-upload container-remove-padding" style="text-align:left;"><a href="" back-button><img src="../../../../static/dashboard/images/yara_logo.svg?v=ce9e59e2272c030c2954deb7d56f3267" width="100%"/></a></div>
+                  <!--  <div class="col-md-1 nav-color sub-header-border10">&nbsp;</div> -->
+                  <div class="col-md-10 nav-color sub-header-small-collaborator10">
+                     <div class="kit-font10">
+                        <div class="header-sh" >
+                           {{currentval.name}}
+                           <div class="bullet01"></div>
+                        </div>
+                        Add Delegate
+                        <div class="header-sh">
+                           {{headerTitle}}
+                           <div class="bullet01"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!----end header---->
+         <div class="col-md-12 nav add-delegate-cancel">
+            <div class="col-md-1 col-md-offset-1 pulse-button-coll text-hover" ng-if="delegateStep=='step1'"><a href="people">Cancel</a></div>
+            <!-- <div class="col-md-1 col-md-offset-1 pulse-button-coll text-hover" ng-show="delegateStep=='step2'"  ng-click="delegateStep='step1'">Cancel</div> -->
+            <div class="col-md-1 col-md-offset-1 pulse-button-coll text-hover" ng-show="delegateStep=='step2'"  ng-click="(ticketsdata.length>1)? delegateStep=='step1':reditoPeople();delegateStep='step1'">Cancel</div>
+            <div class="col-md-1 col-md-offset-1 pulse-button-coll text-hover" ng-show="delegateStep=='step3'"   ng-click="delegateStep='step2'">Cancel</div>
+         </div>
+         <div class="container height-top" >
+            <div class="ticket-top-btn1  " ng-show="delegateStep=='step1'"  >
+               <div class="white text-center ">
+                  <div class=" bg-color-upload03 db-margin">
+                     <ul class="list-group  text-center">
+                        <div class="newevent-nav01" ng-bind="currentval.name">Event Name</div>
+                        <div class="newevent-upload">Package Status</div>
+                        <!-- <div  class="gray-new-upload">430 users will be added to Event_Name</div> --><br/>
+                        <div class="col-md-6 col-md-offset-3 ">
+                           <div ng-hide="cmpyimageSrc" class="col-md-12 logo-update  text-center container-remove-padding" droplet  ng-model="cmpylogo">
+                              <div class="col-md-4 container-remove-padding upload-step3 newevent-nav01">
+                                 Total
+                                 <div  class="gray-new-upload3" ng-bind="number_of_attendee | number">0</div>
+                              </div>
+                              <div class="col-md-4 container-remove-padding upload-step3 newevent-nav01">
+                                 Used
+                                 <div  class="gray-new-upload3" ng-bind="number_of_attendee_added | number">0</div>
+                              </div>
+                              <div class="col-md-4 container-remove-padding upload-step-no newevent-nav01">
+                                 Available 
+                                 <div  class="gray-new-upload3 " ng-bind="number_of_attendee - number_of_attendee_added | number">0</div>
+                              </div>
+                           </div>
+                           <br/><br/><br/><br/>
+                        </div>
+                     </ul>
+                  </div>
+               </div>
+               <form accessible-form novalidate name="delegateForm" ng-init="submitted=false"  ng-enter="delegateForm.$invalid ? submitted=true:delegateStep='step2'" ng-submit="delegateForm.$invalid ? submitted=true:delegateStep='step2'">
+                  <!-- delegateAdd() -->
+                  <div class="white text-center ">
+                     <div class=" bg-color-upload03 db-margin text-center">
+                        <!-- <div class="col-md-12 email-bgcolor">
+                           <div class="newevent-nav01 ">Enter Delegate Email Id</div>
+                           <div class="col-md-6 col-md-offset-3 text-center ">
+                             <input type="email" class="inputbox text-center input-email-color" placeholder="Email ID" validate-email ng-model="SPKemail" required name="SPKemail">
+                             <span class="upload-error-red text-center" ng-show="submitted && !delegateForm.SPKemail.hasFocus">
+                               <span ng-show="delegateForm.SPKemail.$error.required">
+                               Required
+                               </span>
+                               <span  ng-show="delegateForm.SPKemail.$error.email">
+                               Invalid Email
+                               </span>
+                             </span>
+                           </div>
+                           </div> -->
+                        <div class="col-md-12 " >
+                           <!-- ng-hide="ticketsdata.length <2" -->
+                           <div class="newevent-nav01 ">Select Delegate Ticket</div>
+                           <br/>
+                           <div class="col-md-12 text-center ">
+                              <ul class="list-group  text-center" >
+                                 <div class="col-md-12 list-group-item02 list-group-item-upload text-left ng-scope cursor-poi"  style="cursor: auto;" ng-repeat="tck in ticketsdata" ng-click="changetselect(tck)" ng-if="!tck.is_validity_over">
+                                    <div class="col-md-10  created-top-upload">
+                                       <div class="event-font-upload capitalize ng-binding">{{tck.name}}</div>
+                                       <div   ng-show="tck.all_day_access">
+                                          <div class="event-upload"  >Days: All Days</div>
+                                          <div class="event-upload" >Messaging: All Days</div>
+                                          <div class="event-upload" >Session Access: All Days</div>
+                                          <div class="event-upload" >Food Coupon: All Days</div>
+                                       </div>
+                                       <div   ng-if="!tck.all_day_access">
+                                          <div class="event-upload"  >Days: {{ticketDays(tck.ticket_code,tck.days)}}</div>
+                                          <div class="event-upload" >Messaging: {{ds.msg[tck.ticket_code]==''?'Disable':ds.msg[tck.ticket_code]}}</div>
+                                          <div class="event-upload" >Session Access: {{ds.acc[tck.ticket_code]==''?'Disable':ds.acc[tck.ticket_code]}}</div>
+                                          <div class="event-upload" >Food Coupon: {{ds.food[tck.ticket_code]==''?'Disable':ds.food[tck.ticket_code]}}</div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-2"><img src="../../../static/dashboard/images/right-blue.png?v=41202fcbacbf76f5fe8ff7f6c1a066d9" class="delegate-width" ng-show="ticktselected==tck.ticket_code"/></div>
+                                 </div>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-md-4 col-md-offset-4">
+                           <div class="col-md-10 col-md-offset-1 timeline-top-bottom01">
+                              <button class="btn btn-delegate" type="submit"  >Continue</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div class="add-delegate-top" ng-show="delegateStep=='step2'"  style="position:relative;width:100%;">
+               <form name="delEmailForm" novalidate accessible-form  autocomplete="off" ng-submit="checkDuplicates() &&  delEmailForm.$valid ? delegateAdd() :''">
+                  <div class="white text-center ">
+                     <!-- && (ds.emailDel | filter:'':true).length == ds.emailDel.length -->
+                     <div class=" bg-color-upload03 ticket-top">
+                        <div class="col-md-12 " ng-init="ds.emailDel=[1]">
+                           <div class="newevent-nav01 text-center">Add Delegates to <span ng-bind="ticket_name"></span><br/>
+                              Enter Email IDs
+                           </div>
+                           <div class="col-md-6 col-md-offset-3 text-center delegate-top" ng-repeat="e in ds.emailDel track by $index">
+                              <input type="email"  ng-focus="isFocusDemo" class="inputbox-delegate text-left auto-fill" placeholder="Email ID" validate-email ng-model="ds.emailDel[$index]" ng-init="ds.emailDel[$index]=''" ng-required="ds.emailDel.length==1 " name="SPKemail_{{$index}}" id="email_{{$index}}" maxlength="255">
+                              <div class="col-md-2 col-md-offset-10 text-left" style="margin-top: -10px;" ng-show="(ds.emailDel.length-1)==$index">
+                                 <img src="../../../../static/dashboard/images/add-delegate-gray.png?v=d68ed687926fd9ce38cb2d9de37ad7b6" width="40%"   ng-hide="(delEmailForm.$valid && ds.emailDel[ds.emailDel.length-1] !='')"/>
+                                 <img src="../../../../static/dashboard/images/add-delegate.png?v=8b3a96ca01dcfebad089f6c4e61a9bd7" width="40%" class="cursor-poi" ng-click="(delEmailForm.$valid && ds.emailDel[ds.emailDel.length-1] !='') ? ds.emailDel.push(ds.emailDel.length+1) :''" ng-show="(delEmailForm.$valid && ds.emailDel[ds.emailDel.length-1] !='')" />
+                              </div>
+                              <div class="delegate-border"></div>
+                              <div class="col-md-12 text-center" style="height: 18px;">
+                                 <span class="upload-error-red text-center" ng-show="delEmailForm['SPKemail_'+$index].$touched && !delEmailForm['SPKemail_'+$index].hasFocus">
+                                 <span ng-show="delEmailForm['SPKemail_'+$index].$error.required" ng-bind="'yara.required' | i18n">
+                                 Required
+                                 </span>
+                                 <span  ng-show="delEmailForm['SPKemail_'+$index].$error.email" ng-bind="'yara.invalidEmail' | i18n">
+                                 Invalid Email
+                                 </span>
+                                 <span  ng-show="ds.emailDel[$index]!='' && (ds.emailDel | filter:ds.emailDel[$index]:true).length>1 && !delEmailForm['SPKemail_'+$index].$error.email" ng-bind="'yara.dupliacteEmail' | i18n">
+                                 Duplicate Email ID
+                                 </span>
+                                 </span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 text-center">
+                           <span class="upload-error-red text-center" ng-show="existsData.result != 1 " ng-bind="existsData.error"></span>
+                        </div>
+                        <div class="col-md-4 col-md-offset-4">
+                           <div class="col-md-10 col-md-offset-1 timeline-top-bottom">
+                              <button type="submit" class="btn btn-delegate11" ng-enter ng-disabled="delEmailForm.$invalid || (ds.emailDel.length>1 && (ds.emailDel | filter:'':true).length==ds.emailDel.length)" >Continue</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div class=" delegate-top-bottom01" ng-show="delegateStep=='step3'"  style="position:relative;width:100%;">
+               <form novalidate name="invitForm" ng-submit="delegateCreateFrom()">
+                  <div class="white text-center dashboardWell">
+                     <div class=" bg-color-upload03 db-margin ">
+                        <ul class="list-group">
+                           <div class="newevent-nav01" ng-bind="ticket_name">$Ticket Name</div>
+                           <div class="newevent-upload">Add Delegate to <span ng-bind="currentval.name">$event_full_name</span></div>
+                           <br/>
+                           <div class="col-md-12 container-remove-padding ">
+                              <div ng-hide="cmpyimageSrc" class="col-md-12 ticket-top logo-update  text-center container-remove-padding" droplet  ng-model="cmpylogo">
+                                 <div class="col-md-12 container-remove-padding delegate-white-padding">
+                                    <div class="newevent-nav01 text-left">Status</div>
+                                    <div class="font-bulkstep3">
+                                       Delegates invited<!-- to <span ng-bind="currentval.short_name">$event_short_name</span> -->: <span ng-bind="foundDelegate.invited_emails.length">12</span>
+                                    </div>
+                                    <div class="font-bulkstep3">Delegates not invited: <span ng-bind="foundDelegate.non_account_emails.length + foundDelegate.delegate_account_emails.length ">12</span></div>
+                                    <div class="font-bulkstep3" ng-show="foundDelegate.other_account_emails_len>0">Yara Dashboard Users: <span ng-bind="foundDelegate.other_account_emails_len">12</span></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </ul>
+                     </div>
+                  </div>
+                  <div  ng-hide="foundDelegate.invited_emails.length<1">
+                     <!-- ng-hide -->
+                     <div class="container ticket-top-btn1">
+                        <div class="font-bulkstep3 delegate-heading">DELEGATES ALREADY ADDED TO <span ng-bind="currentval.name">$event_full_name</span></div>
+                        <div style="border-bottom:1px solid #f2f2f2;">&nbsp;
+                        </div>
+                     </div>
+                     <div class="white text-center dashboardWell" ng-repeat=" i in foundDelegate.invited_emails">
+                        <div class="col-md-12  container-remove-padding"  ng-show="i.account_email==undefined">
+                           <!-- style="border-top: 1px solid #f2f2f2;" -->
+                           <div class="bg-color-upload03 delegate-border-top-bottom">
+                              <div class="font-bulkstep3">Added : {{setOffset(i.invited_date,userOffset)|date:'hh.mm a MMMM dd, yyyy'}}</div>
+                              <div class="font-bulkstep3" ng-bind="i.email">Email ID</div>
+                              <div class="font-bulkstep3" ng-bind="i.ticket">$Ticket Name</div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 ticket-top-btn bg-color-upload03" ng-hide="i.account_email==undefined">
+                           <!---Add ng here -->
+                           <div class="col-md-12 text-center delegate-bgcolor01">
+                              <div class="col-md-2"><img ng-src="{{(i.profile_picture!=null)?i.profile_picture:'../../../static/dashboard/images/profile_pic.png?v=1077a0870aee6185b8a0943e13980bab'}}" class="bulk-upload-img" ng-class="{'bg-color-white':i.profile_picture==null}"/></div>
+                              <div class="col-md-9 bulkstep3 margin-left10">
+                                 <div class="font-bulkstep3" style="font-size:12px;" >Added: {{setOffset(i.invited_date,userOffset)|date:'hh.mm a MMMM dd, yyyy'}}</div>
+                                 <!--  03:10 PM, June 1 2016 -->
+                                 <div class="font-bulkstep3" style="font-size:14px;margin-bottom:20px" ng-bind="i.ticket">$Ticket Name</div>
+                                 <div class="font-bulkstep3" ng-bind="i.first_name+' '+i.middel_name+' '+i.last_name" >Thomas Key Jackob</div>
+                                 <!-- <div class="font-bulkstep3" >VP of Operations</div>
+                                    <div class="font-bulkstep3">Ralpha Luren</div> -->
+                                 <div class="font-bulkstep3" ng-bind="i.email">Email ID</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div  ng-hide="foundDelegate.conflict_invited_emails.length<1">
+                     <!-- ng-hide -->
+                     <div class="container ticket-top-btn1">
+                        <div class="font-bulkstep3 delegate-heading">People using this Email ID(s) have already been invited to this Event <!-- <span ng-bind="currentval.name">$event_full_name</span> --></div>
+                        <div style="border-bottom:1px solid #f2f2f2;">&nbsp;
+                        </div>
+                     </div>
+                     <div class="white text-center dashboardWell" ng-repeat=" i in foundDelegate.conflict_invited_emails">
+                        <div class="col-md-12  container-remove-padding"  >
+                           <!-- style="border-top: 1px solid #f2f2f2;" -->
+                           <div class="bg-color-upload03 delegate-border-top-bottom">
+                              <!-- <div class="font-bulkstep3" ng-bind="i.invited_email">Email ID</div> -->
+                              <div class="font-bulkstep3" ng-bind="i.inviting_email">$Ticket Name</div>
+                           </div>
+                        </div>
+                       <!--  <div class="col-md-12 ticket-top-btn bg-color-upload03" ng-hide="i.username==undefined">
+                           <div class="col-md-12 text-center delegate-bgcolor01">
+                              <div class="col-md-2"><img ng-src="{{(i.profile_picture!=null)?i.profile_picture:'../../../static/dashboard/images/profile_pic.png?v=1077a0870aee6185b8a0943e13980bab'}}" class="bulk-upload-img" ng-class="{'bg-color-white':i.profile_picture==null}"/></div>
+                              <div class="col-md-9 bulkstep3 margin-left10">
+                                 <div class="font-bulkstep3" style="font-size:12px;" >Added:{{setOffset(i.invited_date,userOffset)|date:'hh.mm a, MMMM d  y'}}</div>
+                                 <div class="font-bulkstep3" style="font-size:14px;margin-bottom:20px" ng-bind="i.ticket">$Ticket Name</div>
+                                 <div class="font-bulkstep3" ng-bind="i.first_name+' '+i.middel_name+' '+i.last_name" >Thomas Key Jackob</div>
+                                 <div class="font-bulkstep3" ng-bind="i.username">Email ID</div>
+                              </div>
+                           </div>
+                        </div> -->
+                     </div>
+                  </div>
+                  <div ng-hide="foundDelegate.delegate_account_emails.length<1 && foundDelegate.non_account_emails.length<1 ">
+                     <!-- ng-hide ng-hide="foundDelegate.invited_emails.length<1" -->
+                     <div class="container ticket-top-btn1">
+                        <div class="font-bulkstep3 delegate-heading">DELAGATES NOT INVITED YET</div>
+                        <div style="border-bottom:1px solid #f2f2f2;">&nbsp;
+                        </div>
+                     </div>
+                     <div class="white text-center dashboardWell">
+                        <div class="col-md-12 ticket-top-btn bg-color-upload03 padding0" ng-repeat="a in foundDelegate.delegate_account_emails">
+                           <!---Add ng here -->
+                           <div class="col-md-12 text-center email-bgcolor01">
+                              <div class="col-md-2"><img ng-src="{{(a.profile_picture!=null)?a.profile_picture:'../../../static/dashboard/images/profile_pic.png'}}" class="bulk-upload-img " ng-class="{'bg-color-white':a.profile_picture==null}"/></div>
+                              <div class="col-md-8 bulkstep3">
+                                 <div class="font-bulkstep3" ng-bind="a.full_name" >Thomas Key Jackob</div>
+                                 <!-- <div class="font-bulkstep3" >VP of Operations</div>
+                                    <div class="font-bulkstep3">Ralpha Luren</div> -->
+                                 <div class="font-bulkstep3" ng-bind="a.email">Email ID</div>
+                              </div>
+                              <div class="col-md-2 bulkstep3">
+                                 <div class="pulse-button-coll cursor-def" ><a class="text-hover cursor-poi" ng-click="foundDelegate.delegate_account_emails.splice($index,1)">REMOVE</a></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 ticket-top-btn1 container-remove-padding" style="border-top: 1px solid #f2f2f2;" ng-init="ds.eList=[]">
+                           <div class="col-md-12 bg-color-upload03 delegate-border-top-bottom01" ng-repeat="e in foundDelegate.non_account_emails">
+                              <!---Add ng here -->
+                              <div class="col-md-4">
+                                 <!-- <div class="font-bulkstep3" ng-bind="e">Email ID</div> -->
+                                 <input type="email" ng-model="ds.eList[$index]" class="input-upload auto-fill" name="email{{$index}}" id="email{{$index}}" ng-disabled="ds.eListDis[$index]" ng-init="ds.eList[$index]=e" validate-email required style="height:24px;">
+                              </div>
+                              <div class="col-md-5 text-center">
+                                 <div class="upload-error-red" ng-show="!invitForm['email{{$index}}'].hasFocus && invitForm['email{{$index}}'].$error.required" >(<span ng-bind="'yara.required' | i18n"></span>)</div>
+                                 <div class="upload-error-red " ng-show="!invitForm['email{{$index}}'].hasFocus   &&  invitForm['email{{$index}}'].$error.email" >(<span ng-bind="'yara.invalidEmail' | i18n"></span>)</div>
+                                 <div class="upload-error-red " ng-show="!invitForm['email{{$index}}'].hasFocus   &&  invitForm['email{{$index}}'].$valid && (ds.eList| filter:ds.eList[$index]:true).length>1 && !ds.eListDis[$index]" >(<span ng-bind="'yara.duplicateEmail' | i18n"></span>)</div>
+                                 <div class="upload-error-red " ng-show="ds.exError[$index].status"  ng-init="ds.exError[$index].status=false">(<span ng-if="ds.exError[$index].msg==1" ng-bind="'yara.error' | i18n"></span> <span ng-if="ds.exError[$index].msg==2" ng-bind="'yara.invitingAgain' | i18n"></span> <span ng-if="ds.exError[$index].msg==3" ng-bind="'yara.alreadyInvited' | i18n"></span> <span ng-if="ds.exError[$index].msg==4" ng-bind="errorMsg"></span>)</div>
+                              </div>
+                              <div class="col-md-1 delegate-blue cursor-def text-right01">
+                                 <div class="btn01 btn-primary-black-pulse01 btn-delegate-padding text-hover" ng-init="ds.eListDis[$index]=true" ng-click="ds.eListDis[$index]=false;InboxFocus('email'+$index)" ng-show="ds.eListDis[$index]">Edit</div>
+                                 <button type="button" class="btn01 btn-primary-black-pulse01 btn-delegate-padding text-hover" ng-click="((ds.eList| filter:ds.eList[$index]:true).length>1 || invitForm['email{{$index}}'].$invalid)?'':(delegateCheck($index,ds.eList[$index]));"  ng-hide="ds.eListDis[$index]">Save</button>
+                              </div>
+                              <div class=" delegate-blue text-center cursor-def"  style="width: 5%; float: left;">|
+                              </div>
+                              <div class="col-md-1 delegate-blue cursor-def text-left">
+                                 <div class="btn01 btn-primary-black-pulse01-red text-hover btn-delegate-padding" ng-click="ds.eList.splice($index,1);foundDelegate.non_account_emails.splice($index,1)" ng-show="ds.eListDis[$index]">Delete</div>
+                                 <div class="btn01 btn-primary-black-pulse01-red text-hover btn-delegate-padding" ng-click="ds.eListDis[$index]=true;ds.eList[$index]=e;ds.exError[$index].status=false;" ng-hide="ds.eListDis[$index]">Cancel</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class=" ticket-top">
+                     <div class="font-bulkstep3 delegate-heading">&nbsp;</div>
+                     <div style="border-bottom:1px solid #f2f2f2;">&nbsp;
+                     </div>
+                     <div class="col-md-12 text-center">
+                        <span class="upload-error-red text-center" ng-show="addDelgData.result != 1 " ng-bind="addDelgData.error"></span>
+                     </div>
+                     <div class="col-md-4 col-md-offset-4">
+                        <div class="col-md-10 col-md-offset-1 timeline-top-bottom01">
+                           <button type="submit" class="btn btn-delegate" ng-disabled="(foundDelegate.delegate_account_emails.length + foundDelegate.non_account_emails.length )<1 || (ds.eListDis |  FilterBoolObj:false).length>0" >Add to <span ng-bind="currentval.short_name">$event_short_name</span></button>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div class=" " ng-show="delegateStep=='step4'"  style="position:relative;width:100%;height:100%">
+               <!----User using app---->
+               <div class="dashboardWell" ng-hide="checkoutAppuserActive"  style="height:100%;">
+                  <div class="col-md-8 col-md-offset-2  bg-color-upload03 ">
+                     <div class="col-md-12 text-center delegate-bgcolor01 delegate-bgcolor02">
+                        <!-- <div ng-if="checkoutAppuser[0].profile_picture==null" class="col-md-2"><img src="../../../../static/dashboard/images/profile_pic.png" class="bulk-upload-img" style="background-color:#fff;"/></div> -->
+                        <div  class="col-md-2 people_logo_app"
+                           ng-style="{'background-image':'url('+((checkoutAppuser.profile_picture!=null)?checkoutAppuser.profile_picture:'../../../static/dashboard/images/profile_pic.png?v=1077a0870aee6185b8a0943e13980bab')+')'}"
+                           ></div>
+                        <div class="col-md-6 col-md-offset-2 bulkstep3">
+                           <div class="font-bulkstep3">YARA App User</div>
+                           <div class="font-bulkstep3"  ng-bind="checkoutAppuser.first_name+' '+checkoutAppuser.middle_name+' '+checkoutAppuser.last_name" >Thomas Key Jackob</div>
+                           <div class="font-bulkstep3" ng-bind="checkoutAppuser.email" >Email ID</div>
+                        </div>
+                     </div>
+                     <div class="col-md-12 ticket-top">
+                        <div class="people-step4-font text-center">Would you like to add <span class="text-bold" ng-bind="checkoutAppuser.first_name+' '+checkoutAppuser.middle_name+' '+checkoutAppuser.last_name">$user_first_name</span> to <span class="text-bold" ng-bind="currentval.short_name">$evnt_short_name</span>?</div>
+                     </div>
+                  </div>
+                  <div class="nav navbar-fixed-bottom">
+                     <div class="nav  navbar-bottom" >
+                        <div class="container" style="border-top:1px solid #f2f2f2; background-color:#fff;">
+                           <div class="col-md-5 col-md-offset-1">
+                              <div class="navbar-text  font-bulkstep3 navbar-brand3-signup event-gatekeeper-footer" style="margin:10px 0;"><a href="" class="text-hover" ng-click="delegateStep='step2'">CANCEL</a>
+                              </div>
+                           </div>
+                           <div class="col-md-3 col-md-offset-3">
+                              <div class="navbar-text font-bulkstep3 navbar-brand3-signup gray-new-learn01" style="margin:10px 0;">
+                                 <a href="" ng-click="addSingleDelegate(checkoutAppuser.email)"  class="text-hover">ADD</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!----User not using app---->
+               <div class="" ng-hide="checkoutUser.length<1 " style=" height: 100%;">
+                  <div class="col-md-8 col-md-offset-2  bg-color-upload03 dashboardWell">
+                     <div class="col-md-12 ">
+                        <div class="people-step4-font text-center" ><span class="text-bold">{{checkoutUser[0]}}</span> is not using YARA app. <br/>Would you like to send an event invitation with sign up request?</div>
+                     </div>
+                  </div>
+                  <div class="nav navbar-fixed-bottom">
+                     <div class="nav  navbar-bottom" >
+                        <div class="container" style="border-top:1px solid #f2f2f2; background-color:#fff;">
+                           <div class="col-md-5 col-md-offset-1">
+                              <div class="navbar-text  font-bulkstep3 navbar-brand3-signup event-gatekeeper-footer" style="margin:10px 0;"><a href="" class="text-hover" ng-click="delegateStep='step2'">CANCEL</a>
+                              </div>
+                           </div>
+                           <div class="col-md-3 col-md-offset-3">
+                              <div class="navbar-text font-bulkstep3 navbar-brand3-signup gray-new-learn01" style="margin:10px 0;">
+                                 <a href="" ng-click="addSingleDelegate(checkoutUser[0])" class="text-hover">INVITE</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-----(App user) You have already invited------>
+               <div class="dashboardWell" ng-hide="invitedAppuserActive" style=" height: 100%;">
+                  <div  class="col-md-8 col-md-offset-2  bg-color-upload03  ">
+                     <div class="col-md-12 text-center delegate-bgcolor01 delegate-bgcolor02">
+                        <div class="col-md-2 people_logo_app" ng-style="{'background-image':'url('+((invitedAppuser[0].profile_picture!=null)?invitedAppuser[0].profile_picture:'../../../static/dashboard/images/profile_pic.png?v=1077a0870aee6185b8a0943e13980bab')+')'}"></div>
+                        <!-- ng-style="{'background-image':'url('+((invitedAppuser[0].profile_picture!=null)?invitedAppuser[0].profile_picture:'../../../static/dashboard/images/profile_pic.png?v=1077a0870aee6185b8a0943e13980bab')+')'}" -->
+                        <!-- <div ng-if="invitedAppuser[0].profile_picture!=null" class="col-md-2"><img src="{{invitedAppuser[0].profile_picture}}" class="bulk-upload-img" style="background-color:#fff;"/></div> -->
+                        <div class="col-md-6 col-md-offset-2 bulkstep3">
+                           <div class="font-bulkstep3" style="font-size:12px;">Added {{is_time_format_24?(setOffset(invitedAppuser[0].invited_date,currentval.eo) |date:'HH:mm MMMM dd, yyyy '):(setOffset(invitedAppuser[0].invited_date,currentval.eo) |date:'hh:mm a MMMM dd, yyyy ')}}
+                        <!-- 03:10 PM, June 1 2016 -->
+                           </div>
+                           <div class="font-bulkstep3">YARA App User</div>
+                           <div class="font-bulkstep3" ng-bind="invitedAppuser[0].first_name+' '+invitedAppuser[0].middle_name+' '+invitedAppuser[0].last_name" >Thomas Key Jackob</div>
+                           <div class="font-bulkstep3" ng-bind="invitedAppuser[0].email">Email ID</div>
+                        </div>
+                     </div>
+                     <div class="col-md-12 ticket-top">
+                        <div class="people-step4-font text-center" >You have already invited <span class="text-bold" ng-bind="invitedAppuser[0].first_name+' '+invitedAppuser[0].middle_name+' '+invitedAppuser[0].last_name">$user_first_name</span>  to <span class="text-bold" ng-bind="currentval.short_name">$evnt_short_name</span></div>
+                     </div>
+                  </div>
+                  <div class="nav navbar-fixed-bottom">
+                     <div class="nav  navbar-bottom" >
+                        <div class="container" style="border-top:1px solid #f2f2f2; background-color:#fff;">
+                           <div class="col-md-5 col-md-offset-1">
+                              <div class="navbar-text  font-bulkstep3 navbar-brand3-signup event-gatekeeper-footer" style="margin:10px 0;"><a href="" class="text-hover" ng-click="delegateStep='step2'">CANCEL</a>
+                              </div>
+                           </div>
+                           <div class="col-md-3 col-md-offset-3">
+                              <div class="navbar-text font-bulkstep3 navbar-brand3-signup gray-new-learn01" style="margin:10px 0;">
+                                 <a href="/collaborator/people"   class="text-hover">OKAY</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- {{invitedUser[0]}} -->
+               <!-----(Not using app) You have already invited------>
+               <div class="dashboardWell"  ng-hide="invitedUser.length<1">
+                  <div  class="col-md-8 col-md-offset-2  bg-color-upload03  ">
+                     <div class="col-md-12 ">
+                        <div class="people-step4-font text-center" ng-bind="invitedUser[0].email">something@something.com</div>
+                        <div class="people-step4-font text-center" >You have already invited <span class="text-bold">{{invitedUser[0].email}}</span> to <span class="text-bold" ng-bind="currentval.short_name">$evnt_short_name</span> (Not using app) You have already invited</div>
+                     </div>
+                  </div>
+                  <div class="nav navbar-fixed-bottom">
+                     <div class="nav  navbar-bottom" >
+                        <div class="container" style="border-top:1px solid #f2f2f2; background-color:#fff;">
+                           <div class="col-md-5 col-md-offset-1">
+                              <div class="navbar-text  font-bulkstep3 navbar-brand3-signup event-gatekeeper-footer" style="margin:10px 0;"><a href="" class="text-hover" ng-click="delegateStep='step2'">CANCEL</a>
+                              </div>
+                           </div>
+                           <div class="col-md-3 col-md-offset-3">
+                              <div class="navbar-text font-bulkstep3 navbar-brand3-signup gray-new-learn01" style="margin:10px 0;">
+                                 <a href="/collaborator/people"   class="text-hover">OKAY</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-----(YARA User) Using yara dashboard------>
+               <div class="" ng-hide="foundDelegate.other_account_emails.length<1 " style=" height: 100%;">
+                  <div class="col-md-8 col-md-offset-2  bg-color-upload03 dashboardWell">
+                     <div class="col-md-12 ">
+                        <div class="people-step4-font text-center" ><span class="text-bold">{{foundDelegate.other_account_emails[0].email}}</span>  is a dashboard user</div>
+                     </div>
+                  </div>
+                  <div class="nav navbar-fixed-bottom">
+                     <div class="nav  navbar-bottom" >
+                        <div class="container" style="border-top:1px solid #f2f2f2; background-color:#fff;">
+                           <div class="col-md-5 col-md-offset-1">
+                              <div class="navbar-text  font-bulkstep3 navbar-brand3-signup event-gatekeeper-footer" style="margin:10px 0;"><a href="" class="text-hover" ng-click="delegateStep='step2'">CANCEL</a>
+                              </div>
+                           </div>
+                           <div class="col-md-3 col-md-offset-3">
+                              <div class="navbar-text font-bulkstep3 navbar-brand3-signup gray-new-learn01" style="margin:10px 0;">
+                                 <a  href="/collaborator/people" class="text-hover">OKAY</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-----already invited with primary email and try to invite again with secondry or terrisiory email ------>
+               <div class="" ng-hide="foundDelegate.conflict_invited_emails.length<1 " style=" height: 100%;">
+                  <div class="col-md-8 col-md-offset-2  bg-color-upload03 dashboardWell">
+                     <div class="col-md-12 ">
+                        <div class="people-step4-font text-center" ><span class="text-bold">{{foundDelegate.conflict_invited_emails[0].inviting_email}}</span>  is  already invited with  {{foundDelegate.conflict_invited_emails[0].invited_email}}</div>
+                     </div>
+                  </div>
+                  <div class="nav navbar-fixed-bottom">
+                     <div class="nav  navbar-bottom" >
+                        <div class="container" style="border-top:1px solid #f2f2f2; background-color:#fff;">
+                           <div class="col-md-5 col-md-offset-1">
+                              <div class="navbar-text  font-bulkstep3 navbar-brand3-signup event-gatekeeper-footer" style="margin:10px 0;"><a href="" class="text-hover" ng-click="delegateStep='step2'">CANCEL</a>
+                              </div>
+                           </div>
+                           <div class="col-md-3 col-md-offset-3">
+                              <div class="navbar-text font-bulkstep3 navbar-brand3-signup gray-new-learn01" style="margin:10px 0;">
+                                 <a  href="/collaborator/people" class="text-hover">OKAY</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- start footer-->
+      <div ng-include-template="/event_footer" copyright="true" ng-hide="delegateStep=='step4'" id="footer123"></div>
+      <!-- ng-class="{'navbar-fixed-bottom':(delegateStep=='step2' && ds.emailDel.length<4 && tck.all_day_access<=2)}" -->
+      <!---End footer---->
+      </div>
+      <script>
+         $(document).ready(function(){
+          $('#loading').hide();
+          $('#container').fadeIn();
+         });
+      </script>
+      <script>
+         function h(e) {
+             $(e).css({'height':'auto','overflow-y':'hidden'}).height(e.scrollHeight);
+         }
+         $('textarea').each(function () {
+           h(this);
+         }).on('input', function () {
+           h(this);
+         });
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+          document.getElementById("email_0").focus();
+          function resizediv(){
+           var h =$(window).height();
+           $('.height-top').css("height",h+"px");
+          } 
+          resizediv();
+          $(window).resize(function(){
+           resizediv();
+          });
+         });
+      </script>
+      {%endverbatim%}
+   </body>
+</html>

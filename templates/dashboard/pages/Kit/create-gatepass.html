@@ -1,0 +1,492 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png">
+      <title>YARA - Create Gatepass</title>
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <link rel="stylesheet" href="../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <!--<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyBiLVnHVmK-3nm_MZvug6NjZmMdOQX_cm8"></script>-->
+      <script src="../../../static/dashboard/scripts/angular.min.js?v=90fb950dbc3e9296755d9cc23a211744"></script>
+      <!--<script src="scripts/ng-map.js?v=32f203d7a258c29ca92dd8eea6ad08df"></script>-->
+      <script src="../../../static/dashboard/scripts/angular-route.min.js?v=ece61dd523eb50cbf5cd0cf91ab88421"></script> <script src="../../../static/dashboard/scripts/angular-cookies.min.js?v=86f98a3a315a398fd59d71c092980ed1"></script> <script src="../../../static/dashboard/scripts/angular-sanitize.min.js?v=dcdddd1980ed1ff84b84461dd3bfabb2"></script> <script src="../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <script src="../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script>
+      <script src="../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../static/dashboard/scripts/app.js?v=9d2c1a85d6bd967f61956d563c72afa3"></script>
+      <script src="../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../static/dashboard/scripts/directives.js?v=d41f0a296269a18610c18caed1a1b39d"></script>
+      <script src="../../../static/dashboard/scripts/Service.js?v=fc74d128e9f31684861168977d41ee41"></script>
+      <script src="../../../static/dashboard/scripts/credentials.js?v=dd868e56504f69541c4437d0043e17b7"></script>
+      <script src="../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>   
+      <script src="../../../static/dashboard/scripts/ng-infinite-scroll.min.js?v=299bcea502c681c68093eb86f8c1bccf"></script>
+      <!--<script src="../../../static/dashboard/scripts/webcam.js"></script>-->
+      <!---crop image---->
+      <script src="../../../static/dashboard/scripts/jquery.cropit.js?v=b37d29875ced18ede72940fb6b0fba52"></script>
+       <!--UI style---->
+      <link rel="stylesheet" href="../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+   </head>
+   <body ng-app="yara"  ng-controller="GatepassController" class="overflow-body01">
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      {%verbatim%}
+      <div id="container" class="wrap01">
+         <!---header-->
+         <div class="container navbar-fixed-top border" >
+            <div class="col-md-12 white text-center ">
+               <div class="col-md-1 nav-color main-header-signup01" style="text-align:left;">
+                  <a href="" back-button><img src="../../../../static/dashboard/images/yara_logo.svg" width="100%"/></a>
+               </div>
+                <div class="col-md-1 nav-color sub-header-border">&nbsp;</div>
+               <div class="col-md-8 nav-color sub-header-small-events text-left ng-binding">Create New GatePass</div>
+            </div>
+         </div>
+         <!----end header---->
+         <div class="container border create-gatepass-cancel01">
+            <div class="col-md-12">
+               <div class="col-md-1 col-md-offset-1 create-delegate-btn text-hover">
+                  <a href="/event/gatekeeper" class="text-hover" ng-click="cancelcreategatepass()">Cancel</a>
+               </div>
+            </div>
+         </div>
+         <!-- ng-submit="scrollToError();(gatepassForm.$invalid) ? submitted=true : step2Formvalidation();" -->
+         <form accessible-form novalidate name="gatepassForm" ng-submit="scrollToError();(gatepassForm.$invalid||imageSrc==undefined||selectTicketval==undefined||selectTicketval==''||selectedDelval==undefined||selectedDelval=='')?submitted=true:generateGatePass()" ng-init="submitted=false" autocomplete="off">
+            <div class="container height-top" >
+               <div class="create-gatepass-top" >
+                  <div class="white text-center ">
+                     <div class=" bg-color-upload03 db-margin">
+                        <ul class="list-group  text-center">
+                           <div class="col-md-6 col-md-offset-3 ">
+                              <div class="create-margin-top-btn" id="spdel">
+                                 <div class="sub-nav-size-signup" >Choose delegate type</div>
+                                 <div class="thumbnail inputbox-exh  margin-top40" style="padding:0;" ng-repeat="spPl in specPeople|orderBy:id">
+                                    <label class="Form-label-tick01 " ng-click="(visitPass==true?selectDelType(spPl.id):'')"  >
+                                       <div class="col-md-12 list-group-item-exh cursor-poi" ng-class="{'active':selectedDelval==spPl.id}" >
+                                          <div class="col-md-10 venue_top" id="alldays" >
+                                             <div>
+                                                <div class="event-font text-left" ng-bind="spPl.single_entity_tittle" ><b>Delegates</b></div>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-2 "><img src="../../../../static/dashboard/images/right-blue-gray.png" class="create-right" ng-show="selectedDelval==spPl.id" />
+                                          </div>
+                                       </div>
+                                    </label>
+                                    </div>
+                                    <div class="text-danger01 error-height" >
+                                       <span ng-bind="'yara.required' | i18n " ng-show="submitted && selectedDelval==undefined ">Required</span>
+                                    </div>
+                                 <!-- <div class="thumbnail inputbox-exh margin-top40" style="padding:0;">
+                                    <label class="Form-label-tick01 ">
+                                      <div class="col-md-12 list-group-item-exh cursor-poi" ng-class="{'active':createSpeaker}" ng-click="createSpeaker=!createSpeaker" ng-hide="hideSpeaker">
+                                          <div class="col-md-10 venue_top" id="alldaySK" ng-init="createSpeaker=false"  >
+                                                <div>
+                                                  <div class="event-font text-left"><b>Speakers</b></div>
+                                                </div>
+                                          </div>
+                                          <div class="col-md-2 "><img src="../../../../static/dashboard/images/right-blue-gray.png" class="create-right" ng-show="createSpeaker"/>
+                                          </div>
+                                      </div>
+                                    </label>
+                                    </div> -->
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-md-offset-3  margin-top40" ng-hide="selectTicketval.length==0">
+                              <div class="create-margin-top-btn" id="selticket">
+                                 <div class="sub-nav-size-signup">Choose a ticket</div>
+                                 <!-- <div class="nav-font01"></div> -->
+                                 <div class="thumbnail inputbox-exh  margin-top40" style="padding:0;" ng-repeat="tk in ticketsdata|unique">
+                                    <label class="Form-label-tick01 "  ng-click="(visitPass==true?ticketSel(tk.ticket_code):'')" >
+                                       <div class="col-md-12 list-group-item-exh cursor-poi" ng-class="{'active':selectTicketval==tk.ticket_code}" >
+                                          <div class="col-md-10 venue_top" id="alldays" >
+                                             <div>
+                                                <div class="event-font text-left" ng-bind="tk.name" ><b>All Access</b></div>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-2 "><img src="../../../../static/dashboard/images/right-blue-gray.png" class="create-right" ng-show="selectTicketval==tk.ticket_code"/>
+                                          </div>
+                                       </div>
+                                    </label>
+                                 </div>
+                                 <div class="text-danger01 error-height" >
+                                    <span ng-bind="'yara.required' | i18n " ng-show="submitted && selectTicketval==undefined ">Required</span>
+                                 </div> 
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-md-offset-3  margin-top40">
+                              <div class="create-margin-top-btn">
+                                 <div class="sub-nav-size-signup">Visitor details</div>
+                                 <div class="nav-font01"></div>
+                                 <input type="email" class="inputbox text-center font-weight auto-fill" placeholder="Email" ng-model="email" required="" name="email" ng-pattern="emailFormat" ng-readonly="gatePassinfo.email.length>0" maxlength="255">
+                                 <div class="text-danger01 error-height" >
+                                    <span ng-show="submitted && !gatepassForm.email.hasFocus && gatepassForm.email.$error.required" ng-bind="'yara.required' | i18n ">Required</span>
+                                    <span ng-show="submitted && !gatepassForm.email.hasFocus && gatepassForm.email.$error.pattern" ng-bind="'yara.invalidEmail' | i18n ">Required</span>
+
+                                 </div> 
+                                 <input type="text" class="inputbox text-center font-weight margin-top20 auto-fill" placeholder="Person Full Name" ng-model="full_name" capitalize-word="true" ng-keydown="keyvalue=$event" required="" name="personname" maxlength="64" ng-readonly="gatePassinfo.full_name.length>0" ng-pattern="/\D{1}/">
+                                 <div class="text-danger01 error-height" >
+                                 <span ng-show="submitted && !gatepassForm.personname.hasFocus && gatepassForm.personname.$invalid &&!gatepassForm.personname.$error.pattern" ng-bind="'yara.required' | i18n ">Required</span>
+                                 </div> 
+                                 <div class="text-danger01 error-height" >
+                                    <span ng-show="gatepassForm.personname.$error.pattern" ng-bind="'yara.textrequired' | i18n ">textrequired</span>
+                                 </div> 
+                                 <input type="text" class="inputbox text-center font-weight margin-top20 auto-fill" placeholder="Job Title" ng-model="designation" name="designation"  maxlength="100" ng-readonly="gatePassinfo.designation.length>0" ng-pattern="/\D{1}/">
+                                 <div class="text-danger01 error-height" >
+                                 <span ng-show="gatepassForm.designation.$error.pattern" ng-bind="'yara.textrequired' | i18n ">textrequired</span>
+                                 </div> 
+                                 <input type="text" class="inputbox text-center font-weight margin-top20 auto-fill" placeholder="Company"  ng-model="company_name" maxlength="100"  name="company" ng-readonly="gatePassinfo.company_name.length>0" ng-pattern="/\D{1}/">
+                                 <div class="text-danger01 error-height" >
+                                 <span ng-show="gatepassForm.company.$error.pattern" ng-bind="'yara.textrequired' | i18n ">textrequired</span>
+                                 </div> 
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-md-offset-3">
+                              <div class="create-margin-top-btn" id="floorPic">
+                                 <div class="sub-nav-size-signup margin-bottom40">Profile Photo</div>
+                                 <div ng-hide="imageSrc" class="logo-update" droplet  ng-model="floorPic">
+                                    <div class="sub-nav-size-signup icon11">
+                                       <a  data-toggle="tooltip" data-placement="right" title="Upload&nbsp;Profile&nbsp;Image" >
+                                       <img src="../../static/dashboard/images/info-icon.png" width="4%" />
+                                       </a>
+                                    </div>
+                                    <div class="sub-heading-signup">
+                                       <img src="../../static/dashboard/images/image_upload_placeholder.png" class="image_upload_placeholder"/>
+                                       <div class="sub-nav-size-invitation">Upload profile photo</div>
+                                       <!-- <div class="nav-font-option">(Optional)</div> -->
+                                       <div class="nav-font-invitation">Drag and drop the file</div>
+                                       <div class="btn01 btn-primary-black-invitation black-signup01 text-hover">
+                                          <span>Choose an Image</span>
+                                          <!-- <input type="file" img-validate ng-file-select="onFileSelect($files)" placeholder="Upload" file-model="floorPic" required accept="image/*" name="floorPic" class=" " img-validate  ng-model="floorPic" > -->
+                                          <droplet-upload-single ng-model="floorPic" accept="image/*" name="floorPic" ></droplet-upload-single>
+                                       </div>
+                                       <div class="nav-font-invitation01">Minimum resolution<br/>512 <a class="cross01">X</a> 512<br/>Any Aspect Ratio<br/>Max size - 5 MB</div>
+                                    </div>
+                                 </div>
+                                 <br/>
+                                 <img ng-src="{{imageSrc}}" class="image-width-camera" id="img-floorPic" ng-show="imageSrc"  />
+                                 <div class="text-danger01 error-height margin-bottom20" >
+                                 <span ng-show="gatepassForm.floorPic.$error.invalidimg">Invalid Image File Type</span>
+                                 <span ng-show="gatepassForm.floorPic.$error.minsizeval">File size sholud not be Max Of 5MB</span>
+                                 <span ng-show="!gatepassForm.floorPic.$error.minsizeval && gatepassForm.floorPic.$error.ratioval">Aspect Ratio Should Be 1 : 1</span>
+                                 <span ng-show="!gatepassForm.floorPic.$error.minsizeval && gatepassForm.floorPic.$error.minDimension">Minimum Size 512 X 512</span>
+                                 <span ng-show="submitted && !imageSrc" ng-bind="'yara.required' | i18n ">Required</span>
+                                 </div>
+                                 <div class="col-md-12 signup_margin" ng-if="(imageSrc!=undefined||imageSrc!=null)&& !iswebCamimg">
+                                    <div class="col-md-6 ">
+                                       <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in floorPic.getFiles(floorPic.FILE_TYPES.VALID)" ng-click="model.deleteFile()" ng-show="EXType!='update'">
+                                          <span>Remove</span>
+                                       </div>
+                                       <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-show="EXType=='update'" ng-click="imageSrc=restImage">
+                                          <span>Reset</span>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6 ">
+                                       <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in floorPic.getFiles(floorPic.FILE_TYPES.VALID)" ng-show="EXType!='update'">
+                                          <span>Change</span>
+                                          <droplet-upload-single ng-model="floorPic" accept="image/*" name="floorPic1" ></droplet-upload-single>
+                                       </div>
+                                       <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-show="EXType=='update'">
+                                          <span>Change</span>
+                                          <droplet-upload-single ng-model="floorPic" accept="image/*" name="floorPic2" ></droplet-upload-single>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-----removing Webcam------>
+                                 <div class="col-md-12 signup_margin" ng-show="iswebCamimg">
+                                    <div class="col-md-6 ">
+                                       <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-click="removeCamImg()">
+                                          <span >Remove</span>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6 ">
+                                       <div class="btn01 btn-primary-black-invitation black-signup01 text-hover">
+                                          <span>Change</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--End Webcam---->
+                                 <div class="margin-bottom40">
+                                 <button type="button" ng-if="gatePassinfo.profile_picture==null"  class="btn btn-primary btn-primary-black-signup01 create-gatepass-button btn-camera"  ng-init="iswebCamimg=false"  ng-click="checkWebcamneeded()" onClick="activateWebcam()">
+                                    <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>&nbsp;&nbsp; Use camera
+                                  </button>
+                                </div>
+                                 <!-- <div ng-if="gatePassinfo.profile_picture==null" class="btn btn-primary-black-signup01 create-gatepass-button"  data-toggle="modal" data-target="#take-picture" ng-init="iswebCamimg=false">
+                                    <span class="glyphicon glyphicon-camera"></span>
+                                    <span>Take a photo</span>
+                                 </div> -->
+                                 <div class="space-bottom">
+                                    <div class="text-danger01 margin-bottom20">
+                                       <span ng-show="errorstatus" ng-bind="errormsg">error</span>
+                                    </div>
+                                    <button class="btn btn-primary-black-signup01 create-gatepass-button" type="submit">Create GatePass</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </form>
+      </div>
+      <!-- start footer-->
+      <div ng-include-template="/event_footer" copyright="true" id="footer123"></div>
+      <!---End footer---->
+      <!--  Download pdf Modal window -->
+         <div class="modal fade" id="myModal-download" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Download PDF</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form  novalidate >
+                           <div class="row">
+                              <div class="col-md-12 bg-collaborator text-center" ng-bind="'yara.downloadGatepass'| i18n">
+                                 download GatePass.
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-8">
+                                    <div  class=" text-danger">&nbsp;</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin" ng-click="closeModal()">
+                                    <a ng-href="{{pdfUrl}}" class="btn01 btn-primary-black-pulse01 text-hover"  download>Download</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      <!--  Image  Invalid Modal window -->
+      <div class="modal fade" id="myModal-invalid" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog gatekeeper-popup" role="document" >
+            <div class="modal-content modal-padding" >
+               <div class="modal-header-top ">
+                  <h4 class="modal-title modal-heading" id="myModalLabel" >Invalid Extension</h4>
+               </div >
+               <div class="modal-body1">
+                  <div  >
+                     <form novalidate ng-submit="addpost(postform)" name="postform" >
+                        <div class="row">
+                           <div class="col-md-12 bg-collaborator"  ng-bind="'yara.invalidImg'| i18n">
+                              Invalid Extension Choose jpg, jpeg and png format.
+                           </div>
+                           <div class="col-md-12 border-top">
+                              <div class="col-md-10">
+                                 <div  class=" text-danger01">&nbsp;</div>
+                              </div>
+                              <div class="col-md-2 pulse-margin">
+                                 <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 ">Close</div>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!----crop image---->
+      <div class="modal fade" id="crop-image" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog gatekeeper-popup" role="document" >
+            <div class="modal-content modal-padding" >
+               <div class="modal-header-top ">
+                  <h4 class="modal-title modal-heading" id="myModalLabel">Crop</h4>
+               </div >
+               <div class="modal-body1">
+                  <div  >
+                     <form novalidate  >
+                        <div class="row">
+                           <div class="col-md-12 bg-general crop-popup" ng-class="{'circle-image': cropPic=='profile'}">
+                              <div class="image-editor crop-popup">
+                                 <input type="file" class="cropit-image-input">
+                                 <div class="cropit-preview"></div>
+                                 <div class="image-size-label">
+                                 </div>
+                                 <div class="crop-bottom"></div>
+                                 <div class="slider-wrapper">
+                                    <input type="range" class="cropit-image-zoom-input custom" min="0" max="1" step="0.01">
+                                 </div>
+                                 <div class="crop-top"></div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 border-top">
+                              <div class="col-md-8">
+                                 <div  class=" text-danger01">&nbsp; </div>
+                              </div>
+                              <div class="col-md-2 pulse-margin">
+                                 <div class="btn01 btn-primary-black-pulse01 text-hover" data-dismiss="modal" aria-label="Close"  ng-click="resetCropImg()">Cancel</div>
+                              </div>
+                              <div class="col-md-2 pulse-margin">
+                                 <div  class="btn01 btn-primary-black-pulse01 text-hover" ng-click="setCropImg()">Crop</div>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- camera -->
+      <!-- ng-show="takePicture" -->
+            <div   id="captureImg" class="camera-header  gatekeeper-popup display-none" >
+
+      <!-- <div   class="camera-header  gatekeeper-popup ng-hide"> -->
+          <div class="camera-bg-color position-relative camera-bg-color position-relative col-md-4 container-remove-padding col-md-offset-4">
+               <img src="../../../../static/dashboard/images/circle_crop3.png" class="circle-image-camera">
+               <div  id="my_camera"></div>
+            <div class="col-md-12">
+                <div class="col-md-2 pulse-margin">
+                  <div  ng-click="hideCamera()" onClick="resetWebcam()" class="btn01 btn-primary-black-pulse01 text-hover camera-padding">Cancel</div>
+                </div>
+                <div class="col-md-2 col-md-offset-3">
+                  <div  class="btn01 btn-primary-black-pulse01 text-hover"  onClick="take_snapshot()" ng-click="checkImage();takePicture=false"><span class="glyphicon glyphicon-camera font-icon-camera-size" aria-hidden="true"></span></div>
+                </div>
+            </div>
+          </div>
+        </div>
+       <div class="modal fade" id="take-picture" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog gatekeeper-popup" role="document" >
+            <div class="modal-content modal-padding" >
+               <div class="modal-header-top ">
+                  <h4 class="modal-title modal-heading" id="myModalLabel" >Enable Camera</h4>
+               </div >
+               <div class="modal-body1">
+                  <div  >
+                     <form novalidate>
+                        <div class="row">
+                           <div class="col-md-12 bg-collaborator text-center"  ng-bind="'yara.blockedCam' | i18n ">
+                           </div>
+                           <div class="col-md-12 border-top">
+                              <div class="col-md-10">
+                                 <div  class=" text-danger01">&nbsp;</div>
+                              </div>
+                              <div class="col-md-2 pulse-margin">
+                                 <a  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</a>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" id="cam-notsupport" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog gatekeeper-popup" role="document" >
+            <div class="modal-content modal-padding" >
+               <div class="modal-header-top ">
+                  <h4 class="modal-title modal-heading" id="myModalLabel" >Browser not supported</h4>
+               </div >
+               <div class="modal-body1">
+                  <div  >
+                     <form novalidate>
+                        <div class="row">
+                           <div class="col-md-12 bg-collaborator text-center" ng-bind="'yara.webcamNotSupport' | i18n ">
+                           </div>
+                           <div class="col-md-12 border-top">
+                              <div class="col-md-10">
+                                 <div  class=" text-danger01">&nbsp;</div>
+                              </div>
+                              <div class="col-md-2 pulse-margin">
+                                 <a  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</a>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> 
+      </div>
+      <script>
+         $(document).ready(function(){
+             $('[data-toggle="tooltip"]').tooltip();   
+         });
+      </script>
+      <script>
+
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+          function resizediv(){
+           var h =$(window).height();
+           $('.height-top').css("height",h+"px");
+          } 
+          resizediv();
+          $(window).resize(function(){
+           resizediv();
+          });
+         });
+      </script>
+      <script src="../../../static/dashboard/scripts/webcam.js"></script>
+      <script language="JavaScript">
+         $(window).load(function() {
+            $('#captureImg').hide();
+         });
+         // function show() {
+         //     $('#loading').hide();
+         //     $('#container').fadeIn();
+         // };
+         
+         // setTimeout(show, 10000);
+      </script>
+      <script language="JavaScript">
+         function take_snapshot() {
+            console.log("take snapshot and get image data");
+            // take snapshot and get image data
+            Webcam.snap( function(data_uri) {
+               localStorage.setItem('camImage',data_uri);
+               $('#captureImg').hide();
+               Webcam.reset();
+            } );
+         }
+         function resetWebcam () {
+             Webcam.reset();
+         }
+      </script>
+      {%endverbatim%}
+   </body>
+</html>

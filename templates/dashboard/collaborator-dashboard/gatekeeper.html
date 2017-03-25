@@ -1,0 +1,590 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <link rel="stylesheet" href="../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <link rel="stylesheet" href="../../../static/dashboard/css/animate.css">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <!--<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyBiLVnHVmK-3nm_MZvug6NjZmMdOQX_cm8"></script>-->
+      <script src="../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <script src="../../../static/dashboard/scripts/angular.min.js?v=90fb950dbc3e9296755d9cc23a211744"></script>
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> <script src="../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script> <script src="../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> <script src="../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <script src="../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script>
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../static/dashboard/scripts/app.js?v=cb63d6447409374df653b8707287ee36"></script>
+      <script src="../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>         
+      <script src="../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>         
+      <script src="../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>                  <script src="../../../static/dashboard/scripts/ng-infinite-scroll.min.js?v=299bcea502c681c68093eb86f8c1bccf"></script>
+      <!---crop image---->
+      <script src="../../../static/dashboard/scripts/jquery.cropit.js?v=b37d29875ced18ede72940fb6b0fba52"></script>
+      <!--UI style---->
+      <link rel="stylesheet" href="../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+         <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+   </head>
+   <body ng-app="yara" ng-controller="CollaboratorGatekeeperController" class="overflow-body01" ng-init="page=GK;setTitle('Gatekeeper')">
+    <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+  {%verbatim%}
+    <div id="container" class="wrap01">
+      <!---header-->
+         <div ng-include-template="/event_header" ng-init="headerTitle='GateKeeper'"></div>
+      <!----end header---->
+      <div class="container container-remove-padding"   >
+            <div class="row container-remove-margin">
+                <div class="col-md-12 text-center container-remove-padding ">
+                  <div class="container container-remove-padding adspace-slider-container" style="z-index: 9;">
+                     <div class="col-md-12 slider-border"  ng-show="eventDaysInfo.length>1">
+                        <div class="col-md-2 text-left gp-arrow-left adspace-slider-width2"><button id="go-left" class="icon-arrow-gatekeeper" ng-show="eventDaysInfo.length>3 && dbutton!=(eventDaysInfo.length-3)"  ng-click="dbutton=1+dbutton;" droppable dragenter="movetab('go-left')" dragleave="leavetab()"><img src="../../../static/dashboard/images/arrow-right.png" width="24px"/></button>  </div>
+                        <div class="col-md-8 adspace-slider-width8 container-remove-padding ">
+                           <div class="slider">
+                              <!-- The slider -->
+                              <div class="gp-adspace-color time-tab01"  >
+                                 <div ng-repeat="d in eventDaysInfo" class="time-tab-adspace" ng-class="{'tab-align-center':eventDaysInfo.length==2}"><a class="nav-people-tab text-hover" data-toggle="tab" traget="_self" role="tab" ng-class="{'nav-people-tab-hover in':seltab==d.dayID}" ng-click="selecttab(d)" data-target="#day{{$index}}">{{d.dayTitle}}</a></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-2 text-right01 container-remove-padding  adspace-slider-width2"><button id="go-right" class="icon-arrow-gatekeeper" ng-show="eventDaysInfo.length>3 && dbutton!=0" ng-init="dbutton=(eventDaysInfo.length-3)" ng-click="dbutton=dbutton-1;"  droppable dragenter="movetab('go-right')" dragleave="leavetab()"><img src="../../../static/dashboard/images/arrow-left.png" width="24px"/></button></div>
+                     </div>
+                  </div>
+                    <div class="container container-remove-padding button-top-new">
+                      <div id="active_event" >
+                        <div class="row container-remove-margin">
+                          <div class="tab-content col-md-10 min-length ticket-top-btn1" ng-class="{'ticket-top-btn':eventDaysInfo.length<=1}" infinite-scroll='paginationGk()' infinite-scroll-disabled="EndList||blockScroll" infinite-scroll-distance='1'>
+                            <div class="col-md-9 gp-nodata text-center" ng-if="!blockScroll">
+                                 <div class="col-md-12 gp-width-not">
+                                    <div class="ticket-description" style="margin: 0;" ng-show="gatekeeperList.length==0" >List of invitees using YARA App will be displayed here</div>
+                                    <!-- <div class="gray">No delegates available</div> -->
+                                    <br/>
+                                    <!-- <div class="event-font ">Gatekeeper</div><br/>
+                                       <a href="/store">Gatekeeper</a> -->
+                                 </div>
+                              </div>
+                              <!---End Gatekeeper not available---->
+                              <div class="col-md-12 " >
+                                 <br/>
+                                 <img src="../../../static/dashboard/images/default5.gif" class="search-loading" ng-if="blockScroll && searchPeople!=undefined && searchPeople!=null && searchCall">
+                                 <input type="text" class="inputbox hasclear position-absolute" ng-model="searchPeople"  placeholder="Search" maxlength="100">
+                                 <img src="../../../static/dashboard/images/close-search.png" class="clearer position-close" ng-click="searchPeople=''"><br/><br/><br/>
+                              </div>
+                              <!---Start Search not available---->
+                              <div class="col-md-9 gp-nodata text-center ng-hide">
+                                 <div class="col-md-12 gp-width-not">
+                                    <div class="gp-Name" >Gatekeeper not Found</div>
+                                    <br/>
+                                 </div>
+                              </div>
+                            <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-people wow animated  fadeInUp" data-wow-delay="0.1s"  style="cursor: auto;" ng-repeat='gk in gatekeeperList|filter:{is_checked_in:sValue}' >
+                              <div class="col-md-9 ">
+                                <div  class="col-md-12">
+                                  <!-- <div class="color-blue event-font gp-font" >&nbsp;</div> -->
+                                  <div class="col-md-2 event-boxshadow" >
+                                    <div class="people_logo" ng-style="{'background-image':'url('+((gk.profile_picture!=null)?(gk.profile_picture|imagefilterQ1):'../../../static/dashboard/images/profile_pic.png')+')'}">
+                                    </div>
+                                  </div>
+                                  <div class="col-md-5 col-md-offset-2"><br/>
+                                  <div class="gp-Name" ng-bind="gk.full_name" >Thomas Key Jackob</div>
+                                   <div class="event-font " ng-bind="gk.designation" >VP of Operations</div>
+                                   <div class="event-font " ng-bind="gk.company_name" >Ralpha Luren</div>
+                                   <div class="event-tck" ng-bind="gk.email"  >Jackob@ralphaluren.com</div>
+                                   <div class="event-tck" ng-bind="gk.ticket_name"  >Jackob@ralphaluren.com</div>
+                                 </div>
+                                </div>
+                              </div>
+                               <div class="col-md-3 gatekeeper-padding-tb text-right">
+                                       <div class="gp-blue cursor-def" ng-if="gk.checkin_time!=false">Checked in at<span> {{is_time_format_24?(setOffset(gk.checkin_time,currentval.eo)|date:'HH:mm'):(setOffset(gk.checkin_time,currentval.eo)|date:'hh:mm a')}}</span></div>
+                                       <div class="gray-color" ng-if="gk.checkin_time==false && isDayActive==1">Not yet checked in</div>
+                                        <div class="gray-color" ng-if="gk.checkin_time==false && isDayActive==0">Not checked in</div>
+                                       <!-- <div class="gp-blue text-hover pointer01">Generate GatePass</div> -->
+                                       <div class="gp-blue text-hover pointer01" ng-if="gk.checkin_time==false && isDayActive==1" ng-click="checkIn(gk)">Check-in</div>
+                                    </div>
+                            </div>
+                          </div>
+                          <div class="col-md-2 ticket-top"  >
+                              <div class="gp-padding-people01 gp-right-showcase-new" style="position:fixed;" >
+                                 <div  class="text-left ">
+                                    <div class="gp-event-font title-color-new " >GATEPASS</div>
+                                    <div class="gp-blue text-hover" data-toggle="modal" data-target="#gatepass-add-logo" ng-if="privilege" ng-click="logoChange()">Change/Add Logo</div>
+                                    <div class="gp-blue text-hover" data-toggle="modal" data-target="#gatepass-sample" ng-click="logoChange()">View GatePass Sample</div>
+                                    <div class="gp-blue text-hover" data-toggle="modal" data-target="#gatepass-manage-time" ng-if="privilege && isDayActive==1 && !checkinStarted" ng-click="preCheckinTime()" ng-if="">Manage Entry Time</div>
+                                    
+                                    <div class="gp-blue text-hover"><a href="/collaborator/visitor-gatepass"  class="text-hover" ng-click="creategatepass()">Create New GatePass</a></div>
+                                    <br/>
+                                    <div class="gp-event-font title-color-new" >GATECODE</div>
+                                    <div class="gp-blue text-hover" ><a class="text-hover" ng-click="gatecodedownlode()">Download GateCode</a></div>
+                                    <br/>
+                                    <div class="gp-event-font title-color-new" >VIEW OPTION</div>
+                                    <div class="gp-blue text-hover cursor-poi " >All ({{totalAppUsers}})</div>
+                                    <div class="gp-blue text-hover cursor-poi" >Checked-In ({{checkInUsers}})</div>
+                                    <div class="gp-blue text-hover" >Not Checked-In ({{notCheckInUsers}})</div>
+                                    <br/>
+                                    <div class="gp-event-font title-color-new" ng-if="peopleMange" >MANAGE PEOPLE</div>
+                                    <div class="gp-blue text-hover" ng-if="peopleMange" ><a href="/collaborator/people" class="text-hover">Manage People</a></div>
+                                 </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+     <!-- Download Modal window -->
+         <div class="modal fade bg-color010 " id="gatepass-download" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="">
+                     <div  >
+                        <form novalidate ng-submit="addpost(postform)" name="postform" >
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="gatekeeper-popup01">
+                                    <div class="text-center">
+                                       <div class="gp-Name" >Download a GateCode</div>
+                                       <br/>
+                                       <div class="event-font ">Choose a GateCode Orientation
+                                       </div>
+                                       <br/>
+                                       <div class="col-md-12 gatepass-mrg-step4">
+                                          <div class="col-md-6">
+                                             <a href="{{gatecodeDownload.pdf_landscape}}" download="" class="text-hover">
+                                                <div class="col-md-8 col-md-offset-2 set-up-gatekeeper gatepass-wide cursor-poi" ng-class="{'WideScreen-active':screen=='WideScreen'}" ng-click="screen='WideScreen'">
+                                                </div>
+                                                <div class="col-md-12 text-center gp-blue-wide cursor-poi text-hover" ng-click="screen='WideScreen'" >WideScreen
+                                                </div>
+                                             </a>
+                                          </div>
+                                          <div class="col-md-6">
+                                             <a href="{{gatecodeDownload.pdf_portrait}}" download="" class="text-hover">
+                                                <div class="col-md-4 col-md-offset-4 set-up-gatekeeper gatepass-portrait cursor-poi" ng-class="{'WideScreen-active':screen=='Portrait'}" ng-click="screen='Portrait'">
+                                                </div>
+                                                <div class="col-md-12 text-center gp-blue-wide cursor-poi text-hover" ng-click="screen='Portrait'">Portrait
+                                                </div>
+                                             </a>
+                                          </div>
+                                          <div class="col-md-12 text-center ticket-top text-danger" ng-show="errormsg1" ng-bind="cdata.error">
+                                          </div>
+                                       </div>
+                                       <br/>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-12 border-top ticket-top">
+                                 <div class="col-md-10">
+                                    <div  class=" text-danger">&nbsp; </div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div class="btn01 btn-primary-black-pulse01 text-hover" data-dismiss="modal" aria-label="Close">Cancel</div>
+                                 </div>
+                              </div>
+                           </div>
+                     </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Manage time Modal window -->
+      <div class="modal fade bg-color010 " id="gatepass-manage-time" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog gatekeeper-popup" role="document" >
+            <div class="modal-content modal-padding" >
+               <div class="">
+                  <div  >
+                     <form novalidate ng-submit="addpost(postform)" name="postform" >
+                        <div class="row">
+                           <div class="col-md-12 " >
+                              <div class="gatekeeper-popup10">
+                                 <div class="text-center">
+                                    <div class="gp-Name" >Set Check-in Time For {{day_title}}</div>
+                                    <br/>
+                                    <div class="event-font ">Check-in time can be scheduled prior to any time before the event 
+                                    </div>
+                                    <br/>
+                                    <div class="col-md-12 gatepass-mrg-step4">
+                                       <ul id="mytabs" class="nav list" role="tablist" >
+                                          <li class="bg-color-gatepass-Check" ng-class="{'active':gatePassHour==1}" >
+                                             <a  role="tab" data-toggle="tab" ng-click="gatePassHour=1">
+                                             1 hour
+                                             </a>
+                                          </li>
+                                          <li class="bg-color-gatepass-Check" ng-class="{'active':gatePassHour==2}">
+                                             <a  role="tab" data-toggle="tab" ng-click="gatePassHour=2">
+                                             2 hours
+                                             </a>
+                                          </li>
+                                          <li class="bg-color-gatepass-Check" ng-class="{'active':gatePassHour==3}">
+                                             <a  role="tab" data-toggle="tab" ng-click="gatePassHour=3">
+                                             3 hours
+                                             </a>
+                                          </li>
+                                          <li class="bg-color-gatepass-Check" ng-class="{'active':gatePassHour==4}">
+                                             <a  role="tab" data-toggle="tab" ng-click="gatePassHour=4">
+                                             4 hours
+                                             </a>
+                                          </li>
+                                          <li class="bg-color-gatepass-Check" ng-class="{'active':gatePassHour==5}">
+                                             <a  role="tab" data-toggle="tab" ng-click="gatePassHour=5">
+                                             5 hours
+                                             </a>
+                                          </li>
+                                          <li class="bg-color-gatepass-Check" ng-class="{'active':gatePassHour==6}">
+                                             <a  role="tab" data-toggle="tab" ng-click="gatePassHour=6">
+                                             6 hours
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    <br/>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 border-top ticket-top">
+                              <div class="col-md-8">
+                                 <div  class=" text-danger">&nbsp; </div>
+                              </div>
+                              <div class="col-md-2 pulse-margin">
+                                 <div class="btn01 btn-primary-black-pulse01 text-hover" data-dismiss="modal" aria-label="Close">Cancel</div>
+                              </div>
+                              <div class="col-md-2 pulse-margin">
+                                 <div  class="btn01 btn-primary-black-pulse01 text-hover" ng-click="saveEntryTime()" >Save</div>
+                              </div>
+                           </div>
+                        </div>
+                  </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!-- Add Logo Modal window -->
+      <div class="modal fade bg-color010 " id="gatepass-add-logo" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog gatekeeper-popup" role="document" >
+            <div class="modal-content modal-padding" >
+               <div class="">
+                  <div  >
+                     <form novalidate  name="GKlogoform" >
+                        <div class="row">
+                           <div class="col-md-12 " >
+                              <div class="gatekeeper-popup01">
+                                 <div class="text-center">
+                                    <div class="col-md-12 container-remove-padding gatekeeper-bottom">
+                                       <div class="col-md-12 container-remove-padding gatepass-green">
+                                          <div class="col-md-3 container-remove-padding">
+                                             <div class="set-up-gatepass">
+                                                <img src="../../../static/dashboard/images/setup_gatekeeper_pass.png?v=c0be3316ba0ff23cb22cfeda39f89418" class="gatepass-img"/>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-6 container-remove-padding text-left">
+                                             <div class="set-up-gatepass">John Smith<br/> VP - Marketing<br/>  DEX Agency</div>
+                                          </div>
+                                          <div class="col-md-3 container-remove-padding">
+                                             <div class="set-up-gatepass">DELEGATE</div>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-12 container-remove-padding gatepass-white">
+                                          <div class="col-md-7 col-md-offset-1 container-remove-padding text-left">
+                                             <div class="set-up-gatepass">GatePass <br/><span style="font-size: 16px;" ng-bind="currentval.name"></span>Premium Pass</div>
+                                          </div>
+                                          <div class="col-md-4 container-remove-padding set-up-gatepass setup-img" >
+                                             <div class="set-up-gatepass">
+                                                <div ng-hide="imageSrc" class="logo-update" droplet  ng-model="cmpylogo">
+                                                   <div class="sub-heading-setup bgcolor-gatepass">
+                                                      <!-- <div class="btn01 btn-primary-black-invitation black-signup01">
+                                                         <droplet-upload-single ng-model="cmpylogo" accept="image/*" name="cmpylogo" ></droplet-upload-single>
+                                                         </div> -->
+                                                      <div>YOUR <br/>EVENT <br/>LOGO</div>
+                                                   </div>
+                                                </div>
+                                                <img ng-src="{{imageSrc|imagefilterQ1}}" class="image-width-gatepass" id="img-cmpylogo" ng-show="imageSrc"  />
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div >
+                                       <div class="col-md-12 ">
+                                          <div class="col-md-6 ">
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 black-btn-gatepass text-hover" ng-repeat="model in cmpylogo.getFiles(cmpylogo.FILE_TYPES.VALID)" ng-click="model.deleteFile()" ng-show="imageSrc!=currentval.event_logo">
+                                                <span>Remove</span>
+                                             </div>
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 black-btn-gatepass text-hover" ng-show="imageSrc==currentval.event_logo"  ng-click="imageSrc=''">
+                                                <span>Reset</span>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-6 ">
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 black-btn-gatepass text-hover" ng-repeat="model in cmpylogo.getFiles(cmpylogo.FILE_TYPES.VALID)" ng-show="imageSrc!=currentval.event_logo">
+                                                <span>Change</span>
+                                                <droplet-upload-single ng-model="cmpylogo" accept="image/*" name="cmpylogo1" ></droplet-upload-single>
+                                             </div>
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 black-btn-gatepass text-hover" ng-show="imageSrc==currentval.event_logo">
+                                                <span>Change</span>
+                                                <droplet-upload-single ng-model="cmpylogo" accept="image/*" name="cmpylogo2" ></droplet-upload-single>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <span style="color:red" ><br/>
+                                       <span ng-show="GKlogoform.cmpylogo.$error.invalidimg">Invalid Image File Type</span>
+                                       <span ng-show="GKlogoform.cmpylogo.$error.minsizeval">File size sholud not be Max Of 5MB</span>
+                                       <span ng-show="!GKlogoform.cmpylogo.$error.minsizeval && GKlogoform.cmpylogo.$error.ratioval">Aspect Ratio Should Be 1 : 1</span>
+                                       <span ng-show="!GKlogoform.cmpylogo.$error.minsizeval && GKlogoform.cmpylogo.$error.minDimension">Minimum resolution 1024 X 1024</span>
+                                       <span ng-show="submitted && !imageSrc && !GKlogoform.cmpylogo.$invalid">Required</span>
+                                       </span>
+                                    </div>
+                                    <div ng-hide="isCroping">
+                                       <div class="col-md-12 " ng-hide="imageSrc!=''">
+                                          <div class="col-md-6">
+                                             <div class="gp-blue btn01 btn-primary-black-invitation black-signup01 black-btn-gatepass gatepass-btn text-hover"  ng-click="imageSrc=currentval.event_logo;resetImg();">Use Event Logo
+                                             </div>
+                                          </div>
+                                          <div class="col-md-6">
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 black-btn-gatepass gatepass-btn text-hover">
+                                                <span >Choose an Image</span>
+                                                <droplet-upload-single ng-model="cmpylogo" accept="image/*" name="cmpylogo" ></droplet-upload-single>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <br/>
+                                 </div>
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-8">
+                                    <div  class=" text-danger">&nbsp; </div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div class="btn01 btn-primary-black-pulse01 text-hover" data-dismiss="modal" aria-label="Close">Cancel</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <button class="btn01 btn-primary-black-pulse01 text-hover" ng-disabled="imageSrc==''" ng-click="updateLogo()" >Save</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Sample Modal window -->
+      <div class="modal fade bg-color010 " id="gatepass-sample" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog gatekeeper-popup" role="document" >
+            <div class="modal-content modal-padding" >
+               <div class="">
+                  <form novalidate ng-submit="addpost(postform)" name="postform" >
+                     <div class="row">
+                        <div class="col-md-12 " >
+                           <div class="gatekeeper-popup01">
+                              <div class="text-center">
+                                 <div class="col-md-12 container-remove-padding ">
+                                    <div class="col-md-12 container-remove-padding gatepass-green">
+                                       <div class="col-md-3 container-remove-padding">
+                                          <div class="set-up-gatepass">
+                                             <img src="../../../static/dashboard/images/setup_gatekeeper_pass.png" class="gatepass-img"/>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-6 container-remove-padding text-left">
+                                          <div class="set-up-gatepass">John Smith<br/> VP - Marketing<br/>  DEX Agency</div>
+                                       </div>
+                                       <div class="col-md-3 container-remove-padding">
+                                          <div class="set-up-gatepass">DELEGATE</div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-12 container-remove-padding gatepass-white">
+                                       <div class="col-md-7 col-md-offset-1 container-remove-padding text-left">
+                                          <div class="set-up-gatepass">GatePass <br/><span style="font-size: 16px;" ng-bind="currentval.name"></span>Premium Pass</div>
+                                       </div>
+                                       <div class="col-md-4 container-remove-padding set-up-gatepass setup-img" >
+                                          <div class="set-up-gatepass">
+                                             <div ng-hide="imageSrc" class="logo-update" droplet  ng-model="cmpylogo">
+                                                <div class="sub-heading-setup bgcolor-gatepass">
+                                                   <!-- <div class="btn01 btn-primary-black-invitation black-signup01">
+                                                      <droplet-upload-single ng-model="cmpylogo" accept="image/*" name="cmpylogo" ></droplet-upload-single>
+                                                      </div> -->
+                                                   <div>YOUR <br/>EVENT <br/>LOGO</div>
+                                                </div>
+                                             </div>
+                                             <img ng-src="{{imageSrc|imagefilterQ1}}" class="image-width-gatepass" id="img-cmpylogo" ng-show="imageSrc"  />
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <br/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 text-right01">
+                           <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Cancel</div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--  Check-in Modal window -->
+         <div class="modal fade" id="Check-in" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Check-in Time</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form  novalidate >
+                           <div class="row">
+                              <div class="col-md-12 bg-collaborator text-center" ng-bind="checkIntime.error">
+                                 Checkin will be started only prior to 2 Hour of event start time
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-10">
+                                    <div  class=" text-danger">&nbsp;</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      <!----crop image---->
+      <div class="modal fade" id="crop-image" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog gatekeeper-popup" role="document" >
+            <div class="modal-content modal-padding" >
+               <div class="modal-header-top ">
+                  <h4 class="modal-title modal-heading" id="myModalLabel" >Crop</h4>
+               </div >
+               <div class="modal-body1">
+                  <div  >
+                     <form novalidate  >
+                        <div class="row">
+                           <div class="col-md-12 bg-general crop-popup" >
+                              <div class="image-editor crop-popup">
+                                 <input type="file" class="cropit-image-input">
+                                 <div class="cropit-preview"></div>
+                                 <div class="image-size-label">
+                                 </div>
+                                 <div class="crop-bottom"></div>
+                                 <div class="slider-wrapper">
+                                    <input type="range" class="cropit-image-zoom-input custom" min="0" max="1" step="0.01">
+                                 </div>
+                                 <div class="crop-top"></div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 border-top">
+                              <div class="col-md-8">
+                                 <div  class=" text-danger">&nbsp; </div>
+                              </div>
+                              <div class="col-md-2 pulse-margin">
+                                 <div class="btn01 btn-primary-black-pulse01 text-hover" data-dismiss="modal" aria-label="Close"  ng-click="resetCropImg()">Cancel</div>
+                              </div>
+                              <div class="col-md-2 pulse-margin">
+                                 <div  class="btn01 btn-primary-black-pulse01 text-hover" ng-click="setCropImg()">Crop</div>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+     <!-- start footer-->
+      <div ng-include-template="/event_footer" copyright="true"></div>
+      <!---End footer---->
+      </div>
+      <script src="../../../static/dashboard/scripts/jquery.diyslider.min.js?v=656471a334cc1a7d1c648f84c82e9d1c"></script>
+      <script src="../../../static/dashboard/scripts/wow.min.js"></script>
+      <script>
+          new WOW().init();
+      </script>
+      <script type="text/javascript">
+         $(".hasclear").keyup(function () {
+           var t = $(this);
+           t.next('img').toggle(Boolean(t.val()));
+         });
+         
+         $(".clearer").hide($(this).prev('input').val());
+         
+         $(".clearer").click(function () {
+           // $(this).prev('input').val('').focus();
+           $(this).hide();
+         });
+      </script>
+      <script>
+         $(document).ready(function(){
+         $(".slider").diyslider({
+             width: "100%", // width of the slider
+             height: "51px", // height of the slider
+              minSlides: 3, // number of slides you want it to display at once
+             loop: false, // disable looping on slides
+             moveSlides: 1,
+         }); // this is all you need!
+         
+         // use buttons to change slide
+         $("#go-left").bind("click", function(){
+             // Go to the previous slide
+             $(".slider").diyslider("move", "back");
+         });
+         $("#go-right").bind("click", function(){
+             // Go to the previous slide
+             $(".slider").diyslider("move", "forth");
+         });
+         });
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+          function resizediv(){
+           var h =$(window).height();
+           $('.height-top').css("height",h+"px");
+          } 
+          resizediv();
+          $(window).resize(function(){
+           resizediv();
+          });
+         });
+      </script>
+      {%endverbatim%}
+   </body>
+</html>

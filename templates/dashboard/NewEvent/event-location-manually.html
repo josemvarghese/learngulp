@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <title>YARA - Event Location Manually</title>
+      <link rel="stylesheet" href="../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <link rel="stylesheet" href="../../static/dashboard/css/customscrollbar.min.css?v=b72d1ff03f5d4322fda530affc8628fd">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyCV9Dg0e7cZQv4kV50S9eDUFQdIUCSN7RM"></script>
+      <script src="../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> <script src="../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script> <script src="../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> <script src="../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <!--  <script src="../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script> -->
+      <script src="../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <script src="../../static/dashboard/scripts/customscrollbar.min.js?v=ea9f31b6e94c00a389c0f19bb9a876f2"></script>
+      <link rel="stylesheet" href="../../../static/dashboard/css/angular-material.min.css?v=324b61820a354c69f275793da4516197">
+      <link rel="stylesheet" href="../../../static/dashboard/css/mdPickers.min.css?v=e7e0022313e47ca44e50fa9b895d77c0">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script src="../../../static/dashboard/scripts/moment.min.js?v=18338685047bb998815d0fce225665f4"></script> 
+      <script src="../../../static/dashboard/scripts/angular-animate.min.js?v=b5cd239b1ae96c9917a03372000dafe8"></script>
+      <script src="../../../static/dashboard/scripts/angular-aria.min.js?v=7f3a52851887f3f03822c9159f8f46ff"></script> 
+      <script src="../../../static/dashboard/scripts/angular-material.min.js?v=1bf69d5d0bcb732e4fa0734e5bd04232"></script> 
+      <script src="../../../static/dashboard/scripts/mdPickers.js?v=d41e5980049501aec6cdf0bc90d81efd"></script>  
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../static/dashboard/scripts/ng-map.js?v=32f203d7a258c29ca92dd8eea6ad08df"></script>
+      <script src="../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../static/dashboard/scripts/app1.js?v=57fdba9d671ec2f607b71bdad449f34d"></script>
+      <script src="../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>         
+      <script src="../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>         
+      <script src="../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>
+      <script src="../../../static/dashboard/scripts/ng-map.js?v=32f203d7a258c29ca92dd8eea6ad08df"></script>
+      <!---crop image---->
+      <script src="../../../static/dashboard/scripts/jquery.cropit.js?v=b37d29875ced18ede72940fb6b0fba52"></script>
+      <!--UI style---->
+      <link rel="stylesheet" href="../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+      <script src="../../../static/dashboard/scripts/angular-material-datetimepicker.js?v=14468359f8a6e7b9efb7ae41163bee11"></script>
+      <link rel="stylesheet" href="../../../static/dashboard/css/material-datetimepicker.min.css?v=841697f789974da72ac1053a7aeb3f4f">
+      <style>
+      </style>
+   </head>
+   <body ng-app="yara" ng-controller="ManualLocationController">
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      {%verbatim%}
+      <div id="container" class="wrap01">
+         <div class=" navbar-fixed-top bg-new">&nbsp;</div>
+         <!---header-->
+         <div class="container navbar-fixed-top border" >
+            <div class="col-md-12 white">
+               <div class="col-md-1 nav-color main-header-signup01-new" style="text-align:left;"><a href="" back-button><img src="../../../static/dashboard/images/yara_logo.svg?v=ce9e59e2272c030c2954deb7d56f3267" width="100%"/></a></div>
+               <div class="col-md-1 nav-color sub-header-border-new">&nbsp;</div>
+               <div class="col-md-2 nav-color sub-header-buy-new container-remove-padding">Create New Event</div>
+            </div>
+         </div>
+         <!----end header---->
+         <!--  Tab 3 -->
+         <div class="tab-pane">
+            <form class="container1" novalidate accessible-form name="step3form" ng-init="submitted0=false" ng-submit="!((country | isEmpty) || country=='') && !(states.length>0 && ((state | isEmpty) || state=='')) && (!step3form.$invalid)? saveLocationManually() :submitted0=true;errorScroll();" autocomplete="off">
+               <div class="row">
+                  <div class="col-md-12 newevent-top03 text-center manually-top">
+                     <div class="newevent-top04">
+                        <div class="newevent">Event Location</div>
+                     </div>
+                     <div class="col-md-4 col-md-offset-4">
+                        <div class="col-md-12 container-remove-padding">
+                           <input type="text" name="venu1" class="inputbox subtitle-font" placeholder="Venue" required  id="venu" ng-model="venu" style="padding: 6px 28px" ng-change="changingLoc()">
+                           <span class="text-danger" ng-show="submitted0 && !step3form.venu1.hasFocus && step3form.venu1.$invalid">
+                           <span ng-show="step3form.venu1.$error.required" ng-bind="'yara.required' | i18n ">Required</span>
+                           </span>
+                           <br/>
+                           <div class="col-md-12 container-remove-padding z-index9 margin-bottom20" id="menucontainercountry">
+                           <input type="text" name="addrline11" ng-model="searchCountry" class="inputbox subtitle-font auto-fill" placeholder="Select Country" ng-init="showCountrylist=false" ng-change="afterSelection('c');showCountrylist=true" ng-click="showCountrylist=true" ng-focus="showCountrylist=true" id="countryId">
+                           <!-- <div class="col-md-1 container-remove-padding" style="padding-left:15px;">
+                              <img src="../../static/dashboard/images/arrow-down.png?v=5e51b404929f5b6be7d35478804ffb57" ng-show="countries.length>1" class="caret01">
+                              </div> -->
+                           <ul class="font-names manually-padding dropdown-fixed-movement z-index9" ng-show="showCountrylist" id="countrydropdown">
+                              <li class="manually-margin" ng-repeat="c in countryData=(countries|filter:searchCountry| orderBy:'name')" ng-click="countrySelection(c);changingLoc();showCountrylist=false" ><a class="list-color">{{c.name}}
+                                 </a>
+                              </li>
+                              <li ng-show="countryData.length==0" ng-click="countrySelection('');"  ><a>No Result</a></li>
+                           </ul>
+                           <span style="color:red" ng-show="submitted0 " class="position-absolute manually-error-align">
+                           <span ng-show="((country | isEmpty) || country=='')" ng-bind="'yara.required' | i18n ">Required</span>
+                           </span>
+                           </div>
+                           <div class="col-md-12 container-remove-padding margin-bottom20" id="menucontainerstate">
+                              <input type="text"  ng-show="states==undefined || states.length==0" ng-model="state" class="inputbox subtitle-font" placeholder="Region" id="state_id1" > 
+                              <input type="text" ng-show="states.length>0" ng-model="searchState" id="state_id" class="inputbox subtitle-font auto-fill" placeholder="Select State" ng-init="showStatelist=false" ng-change="afterSelection('s');changingLoc();showStatelist=true" ng-click="showStatelist=true"  ng-focus="showStatelist=true" id="stateId">
+                              <!-- <div class="col-md-1 container-remove-padding" style="padding-left:15px;">
+                                 <img src="../../static/dashboard/images/arrow-down.png" ng-show="countries.length>1" class="caret01">
+                                 </div> -->
+                              <ul class="font-names manually-padding dropdown-fixed-movement z-index9" ng-show="showStatelist" id="statedropdown">
+                                 <li class="manually-margin" ng-repeat="st in statesData=(states|filter:searchState|orderBy)" ng-click="stateSelection(st);showStatelist=false" ><a  class="list-color">{{st}}</a></li>
+                                 <li ng-show="statesData.length==0" ng-click="stateSelection('');"><a>No Result</a></li>
+                              </ul>
+                              <span style="color:red" ng-show="submitted0 "  class="position-absolute manually-error-align">
+                              <span ng-show="(states.length>0 && ((state | isEmpty) || state==''))" ng-bind="'yara.required' | i18n ">Required</span>
+                              </span>
+                              <span style="color:red" ng-show="submitted0 "  class="position-absolute manually-error-align">
+                              <span ng-show="(states.length==0 && ((state | isEmpty) || state==''))" ng-bind="'yara.required' | i18n ">Required</span>
+                              </span>
+                              </div>
+                           <!-- country -->
+                           <!-- <div id="country_dropdown" class="dropdown signup_input country_dropdown">
+                              <nav  class="primary_nav_wrap_div primary_nav_wrap"  >
+                                <ul class="over01" >
+                                  <li>
+                                    <div class="col-md-12 container-remove-padding country-down" >
+                                      <div class="col-md-10 col-md-offset-1 container-remove-padding">
+                                        <span  id="menutitle" class="menutitle subtitle-font" ng-style="((country | isEmpty) || country=='')?{'color':'#b5b5bd'}:{'color':'#555'}" >Select Country</span>
+                                        
+                                        <input stopccp type="text" id="menutitlesearch" placeholder="Select Country" class="inputbox-signup menutitlesearch subtitle-font" autocomplete="off"  ng-model="countrysearch" name="countrysearch" ng-change="changingLoc()">
+                                      </div>
+                                      <div class="col-md-1 container-remove-padding" style="padding-left:15px;">
+                                        <img src="../../static/dashboard/images/arrow-down.png" ng-show="countries.length>1" class="caret01">
+                                      </div>
+                                    </div>
+                                      <ul class="font-names mrg" >
+                                        <li  ng-repeat="c in countrydata=(countries  |  custom:countrysearch ) | orderByDayNumber:'name' track by $index" ng-click="changeCountry(c,c.country_code)" ><a class="subtitle-font">{{c.name}}</a></li>
+                                        <li ng-show="countrydata | isEmpty" ng-click="changeCountry('','')" ><a>No Result</a></li>
+                                      </ul>
+                                  </li>
+                                </ul> 
+                              </nav>
+                              </div>
+                              <div class="col-md-12 text-center">
+                              <span style="color:red" ng-show="submitted0 ">
+                                <span ng-show="((country | isEmpty) || country=='')" ng-bind="'yara.required' | i18n ">Required</span>
+                              </span>
+                              </div>
+                              
+                              <div id="state_dropdown" class="dropdown signup_input state_dropdown" style="z-index:8;" ng-class="{'signup_input02': ((submitted0 ) && ((country | isEmpty) || country==''))}" ng-show="states.length> 0 && !((country | isEmpty) || country=='')">
+                                <nav  class="primary_nav_wrap primary_nav_wrap_div">
+                                <ul  style="width:100%">
+                                  <li  >
+                                <div class="col-md-12 container-remove-padding" style="border-bottom: 1px solid rgb(242, 242, 242); z-index: inherit;
+                                width: 100%;text-align:left">
+                                    <div class="col-md-10 col-md-offset-1  container-remove-padding">
+                                      <span  id="menutitlestate" class="menutitlestate subtitle-font" ng-style="((state | isEmpty) || state=='')?{'color':'#555'}:{'color':'#555'}">Select State/Province</span>
+                                      <input stopccp autocomplete="off"  type="text" id="menutitlestatesearch" class="inputbox-signup menutitlestatesearch subtitle-font" placeholder="Select State/Province" ng-readonly="(country | isEmpty) || country=='' " ng-model="statesearch" name="statesearch"ng-change="changingLoc()">
+                                    </div>
+                                    <div class="col-md-1 container-remove-padding" style="padding-left:15px;">
+                                    <img src="../../static/dashboard/images/arrow-down.png" class="caret01">
+                                  </div>
+                                </div>
+                              
+                                    <ul class="font-names" style="margin-top:28px;">
+                                  <li  ng-repeat="c in statedata=(states | unique |  filter:statesearch:startsWith) | orderBy " ng-click="changeState(c)" ><a class="subtitle-font">{{c}}</a></li>
+                                  <li ng-show="statedata | isEmpty" ng-click="changeState('')" ><a>No Result</a></li>
+                                    </ul>
+                                  </li>
+                              
+                                </ul>
+                                </nav>
+                              </div> 
+                              <div class="col-md-12 text-center container-remove-padding" style="margin-bottom: 20px;">
+                              <span style="color:red" ng-show="submitted0 ">
+                                    <span ng-show="(states.length>0 && ((state | isEmpty) || state==''))" ng-bind="'yara.required' | i18n ">Required</span>
+                              </span>
+                              <span ng-show="states.length<=0">
+                                   <br/>
+                                  <input type="text" name="state3" ng-model="state" class="inputbox subtitle-font" placeholder="Region" ng-show="states.length<=0"> 
+                              </span>
+                              </div> -->
+                           <!-- country -->
+                           <!-- address -->
+                           <input type="text" name="addrline11" ng-model="addrline1" class="inputbox subtitle-font auto-fill" placeholder="Address Line 1" required ng-init="addrline1=''" ng-change="changingLoc()" ng-disabled="disableFeilds">
+                           <span class="text-danger" ng-show="submitted0 && !step3form.addrline11.hasFocus && step3form.addrline11.$invalid">
+                           <span ng-show="step3form.addrline11.$error.required" ng-bind="'yara.required' | i18n ">Required</span>
+                           </span>
+                           <br/>
+                           <input type="text" name="addrline2" ng-model="addrline2" class="inputbox subtitle-font auto-fill" placeholder="Address Line 2" ng-disabled="disableFeilds"><br/>
+                           <input type="text" name="venucity1" ng-model="venucity" class="inputbox subtitle-font auto-fill" placeholder="City" required ng-init="venucity=''" ng-change="changingLoc()" ng-disabled="disableFeilds">
+                           <span class="text-danger" ng-show="submitted0  && !step3form.venucity1.hasFocus && step3form.venucity1.$invalid">
+                           <span ng-show="step3form.venucity1.$error.required" ng-bind="'yara.required' | i18n ">Required</span>
+                           </span>
+                           <br/>
+                           <input type="text" name="venupincode1" ng-model="venupincode" class="inputbox subtitle-font auto-fill" placeholder="Zip" required maxlength="16" ng-init="venupincode=''" ng-change="changingLoc()" ng-disabled="disableFeilds">
+                           <div class="error-height">
+                             <span class="text-danger" ng-show="submitted0 && !step3form.venupincode1.hasFocus && step3form.venupincode1.$invalid">
+                             <span ng-show="step3form.venupincode1.$error.required" ng-bind="'yara.required' | i18n ">Required</span>
+                             </span>
+                           </div>
+                           <!-- end addeess -->
+                        </div>
+                     </div>
+                     <div class="col-md-12 newevent-top03" >
+                        <div class="newevent-top04">
+                           <div class="newevent">Pinpoint the Venue</div>
+                           <div class="gray">Place the marker on the exact Event location
+                           </div>
+                        </div>
+                        <br/>
+                        <div ng-hide="showMap" class="layer-map" ng-class="{'layer-map':!mapenable}"  style="position: absolute;">&nbsp;</div>
+                        <div cust-map ng-model="searchloc" class="cust-map" country="{{country.name}}" state="{{state}}" city="{{venucity}}" ng-hide="showMap">
+                        </div>
+                     </div>
+                     <div class="col-md-12 general-top-bottom02"  ng-show="showMap">
+                        <div class="layer-map">&nbsp;</div>
+                        <div class="cust-map"  height="500px" >
+                           <ng-map zoom="15" center="[{{eventLoc.geoloc.lat}},{{eventLoc.geoloc.lng}}]" style="height:100%!important"></ng-map>
+                        </div>
+                        <!-- <div id="map_canvas" class="cust-map"  height="500px">
+                           </div> -->
+                     </div>
+                  </div>
+               </div>
+               <div class="container">
+                  <div class="col-md-4 col-md-offset-4">
+                     <div class="col-md-8 col-md-offset-2 button-top-new">
+                        <button type="submit"  class="btn btn-primary-black">Continue</button><br/><br/><br/>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <!-- End Tab 3 -->
+         <!-- start footer-->
+         <div ng-include-template="/event_footer" copyright="true" id="footer123"></div>
+         <!---End footer---->
+      </div>
+      <script type="text/javascript">
+         // $(document).ready(function(){
+         //  function resizediv(){
+         //   var h =$(window).height();
+         //   $('.height-top').css("height",h+"px");
+         //  } 
+         //  resizediv();
+         //  $(window).resize(function(){
+         //   resizediv();
+         //  });
+         // });
+      </script>
+      <script>
+         $(window).load(function() {
+             //show();
+         });
+         
+         function show() {
+             $('#loading').hide();
+             $('#container').fadeIn();
+         };
+         
+         //setTimeout(show, 100000);
+      </script>
+      <script>
+         (function(jQuery){
+           jQuery(window).load(function(){       
+             jQuery(".font-names").mCustomScrollbar({
+               theme:"dark",
+               scrollInertia: 400,
+               scrollButtons:{enable: true},   
+               autoHideScrollbar: false, 
+         
+               autoExpandScrollbar: true,
+               keyboard:{ enable: true }
+             });       
+           });
+         })(jQuery);
+      </script> 
+      <script>
+         function h(e) {
+             $(e).css({'height':'auto','overflow-y':'hidden'}).height(e.scrollHeight);
+         }
+         $('textarea').each(function () {
+           h(this);
+         }).on('input', function () {
+           h(this);
+         });
+      </script>
+      <script type="text/javascript">
+         function changeMe(sel)
+         {
+           sel.style.color = "#555";              
+         }
+      </script>
+      <script>
+         $(document).ready(function(){
+           $(".menutitlesearch").hide();
+           $(".subtitlesearch").hide();
+           $(".menutitlestatesearch").hide();
+         $(document).on('click',".country_dropdown .font-names  li",function() {
+           
+            $(".menutitlesearch").hide();
+            $(".menutitle").show();
+            $(".country_dropdown img").removeClass();
+            $(".country_dropdown img").addClass('caret01');  
+         });  
+         $(document).on('click',".state_dropdown .font-names  li",function() {
+           
+            $(".menutitlestatesearch").hide();
+            $(".menutitlestate").show(); 
+            $(".state_dropdown img").removeClass();
+            $(".state_dropdown img").addClass('caret01'); 
+         });  
+          $(document).on('click',".subtype_dropdown .font-names  li",function() {
+            $(".subtitlesearch").hide();
+            $(".subtitle").show();
+            $(".subtype_dropdown img").removeClass();
+            $(".subtype_dropdown img").addClass('caret01');  
+         });   
+          $(window).click(function() {
+            $("#countrydropdown").hide();
+            $("#statedropdown").hide();            
+            });
+            $('#menucontainercountry').click(function(event){
+                event.stopPropagation();
+              $("#countrydropdown").show();
+              $("#statedropdown").hide();
+            });
+            $('#menucontainerstate').click(function(event){
+                event.stopPropagation();
+              $("#statedropdown").show();
+            });
+            $('#countryId').on('input', function() {
+              $("#countrydropdown").show();
+              $("#statedropdown").hide();
+            });
+            $('#countryId').on('input', function() {
+              $("#countrydropdown").show();
+              $("#statedropdown").hide();
+            });
+            $('#stateId').on('input', function() {
+              $("#countrydropdown").hide();
+              $("#statedropdown").show();
+            });
+         });
+      </script>
+      <script>
+         $(document).ready(function(){
+             $('[data-toggle="tooltip"]').tooltip();   
+         });
+      </script>
+      {%endverbatim%}
+   </body>
+</html>

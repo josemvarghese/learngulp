@@ -1,0 +1,746 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <title>YARA - Create Event</title>
+      <link rel="stylesheet" href="../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <link rel="stylesheet" href="../../static/dashboard/css/customscrollbar.min.css?v=b72d1ff03f5d4322fda530affc8628fd">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyCV9Dg0e7cZQv4kV50S9eDUFQdIUCSN7RM"></script>
+      <script src="../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> <script src="../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script> <script src="../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> <script src="../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <!--  <script src="../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script> -->
+      <script src="../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <script src="../../static/dashboard/scripts/customscrollbar.min.js?v=ea9f31b6e94c00a389c0f19bb9a876f2"></script>
+      <link rel="stylesheet" href="../../../static/dashboard/css/angular-material.min.css?v=324b61820a354c69f275793da4516197">
+      <link rel="stylesheet" href="../../../static/dashboard/css/mdPickers.min.css?v=e7e0022313e47ca44e50fa9b895d77c0">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script src="../../../static/dashboard/scripts/moment.min.js?v=18338685047bb998815d0fce225665f4"></script> 
+      <script src="../../../static/dashboard/scripts/angular-animate.min.js?v=b5cd239b1ae96c9917a03372000dafe8"></script>
+      <script src="../../../static/dashboard/scripts/angular-aria.min.js?v=7f3a52851887f3f03822c9159f8f46ff"></script> 
+      <script src="../../../static/dashboard/scripts/angular-material.min.js?v=1bf69d5d0bcb732e4fa0734e5bd04232"></script> 
+      <script src="../../../static/dashboard/scripts/mdPickers.js?v=d41e5980049501aec6cdf0bc90d81efd"></script>  
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../static/dashboard/scripts/app1.js?v=57fdba9d671ec2f607b71bdad449f34d"></script>
+      <script src="../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>         
+      <script src="../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>         
+      <script src="../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>
+      <script src="../../../static/dashboard/scripts/ng-map.js?v=32f203d7a258c29ca92dd8eea6ad08df"></script>
+      <!---crop image---->
+      <script src="../../../static/dashboard/scripts/jquery.cropit.js?v=b37d29875ced18ede72940fb6b0fba52"></script>
+      <!--UI style---->
+      <link rel="stylesheet" href="../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+      <script src="../../../static/dashboard/scripts/angular-material-datetimepicker.js?v=14468359f8a6e7b9efb7ae41163bee11"></script>
+      <link rel="stylesheet" href="../../../static/dashboard/css/material-datetimepicker.min.css?v=841697f789974da72ac1053a7aeb3f4f">
+      <style>
+      </style>
+   </head>
+   <body ng-app="yara"  ng-controller="CreateNewEventController" ng-class="{'overflow-body':datepop,'overflow-body-newEvent':!datepop}">
+      <!--  -->
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      {%verbatim%}
+      <div id="container" class="wrap01">
+         <div class=" navbar-fixed-top bg-new" >&nbsp;</div>
+         <!---header-->
+         <div class="container navbar-fixed-top border" >
+            <div class="col-md-12 white">
+               <div class="col-md-1 nav-color main-header-signup01-new" style="text-align:left;"><a href="" back-button><img src="../../../static/dashboard/images/yara_logo.svg?v=ce9e59e2272c030c2954deb7d56f3267" width="100%"/></a></div>
+               <div class="col-md-1 nav-color sub-header-border-new">&nbsp;</div>
+               <div class="col-md-2 nav-color sub-header-buy-new container-remove-padding">Create New Event</div>
+            </div>
+         </div>
+         <!----end header---->
+         <div class="" >
+            <div class="row remove-margin">
+               <div class="col-md-12 text-center newevent-top">
+                  <div class="col-md-6 col-md-offset-3">
+                     <ul class="col-md-12 create-event-detail-center container-remove-padding com nav nav-tabs-newevent05" id="eventTab">
+                        <li class="col-md-4 width-nav"  id="t1"><a class="gray-color">1</a></li>
+                        <li class="col-md-4 width-nav active"  id="t2"><a class="gray-color">2</a></li>
+                        <li class="col-md-4 width-nav"  id="t3"><a class="gray-color">3</a></li>
+                     </ul>
+                  </div>
+                  <div class=" newevent-top">
+                     <!-- Tab 2 -->
+                     <div role="tabpanel" class="tab-pane" ng-class="{active:2 == tabsel}" >
+                        <!-- form start -->
+                        <!--  -->
+                        <form accessible-form novalidate name="detailsform" ng-submit="timeValiadtion();errorScroll();(detailsform.$invalid || invalidImage()||validatetime()||checkEventminDuration()) ? submitted2=true : evnetDetailsValidation();" ng-init="submitted2=false" autocomplete="off">
+                           <!-- event name, event logo, event day selection -->
+                           <div class="container">
+                              <div class="col-md-4 col-md-offset-4 container-remove-padding">
+                                 <div class="row">
+                                    <div class="col-md-12 top-nav">
+                                       <div class="newevent">Event Info</div>
+                                      <!--  <div class="gray">Should be short. a cover image and dimesntions is a <br/>
+                                          Every feature is meticulously crafted in way
+                                       </div> -->
+                                       <div class="col-md-12 text-center margin-top40">
+                                          <textarea type="text" rows="1"  placeholder="Event Name" class="textarea-create-event-detail text-center subtitle-font" ng-model="eventname" name="eventname" required ng-blur="suggestShrtName()" capitalize-word="true" ng-keydown="keyvalue=$event" maxlength="50" id="eventname" ng-pattern="/\D{1}/" ></textarea>
+                                           <hr/>
+                                          <!-- capitalize-word="true" -->
+                                          <div class="text-danger01" >
+                                             <span ng-show="submitted2 && !detailsform.eventname.hasFocus && detailsform.eventname.$invalid && detailsform.eventname.$error.required" ng-bind="'yara.required' | i18n ">Required</span>
+                                          </div>
+                                          <div class="text-danger01" >
+                                             <span ng-show="detailsform.eventname.$error.pattern" ng-bind="'yara.textrequired' | i18n ">Required</span>
+                                          </div>
+                                          <!-- <span class="text-danger01" ng-show="errormsg">
+                                             <span  ng-bind="'yara.showError'| i18n ">Event with same name already exists for the given date</span>
+                                             </span> -->
+                                          <input type="text" placeholder="Event Short Name" class="inputbox-create-event-detail text-center subtitle-font" ng-model="eventshrtname" name="eventshrtname" required  maxlength="8">
+                                          <div class="text-danger01" >
+                                             <span ng-show="submitted2 && !detailsform.eventshrtname.hasFocus && detailsform.eventshrtname.$invalid && detailsform.eventshrtname.$error.required" ng-bind="'yara.required' | i18n ">Required</span>
+                                          </div>
+                                          <textarea id="create-event-details" class="textarea-create-event-detail text-center subtitle-font" rows="1" name="eventdesc" ng-model="eventdesc" placeholder="Event Description" minlength="50" ng-pattern="/\D{1}/" required maxlength="750" style="min-height:26px;"></textarea>
+                                          <hr/>
+                                          <!-- <textarea ng-model="eventdesc" rows="1" name="eventdesc"  placeholder="Event Description"  class="new-event-des11 text-center"  required maxlength="750" minlength="50"></textarea> -->
+                                          <div class="text-danger01">
+                                             <span ng-show="submitted2 &&  !detailsform.eventdesc.hasFocus && detailsform.eventdesc.$invalid && detailsform.eventdesc.$error.required&&!detailsform.eventdesc.$error.pattern" ng-bind="'yara.required' | i18n ">Required</span>
+                                             <span ng-show="submitted2 &&  !detailsform.eventdesc.hasFocus && detailsform.eventdesc.$invalid && detailsform.eventdesc.$error.minlength&&!detailsform.eventdesc.$error.pattern" ng-bind="'yara.descMinLenght' | i18n:['50','750'] ">Description should be 50 to 750 characters long</span>
+                                             <span class="text-danger" ng-show=" detailsform.eventdesc.$error.pattern" ng-bind="'yara.textrequired' | i18n ">Required</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-md-12" ng-show="eventEdit">
+                                       <div   ng-hide="uploadEventLogo">
+                                          <div class="sub-nav-size-signup newevent-top">Upload Event Logo</div>
+                                          <br />
+                                          <img ng-src="{{editimageSrc}}" class="image-width-step4" id="img-coverimg"  />
+                                          <div class="col-md-12 signup_margin" >
+                                             <div class="col-md-6 ">
+                                                <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-click="uploadEventLogo=true;editimageSrc=''" ><span>Remove</span></div>
+                                             </div>
+                                             <div class="col-md-6 ">
+                                                <div class="btn01 btn-primary-black-invitation black-signup01 text-hover"  ng-click="uploadEventLogo=true;editimageSrc=''" >
+                                                   <span>Change</span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-12" ng-hide="eventEdit" >
+                                       <div class="sub-nav-size-signup newevent-top">Upload Event Logo</div>
+                                       <br />
+                                       <div ng-hide="imageSrc" class="logo-update" droplet  ng-model="evntlogo" id="evntlogoerr">
+                                          <div class="sub-nav-size-signup icon11">
+                                            <!--  <a data-toggle="tooltip" data-placement="right" title="Upload&nbsp;the&nbsp;Event&nbsp;Logo " >
+                                             <img src="../../../static/dashboard/images/info-icon.png?v=a1de70e5d3fedcbe46e85d2d41df189a" width="4%" />
+                                             </a> -->
+                                          </div>
+                                          <div class="sub-heading-signup">
+                                             <img src="../../../static/dashboard/images/image_upload_placeholder.png?v=7d539c1f656434ceaec3a5ebbe66836f" class="image_upload_placeholder"/>
+                                             <div class="sub-nav-size-invitation">Logo</div>
+                                             <div class="nav-font-invitation">Drag and drop the file</div>
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 text-hover cursoe-poi">
+                                                <span>Choose an Image</span>
+                                                <droplet-upload-single ng-model="evntlogo" accept="image/*" name="evntlogo" ></droplet-upload-single>
+                                             </div>
+                                             <div class="nav-font-invitation01">Minimum resolution<br/>1024 X 1024<br/>Aspect Ratio - 1:1<br/>Max size - 5 MB</div>
+                                          </div>
+                                       </div>
+                                       <br/>
+                                       <img ng-src="{{imageSrc}}" class="image-width-step4" id="img-evntlogo" ng-show="imageSrc"  />
+                                       <span class="text-danger01" >
+                                       <span ng-show="detailsform.evntlogo.$error.invalidimg">Invalid Image File Type</span>
+                                       <span ng-show="detailsform.evntlogo.$error.minsizeval" ng-bind="'yara.invalidImgSize' | i18n ">File size should not exceed 5MB</span>
+                                       <span ng-show="!detailsform.evntlogo.$error.minsizeval && detailsform.evntlogo.$error.ratioval" ng-bind="'yara.invalidImgR' | i18n:['1','1'] ">Aspect Ratio Should Be 1 : 1</span>
+                                       <span ng-show="!detailsform.evntlogo.$error.minsizeval && detailsform.evntlogo.$error.minDimension" ng-bind="'yara.invalidImgD' | i18n:['1024','1024'] ">Minimum resolution should be 1024 X 1024</span>
+                                       <span id="logoerr" ng-show="submitted2 && !imageSrc && detailsform.evntlogo.$valid" ng-bind="'yara.required' | i18n ">Event Logo required</span>
+                                       </span>
+                                       <div class="col-md-12 " ng-class="{'signup_margin10': evntlogo.getFiles(evntlogo.FILE_TYPES.VALID).length >0}">
+                                          <div class="col-md-6 ">
+                                             <div class="btn01 btn-primary-black-new black-signup01 text-hover" ng-repeat="model in evntlogo.getFiles(evntlogo.FILE_TYPES.VALID)" ng-click="model.deleteFile()">
+                                                <span>Remove</span>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-6 ">
+                                             <div class="btn01 btn-primary-black-new black-signup01 text-hover" ng-repeat="model in evntlogo.getFiles(evntlogo.FILE_TYPES.VALID)">
+                                                <span>Change</span>
+                                                <droplet-upload-single ng-model="evntlogo" accept="image/*" name="evntlogo1" ></droplet-upload-single>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <br/>
+                                    </div>
+                                    <div class="col-md-12" ng-show="eventEdit" id="evntlogoerredit" >
+                                       <div  ng-show="uploadEventLogo">
+                                          <div class="sub-nav-size-signup newevent-top">Upload Event Logo</div>
+                                          <br />
+                                          <div ng-hide="imgSrc" class="logo-update" droplet  ng-model="evntlogoChange">
+                                             <div class="sub-nav-size-signup icon11">
+                                                <a data-toggle="tooltip" data-placement="right" title="Upload&nbsp;the&nbsp;Event&nbsp;Logo " >
+                                                <img src="../../../static/dashboard/images/info-icon.png" width="4%" />
+                                                </a>
+                                             </div>
+                                             <div class="sub-heading-signup">
+                                                <img src="../../../static/dashboard/images/image_upload_placeholder.png" class="image_upload_placeholder"/>
+                                                <div class="sub-nav-size-invitation">Logo</div>
+                                                <div class="nav-font-invitation">Drag and drop the file</div>
+                                                <div class="btn01 btn-primary-black-invitation black-signup01 text-hover cursoe-poi">
+                                                   <span>Choose an Image</span>
+                                                   <droplet-upload-single ng-model="evntlogoChange" accept="image/*" name="evntlogoChange" ></droplet-upload-single>
+                                                </div>
+                                                <div class="nav-font-invitation01">Minimum resolution<br/>1024 X 1024<br/>Aspect Ratio - 1:1<br/>Max size - 5 MB</div>
+                                             </div>
+                                          </div>
+                                          <br/>
+                                          <img ng-src="{{imgSrc}}" class="image-width-step4" id="img-evntlogo" ng-show="imgSrc"  />
+                                          <span class="text-danger01" >
+                                          <span ng-show="detailsform.evntlogoChange.$error.invalidimg">Invalid Image File Type</span>
+                                          <span ng-show="detailsform.evntlogoChange.$error.minsizeval" ng-bind="'yara.invalidImgSize' | i18n ">File size should not exceed 5MB</span>
+                                          <span ng-show="!detailsform.evntlogoChange.$error.minsizeval && detailsform.evntlogoChange.$error.ratioval" ng-bind="'yara.invalidImgR' | i18n:['1','1'] ">Aspect Ratio Should Be 1 : 1</span>
+                                          <span ng-show="!detailsform.evntlogoChange.$error.minsizeval && detailsform.evntlogoChange.$error.minDimension" ng-bind="'yara.invalidImgD' | i18n:['1024','1024'] ">Minimum resolution should be 1024 X 1024</span>
+                                          <span  ng-show="submitted2 && !imgSrc && detailsform.evntlogoChange.$valid" ng-bind="'yara.required' | i18n ">Event Logo required</span>
+                                          </span>
+                                          <div class="col-md-12 " ng-class="{'signup_margin10': evntlogoChange.getFiles(evntlogoChange.FILE_TYPES.VALID).length >0}">
+                                             <div class="col-md-6 ">
+                                                <div class="btn01 btn-primary-black-new black-signup01 text-hover" ng-repeat="model in evntlogoChange.getFiles(evntlogoChange.FILE_TYPES.VALID)" ng-click="model.deleteFile()">
+                                                   <span>Remove</span>
+                                                </div>
+                                             </div>
+                                             <div class="col-md-6 ">
+                                                <div class="btn01 btn-primary-black-new black-signup01 text-hover" ng-repeat="model in evntlogoChange.getFiles(evntlogoChange.FILE_TYPES.VALID)">
+                                                   <span>Change</span>
+                                                   <droplet-upload-single ng-model="evntlogoChange" accept="image/*" name="evntlogo1" ></droplet-upload-single>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <br/>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row ">
+                                    <div class="newevent-top-bottom">
+                                       <div class="newevent">Event Day(s)
+                                       </div>
+                                       <div class="gray">Set your event duration<br/>
+                                          Only continuous days is allowed
+                                       </div>
+                                    </div>
+                                    <div class="col-md-12" style="width:100%">
+                                       <!-- Nav tabs -->
+                                       <ul id="mytabs" class="nav list-security" role="tablist" >
+                                          <li class="bg-color-newevent " ng-class="{'active':evntDate=='single'}" ng-init="evntDate='single'">
+                                             <a  role="tab" data-toggle="tab" ng-click="evntDate='single';dates.splice(1)">
+                                             Single Day
+                                             </a>
+                                          </li>
+                                          <li class="bg-color-newevent " ng-class="{'active':evntDate=='multi'}">
+                                             <a  role="tab" data-toggle="tab" ng-click="evntDate='multi'">
+                                             Multiple Days
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- end event name, event logo, event day selection -->
+                           <!-- date selection  -->
+                           <div class="col-md-8 col-md-offset-2">
+                              <div class="row" id="dateScroll">
+                                 <div class="col-md-12 " >
+                                    <div class=" list-group-item padding_newevent date-time-UI newevent-top-multi "  ng-class="{'col-md-6 col-md-offset-3 ':evntDate=='single','col-md-5 col-md-offset-1 top-mrg-new-event':evntDate!='single','date-time-UI-dst':dst[d]==0}" ng-repeat="d in dates">
+                                       <div class="col-md-12 container-remove-padding">
+                                          <div class="col-md-6 col-md-offset-3 dst-display" ng-show="dst[d]!=0 && dst[d]!=undefined" ng-bind="'yara.dstMessage' | i18n ">Dst Applicabile</div>
+                                          <div class="col-md-10 col-md-offset-1 dst-display01 position-absolute"  ng-bind="'yara.minHours' | i18n " ng-show="minDuration[d]==true && minDuration[d]!=undefined">Minimum event duration is 2 hours</div>
+                                          <!-- <div class="col-md-6 col-md-offset-3 dst-display" ng-show="true" ng-bind="'yara.dstMessage' | i18n ">Dst Applicabile  {{checkDst(d)}}</div> -->
+                                          <div class="col-md-2 text-right time-cancel-btn container-remove-padding"  ng-show="$index!=0 && $index==(dates.length-1)" ng-click="deleteDay()">
+                                             <img src="../../../static/dashboard/images/close.png?v=b1ce2d1d813d0e16af2d417f4f3644e6" width="25px" height="25px"/>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-12 align-mrg-time-picker">
+                                          <!-- Start Dates -->
+                                          <div class="col-md-12 input-group time-p-top01 text-left" style="float:left; z-index:9;">
+                                             <label class="text-left bg-color-time time-picker-labal-font" style="color: #000!important;">Date</label>
+                                             <div class="create-event-overlayer"></div>
+                                             <!-- start date -->
+                                             <input type="text" ng-readonly="true" ng-model="eventstartdate" value="{{eventstartdate}}" ng-change="editStartdate()" ng-click="showDatePicker($event)"  ng-show="$index==0"  class="cursor-poi time-picker-date03 padding-zero01 time-picker-font" style="border: none!important; background-color:transparent!important; height: auto;"/>
+                                             <!--End  start date -->
+                                             <!-- days after start date -->
+                                             <span ng-show="$index!=0" class="time-picker-date02 padding-zero01 time-picker-font" >
+                                             {{(d) | date:'MMMM dd yyyy'}}
+                                             </span>
+                                             <!--End  days after start date -->
+                                          </div>
+                                          <!-- End  start Dates -->
+                                          <!-- Edit date -->
+                                          <div class="time-picker-edit container-remove-padding text-right01 text-hover cursor-def create-event-edit" ng-class="{'create-event-edit-multiple':(evntDate=='multi')}" ng-hide="$index!=0"><a class="text-hover cursor-poi">EDIT</a>
+                                          </div>
+                                          <!--End Edit date -->
+                                       </div>
+                                       <div class="col-md-12 align-mrg-time-picker">
+                                          <div class="col-md-12 input-group " ng-class="{'':$index==0 &&  !((submitted2 || timeInvalid) && detailsform['evntendtime{{d}}'].$untouched || detailsform['evntendtime{{d}}'].$touched && detailsform['evntendtime{{d}}'].$error.required),'top-create12':$index!=0}" style="float:left;z-index:9;">
+                                             <!-- start time for first date -->
+                                             <md-input-container class="md-input-has-placeholder md-dialog-container-date" md-no-float ng-show="$index==0">
+                                                <div  class="text-left bg-color-time time-picker-labal-font">Start Time
+                                                </div>
+                                                <label id="evntstarttime{{d}}-label" class="text-left bg-color-time time-picker-font" style="font-size: 21px!important; line-height: 1.3; font-weight: bold;" ng-show="eventEdit==false">_ _ : _ _</label>
+                                                <div class="create-event-overlayer"></div>
+                                                <input mdc-datetime-picker="" date="false" time="true" type="text" id="evntstarttime{{d}}" short-time="!is_time_format_24?true:false" placeholder="Start Time"  format="{{timeformaType}}" ng-model="td.starttime[d]" max-date="" class="md-input cursor-poi inputbox-res01  md-raised md-warn pointer-time time-picker-font" ng-required="$index==0" name="evntstarttime{{d}}" style="border: none!important; font-family: 'Yantramanav', sans-serif;">
+                                             </md-input-container>
+                                             <!-- end start time for first date -->
+                                             <div  class="text-left bg-color-time time-picker-labal-font" ng-show="$index!=0">Start Time</div>
+                                             <div class="create-event-overlayer"></div>
+                                             <input mdc-datetime-picker="" date="false" time="true" type="text" id="evntstarttime2{{d}}" short-time="!is_time_format_24?true:false" placeholder="Start Time" min-date="" max-date="" format="{{timeformaType}}" ng-model="td.starttime[d]" class="md-input cursor-poi inputbox-new-event01  md-raised md-warn pointer-time time-picker-font"  name="evntstarttime2{{d}}" ng-show="$index!=0" style="background-color: transparent; font-family: 'Yantramanav', sans-serif;" >
+                                             <div class="col-md-12 text-left container-remove-padding" style="height:1px;">
+                                                <span class="text-danger01" ng-show="$index==0 && (submitted2 || timeInvalid) && detailsform['evntstarttime{{d}}'].$untouched || detailsform['evntstarttime{{d}}'].$touched && detailsform['evntstarttime{{d}}'].$error.required" ng-bind="'yara.required' | i18n ">Required</span>
+                                             </div>
+                                             <!-- {{td.datetime[d]}} -->
+                                          </div>
+                                          <div class="time-picker-edit container-remove-padding text-right01 text-hover cursor-def create-event-edit" ng-class="{'create-event-edit-multiple':(evntDate=='multi')}"><a class="text-hover cursor-poi">EDIT</a></div>
+                                       </div>
+
+                                       <div class="col-md-12 align-mrg-time-picker">
+                                          <div class="col-md-12 input-group" ng-class="{'':$index==0 && !((submitted2 || timeInvalid) && detailsform['evntendtime{{d}}'].$untouched || detailsform['evntendtime{{d}}'].$touched && detailsform['evntendtime{{d}}'].$error.required),'top-create12':$index!=0}" style="float:left; z-index:9;">
+                                             <md-input-container class="md-input-has-placeholder" md-no-float ng-show="$index==0" >
+                                                <div  class="text-left bg-color-time time-picker-labal-font">End Time</div>
+                                                <label id="evntendtime{{d}}-label" class="text-left bg-color-time time-picker-font" style="font-size: 21px!important; line-height: 1.3; font-weight: bold;" ng-show="eventEdit==false">_ _ : _ _</label>
+                                                <div class="create-event-overlayer"></div>
+                                                <input mdc-datetime-picker="" date="false" time="true" type="text" id="evntendtime{{d}}" short-time="!is_time_format_24?true:false" placeholder="End Time" min-date="td.starttime[d]" format="{{timeformaType}}" ng-model="td.endtime[d]" class=" cursor-poi md-input inputbox-res01 md-raised md-warn  pointer-time time-picker-font" ng-required="$index==0" name="evntendtime{{d}}" style="border: none!important; font-family: 'Yantramanav', sans-serif;">
+                                             </md-input-container>
+                                             <div  class="text-left bg-color-time time-picker-labal-font" ng-show="$index!=0">End Time</div>
+                                             <div class="create-event-overlayer"></div>
+                                             <input mdc-datetime-picker="" date="false" time="true" type="text" id="evntendtime2{{d}}" short-time="!is_time_format_24?true:false" placeholder="End Time" min-date="td.starttime[d]" format="{{timeformaType}}" ng-model="td.endtime[d]" class=" cursor-poi md-input inputbox-new-event01 md-raised md-warn  pointer-time time-picker-font"  name="evntendtime2{{d}}" ng-show="$index!=0" style="background-color: transparent; font-family: 'Yantramanav', sans-serif;">
+                                             <div class="col-md-12 text-left container-remove-padding" style="height:1px;">
+                                                <span class="text-danger01" ng-show="$index==0 && (submitted2 || timeInvalid) && detailsform['evntendtime{{d}}'].$untouched || detailsform['evntendtime{{d}}'].$touched && detailsform['evntendtime{{d}}'].$error.required" ng-bind="'yara.required' | i18n ">Required</span>
+                                             </div>
+                                             <!-- {{td.endtime[d]}} -->
+                                             <!--  <input  type="text" class="inputbox-res01 md-raised md-warn text-center pointer" placeholder="End Time" ng-click="showTimePicker($event,'evntendtime'+d,d)" aria-label="show picker" id="evntendtime{{d}}" ng-model="evntendtime$index"  ng-readonly="true" name="evntendtime{{d}}" required/>
+                                                <span class="text-danger01" ng-show=" submitted2 && detailsform['evntendtime{{d}}'].$untouched || detailsform['evntendtime{{d}}'].$touched && detailsform['evntendtime{{d}}'].$error.required">End Time required</span> -->
+                                          </div>
+                                          <div class="time-picker-edit container-remove-padding text-right01 text-hover cursor-def create-event-edit" ng-class="{'create-event-edit-multiple':(evntDate=='multi')}"><a class="text-hover cursor-poi" >EDIT</a></div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-5 col-md-offset-1 list-group-item padding_newevent-plus-btn top-mrg-new-event padding_newevent-plus-btn-dst"   ng-hide="evntDate=='single'  || dates.length>=20" ng-click="checkEventminDuration()&&!addingDay?'':addDay()" >
+                                    <!------Start Loading indicator------>
+
+<!--                                        <div class="col-md-12 position-absolute container-remove-padding create-details-bg-loader-pop" id="loadingDate">
+                                          <img src="../../../static/dashboard/images/default5.gif" class="search-loading text-center general-loader">
+                                       </div>
+ -->                                    <!------End Loading indicator------>
+                                       <div class="dashboardWell-agreement">
+                                          <div class="nav-font-new"><img src="../../../static/dashboard/images/plus.png?v=4485a68ee8da31a786ec57a4b0873b74" width="35%"/></div>
+                                          <div class="nav-font-new1 plus-align-top">ADD</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- date selection end -->
+                           <!-- social icons start -->
+                           <div class="row">
+                              <div class="col-md-6 col-md-offset-3 newevent-top02 " ng-hide="isEventPrvt">
+                                 <div class="newevent-top-bottom">
+                                    <div class="newevent">Contact</div>
+                                    <div class="gray">Fill in your contact details<br/>
+                                          Phone and Email ID are mandatory
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-2" ng-class="{'col-md-offset-4': eventPrivate == 'true' , 'col-md-offset-1': eventPrivate == 'false'}" >  <span class="fa fa-phone bootstrap-font-icon  bootstrap-font-icon-gray icon-width-event-details phone 009" data-toggle="modal" data-target="#myModal-social" id="009" ng-click="social_type='phone';phoneInfo();setFocus(social_type);poperror=false" aria-hidden="true"></span><br/>Phone<br/>
+                                    <span style="color:red;" class="arrow_box" ng-show="submitted2 && detailsform.eventph.$error.required" id="socialErr" ng-bind="'yara.required' | i18n ">
+                                    Required
+                                    </span>     
+                                 </div>
+                                 <div class="col-lg-2"><span class="fa fa-envelope bootstrap-font-icon  bootstrap-font-icon-gray icon-width-event-details message 010" data-toggle="modal" data-target="#myModal-social" id="010" ng-click="social_type='message'; setFocus(social_type) ;poperror=false"  aria-hidden="true"></span><br/>Email<br/>
+                                    <span style="color:red;" id="socialErremail"  class="arrow_box" ng-show="submitted2 && detailsform.eventEmail.$error.required" ng-bind="'yara.required' | i18n ">Required </span>
+                                 </div>
+                                 <div class="col-lg-2 " ng-hide="eventPrivate=='true'" >
+                                    <span class="fa fa-globe bootstrap-font-icon  bootstrap-font-icon-gray icon-width-event-details company-website 001" data-toggle="modal" data-target="#myModal-social" id="001" ng-click="social_type='company-website'; setFocus(social_type)" data-container="body" data-toggle="" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." aria-hidden="true"></span><br/>Web
+                                 </div>
+                                 <div class="col-lg-2" ng-hide="eventPrivate=='true'">
+                                    <span class="fa fa-facebook bootstrap-font-icon  bootstrap-font-icon-gray icon-width-event-details  003" data-toggle="modal" data-target="#myModal-social" id="003" ng-click="social_type='facebook'; setFocus(social_type)" aria-hidden="true"></span><br/>Facebook
+                                 </div>
+                                 <div class="col-lg-2" ng-hide="eventPrivate=='true'"> 
+                                    <span class="fa fa-twitter bootstrap-font-icon  bootstrap-font-icon-gray icon-width-event-details  002" data-toggle="modal" data-target="#myModal-social" id="002" ng-click="social_type='twitter'; setFocus(social_type)" aria-hidden="true"></span><br/>Twitter
+                                 </div>
+                                 <!-- Social Icons Modal Window -->
+                                 <div class="modal fade" id="myModal-social" tabindex="-1" role="dialog" data-backdrop="static"  aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document" style="margin-top:15%;">
+                                       <div class="modal-content">
+                                          <div class="modal-header-signup2">
+                                             <h4 class="modal-title text-left signup2-created" id="myModalLabel" >Add Social</h4>
+                                          </div>
+                                          <div class="modal-body-account">
+                                             <div ng-show="social_type=='phone'">
+                                                <div class="text-left account_font01">Phone</div>
+                                                <div class="col-md-12">
+                                                   <div class="col-md-5">
+                                                      <input type="text" ng-model="phDailCode" placeholder="Country Code" isdialcode name="phDailCode" required  class="inputbox-signup2 text-center auto-fill" maxlength="8" id="country_code" ng-required="phdialreq" >
+                                                      <div class="border-top-web">
+                                                         <span style="color:red;"  ng-show="poperror && detailsform.phDailCode.$error.required " ng-bind="'yara.required' | i18n ">
+                                                         Required
+                                                         </span>  
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-md-6 col-md-offset-1">
+                                                      <input type="text" id="phone_id" ng-model="Teventph" name="eventph" is-number class="inputbox-signup-new auto-fill" maxlength="15"  minlength="4" placeholder="Phone"  ng-required="!isEventPrvt">
+                                                      <div class="border-top-web">
+                                                         <span style="color:red;" ng-show="poperror && detailsform.eventph.$error.minlength" ng-bind="'yara.invalidPH' | i18n ">Invalid Phone </span>  
+                                                         <span style="color:red;"  ng-show="poperror && detailsform.eventph.$error.required " ng-bind="'yara.required' | i18n ">
+                                                         Required
+                                                         </span>  
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <!-- <span style="color:red;" ng-show="detailsform.eventph.$touched && detailsform.eventph.$error.minlength">Invalid Phone </span> -->
+                                                <!-- <span style="color:red;" ng-show="detailsform.eventph.$dirty && detailsform.eventph.$invalid && detailsform.eventph.$touched ">
+                                                   <span ng-show="detailsform.eventph.$error.required">Event Phone </span>
+                                                   
+                                                   </span> -->
+                                             </div>
+                                             <div ng-show="social_type=='message'">
+                                                <div class="text-left account_font01">Email</div>
+                                                <input type="email" id="message_id" ng-model="TeventEmail" name="eventEmail" placeholder="Event Email Id" validate-email  class="inputbox-signup2 auto-fill" ng-required="!isEventPrvt">
+                                                <div class="border-top-web"></div>
+                                                <span style="color:red;"  ng-show="poperror && detailsform.eventEmail.$error.email" ng-bind="'yara.invalidEmail' | i18n ">Invalid Email </span>
+                                                <span style="color:red;"  ng-show="poperror && detailsform.eventEmail.$error.required" ng-bind="'yara.required' | i18n ">Required </span>
+                                                <!-- <span style="color:red;"  ng-show="detailsform.eventEmail.$touched && detailsform.eventEmail.$error.email">Invalid Email </span> -->
+                                             </div>
+                                             <div ng-show="social_type=='company-website'">
+                                                <div class="text-left account_font01">Website</div>
+                                                <input type="text" id="company-website_id" ng-model="Teventweb" name="eventweb" placeholder="Event Website" class="inputbox-signup2 auto-fill" maxlength="50" web-url>
+                                                <div class="border-top-web01"></div>
+                                                <!-- <span style="color:red;" ng-show="detailsform.eventweb.$dirty && detailsform.eventweb.$invalid ">
+                                                   <span ng-show="detailsform.eventweb.$error.required">Company Website </span>
+                                                   </span> -->
+                                             </div>
+                                             <div ng-show="social_type=='facebook'">
+                                                <div class="text-left account_font01">Facebook</div>
+                                                <input type="text" id="facebook_id" ng-model="Teventfb" name="eventfb"  fb-url class="inputbox-signup2 auto-fill"  maxlength="50">
+                                                <div class="border-top-signup2"></div>
+                                                <!--  <span style="color:red;" ng-show="detailsform.eventfb.$dirty && detailsform.eventfb.$invalid ">
+                                                   <span ng-show="detailsform.eventfb.$error.required">Company Facebook </span>
+                                                   </span> -->
+                                             </div>
+                                             <div ng-show="social_type=='twitter'">
+                                                <div class="text-left account_font01">Twitter</div>
+                                                <input type="text" id="twitter_id" ng-model="Teventtwitter" name="eventtwitter" twitter-url class="inputbox-signup2 auto-fill" maxlength="50">
+                                                <div class="border-top-twitter"></div>
+                                                <!--  <span style="color:red;" ng-show="detailsform.eventtwitter.$dirty && detailsform.eventtwitter.$invalid ">
+                                                   <span ng-show="detailsform.eventtwitter.$error.required">Company Twitter </span>
+                                                   </span> -->
+                                             </div>
+                                          </div>
+                                          <div class="row" style="margin:0 15px;">
+                                             <div class="col-md-12 border-top">
+                                                <div class="col-md-8">&nbsp;</div>
+                                                <div class="col-md-2 pulse-margin"><button type="button" data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</button></div>
+                                                <div class="col-md-2">
+                                                   <button ng-show="social_type=='phone'" type="button" class="btn01 btn-primary-black-pulse01 text-hover" ng-click="detailsform.eventph.$invalid ? poperror=true : saveSocials();" ng-disabled="detailsform.eventph.$invalid  || (phdialreq &&(phDailCode==undefined||phDailCode==''))? true:false">Add</button>
+                                                   <button ng-show="social_type=='message'" type="button" class="btn01 btn-primary-black-pulse01 text-hover" ng-click="detailsform.eventEmail.$invalid? poperror=true : saveSocials();" ng-disabled="detailsform.eventEmail.$invalid? true:false">Add</button>
+                                                   <button ng-show="social_type=='facebook'" type="button" class="btn01 btn-primary-black-pulse01 text-hover" ng-click="saveSocials()" >Add</button>
+                                                   <!-- ng-disabled="(Teventfb.length==undefined ||Teventfb.length==25)? true:false" -->
+                                                   <button ng-show="social_type=='company-website'" type="button" class="btn01 btn-primary-black-pulse01 text-hover" ng-click="saveSocials()" >Add</button>
+                                                   <!-- ng-disabled="(Teventweb.length==undefined ||Teventweb.length==7)? true:false" -->
+                                                   <button ng-show="social_type=='twitter'" type="button" class="btn01 btn-primary-black-pulse01 text-hover" ng-click="saveSocials()" >Add</button>
+                                                   <!-- ng-disabled="(Teventtwitter.length==undefined ||Teventtwitter.length==20)? true:false" -->
+                                                   <!--  <button ng-show="social_type!='phone' && social_type!='message'" type="button" class="btn01 btn-primary-black-pulse01 text-hover" ng-click="saveSocials()">Add</button>
+                                                      <button ng-show="social_type!='phone' && social_type!='message'" type="button" class="btn01 btn-primary-black-pulse01 text-hover" ng-click="saveSocials()">Add</button> -->
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!---modal window End- -->          
+                              </div>
+                           </div>
+                           <!-- social icons end -->
+                           <!-- last step -->
+                           <div class="container">
+                              <div class="col-md-4 col-md-offset-4 container-remove-padding">
+                                 <div calss="row ">
+                                    <div class="newevent-top03">
+                                       <div class="margin-bottom20">
+                                          <div class="newevent">Schedule Cover Image</div>
+                                          <div class="gray">Choose a cover image to be displayed on ‘schedule screen’ on YARA app
+                                          </div>
+                                       </div>
+                                       <div ng-show="eventEdit">
+                                          <div class="" ng-hide="uploadCoverimg ">
+                                             <img ng-src="{{editimageSrc1}}" class="image-width-step4" id="img-coverimg"  />
+                                             <div class="col-md-12 signup_margin" >
+                                                <div class="col-md-6 ">
+                                                   <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-click="uploadCoverimg=true;editimageSrc1=''" ><span>Remove</span></div>
+                                                </div>
+                                                <div class="col-md-6 ">
+                                                   <div class="btn01 btn-primary-black-invitation black-signup01 text-hover"  ng-click="uploadCoverimg=true;editimageSrc1=''" >
+                                                      <span>Change</span>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <br/>
+                                       <!-- add image  -->
+                                       <div class="" ng-hide="eventEdit">
+                                          <div ng-hide="imageSrc1" class="logo-update" droplet  ng-model="coverimg">
+                                             <div class="sub-nav-size-signup icon">
+                                             </div>
+                                             <div class="sub-heading-signup">
+                                                <img src="../../../static/dashboard/images/image_upload_placeholder.png" class="image_upload_placeholder"/>
+                                                <div class="sub-nav-size-signup2">Upload Cover Image</div>
+                                                <div class="nav-font-option">(Optional)</div>
+                                                <div class="nav-font-invitation">Drag and drop the file</div>
+                                                <div class="btn01 btn-primary-black-invitation black-signup01 text-hover cursoe-poi">
+                                                   <span>Choose an Image</span>
+                                                   <droplet-upload-single ng-model="coverimg" accept="image/*" name="coverimg" ></droplet-upload-single>
+                                                </div>
+                                                <div class="nav-font-invitation01">Minimum Size<br/>1024 X 1024<br/>Aspect Ratio - 1:1<br/> Max size - 5 MB</div>
+                                             </div>
+                                          </div>
+                                          <br/>
+                                          <img ng-src="{{imageSrc1}}" class="image-width-step4" id="img-coverimg" ng-show="imageSrc1"  />
+                                          <span class="text-danger01" >
+                                          <span ng-show="detailsform.coverimg.$error.invalidimg">Invalid Image File Type</span>
+                                          <span ng-show="detailsform.coverimg.$error.minsizeval" ng-bind="'yara.invalidImgSize' | i18n ">File size should not exceed 5MB</span>
+                                          <span ng-show="!detailsform.coverimg.$error.minsizeval && detailsform.coverimg.$error.ratioval" ng-bind="'yara.invalidImgR' | i18n:['1','1'] ">Aspect Ratio Should Be 1 : 1</span>
+                                          <span ng-show="!detailsform.coverimg.$error.minsizeval && detailsform.coverimg.$error.minDimension" ng-bind="'yara.invalidImgD' | i18n:['1024','1024'] ">Minimum resolution should be 1024 X 1024</span>
+                                          </span>
+                                          <br/>
+                                          <div class="col-md-12 signup_margin">
+                                             <div class="col-md-6 ">
+                                                <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in coverimg.getFiles(coverimg.FILE_TYPES.VALID)" ng-click="model.deleteFile()"><span>Remove</span></div>
+                                             </div>
+                                             <div class="col-md-6 ">
+                                                <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in coverimg.getFiles(coverimg.FILE_TYPES.VALID)">
+                                                   <span>Change</span>
+                                                   <droplet-upload-single ng-model="coverimg" accept="image/*" name="coverimg1" ></droplet-upload-single>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <!-- edit image -->
+                                       <!-- edit coverimage -->
+                                       <div ng-show="eventEdit">
+                                          <div class="" ng-show="uploadCoverimg">
+                                             <div ng-hide="imgSrc1" class="logo-update" droplet  ng-model="coverimgChange">
+                                                <div class="sub-nav-size-signup icon">
+                                                </div>
+                                                <div class="sub-heading-signup">
+                                                   <img src="../../../static/dashboard/images/image_upload_placeholder.png" class="image_upload_placeholder"/>
+                                                   <div class="sub-nav-size-signup2">Upload Cover Image</div>
+                                                   <div class="nav-font-option">(Optional)</div>
+                                                   <div class="nav-font-invitation">Drag and drop the file</div>
+                                                   <div class="btn01 btn-primary-black-invitation black-signup01 text-hover cursoe-poi">
+                                                      <span>Choose an Image</span>
+                                                      <droplet-upload-single ng-model="coverimgChange" accept="image/*" name="coverimgChange" ></droplet-upload-single>
+                                                   </div>
+                                                   <div class="nav-font-invitation01">Minimum Size<br/>1024 X 1024<br/>Aspect Ratio - 1:1<br/> Max size - 5 MB</div>
+                                                </div>
+                                             </div>
+                                             <br/>
+                                             <img ng-src="{{imgSrc1}}" class="image-width-step4" id="img-coverimg" ng-show="imgSrc1"  />
+                                             <span class="text-danger01" >
+                                             <span ng-show="detailsform.coverimgChange.$error.invalidimg">Invalid Image File Type</span>
+                                             <span ng-show="detailsform.coverimgChange.$error.minsizeval" ng-bind="'yara.invalidImgSize' | i18n ">File size should not exceed 5MB</span>
+                                             <span ng-show="!detailsform.coverimgChange.$error.minsizeval && detailsform.coverimgChange.$error.ratioval" ng-bind="'yara.invalidImgR' | i18n:['1','1'] ">Aspect Ratio Should Be 1 : 1</span>
+                                             <span ng-show="!detailsform.coverimgChange.$error.minsizeval && detailsform.coverimgChange.$error.minDimension" ng-bind="'yara.invalidImgD' | i18n:['1024','1024'] ">Minimum resolution should be 1024 X 1024</span>
+                                             </span>
+                                             <br/>
+                                             <div class="col-md-12 signup_margin">
+                                                <div class="col-md-6 ">
+                                                   <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in coverimgChange.getFiles(coverimgChange.FILE_TYPES.VALID)" ng-click="model.deleteFile()"><span>Remove</span></div>
+                                                </div>
+                                                <div class="col-md-6 ">
+                                                   <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in coverimgChange.getFiles(coverimgChange.FILE_TYPES.VALID)">
+                                                      <span>Change</span>
+                                                      <droplet-upload-single ng-model="coverimgChange" accept="image/*" name="coverimgChange" ></droplet-upload-single>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <!-- End edit cover image -->
+                                    </div>
+                                 </div>
+                                 <br/>
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="col-md-12 button-top">
+                                          <div class="col-md-12 error-height">
+                                             <span class="text-danger01" ng-show="errormsg">
+                                             <span  ng-bind="showerror">Event with same name already exists for the given date</span>
+                                             </span>
+                                          </div>
+                                          <div class="col-md-8 col-md-offset-2">
+                                             
+                                             <button  class="btn btn-primary-black" class="btn btn-lg btn-success" type="submit" >Continue</button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- end continue button -->
+                        </form>
+                        <!-- form end  -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--  Image  Invalid Modal window -->
+         <div class="modal fade" id="myModal-invalid" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog top-collaborator" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Invalid Extension</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form novalidate ng-submit="addpost(postform)" name="postform" >
+                           <div class="row">
+                              <div class="col-md-12 bg-collaborator" ng-bind="'yara.invalidImg'| i18n">
+                                 Invalid Extension Choose jpg, jpeg and png format.
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-10">
+                                    <div  class=" text-danger">&nbsp;</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 test-hover"><a class="text-hover">Close</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!----crop image---->
+         <div class="modal fade" id="crop-image" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+               <!-----loading indicator start------>
+                  <div class="col-md-12 position-absolute container-remove-padding general-bg-loader-pop" ng-hide="lodinghide">
+                     <img src="../../../static/dashboard/images/default5.gif" class="search-loading text-center general-loader">
+                  </div>
+               <!-----loading indicator End------>
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Crop</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form novalidate  >
+                           <div class="row">
+                              <div class="col-md-12 bg-general crop-popup" >
+                                 <div class="image-editor crop-popup">
+                                    <input type="file" class="cropit-image-input">
+                                    <div class="cropit-preview"></div>
+                                    <div class="image-size-label">
+                                    </div>
+                                    <div class="crop-bottom"></div>
+                                    <div class="slider-wrapper">
+                                       <input type="range" class="cropit-image-zoom-input custom" min="0" max="1" step="0.01">
+                                    </div>
+                                    <div class="crop-top"></div>
+                                 </div>
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-8">
+                                    <div  class=" text-danger">&nbsp; </div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div class="btn01 btn-primary-black-pulse01 test-hover"data-dismiss="modal" aria-label="Close"  ><a class="text-hover" ng-click="resetCropImg()">Cancel</a></div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  class="btn01 btn-primary-black-pulse01 test-hover"><a class="text-hover" ng-click="setCropImg()">Crop</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- start footer-->
+         <div ng-include-template="/event_footer" copyright="true"></div>
+         <!---End footer---->
+      </div>
+      <script>
+         window.setTimeout( function() {
+             $("textarea").height( $("textarea")[0].scrollHeight );
+         }, 1);
+      </script>
+      <script>
+         function h(e) {
+             $(e).css({'height':'auto','overflow-y':'hidden'}).height(e.scrollHeight);
+         }
+         $('textarea').each(function () {
+           h(this);
+         }).on('input', function () {
+           h(this);
+         });
+      </script>
+      <script>
+         (function(jQuery){
+           jQuery(window).load(function(){       
+             jQuery(".font-names").mCustomScrollbar({
+               theme:"dark",
+               scrollInertia: 400,
+               scrollButtons:{enable: true},   
+               autoHideScrollbar: false, 
+               autoExpandScrollbar: true,
+               keyboard:{ enable: true }
+             });       
+           });
+         })(jQuery);
+      </script> 
+      <script>
+         $(document).ready(function(){
+             $('#loading').hide();
+              $("#loadingDate").hide();
+             $('#container').fadeIn();
+             $('[data-toggle="tooltip"]').tooltip();   
+         });
+         
+      </script>
+      {%endverbatim%}
+   </body>
+</html>

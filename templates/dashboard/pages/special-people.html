@@ -1,0 +1,555 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <link rel="stylesheet" href="../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <!--<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyBiLVnHVmK-3nm_MZvug6NjZmMdOQX_cm8"></script>-->
+      <script src="../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> 
+      <script src="../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script>
+      <script src="../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script>
+      <script src="../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <script src="../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script>
+      <script src="../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../static/dashboard/scripts/app.js?v=cb63d6447409374df653b8707287ee36"></script>
+      <script src="../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>
+      <script src="../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>
+      <script src="../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>                  <script src="../../../static/dashboard/scripts/ng-infinite-scroll.min.js?v=299bcea502c681c68093eb86f8c1bccf"></script>
+      <!---crop image---->
+      <script src="../../../static/dashboard/scripts/jquery.cropit.js?v=b37d29875ced18ede72940fb6b0fba52"></script>
+      <!--UI style---->
+      <link rel="stylesheet" href="../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+         <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+   </head>
+   <body ng-app="yara" ng-controller="EventPeopleController"  class="overflow-body01" >
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      {%verbatim%}
+      <div id="container" ng-init="setTitle('Add  '+delegateIdinfo.single_entity_tittle)">
+         <!---header-->
+         <div class=" navbar-fixed-top border" >
+            <div class=" white text-center ">
+               <div class="col-md-12">
+                  <div class="col-md-1 nav-color main-header-upload container-remove-padding" style="text-align:left;"><a href="" back-button><img src="../../../../static/dashboard/images/yara_logo.svg?v=ce9e59e2272c030c2954deb7d56f3267" width="100%"/></a></div>
+                  <!--  <div class="col-md-1 nav-color sub-header-border10">&nbsp;</div> -->
+                  <div class="col-md-9 nav-color sub-header-small-collaborator10">
+                     <div class="kit-font10">
+                        <div class="header-sh">
+                           <span ng-bind="currentval.name">Enent Name</span>
+                           <div class="bullet01"></div>
+                        </div>
+                        <span ng-bind="'Add {{delegateIdinfo.single_entity_tittle}}'">Page Name</span>
+                        <div class="header-sh">
+                           <span ng-bind="headerTitle">Page name</span>
+                           <div class="bullet01"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!----end header---->
+         <div class="tab-height" >
+            <div class="dashboardWell">
+               <div class="white text-center ">
+                  <div class=" bg-color-upload03 db-margin">
+                     <ul class="list-group  text-center">
+                        <div class="newevent-nav01" ng-bind="currentval.name">Event Name</div>
+                        <div class="newevent-upload">Package Status</div>
+                        <!-- <div  class="gray-new-upload">430 users will be added to Event_Name</div> --><br/>
+                        <div class="col-md-6 col-md-offset-3 ">
+                           <div ng-hide="cmpyimageSrc" class="col-md-12 logo-update  text-center container-remove-padding" droplet  ng-model="cmpylogo" style="margin-bottom: 25px;">
+                              <div class="col-md-4 container-remove-padding upload-step3 newevent-nav01">
+                                 Total
+                                 <div  class="gray-new-upload3" ng-bind="number_of_attendee | number">1000</div>
+                              </div>
+                              <div class="col-md-4 container-remove-padding upload-step3 newevent-nav01">
+                                 Used
+                                 <div  class="gray-new-upload3" ng-bind="number_of_attendee_added | number">980</div>
+                              </div>
+                              <div class="col-md-4 container-remove-padding upload-step-no newevent-nav01">
+                                 Available 
+                                 <div  class="gray-new-upload3" ng-bind="number_of_attendee - number_of_attendee_added | number">20</div>
+                              </div>
+                           </div>
+                        </div>
+                     </ul>
+                  </div>
+               </div>
+               <form accessible-form novalidate name="speakerForm" ng-init="submitted=false" ng-submit="errorScroll();(speakerForm.$invalid || !imageSrc1 || wordlength)? submitted=true:addSpeaker(speakerForm)">
+                  <div class="white text-center ">
+                     <div class=" bg-color-upload03 db-margin text-center"><br/>
+                     <div class="newevent-upload margin-top-bottom50">{{delegateIdinfo.single_entity_tittle}}</div>
+                     <!--Emial layer start---->
+                     <div class="col-md-12 email-layer" ng-show="disableMail?true:false"></div>
+                     <!---email layer End---->
+                        <div class="col-md-12 email-bgcolor">
+                           <!-- <div class="newevent-nav01">{{delegateIdinfo.single_entity_tittle}} Email Id</div> -->
+                           <div class="col-md-6 col-md-offset-3 text-center ">
+                              <input type="email" class="inputbox text-center input-email-color auto-fill" placeholder="Email ID" validate-email ng-model="SPKemail" ng-blur="checkEmail(SPKemail)" required name="SPKemail" ng-readonly="disableMail?true:false">
+                              <div class="col-md-12 text-center error-height">
+                                 <span class="upload-error-red text-center" ng-show="submitted && !speakerForm.SPKemail.hasFocus">
+                                    <span ng-show="speakerForm.SPKemail.$error.required" ng-bind="'yara.required' | i18n">Required</span>
+                                    <span  ng-show="speakerForm.SPKemail.$error.email" ng-bind="'yara.invalidEmail' | i18n">Invalid Email</span>
+                                 </span>
+                                 <span class="upload-error-red text-center" ng-show="blockCreation">
+                                    <span  ng-bind="errorMsg">Email already added as a Special Delegate in event.</span>
+                                 </span>
+                             </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12" > 
+                              <div class="special-people-error text-left" ng-bind="mailInfo.message" ng-show="mailInfo.conflict==1">&nbsp; mail@gmail.com and mail@voris.co.in are associated with same account. mail@gmail.com will be updated with mail@voris.co.in.</div>
+                           </div>
+                        <!-- <span class="upload-error-red text-center" ng-show="mailInfo.conflict==1">
+                           <span  ng-bind="mailInfo.message">mail@gmail.com and mail@voris.co.in are associated with same account. mail@gmail.com will be updated with mail@voris.co.in.
+                           </span>
+                        </span> -->
+                        <div class="col-md-12 ticket-top-btn">
+                           <div class="newevent-nav01 ">Info</div>
+                           <br/>
+                           <div class="col-md-12">
+                              <div class="col-md-6 col-md-offset-3 text-center ">
+                                 <input type="text" class="inputbox text-center auto-fill" placeholder="Full Name" ng-model="spname" required name="spname" first-name capitalize-word="!disableName?true:false" ng-keydown="keyvalue=$event" maxlength="73" id="fullname" ng-readonly="disableName" ng-pattern="/\D{1}/">
+                                   <!-- <input type="text" class="inputbox text-center auto-fill" placeholder="Full Name" ng-model="spname" required name="spname" ng-if="disableMail"  maxlength="50"> -->
+                                 <div class="col-md-12 text-center" style="height:25px;">
+                                    <span class="upload-error-red text-center" ng-show="submitted && !speakerForm.spname.hasFocus&&!speakerForm.spname.$error.pattern">
+                                    <span ng-show="speakerForm.spname.$error.required" ng-bind="'yara.required' | i18n">
+                                    Required
+                                    </span>
+                                    </span>
+                                     <span class="upload-error-red text-center" ng-show="speakerForm.spname.$error.pattern" ng-bind="'yara.textrequired' | i18n ">Required</span>
+
+                                    <span class="upload-error-red text-center" ng-show='firstNameMaxLength' ng-bind="'yara.maxCharectersFirstname' | i18n"></span>
+                                    <span class="upload-error-red text-center" ng-show='middleNameMaxLength' ng-bind="'yara.maxCharectersMiddle' | i18n"></span>
+                                    <span class="upload-error-red text-center" ng-show='lastNameMaxLength' ng-bind="'yara.maxCharectersLastname' | i18n"></span>
+                                    <span class="upload-error-red text-center" ng-show='submitted && wordlength &&!speakerForm.spname.hasFocus' ng-bind="'yara.minWords' | i18n"></span>
+                                 </div>
+                                 <!-- capitalize-word="true" -->
+                                 <input type="text" class="inputbox text-center auto-fill" placeholder="Job Title" capitalize-word="true" ng-keydown="keyvalue=$event" ng-model="spkdesg" maxlength="100" required name="spkdesg"  ng-pattern="/\D{1}/">
+                                 <div class="col-md-12 text-center" style="height:25px;">
+                                    <span class="upload-error-red text-center" ng-show="submitted && !speakerForm.spkdesg.hasFocus &&!speakerForm.spkdesg.$error.pattern">
+                                    <span ng-show="speakerForm.spkdesg.$error.required" ng-bind="'yara.required' | i18n">
+                                    Required
+                                    </span>
+                                    </span>
+                                    <span class="upload-error-red text-center" ng-show="speakerForm.spkdesg.$error.pattern" ng-bind="'yara.textrequired' | i18n ">Required</span>
+
+                                 </div>
+                                 <input type="text" class="inputbox text-center auto-fill" placeholder="Company" ng-model="spkcmpy" required name="spkcmpy" ng-pattern="/\D{1}/">
+                                 <div class="col-md-12 text-center" style="height:30px;">
+                                    <span class="upload-error-red text-center" ng-show="submitted && !speakerForm.spkcmpy.hasFocus&&!speakerForm.spkcmpy.$error.pattern">
+                                    <span ng-show="speakerForm.spkcmpy.$error.required" ng-bind="'yara.required' | i18n">
+                                    Required
+                                    </span>
+                                    </span>
+                                    <span class="upload-error-red text-center" ng-show="speakerForm.spkcmpy.$error.pattern" ng-bind="'yara.textrequired' | i18n ">Required</span>
+
+                                 </div>
+                                 <textarea  rows="1" name="spkabt"  placeholder="{{delegateIdinfo.name}} Description"  class="input_boxtext-happy text-center" ng-model="spkabt"  required maxlength="500" minlength="50" style="min-height:26px; margin: 0" ng-pattern="/\D{1}/"></textarea>
+                                 <div class="col-md-12 text-center" style="height:25px;">
+                                    <span class="upload-error-red text-center" ng-show="submitted && !speakerForm.spkabt.hasFocus">
+                                    <span ng-show="speakerForm.spkabt.$error.required" ng-bind="'yara.required' | i18n">
+                                    Required
+                                    </span>
+                                    <span ng-show="speakerForm.spkabt.$error.minlength" ng-bind="'yara.descMinLenght' | i18n:['50','500']">
+                                    Description is not minimum 50.
+                                    </span>
+                                    </span>
+                                    <span class="upload-error-red text-center" ng-show="speakerForm.spkabt.$error.pattern" ng-bind="'yara.textrequired' | i18n ">Required</span>
+                                 </div>
+                                 <br/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="newevent-nav01 ticket-top">Socials</div>
+                           <br/>
+                           <div class="col-md-6 col-md-offset-3 text-center ">
+                              <div class="col-lg-3">
+                                 <span class="fa fa-globe bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 001" data-toggle="modal" data-target="#myModal-social" id="001" ng-click="social_type='company-website'" data-container="body" data-toggle="" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." aria-hidden="true"></span>
+                              </div>
+                              <div class="col-lg-3" > <span class="fa fa-twitter bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 002" data-toggle="modal" data-target="#myModal-social" id="002" ng-click="social_type='twitter'" aria-hidden="true"></span></div>
+                              <div class="col-lg-3"> <span class="fa fa-facebook bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 003" data-toggle="modal" data-target="#myModal-social" id="003" ng-click="social_type='facebook'" aria-hidden="true"></span></div>
+                              <div class="col-lg-3"> <span class="fa fa-linkedin bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 004" data-toggle="modal" data-target="#myModal-social" id="004" ng-click="social_type='linkedin'" aria-hidden="true"></span></div>
+                              <div class="col-lg-3 break-line"><span class="fa fa-pinterest bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 005" data-toggle="modal" data-target="#myModal-social" id="005" ng-click="social_type='pinterest'" aria-hidden="true"></span></div>
+                              <div class="col-lg-3 break-line "><span class="fa fa-tumblr bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 006" data-toggle="modal" data-target="#myModal-social" id="006" ng-click="social_type='tumblr'" aria-hidden="true"></span></div>
+                              <div class="col-lg-3 break-line"><span class="fa fa-github bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 007" data-toggle="modal" data-target="#myModal-social" id="007" ng-click="social_type='git-hub'" aria-hidden="true"></span></div>
+                              <div class="col-lg-3 break-line"><span class="fa fa-instagram bootstrap-font-icon  bootstrap-font-icon-gray icon-width company-website 008" data-toggle="modal" data-target="#myModal-social" id="008" ng-click="social_type='instagram'" aria-hidden="true"></span><br/><br/></div>
+                              <!-- Social Icons Modal Window -->
+                              <div class="modal fade" id="myModal-social" tabindex="-1" role="dialog" data-backdrop="static"  aria-labelledby="myModalLabel">
+                                 <div class="modal-dialog" role="document" style="margin-top:15%;">
+                                    <div class="modal-content">
+                                       <div class="modal-header-signup2">
+                                          <h4 class="modal-title text-left speaker-social" id="myModalLabel" >Add Social</h4>
+                                       </div>
+                                       <div class="modal-body-account">
+                                          <div ng-show="social_type=='company-website'">
+                                             <div class="text-left speaker-social01">Website</div>
+                                             <input  type="text" ng-model="Tcmpyweb" name="cmpyweb" placeholder="http://" class="inputbox-signup2 auto-fill" maxlength="100" id="company-website_id" web-url >
+                                             <div class="border-top-web01"></div>
+                                             <span style="color:red;" ng-show="speakerForm.cmpyweb.$dirty && speakerForm.cmpyweb.$invalid ">
+                                             <span ng-show="speakerForm.cmpyweb.$error.required">Organization Website Required</span>
+                                             </span>
+                                          </div>
+                                          <div ng-show="social_type=='facebook'">
+                                             <div class="text-left speaker-social01">Facebook</div>
+                                             <input  type="text" ng-model="Tcmpyfb" name="cmpyfb"  fb-url class="inputbox-signup2"  maxlength="100" id="facebook_id">
+                                             <div class="border-top-signup2"></div>
+                                             <span style="color:red;" ng-show="speakerForm.cmpyfb.$dirty && speakerForm.cmpyfb.$invalid ">
+                                             <span ng-show="speakerForm.cmpyfb.$error.required">Organization Facebook Required</span>
+                                             </span>
+                                          </div>
+                                          <div ng-show="social_type=='twitter'">
+                                             <div class="text-left speaker-social01">Twitter</div>
+                                             <input  type="text" ng-model="Tcmpytwitter" name="cmpytwitter" twitter-url class="inputbox-signup2" maxlength="100" id="twitter_id">
+                                             <div class="border-top-twitter"></div>
+                                             <span style="color:red;" ng-show="speakerForm.cmpytwitter.$dirty && speakerForm.cmpytwitter.$invalid ">
+                                             <span ng-show="speakerForm.cmpytwitter.$error.required">Organization Twitter Required</span>
+                                             </span>
+                                          </div>
+                                          <div ng-show="social_type=='linkedin'">
+                                             <div class="text-left speaker-social01">LinkedIn</div>
+                                             <input  type="text" ng-model="Tcmpylink" name="cmpylink" linkedin-url class="inputbox-signup2" maxlength="100" id="linkedin_id">
+                                             <div class="border-top-linkedin"></div>
+                                             <span style="color:red;" ng-show="speakerForm.cmpylink.$dirty && speakerForm.cmpylink.$invalid ">
+                                             <span ng-show="speakerForm.cmpylink.$error.required">Organization LinkedIn Required</span>
+                                             </span>
+                                          </div>
+                                          <div ng-show="social_type=='pinterest'">
+                                             <div class="text-left speaker-social01">Pinterest</div>
+                                             <input  type="text" ng-model="Tcmpypinterest" name="cmpypinterest" pinterest-url  class="inputbox-signup2" id="pinterest_id" maxlength="100">
+                                             <div class="border-top-pint"></div>
+                                             <span style="color:red;" ng-show="speakerForm.cmpypinterest.$dirty && speakerForm.cmpypinterest.$invalid ">
+                                             <span ng-show="speakerForm.cmpypinterest.$error.required">Organization Pinterest Required</span>
+                                             </span>
+                                          </div>
+                                          <div ng-show="social_type=='git-hub'">
+                                             <div class="text-left speaker-social01">Git-Hub</div>
+                                             <input  type="text" ng-model="Tcmpygithub" name="cmpygithub"  github-url class="inputbox-signup2" id="git-hub_id" maxlength="100">
+                                             <div class="border-top-git"></div>
+                                             <span style="color:red;" ng-show="speakerForm.cmpygithub.$dirty && speakerForm.cmpygithub.$invalid ">
+                                             <span ng-show="speakerForm.cmpygithub.$error.required">Organization Git-Hub Required</span>
+                                             </span>
+                                          </div>
+                                          <div ng-show="social_type=='tumblr'">
+                                             <div class="text-left speaker-social01">Tumblr</div>
+                                             <div class="col-md-12 container-remove-padding">
+                                                <div class="resizing-input">
+                                                   <span>https://</span>
+                                                   <span id="spantext" style="display:none;">https://</span>
+                                                   <input  type="text" ng-model="Tcmpytumblr" name="cmpytumblr" placeholder="Tumblr Social link"  class="inputbox-account" id="tumblr_id" maxlength="100">
+                                                   <span>.tumblr.com</span>
+                                                </div>
+                                             </div>
+                                             <span style="color:red;" ng-show="speakerForm.cmpytumblr.$dirty && speakerForm.cmpytumblr.$invalid ">
+                                             <span ng-show="speakerForm.cmpytumblr.$error.required">Organization Tumblr Required</span>
+                                             </span>
+                                          </div>
+                                          <div ng-show="social_type=='instagram'">
+                                             <div class="text-left speaker-social01">Instagram</div>
+                                             <input type="text" ng-model="Tcmpyinstagram" name="cmpyinstagram" instagram-url class="inputbox-signup2" id="instagram_id" maxlength="100">
+                                             <div class="border-top-signup2"></div>
+                                             <span style="color:red;" ng-show="speakerForm.cmpyinstagram.$dirty && speakerForm.cmpyinstagram.$invalid ">
+                                             <span ng-show="speakerForm.cmpyinstagram.$error.required">Organization Instagram Required</span>
+                                             </span>
+                                          </div>
+                                       </div>
+                                       <div class="row" style="margin:0 15px;">
+                                          <div class="col-md-12 border-top">
+                                             <div class="col-md-8">&nbsp;</div>
+                                             <div class="col-md-2 pulse-margin"><button type="button" data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Cancel</button></div>
+                                             <div class="col-md-2"><button type="button" class="btn01 btn-primary-black-pulse01 text-hover" ng-class="{'gray-color':!isSocialSave}" ng-click="saveSocials()" ng-disabled="!isSocialSave" >Add</button></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!---modal window End- -->
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="newevent-nav01 ticket-top">Photo</div>
+                           <br/>
+                           <div class="col-md-6 col-md-offset-3 text-center ">
+                              <div ng-hide="imageSrc1" class="logo-update" droplet  ng-model="SpkPic">
+                                 <div class="sub-nav-size-signup icon11">
+                                    <br/>
+                                    <!-- <a  data-toggle="tooltip" data-placement="right" title="Upload&nbsp;Speaker's&nbsp;image">
+                                       <img src="../../static/dashboard/images/info-icon.png?v=a1de70e5d3fedcbe46e85d2d41df189a"width="4%"/>
+                                       
+                                       </a> -->
+                                 </div>
+                                 <div class="sub-heading-signup" id="spimage">
+                                    <img src="../../static/dashboard/images/image_upload_placeholder.png?v=7d539c1f656434ceaec3a5ebbe66836f" class="image_upload_placeholder"/>
+                                    <div class="sub-nav-size-invitation">Profile Picture</div>
+                                    <div class="nav-font-invitation">Drag and drop the file</div>
+                                    <div class="btn01 btn-primary-black-invitation black-signup01 text-hover">
+                                       <span>Choose an Image</span>
+                                       <!--  <input type="file" ng-file-selected="onFileSelect($files)" file-model="SpkPic" required accept="image/*" name="SpkPic" img-validate ng-model="SpkPic"  class=""> -->
+                                       <droplet-upload-single ng-model="SpkPic" accept="image/*" name="SpkPic" ></droplet-upload-single>
+                                    </div>
+                                    <div class="nav-font-invitation01">Minimum resolution<br/>512 <a class="cross01">X</a> 512<br/>Aspect Ratio - 1:1<br/>Max size - 5 MB</div>
+                                 </div>
+                              </div>
+                              <img ng-src="{{imageSrc1}}" class="image-width01" ng-show="imageSrc1" />
+                              <div class="col-md-12 text-center error-height margin-top10">
+                                 <span class="upload-error-red" >
+                                    <!-- <span ng-show="!submitted && !imageSrc1">Organization Cover Image Required</span> -->
+                                    <span ng-show="speakerForm.SpkPic.$error.invalidimg">Invalid Image File Type</span>
+                                    <span ng-show="speakerForm.SpkPic.$error.minsizeval" ng-bind="'yara.invalidImgSize' | i18n">File size sholud not be Max Of 5MB</span>
+                                    <span ng-show="!speakerForm.SpkPic.$error.minsizeval && speakerForm.SpkPic.$error.ratioval" ng-bind="'yara.invalidImgR' | i18n:['1','1']">Aspect Ratio Should Be 1 : 1</span>
+                                    <span ng-show="!speakerForm.SpkPic.$error.minsizeval && speakerForm.SpkPic.$error.minDimension" ng-bind="'yara.invalidImgD' | i18n:['512','512']">Minimum resolution 512 X 512</span>
+                                    <span ng-show="submitted && !imageSrc1 " ng-bind="'yara.required' | i18n">Required</span>		 	
+                                 </span>
+                              </div>
+                              <br/>
+                              <div class="col-md-12 signup_margin">
+                                 <div class="col-md-6 ">
+                                    <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in SpkPic.getFiles(SpkPic.FILE_TYPES.VALID)" ng-click="model.deleteFile()">
+                                       <span>Remove</span>
+                                    </div>
+                                    <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-show="(SpkPic.getFiles(SpkPic.FILE_TYPES.VALID)).length<=0 && imageSrc1" ng-click="imageSrc1=''">
+                                       <span>Remove</span>
+                                    </div>
+                                    <!-- ng-show="(cmpylogo.getFiles(cmpylogo.FILE_TYPES.VALID)).length<=0 && cmpyimageSrc" ng-click="cmpyimageSrc=''" -->
+                                 </div>
+                                 <div class="col-md-6 ">
+                                    <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in SpkPic.getFiles(SpkPic.FILE_TYPES.VALID)" >
+                                       <span>Change</span>
+                                       <droplet-upload-single ng-model="SpkPic" accept="image/*" name="SpkPic1" ></droplet-upload-single>
+                                    </div>
+                                    <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-show="(SpkPic.getFiles(SpkPic.FILE_TYPES.VALID)).length<=0 && imageSrc1" >
+                                       <span>Change</span>
+                                       <droplet-upload-single ng-model="SpkPic" accept="image/*" name="SpkPic1" ></droplet-upload-single>
+                                    </div>
+                                 </div>
+                              </div>
+  <!--                             <div class="col-md-12 signup_margin">
+                                 <div class="col-md-6 ">
+                                    <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-show="imageSrc1!=''"  ng-click="removeSpimage()">
+                                       <span>Remove</span>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 " ng-show="imageSrc1!=''" >
+                                    <div class="btn01 btn-primary-black-invitation black-signup01 text-hover"  >
+                                       <span>Change</span>
+                                       <droplet-upload-single ng-model="SpkPic" accept="image/*" name="SpkPic1" ></droplet-upload-single>
+                                    </div>
+                                 </div>
+                              </div> -->
+                           </div>
+                        </div>
+                        <div class="col-md-12" ng-hide="ticketsdata.length <2">
+                           <div class="newevent-nav01 ">Choose the Ticket</div>
+                           <br/>
+                           <div class="col-md-12 text-center ">
+                              <ul class="list-group  text-center" >
+                                 <div class="col-md-12 list-group-item02 list-group-item-upload text-left ng-scope cursor-poi"  style="cursor: auto;" ng-repeat="tck in ticketsdata|unique" ng-click="changetselect(tck)" ng-if="!tck.is_validity_over">
+                                    <div class="col-md-10  created-top-upload">
+                                       <div class="event-font-upload capitalize ng-binding">{{tck.name}}</div>
+                                       <div   ng-show="tck.all_day_access">
+                                          <div class="event-upload"  >Days: All Days</div>
+                                          <div class="event-upload" >Messaging: All Days</div>
+                                          <div class="event-upload" >Session Access: All Days</div>
+                                          <div class="event-upload" >Food Coupon: All Days</div>
+                                       </div>
+                                       <div   ng-if="!tck.all_day_access">
+                                          <div class="event-upload"  >Days: {{ticketDays(tck.ticket_code,tck.days)}}</div>
+                                          <div class="event-upload" >Messaging: {{ds.msg[tck.ticket_code]==''?'Disable':ds.msg[tck.ticket_code]}}</div>
+                                          <div class="event-upload" >Session Access: {{ds.acc[tck.ticket_code]==''?'Disable':ds.acc[tck.ticket_code]}}</div>
+                                          <div class="event-upload" >Food Coupon: {{ds.food[tck.ticket_code]==''?'Disable':ds.food[tck.ticket_code]}}</div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-2"><img src="../../../static/dashboard/images/right-blue.png?v=41202fcbacbf76f5fe8ff7f6c1a066d9" class="width-account-img" ng-show="ticktselected==tck.ticket_code"/></div>
+                                 </div>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-md-12 text-center">
+                           <span class="upload-error-red text-center" ng-show="errormsg">{{data.error}}</span>
+                           <span class="upload-error-red text-center" ng-show="is_Appspeaker" ng-bind="'yara.speakerExists' | i18n">{{delegateIdinfo.single_entity_tittle}} Already Exist</span>
+                           <span class="upload-error-red text-center" ng-show="notConnectedNet" ng-bind="'yara.notConnected' | i18n" >You are not connected to the internet</span>
+                        </div>
+                        <div class="col-md-4 col-md-offset-4"><br/>
+                           <button class="btn btn-primary-black-signup01" type="submit" ng-disabled="is_Appspeaker||blockCreation" >Done</button><br/><br/>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <!--  Image  Invalid Modal window -->
+         <div class="modal fade" id="myModal-invalid" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Invalid Extension</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form  novalidate >
+                           <div class="row">
+                              <div class="col-md-12 bg-collaborator" ng-bind="'yara.invalidImg'| i18n">
+                                 Invalid Extension Choose jpg, jpeg and png format.
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-10">
+                                    <div  class=" text-danger">&nbsp;</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!----crop image---->
+         <div class="modal fade" id="crop-image" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Crop</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form novalidate  >
+                           <div class="row">
+                              <div class="col-md-12 bg-general crop-popup" ng-class="{'circle-image': cropPic=='profile'}" >
+                                 <div class="image-editor crop-popup">
+                                    <input type="file" class="cropit-image-input">
+                                    <div class="cropit-preview" style="border-radius: 50%;"></div>
+                                    <div class="image-size-label">
+                                    </div>
+                                    <div class="crop-bottom"></div>
+                                    <div class="slider-wrapper">
+                                       <input type="range" class="cropit-image-zoom-input custom" min="0" max="1" step="0.01">
+                                    </div>
+                                    <div class="crop-top"></div>
+                                 </div>
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-8">
+                                    <div  class=" text-danger">&nbsp; </div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div class="btn01 btn-primary-black-pulse01 text-hover" data-dismiss="modal" aria-label="Close"  ng-click="resetCropImg()">Cancel</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  class="btn01 btn-primary-black-pulse01 text-hover" ng-click="setCropImg()">Crop</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- start footer -->
+      <script>
+         $(document).ready(function(){
+             $('[data-toggle="tooltip"]').tooltip();   
+         });
+      </script>
+      <script>
+         $(document).ready(function(){
+          //$('#loading').hide();
+          //$('#container').fadeIn();
+         });
+      </script>
+      <script>
+         function h(e) {
+             $(e).css({'height':'auto','overflow-y':'hidden'}).height(e.scrollHeight);
+         }
+         $('textarea').each(function () {
+           h(this);
+         }).on('input', function () {
+           h(this);
+         });
+      </script>
+      <script>
+         $(document).ready(function () {
+             var $inputs = $('.resizing-input');
+         
+             // Resize based on text if text.length > 0
+             // Otherwise resize based on the placeholder
+             function resizeForText(text) {
+                 var $this = $(this);
+                 if (!text.trim()) {
+                     text = $this.attr('placeholder').trim();
+                 }
+                 var $span = $this.parent().find('#spantext');
+                 $span.text(text);
+                 var $inputSize = $span.width();
+                 $this.css("width", $inputSize);
+             }
+         
+             $inputs.find('input').keypress(function (e) {
+                 if (e.which && e.charCode) {
+                     var c = String.fromCharCode(e.keyCode | e.charCode);
+                     var $this = $(this);
+                     resizeForText.call($this, $this.val() + c);
+                 }
+             });
+         
+             // Backspace event only fires for keyup
+             $inputs.find('input').keyup(function (e) { 
+                 if (e.keyCode === 8 || e.keyCode === 46) {
+                     resizeForText.call($(this), $(this).val());
+                 }
+             });
+         
+             $inputs.find('input').each(function () {
+                 var $this = $(this);
+                 resizeForText.call($this, $this.val())
+             });
+         });
+      </script>
+      {%endverbatim%}
+   </body>
+</html>

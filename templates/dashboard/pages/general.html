@@ -1,0 +1,918 @@
+<!doctype html>
+<html>
+   <head>
+       <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+  </noscript>
+      <link rel="stylesheet" href="../../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyCV9Dg0e7cZQv4kV50S9eDUFQdIUCSN7RM"></script>
+      <script src="../../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> <script src="../../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script> <script src="../../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> <script src="../../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <script src="../../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script>
+      <script src="../../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../../static/dashboard/scripts/app.js?v=cb63d6447409374df653b8707287ee36"></script>
+      <script src="../../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>         
+      <script src="../../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>         
+      <script src="../../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>                               <script src="../../../../static/dashboard/scripts/ng-infinite-scroll.min.js?v=299bcea502c681c68093eb86f8c1bccf"></script> 
+            <script src="../../../static/dashboard/scripts/jquery.cropit.js?v=b37d29875ced18ede72940fb6b0fba52"></script>
+
+      <!--UI style---->
+      <link rel="stylesheet" href="../../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <style type="text/css">
+         .gmnoprint{
+            display: none!important;
+         }
+      </style>
+   </head>
+   <body ng-app="yara" ng-controller="EventGeneralController" class="overflow-body01">
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      {%verbatim%}
+      <div id="container" class="wrap01">
+         <!---header-->
+         <div ng-include-template="/event_header" ng-init="headerTitle='General'"></div>
+         <!----end header---->
+         <div class="container height-top" >
+            <div class="row">
+               <div class="col-md-12  " style="padding-right:0px; padding-left:0px;">
+                  <br/>
+                  <div class="btn-group" role="group" >
+                     <!-- <ul class="container nav nav-tabs text-center" >
+                        <li class="active"  ng-class="{'col-md-4':((privilege && !currentval.isAchieved) || !currentval.is_private),'col-md-3':((privilege && !currentval.isAchieved) && !currentval.is_private),'col-md-6':(!(privilege && !currentval.isAchieved) && currentval.is_private)}"><a data-toggle="tab"  class="tab-general text-hover"  ng-init="step1='info'" ng-click="step1='info'" ng-class="{active: step1=='info'}">Info</a></li>
+                        <li class=""  ng-class="{'col-md-4':((privilege && !currentval.isAchieved) || !currentval.is_private),'col-md-3':((privilege && !currentval.isAchieved) && !currentval.is_private),'col-md-6':(!(privilege && !currentval.isAchieved) && currentval.is_private)}"><a data-toggle="tab"  class="tab-general text-hover"  ng-click="step1='DnT'" ng-class="{active:step1=='DnT'}" onclick="initMap()">Date & Location</a></li>
+                        <li class=""    ng-class="{'col-md-4':((privilege && !currentval.isAchieved) || !currentval.is_private),'col-md-3':((privilege && !currentval.isAchieved) && !currentval.is_private),'col-md-6':(!(privilege && !currentval.isAchieved) && currentval.is_private)}"><a data-toggle="tab"  class="tab-general text-hover"  ng-click="step1='LnF'" ng-class="{active:step1=='LnF'}" ng-hide="currentval.is_private">Social & Contacts</a></li>
+                        <li class=""   ng-class="{'col-md-4':((privilege && !currentval.isAchieved) || !currentval.is_private),'col-md-3':((privilege && !currentval.isAchieved) && !currentval.is_private),'col-md-6':(!(privilege && !currentval.isAchieved) && currentval.is_private)}" ><a data-toggle="tab" class="tab-general text-hover"  ng-click="step1='cancel'" ng-class="{active:step1=='cancel'}" ng-bind="'Cancel Event'" ng-show="privilege && !currentval.isAchieved"></a></li>
+                     </ul> -->
+                     <ul class="container nav nav-tabs text-center" >
+                        <li class="active"  ng-class="{'col-md-4':((privilege && !currentval.isAchieved) || !currentval.is_private),'col-md-3':((privilege && !currentval.isAchieved)),'col-md-6':(!(privilege && !currentval.isAchieved) && currentval.is_private)}"><a data-toggle="tab"  class="tab-general text-hover"  ng-init="step1='info'" ng-click="step1='info'" ng-class="{active: step1=='info'}">Info</a></li>
+                        <li class=""  ng-class="{'col-md-4':((privilege && !currentval.isAchieved) || !currentval.is_private),'col-md-3':((privilege && !currentval.isAchieved)),'col-md-6':(!(privilege && !currentval.isAchieved) && currentval.is_private)}"><a data-toggle="tab"  class="tab-general text-hover"  ng-click="step1='DnT'" ng-class="{active:step1=='DnT'}" onclick="initMap()">Date & Location</a></li>
+                        <li class=""    ng-class="{'col-md-4':((privilege && !currentval.isAchieved) || !currentval.is_private),'col-md-3':((privilege && !currentval.isAchieved)),'col-md-6':(!(privilege && !currentval.isAchieved) && currentval.is_private)}"><a data-toggle="tab"  class="tab-general text-hover"  ng-click="step1='LnF'" ng-class="{active:step1=='LnF'}">Social & Contacts</a></li>
+                        <li class=""   ng-class="{'col-md-4':((privilege && !currentval.isAchieved) || !currentval.is_private),'col-md-3':((privilege && !currentval.isAchieved)),'col-md-6':(!(privilege && !currentval.isAchieved) && currentval.is_private)}" ><a data-toggle="tab" class="tab-general text-hover"  ng-click="step1='cancel'" ng-class="{active:step1=='cancel'}" ng-bind="'Cancel Event'" ng-show="privilege && !currentval.isAchieved"></a></li>
+                     </ul>
+                  </div>
+                  <div ng-show="step1=='info'" class="general-top">
+                     <div ng-show="changeinfo=='normaldata'" ng-init="changeinfo='normaldata'">
+                        <div class="col-md-12 container-remove-padding">
+                           <!--  <div class="col-md-4 text-left"><div class="color-blue event-font" ng-click="changeinfo='Sdata'" ng-if="privilege && !currentval.isAchieved" ng-bind="'Change Event Name'"></div></div> -->
+                           <form novalidate name="infoForm"  ng-submit="errorscroll();infoForm.$invalid || !cmpyimageSrc ? submitted=true : updateinfo('info') " ng-init="submitted=false">
+                              <div class="row">
+                                 <div class="col-md-4 col-md-offset-4 ticket-top">
+                                    <br/>
+                                    <input type="text" name="evtname" placeholder="Event Name" ng-model="evtname" ng-disabled="true" class="inputbox subtitle-font font-weight300">
+                                    <br/>
+                                    <input type="text" name="evtshrtname" placeholder="Event Short Name" ng-model="evtshrtname"  class="inputbox subtitle-font font-weight300" ng-disabled="currentval.isAchieved" required maxlength="8">
+                                    <div class="col-md-12 text-center">
+                                       <span style="color:red" ng-show="submitted &&  !infoForm.evtshrtname.hasFocus && infoForm.evtshrtname.$invalid">
+                                       <span ng-show=" infoForm.evtshrtname.$error.required" ng-bind="'yara.required' | i18n">Required</span>
+                                       </span> 
+                                    </div>
+                                    <br/>
+                                    <input type="text" name="evtcatg" placeHolder="Event Category" ng-model="evtcatg" ng-disabled="true" class="inputbox subtitle-font font-weight300">
+                                    <br/>
+                                    <input type="text" name="evtsubcatg" placeHolder="Event Sub Category" ng-model="evtsubcatg" ng-disabled="true" class="inputbox subtitle-font font-weight300">
+                                    <br/>
+                                    <textarea rows="1" class="textarea-input subtitle-font font-weight300 textarea-des textarea" name="evtdesc" ng-model="evtdesc" placeholder="Event Description"  ng-disabled="currentval.isAchieved" required required maxlength="750" minlength="50" ng-pattern="/\D{1}/"></textarea>
+                                    <div class="col-md-12 text-center" id="eventdesc">
+                                       <span style="color:red" ng-show="submitted &&  !infoForm.evtdesc.hasFocus && infoForm.evtdesc.$invalid">
+                                       <span ng-show=" infoForm.evtdesc.$error.required" ng-bind="'yara.required' | i18n">Required</span>
+                                       <span ng-show=" infoForm.evtdesc.$error.minlength" ng-bind="'yara.descMinLenght' | i18n:['50','750']">Should contain 50 - 750 characters </span>
+                                       </span>
+                                       <span class="text-danger" ng-show="submitted && !infoForm.evtdesc.hasFocus && infoForm.evtdesc.$error.pattern" ng-bind="'yara.textrequired' | i18n ">Required</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-4 col-md-offset-4 text-center">
+                                 <div class="row">
+                                    <div class="sub-nav-size-signup newevent-top">Event Logo</div>
+                                    <!-- <div class="nav-font01">should be short. a cover image and dimesntions is a 
+                                       Every feature is meticulously crafted in way
+                                    </div> -->
+                                    <br />
+                                    <div class="">
+                                    <!-----loading indicator start------>
+                                       <!-- <div class="col-md-12 position-absolute container-remove-padding general-bg-loader">
+                                          <img src="../../../static/dashboard/images/default5.gif" class="search-loading text-center general-loader">
+                                       </div> -->
+                                    <!-----loading indicator End------>
+                                       <div ng-hide="cmpyimageSrc" class="logo-update" droplet  ng-model="cmpylogo">
+                                          <div class="sub-nav-size-signup icon">
+                                             <!-- <a  data-toggle="tooltip" data-placement="right" title="Upload&nbsp;the&nbsp;Organization&nbsp;Logo " >
+                                             <img src="../../../../static/dashboard/images/info-icon.png?v=a1de70e5d3fedcbe46e85d2d41df189a" width="4%" />
+                                             </a> -->
+                                          </div>
+                                          <div class="sub-heading-signup">
+                                             <img src="../../../../static/dashboard/images/image_upload_placeholder.png?v=7d539c1f656434ceaec3a5ebbe66836f" class="image_upload_placeholder"/>
+                                             <div class="sub-nav-size-invitation">Logo</div>
+                                             <div class="nav-font-invitation">Drag and drop the file</div>
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 text-hover">
+                                                <span>Choose an Image</span>
+                                                <!-- <input type="file" img-validate ng-file-select="onFileSelect($files)" placeholder="Upload" file-model="cmpylogo" required accept="image/*" name="cmpylogo" class=" " img-validate  ng-model="cmpylogo" > -->
+                                                <droplet-upload-single ng-model="cmpylogo" accept="image/*" name="cmpylogo" ></droplet-upload-single>
+                                             </div>
+                                             <div class="nav-font-invitation01">Minimum resolution<br/>1024<a class="cross01">X</a> 1024<br/>Aspect Ratio:1:1<br/>Max size - 5 MB</div>
+                                          </div>
+                                       </div>
+                                       <br/>
+                                       <img ng-src="{{cmpyimageSrc}}" class="image-width" id="img-cmpylogo" ng-show="cmpyimageSrc"  />
+                                       <span style="color:red" >
+                                       <span ng-show="infoForm.cmpylogo.$error.invalidimg">Invalid Image File Type</span>
+                                       <span ng-show="infoForm.cmpylogo.$error.minsizeval" ng-bind="'yara.invalidImgSize' | i18n">File size sholud not be Max Of 5MB</span>
+                                       <span ng-show="!infoForm.cmpylogo.$error.minsizeval && infoForm.cmpylogo.$error.ratioval" ng-bind="'yara.invalidImgR' | i18n:['1','1']">Aspect Ratio Should Be 1 : 1</span>
+                                       <span ng-show="!infoForm.cmpylogo.$error.minsizeval && infoForm.cmpylogo.$error.minDimension" ng-bind="'yara.invalidImgD' | i18n:['1024','1024']">Minimum resolution should be 1024 X 1024</span>
+                                       <span id="logo_error" ng-show="submitted && !cmpyimageSrc" ng-bind="'yara.required' | i18n">Required</span>
+                                       </span>
+                                       <br/>
+                                       <div class="col-md-12 signup_margin">
+                                          <div class="col-md-6 ">
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in cmpylogo.getFiles(cmpylogo.FILE_TYPES.VALID)" ng-click="model.deleteFile()">
+                                                <span>Remove</span>
+                                             </div>
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-show="(cmpylogo.getFiles(cmpylogo.FILE_TYPES.VALID)).length<=0 && cmpyimageSrc" ng-click="cmpyimageSrc=''">
+                                                <span>Remove</span>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-6 ">
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in cmpylogo.getFiles(cmpylogo.FILE_TYPES.VALID)" >
+                                                <span>Change</span>
+                                                <droplet-upload-single ng-model="cmpylogo" accept="image/*" name="cmpylogo1" required></droplet-upload-single>
+                                             </div>
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-show="(cmpylogo.getFiles(cmpylogo.FILE_TYPES.VALID)).length<=0 && cmpyimageSrc" >
+                                                <span>Change</span>
+                                                <droplet-upload-single ng-model="cmpylogo" accept="image/*" name="cmpylogo2" required></droplet-upload-single>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <br/>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="sub-nav-size-signup newevent-top">Schedule Cover Image</div>
+                                    <div class="nav-font01">Choose a cover image to be displayed on schedule screen on YARA app
+                                    </div>
+                                    <br />
+                                    <div class="">
+                                       <!-----loading indicator start------>
+                                          <!-- <div class="col-md-12 position-absolute container-remove-padding general-bg-loader">
+                                             <img src="../../../static/dashboard/images/default5.gif" class="search-loading text-center general-loader">
+                                          </div> -->
+                                       <!-----loading indicator End------>
+                                       <div ng-hide="imageSrc1" class="logo-update" droplet  ng-model="coverimg">
+                                          <div class="sub-nav-size-signup icon11">
+                                             <a  data-toggle="tooltip" data-placement="right" title="The&nbsp;cover&nbsp;image&nbsp;will&nbsp;be&nbsp;displayed on&nbsp;your&nbsp;event" >
+                                             <img src="../../../../static/dashboard/images/info-icon.png" width="4%" />
+                                             </a>
+                                          </div>
+                                          <div class="sub-heading-signup">
+                                             <img src="../../../../static/dashboard/images/image_upload_placeholder.png" class="image_upload_placeholder"/>
+                                             <div class="sub-nav-size-invitation">Cover Image</div>
+                                             <div class="nav-font-invitation">Drag and drop the file</div>
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 text-hover">
+                                                <span>Choose an Image</span>
+                                                <!-- <input type="file" img-validate ng-file-select="onFileSelect($files)" placeholder="Upload" file-model="coverimg" required accept="image/*" name="coverimg" class=" " img-validate  ng-model="coverimg" > -->
+                                                <droplet-upload-single ng-model="coverimg" accept="image/*" name="coverimg" ></droplet-upload-single>
+                                             </div>
+                                             <div class="nav-font-invitation01">Minimum resolution<br/>1024<a class="cross01">X</a> 1024<br/>Aspect Ratio:1:1<br/>Max size - 5 MB</div>
+                                          </div>
+                                       </div>
+                                       <br/>
+                                       <img ng-src="{{imageSrc1}}" class="image-width" id="img-coverimg" ng-show="imageSrc1"  />
+                                       <span style="color:red" >
+                                          <span ng-show="infoForm.coverimg.$error.invalidimg">Invalid Image File Type</span>
+                                          <span ng-show="infoForm.coverimg.$error.minsizeval"  ng-bind="'yara.invalidImgSize' | i18n">File size sholud not be Max Of 5MB</span>
+                                          <span ng-show="!infoForm.coverimg.$error.minsizeval && infoForm.coverimg.$error.ratioval"  ng-bind="'yara.invalidImgR' | i18n:['1','1']">Aspect Ratio Should Be 1 : 1</span>
+                                          <span ng-show="!infoForm.coverimg.$error.minsizeval && infoForm.coverimg.$error.minDimension"  ng-bind="'yara.invalidImgD' | i18n:['1024','1024']">Minimum resolution should be 1024 X 1024</span>
+                                          <!-- <span ng-show="submitted1 && !imageSrc1">required</span> -->
+                                       </span>
+                                       <br/>
+                                       <div class="col-md-12 signup_margin">
+                                          <div class="col-md-6 ">
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in coverimg.getFiles(coverimg.FILE_TYPES.VALID)" ng-click="model.deleteFile()">
+                                                <span>Remove</span>
+                                             </div>
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-show="(coverimg.getFiles(coverimg.FILE_TYPES.VALID)).length<=0 && imageSrc1" ng-click="imageSrc1=''">
+                                                <span>Remove</span>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-6 ">
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in coverimg.getFiles(coverimg.FILE_TYPES.VALID)" >
+                                                <span>Change</span>
+                                                <droplet-upload-single ng-model="coverimg" accept="image/*" name="coverimg1" required></droplet-upload-single>
+                                             </div>
+                                             <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-show="(coverimg.getFiles(coverimg.FILE_TYPES.VALID)).length<=0 && imageSrc1" >
+                                                <span>Change</span>
+                                                <droplet-upload-single ng-model="coverimg" accept="image/*" name="coverimg2" required></droplet-upload-single>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <br/>
+                                    </div>
+                                 </div>
+                              </div>
+                             
+                              <div class="col-md-12 container-remove-padding text-left border-top-bottom01 general-status01 ">
+                                 <span class="cursor-def">STATUS</span>
+                              </div>
+                              <div class="col-md-8 col-md-offset-2">
+                                <div class="col-md-4 col-md-offset-2 container-remove-padding general-status-border">Event Activation Date</div>
+                                <div class="col-md-6 general-status-border01">{{setOffset(currentval.activation_at,currentval.eo)|date:"MMMM dd, yyyy"}}</div>
+                                <div class="col-md-4 col-md-offset-2 container-remove-padding general-status-border">Event Security
+                                </div>
+                                <div class="col-md-6 general-status-border01" ng-show="currentval.is_private">Private Event</div>
+                                <div class="col-md-6 general-status-border01" ng-show="!currentval.is_private">Public Event</div>
+                                <div class="col-md-4 col-md-offset-2 container-remove-padding general-status-border">GateKeeper</div>
+                                <div class="col-md-6 general-status-border01 " ng-show="currentval.kits.GateKeeper.confirmed &&  currentval.kits.GateKeeper.status"><img src="../../../static/dashboard/images/right-blue.png?v=41202fcbacbf76f5fe8ff7f6c1a066d9" width="5%"></div>
+                                <div class="col-md-6 general-status-border01" ng-show="currentval.kits.GateKeeper.confirmed &&  currentval.kits.GateKeeper.status==false"><img src="../../../static/dashboard/images/tm-close.png?v=2b5a160f400b9119c4d879f216cb398d" width="5%"></div>
+                                <div class="col-md-4 col-md-offset-2 container-remove-padding general-status-border">Pin to Pulse</div>
+                                <div class="col-md-6 general-status-border01 ng-hide" ng-show="pintopulse.status&&pintopulse.confirmed"><img src="../../../static/dashboard/images/right-blue.png" width="5%"></div>
+                                <div class="col-md-6 general-status-border01" ng-hide="pintopulse.status&&pintopulse.confirmed"><img src="../../../static/dashboard/images/tm-close.png" width="5%"></div>
+                                <div class="col-md-4 col-md-offset-2 container-remove-padding general-status-border" ng-show="currentval.is_private==false" >Promotion</div>
+                                <div class="col-md-6 general-status-border01" ng-show="currentval.is_private==false && currentval.kits.Promote.confirmed && currentval.kits.Promote.status"><img src="../../../static/dashboard/images/right-blue.png" width="5%"></div>
+                                <div class="col-md-6 general-status-border01 ng-hide" ng-show="currentval.is_private==false && currentval.kits.Promote.confirmed && currentval.kits.Promote.status==false"><img src="../../../static/dashboard/images/tm-close.png" width="5%"></div>
+                             </div>
+                            <!--   <div class="col-md-6 col-md-offset-3 ticket-top">
+                                 <div class="subtitle-font font-weight300 border general-status-padding">Event Activation Date :{{currentval.created_at|date:"MMMM d yyyy"}} </div>
+                                 <div class="subtitle-font font-weight300 border general-status-padding" ng-if="currentval.is_private">Private Event</div>
+                                 <div class="subtitle-font font-weight300 border general-status-padding"ng-if="currentval.is_private==false">Private Event</div>
+                                 <div class="subtitle-font font-weight300 border general-status-padding" ng-if="currentval.kits.GateKeeper.confirmed">GateKeeper  enabled</div>
+                                 <div class="subtitle-font font-weight300 border general-status-padding" ng-if="currentval.kits.GateKeeper.confirmed==false">GateKeeper not enabled</div>
+                                 <div class="subtitle-font font-weight300 border general-status-padding" >Pin to Pulse is not enabled</div>
+                                 <div class="subtitle-font font-weight300 border general-status-padding">Pin to Pulse is not enabled</div>
+                                 <div class="subtitle-font font-weight300 border general-status-padding" ng-if="currentval.is_private==false && currentval.kits.Promote.confirmed">Promotion enabled</div>
+                                 <div class="subtitle-font font-weight300 border general-status-padding" ng-if="currentval.is_private==false && currentval.kits.Promote.confirmed==false">Promotion not enabled</div>
+                              </div> -->
+                               <div class="col-md-12 text-center margin-top10 error-height">
+                                 <span  ng-class="{'text-success-blue':data.result==1}" ng-init="errormsg=false" class="text-center text-danger" ng-bind="data.error" ng-show="typechange=='info' && errormsg">
+                                 </span>
+                              </div>
+                              <div class="col-md-12  text-center general-update-btn">
+                                 <div class="col-md-4 col-md-offset-4">
+                                    <button type="submit" class="btn btn-primary-black-signup01"  ng-disabled="currentval.isAchieved || !infoUpdate">Update</button>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <div ng-show="changeinfo=='Sdata'" class="ticket-top-issue09">
+                        <div class="row">
+                           <div class="col-md-4 col-md-offset-4">
+                              <textarea class="input_boxtext-general" ng-model="reason" ng-init="reason=''" placeholder="Reason"></textarea>
+                              <br/>
+                              <div class="text-center event-font">Current Event Name</div>
+                              <input type="text" name="evtname" placeholder="Event Name" ng-model="evtname" ng-disabled="true" class="inputbox">
+                              <br/>
+                              <div class="text-center event-font">New Event Name</div>
+                              <br/>
+                              <input type="text" name="newevtname" placeholder="New Event Name" ng-model="newevtname" class="inputbox">
+                              <br/>
+                              <div class="text-center ticket-top-bottom-btn">
+                                 <button class="btn btn-primary-black-signup01">Create Issue</button>
+                              </div>
+                              <br/><br/>
+                              <!-- <button class="btn btn-default btn-lg" ng-click="changeinfo='normaldata'">Back</button> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div ng-show="step1=='DnT'" class="general-top">
+                     <div ng-show="changeDnT=='ListDnT'" ng-init="changeDnT='ListDnT'">
+                        <div class="col-md-10 col-md-offset-1 ">
+                           <!--  <div class="col-md-4 text-left"><div class="color-blue event-font" ng-click="changeDnT='Dateissue'" ng-if="privilege && !currentval.isAchieved">Change Date</div></div> -->
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="col-md-6 col-md-offset-3  text-left">
+                                    <div class="event-description ">Date</div>
+                                    <div class="general-gray subtitle-font font-weight300" style="padding: 0 0 10px 0;"> <span>{{setOffset(currentval.start_date,currentval.eo) | date:'MMMM d, yyyy'}}</span> <span ng-hide="checkdate(currentval.start_date, currentval.end_date, currentval.eo)"> to</span> <span ng-hide="checkdate(currentval.start_date, currentval.end_date, currentval.eo)"> {{setOffset(currentval.end_date,currentval.eo) | date:"MMMM d, yyyy"}} </span></div>
+                                    <!-- From Wednesday 21, January 2015 to Saturday, 28 2015 -->
+                                    <!-- <input type="text" placeholder="Start Date" class="inputbox-general-date general-gray subtitle-font font-weight300" ng-model="evntstartdate" ng-disabled="true">
+                                       <input type="text" ng-show="evntstartdate!=evntenddate" placeholder="End Date" ng-model="evntenddate" class="inputbox-general-date general-gray subtitle-font font-weight300" ng-disabled="true"> -->
+                                 </div>
+                              </div>
+                           </div>
+                           <hr>
+                           <!--   <div class="col-md-4 text-left"><div class="color-blue event-font"  ng-click="changeDnT='Timeissue'" ng-if="privilege && !currentval.isAchieved">Change Timing</div></div> -->
+                           <div class="row">
+                              <div class="col-md-12 text-left">
+                                 <div class="col-md-6 col-md-offset-3 general-bottom-02" ><br/>
+                                    <div class="event-description sub-nav-size-signup">Time</div>
+                                    <div class="row">
+                                       <div class="col-md-12">
+                                          <ul class="list-group  " >
+                                             <a  class="col-md-12  general-border"  ng-repeat="dd in eventDaysInfo "  >
+                                                <div class="col-md-10 text-top010">
+                                                   <div>
+                                                      <div class="event-font general-gray subtitle-font font-weight300" ng-bind="dd.dayTitle">Day {{$index + 1}}</div>
+                                                      <div class="event-font general-gray subtitle-font font-weight300"><span>{{is_time_format_24?(dd.startTime|date:'HH:mm'):(dd.startTime|date:'hh:mm a')}} </span> to <span>{{is_time_format_24?(dd.endTime|date:'HH:mm'):(dd.endTime|date:'hh:mm a')}}</span></div>
+                                                   </div>
+                                                </div>
+                                             </a>
+                                          </ul>
+                                          <div class="text-danger" ng-show="submitted && selectedval==0"> Select an Event Type</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12 text-left">
+                                    <hr>
+                                    <!-- <div class="color-blue event-font"  ng-click="changeDnT='Locissue'" ng-if="privilege && !currentval.isAchieved">Change Location</div> -->
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-md-6 col-md-offset-3  text-left"><br/>
+                                       <div class="event-description sub-nav-size-signup">Location</div>
+                                       <br/>
+                                       <input type="text" name="venu1" ng-model="venu" class="inputbox-general01 general-gray subtitle-font font-weight300" placeholder="venu" required ng-disabled="true">
+                                       <input type="text" name="addrline11" ng-model="addrline1" class="inputbox-general01 general-gray subtitle-font font-weight300" placeholder="Address Line 1" required ng-disabled="true">
+                                       <input type="text" name="addrline2" ng-model="addrline2" class="inputbox-general01 general-gray subtitle-font font-weight300" placeholder="Address Line 2" ng-disabled="true" ng-show="(addrline2.length > 0)">
+                                       <input type="text" name="venucity1" ng-model="venucity" class="inputbox-general01 general-gray subtitle-font font-weight300" placeholder="City" required  ng-disabled="true">
+                                       <input type="text" name="venustate1" ng-model="venustate" class="inputbox-general01 general-gray subtitle-font font-weight300" placeholder="State or Province" required ng-disabled="true"  ng-show="(venustate.length > 0)">
+                                       <input type="text" name="venucountry1" ng-model="venucountry" class="inputbox-general01 general-gray subtitle-font font-weight300" placeholder="Country"  ng-disabled="true" ng-disabled="true">
+                                       <input type="text" name="venupincode1" ng-model="venupincode" class="inputbox-general01 general-gray subtitle-font font-weight300" placeholder="Zip" required ng-disabled="true">
+                                    </div>
+                                    <div class="col-md-12 general-top-bottom02" >
+                                       <!--  <img ng-src="https://maps.googleapis.com/maps/api/staticmap?center={{currentval.latitude}},{{currentval.longitude}}&zoom=15&markers={{currentval.latitude}},{{currentval.longitude}}&format=jpg&size=640x640"   height="640px;" style="margin:auto;display:table;" > -->
+                                       <!--                        <div class="layer-map" ng-class="{'layer-map':!sect3}">&nbsp;</div>
+                                          <div cust-map ng-model="searchloc" class="cust-map"  height="500px">
+                                            <!-- ng-show = "currentval.country == 'India' " -->
+                                       <!-- </div> --> 
+                                       <!-- <div class="layer-map">&nbsp;</div> -->
+                                       <div class="layer-map-genaral">&nbsp;</div>
+                                       <div class="general-map-shadow">
+                                          <div id="map"  style="height:500px!important"></div>
+                                       </div>
+                                       <!-- <div id="map"></div> -->
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     </div>
+                     </div>
+                     <div ng-show="changeDnT=='Locissue'" class="col-md-4 col-md-offset-4 text-center ticket-top">
+                        <textarea class="input_boxtext-general" ng-model="DateReason" name="DateReason" ng-init="DateReason=''" placeholder="Reason"></textarea>
+                        <br/>
+                        <div class="text-center event-font general-top-bottom02">Current Location</div>
+                        <input type="text" placeholder="Venue" class="inputbox" ng-model="newstartdate">
+                        <br/>
+                        <input type="text" placeholder="Address Line 1" class="inputbox" ng-model="newstartdate">
+                        <br/>
+                        <input type="text" placeholder="Address Line 2" class="inputbox" ng-model="newstartdate">
+                        <br/>
+                        <input type="text" placeholder="City" class="inputbox" ng-model="newstartdate">
+                        <br/>
+                        <input type="text" placeholder="State / Province" class="inputbox" ng-model="newstartdate">
+                        <br/>
+                        <input type="text" placeholder="Country" class="inputbox" ng-model="newstartdate">
+                        <br/>
+                        <input type="text" placeholder="Zip" class="inputbox" ng-model="newstartdate">
+                        <br/>
+                        <div class="text-center event-font general-top-bottom02">New Location</div>
+                        <input type="text" placeholder="Venue" class="inputbox" ng-model="newstartdate">
+                        <br/>
+                        <input type="text" placeholder="Address Line 1" class="inputbox" ng-model="newstartdate">
+                        <br/>
+                        <input type="text" placeholder="Address Line 2" class="inputbox" ng-model="newstartdate">
+                        <br/>
+                        <input type="text" placeholder="City" class="inputbox" ng-model="newstartdate">
+                        <br/>
+                        <input type="text" placeholder="State / Province" class="inputbox" ng-model="newstartdate">
+                        <br/>
+                        <input type="text" placeholder="Country" class="inputbox" ng-model="newstartdate">
+                        <br/>
+                        <input type="text" placeholder="Zip" class="inputbox" ng-model="newstartdate">
+                        <br/>
+                        <div class="text-center ticket-top-bottom-btn">
+                           <button class="btn btn-primary-black-signup01">Create Issue</button>
+                        </div>
+                     </div>
+                     <div ng-show="changeDnT=='Dateissue'" >
+                        <div class="row">
+                           <div class="col-md-4 col-md-offset-4 text-center ticket-top-issue08" ng-show="alter" ng-init="alter=true">
+                              <p class="event-description text-center"><b>Date Changes Affects:</b><br/><br/> Refund Policy ( No Refund after theres is date is allowed ) only one change is allowed</p>
+                              <button class="btn btn-primary-black-signup01" ng-click="alter=false">Procced</button>
+                           </div>
+                           <div class="col-md-4 col-md-offset-4 ticket-top" ng-hide="alter">
+                              <textarea class="input_boxtext-general" ng-model="DateReason" name="DateReason" ng-init="DateReason=''" placeholder="Reason"></textarea>
+                              <br/>
+                              <div class="text-center event-font">Current Date</div>
+                              <input type="text" placeholder="Start Date" class="inputbox" ng-model="evntstartdate" ng-disabled="true">
+                              <br/>
+                              <input type="text" placeholder="End Date" ng-model="evntenddate" class="inputbox" ng-disabled="true">
+                              <br/>
+                              <div class="text-center event-font">New Date</div>
+                              <input type="text" placeholder="Start Date" class="inputbox" ng-model="newstartdate">
+                              <br/>
+                              <input type="text" placeholder="End Date" ng-model="newenddate" class="inputbox">
+                              <br/>
+                              <div class="text-center ticket-top-bottom-btn">
+                                 <button class="btn btn-primary-black-signup01">Create Issue</button>
+                              </div>
+                              <br/><br/>
+                              <!-- <button class="btn btn-default btn-lg" ng-click="alter=true;changeDnT='ListDnT'">Back</button> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div ng-show="changeDnT=='Timeissue'" class="text-center col-md-4 col-md-offset-4 ticket-top" >
+                        <textarea class="input_boxtext-general" ng-model="TimeReason" name="TimeReason" ng-init="TimeReason=''" placeholder="Reason"></textarea>
+                        <br/>
+                        <div class="text-center event-font">Current Time</div>
+                        <div class=" general-top-bottom02" >
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <ul class="list-group  pointer" >
+                                    <a  class="col-md-12 list-group-item  tab-click" ng-class="{active: selectedval.indexOf(d)>=0} " ng-repeat="(key,ddl) in datelisting "  ng-click="selectedtype(d)">
+                                       <div class="col-md-10 text-top010">
+                                          <div>
+                                             <div class="event-font"><b ng-bind="ddl.day_name">Day {{$index + 1}}</b></div>
+                                             <div class="event-font"><b>{{ddl.starttime}} to {{ddl.endtime}}</b></div>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-2"><img src="../../../static/dashboard/images/right.png?v=87dc69e36cee2088acaf4e40773d28eb" width="100%"/></div>
+                                    </a>
+                                 </ul>
+                                 <div class="text-danger" ng-show="submitted && selectedval==0"> Select an Event Type</div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="">
+                              <!-- <ul class="list-group">
+                                 <li class="list-group-item" ng-repeat="(key,ddl) in datelisting ">
+                                  
+                                    <h4>{{key}}</h4>
+                                    <p>Start Time : {{ddl.starttime}}</p>
+                                    <p>End Time : {{ddl.endtime}}</p>
+                                 
+                                 </li>
+                                 </ul> -->
+                              <div class="text-center event-font">New Time</div>
+                              <br/>
+                              <select class="inputbox">
+                                 <!-- {{dates}}
+                                    <option  ng-repeat="d in dates" placeholder="Select Date" value="{{d}}">{{d}}</option> -->
+                              </select>
+                              <br/>
+                              <div class="text-center event-font">Time</div>
+                              <br/>
+                              <input type="text" class="inputbox" ng-model="newstarttime" placeholder="Start Time">
+                              <br/>
+                              <input type="text" class="inputbox" ng-model="newsendtime"  placeholder="end Time">
+                              <br/>
+                              <div class="text-center ticket-top-bottom-btn">
+                                 <button class="btn btn-primary-black-signup01">Create Issue</button>
+                              </div>
+                              <br/><br/>
+                              <br/><br/>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div ng-show="step1=='location'">
+                     <h1>Location</h1>
+                     <div class="row">
+                        <div class="col-md-6">
+                           <input type="text" name="venu1" ng-model="venu" class="form-control" placeholder="venu" required>
+                           <br/>
+                           <input type="text" name="addrline11" ng-model="addrline1" class="form-control" placeholder="Address Line 1" required>
+                           <br/>
+                           <input type="text" name="addrline2" ng-model="addrline2" class="form-control" placeholder="Address Line 2"><br/>
+                           <input type="text" name="venucity1" ng-model="venucity" class="form-control" placeholder="City" required >
+                           <br/>
+                           <input type="text" name="venustate1" ng-model="venustate" class="form-control" placeholder="State or Province" required >
+                           <br/>
+                           <input type="text" name="venucountry1" ng-model="venucountry" class="form-control" placeholder="Country"  ng-disabled="true" >
+                           <br/>
+                           <input type="text" name="venupincode1" ng-model="venupincode" class="form-control" placeholder="Zip" required >
+                        </div>
+                        <div class="col-md-6" >
+                           <div ng-model="searchloc" class="">
+                           </div>
+                        </div>
+                     </div>
+                     <br/>
+                     <button class="btn btn-lg btn-info">Change Location</button>
+                  </div>
+                  <div ng-show="step1=='LnF'" class="height-top">
+                     <form novalidate name="socialForm"  ng-init="submitted=false" ng-submit="(socialForm.$invalid ) ? submitted=true : updateinfo('socail')"  class="height100">
+                        <div class="pulse-popup col-md-12">
+                           <div class="row">
+                              <div class="col-md-6 col-md-offset-3  text-center" ng-hide="">
+                                 <div class="newevent">Event Contact Details</div>
+                                 <div class="gray">Fill in your Contact Details<br/>
+                                       Phone and Email ID are mandatory
+                                 </div>
+                                 <br/>
+                                 <div class="col-md-2"  ng-class="currentval.is_private?'col-md-offset-4':'col-md-offset-1'"><span class="fa fa-phone bootstrap-font-icon bootstrap-font-icon01 bootstrap-font-icon-gray icon-width phone 009" data-toggle="modal" data-target="#myModal-social" id="009" ng-click="social_type='phone';poperror=false"  aria-hidden="true"></span><br/>Phone<br/>
+                                    <span style="color:red;" class="arrow_box" ng-show="submitted && socialForm.eventph.$error.required" id="socialErr"  ng-bind="'yara.required' | i18n">
+                                    Required
+                                    </span>     
+                                 </div>
+                                 <div class="col-md-2"><span class="fa fa-envelope bootstrap-font-icon bootstrap-font-icon01  bootstrap-font-icon-gray icon-width message 010" data-toggle="modal" data-target="#myModal-social" id="010" ng-click="social_type='message';poperror=false"  aria-hidden="true"></span><br/>Email<br/>
+                                    <span style="color:red;" id="socialErremail"  class="arrow_box" ng-show="submitted && socialForm.eventEmail.$error.required" ng-bind="'yara.required' | i18n">Required </span>
+                                 </div>
+                                 <div class="col-md-2" ng-hide="currentval.is_private">
+                                    <span class="fa fa-globe bootstrap-font-icon bootstrap-font-icon01 bootstrap-font-icon-gray icon-width company-website 001" data-toggle="modal" data-target="#myModal-social" id="001" ng-click="social_type='company-website'" data-container="body" data-toggle="" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." aria-hidden="true"></span><br/>Web
+                                 </div>
+                                 <div class="col-md-2" ng-hide="currentval.is_private"> <span class="fa fa-facebook bootstrap-font-icon bootstrap-font-icon01 bootstrap-font-icon-gray icon-width  003" data-toggle="modal" data-target="#myModal-social" id="003" ng-click="social_type='facebook'"  aria-hidden="true"></span><br/>Facebook</div>
+                                 <div class="col-md-2" ng-hide="currentval.is_private"> <span class="fa fa-twitter bootstrap-font-icon bootstrap-font-icon01  bootstrap-font-icon-gray icon-width  002" data-toggle="modal" data-target="#myModal-social" id="002" ng-click="social_type='twitter'"  aria-hidden="true"></span><br/>Twitter</div>
+                                 <!-- Social Icons Modal Window -->
+                                 <div class="modal fade" id="myModal-social" tabindex="-1" role="dialog" data-backdrop="static"  aria-labelledby="myModalLabel" >
+                                    <div class="modal-dialog gatekeeper-popup" role="document" >
+                                       <div class="modal-content">
+                                          <div class="modal-header-signup2">
+                                             <h4 class="modal-title text-left signup2-created" id="myModalLabel" >Add Detail</h4>
+                                          </div>
+                                          <div class="modal-body-account">
+                                             <div ng-show="social_type=='phone'">
+                                                <div class="text-left account_font01">Phone</div>
+                                                <div class="col-md-12">
+                                                   <div class="col-md-5">
+                                                      <input type="text" ng-model="phDailCode" placeholder="Country Code" isdialcode name="phDailCode" required  class="inputbox-signup2 text-center" maxlength="8" ng-required="phdialreq" >
+                                                      <div class="border-top-web error-height">
+                                                         <span style="color:red;"  ng-show="poperror && socialForm.phDailCode.$error.required " ng-bind="'yara.required' | i18n">
+                                                         Required
+                                                         </span>  
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-md-6 col-md-offset-1">
+                                                      <input type="text" ng-model="Teventph" name="eventph" is-number class="inputbox-signup-new" maxlength="15"  minlength="4" placeholder="Phone" required>
+                                                      <div class="border-top-web error-height">
+                                                         <span style="color:red;" ng-show="poperror && socialForm.eventph.$error.minlength" ng-bind="'yara.invalidPH' | i18n">Invalid Phone </span>  
+                                                         <span style="color:red;"  ng-show="poperror && socialForm.eventph.$error.required " ng-bind="'yara.required' | i18n">
+                                                         Required
+                                                         </span>  
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <!-- <span style="color:red;" ng-show="socialForm.eventph.$touched && socialForm.eventph.$error.minlength">Invalid Phone </span> -->
+                                                <!-- <span style="color:red;" ng-show="socialForm.eventph.$dirty && socialForm.eventph.$invalid && socialForm.eventph.$touched ">
+                                                   <span ng-show="socialForm.eventph.$error.required">Event Phone </span>
+                                                   
+                                                   </span> -->
+                                             </div>
+                                             <div ng-show="social_type=='message'">
+                                                <div class="text-left account_font01">Email</div>
+                                                <input type="email" ng-model="TeventEmail" name="eventEmail" placeholder="Event Email Id" validate-email  class="inputbox-signup2" required>
+                                                <div class="border-top-web error-height">
+                                                <span style="color:red;"  ng-show="poperror && socialForm.eventEmail.$error.email" ng-bind="'yara.invalidEmail' | i18n">Invalid Email </span>
+                                                <span style="color:red;"  ng-show="poperror && socialForm.eventEmail.$error.required" ng-bind="'yara.required' | i18n">Required </span>
+                                                </div>
+                                                <!-- <span style="color:red;"  ng-show="socialForm.eventEmail.$touched && socialForm.eventEmail.$error.email">Invalid Email </span> -->
+                                             </div>
+                                             <div ng-show="social_type=='company-website'">
+                                                <div class="text-left account_font01">Website</div>
+                                                <input type="text" ng-model="Teventweb" name="eventweb" placeholder="Event Website" class="inputbox-signup2" maxlength="50" web-url>
+                                                <div class="border-top-web01"></div>
+                                                <!-- <span style="color:red;" ng-show="socialForm.eventweb.$dirty && socialForm.eventweb.$invalid ">
+                                                   <span ng-show="socialForm.eventweb.$error.required">Company Website </span>
+                                                   </span> -->
+                                             </div>
+                                             <div ng-show="social_type=='facebook'">
+                                                <div class="text-left account_font01">Facebook</div>
+                                                <input type="text" ng-model="Teventfb" name="eventfb"  fb-url class="inputbox-signup2"  maxlength="50">
+                                                <div class="border-top-signup2"></div>
+                                                <!--  <span style="color:red;" ng-show="socialForm.eventfb.$dirty && socialForm.eventfb.$invalid ">
+                                                   <span ng-show="socialForm.eventfb.$error.required">Company Facebook </span>
+                                                   </span> -->
+                                             </div>
+                                             <div ng-show="social_type=='twitter'">
+                                                <div class="text-left account_font01">Twitter</div>
+                                                <input type="text" ng-model="Teventtwitter" name="eventtwitter" twitter-url class="inputbox-signup2" maxlength="50">
+                                                <div class="border-top-twitter"></div>
+                                                <!--  <span style="color:red;" ng-show="socialForm.eventtwitter.$dirty && socialForm.eventtwitter.$invalid ">
+                                                   <span ng-show="socialForm.eventtwitter.$error.required">Company Twitter </span>
+                                                   </span> -->
+                                             </div>
+                                          </div>
+                                          <div class="row" style="margin:0 15px;">
+                                             <div class="col-md-12 border-top">
+                                                <div class="col-md-8">&nbsp;</div>
+                                                <div class="col-md-2 pulse-margin"><button type="button" data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover ">Cancel</button></div>
+                                                <div class="col-md-2"><button ng-show="social_type=='phone'" type="button" class="btn01 btn-primary-black-pulse01 text-hover " ng-click="socialForm.eventph.$invalid ? poperror=true : saveSocials();">Add</button><button ng-show="social_type=='message'" type="button" class="btn01 btn-primary-black-pulse01 text-hover " ng-click="socialForm.eventEmail.$invalid? poperror=true : saveSocials();">Add</button><button ng-show="social_type!='phone' && social_type!='message'" type="button" class="btn01 btn-primary-black-pulse01 text-hover " ng-click="saveSocials()">Add</button></div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!---modal window End- -->
+                              </div>
+                           </div>
+                           <div class="col-md-12 text-center general-top20" style="height:25px;">
+                              <span ng-show="typechange=='socail' && errormsg" ng-class="{'text-success-blue':data.result==1}" class="text-center text-danger" ng-bind="data.error">
+                              </span>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="col-md-2 col-md-offset-5 general-top20">
+                                 <button type="submit"  class="btn btn-primary-black" ng-disabled="!contactUpdate">Update</button>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                     <!-- <div data-toggle="modal" data-target="#crop-image">hi</div> -->
+                  </div>
+                  <!-- <div ng-show="step1=='social'" class="text-left">
+                     <h1 class="text-center">Social</h1>
+                     <div class="row">
+                      <div class="col-md-6">
+                                      <i class="fa fa-phone fa-5x"></i>
+                                      <input type="text" name="eventphone" class="form-control" is-number ng-model="eventph" required>
+                                     </div>
+                                     <div class="col-md-6">
+                                         <i class="fa fa-envelope-o fa-5x"></i>
+                                         <input type="email" name="eventemail" class="form-control" ng-model="eventemail" required>
+                                     </div>
+                                 </div>
+                                 <div class="row">
+                                     <div class="col-md-6">
+                                         <br/>
+                                         <i class="fa fa-globe fa-5x"></i>
+                                         <input type="text" name="eventweb" class="form-control" ng-model="eventweb">
+                                     </div>
+                                     <div class="col-md-6">
+                                      <br/>
+                                         <i class="fa fa-facebook fa-5x"></i>
+                                         <input type="text" name="eventfb" class="form-control" ng-model="eventfb" fb-url>
+                                     </div>
+                                 </div>
+                                 <div class="row">
+                                     <div class="col-md-6">
+                                      <br/>
+                                         <i class="fa fa-twitter fa-5x"></i>
+                                         <input type="text" name="eventtwitter" class="form-control" ng-model="eventtwitter" twitter-url>
+                                     </div>
+                                 </div>
+                                 <br/>
+                                 <button class="btn btn-lg btn-info"> Save Changes</button>
+                     </div> -->
+                  <div  ng-show="step1=='cancel'">
+                     <div  class=" col-md-6 col-md-offset-3 text-center ">
+                        <div ng-show="!evtcls" ng-init="evtcls=false" class="height-top cencel-event">
+                           <div class="event-description">Cancel the Event</div>
+                           <br/><br/>
+                           <p class="text-center">All event data from dashboard as well as mobile app will be cleared. 
+                           </p>
+                           <p class="text-center">Eligible for refund? See our refund policy. 
+                           </p>
+                           <div class="col-md-6 col-md-offset-3 general-top-bottom02">
+                              <div class="text-center text-danger" ng-show="errormsg1" ng-class="{'text-success-blue':data1.result==1}" ng-bind="data1.error">
+                              </div>
+                              <button class="btn btn-lg btn-danger" ng-click="getRefund()" style="padding: 10px 0 6px 0;">Cancel Event</button>
+                           </div>
+                        </div>
+                        <div ng-show="evtcls" class="row general-top" ng-form="canselform">
+                           <div class="event-description ticket-top">Reason for cancellation</div>
+                           <div class="ticket-top">
+                              <textarea rows="1" id="reason_id" name="CancellationReason" placeholder="Cancellation Reason" class="input_boxtext-happy text-center subtitle-font font-weight300 textarea" maxlength="250" minlength="10" ng-model="reason" ng-init="enableCancel=true" ng-change="reasonLength(reason)" style="min-height: 25px;" ng-pattern="/\D{1}/"></textarea>
+                           </div>
+                           <span class="text-danger" ng-init="showerr=false" ng-show="enableCancel && showerr && !canselform.CancellationReason.hasFocus &&!canselform.CancellationReason.$error.pattern" ng-bind="'yara.adspacemin'|i18n"></span>
+                           
+                           <span class="text-danger" ng-show="canselform.CancellationReason.$error.pattern" ng-bind="'yara.textrequired'|i18n"></span>
+                           <!-- <div class="row">
+                              <div class="event-description ticket-top-btn">Refund Policy</div>
+                              <div class="gray text-center">Our Refund Policy is associted with YARA Mobile Usage 
+                              </div>
+                              </div> -->    
+                           <div class="row ">
+                              <!-- <div class="event-description">Refund</div> -->
+                              <div ng-show="!refundAvilabile" class="text-left cancel-event-red">{{evtname}} is not eligible for refund.<br/>
+                                 <a href="https://yara.io/refund-policy" class="text-hover01 color-white" target="new">See Refund Policy <i class="glyphicon glyphicon-menu-right icon-top icon-size" aria-hidden="true"></i></a>
+                              </div>
+                              <div ng-show="refundAvilabile" class="text-left cancel-event-gray">
+                                 <p class="text-center cancel-event-price">
+                                    <!-- <i class="glyphicon glyphicon-menu-right icon-top icon-size" aria-hidden="true"></i> -->
+                                    <!-- {{data1.currency}}  -->
+                                    {{data1.refund}}
+                                 </p>
+                                 The amount will be refunded within 30 business days<br/><br/>
+                                 Transaction charges that are levied by the Payment Gateway/Banks/ 
+                                 Taxes incurred are not subject to refund<br/>
+                                 <p class="cancel-refund-link"><a href="https://yara.io/refund-policy" class="text-hover color-black" target="new">See Refund Policy <i class="glyphicon glyphicon-menu-right icon-top icon-size" aria-hidden="true"></i></a>
+                                 </p>
+                              </div>
+                              <!-- <div class="gray text-center"><span ng-show="data1.refund>0">Amount {{data1.refund}} will be reimbursed within 2 business day</span>
+                                 <span  ng-show="data1.refund<=0">{{evtname}} is not Eligible for a refund</span>
+                                 </div> -->
+                              <div class="event-description" style="margin: 90px 0px 45px 0px;">Verify the cancellation</div>
+                              <div class="text-center">
+                                 <div class="col-md-12">
+                                    <div class="col-md-4 col-md-offset-4 container-remove-padding" style="margin-left:31.333333%;">
+                                       <div class="nav-width-robot-genral-new" vc-recaptcha on-success="captchaInvalid=false" on-expire="captchaInvalid=true" key="key" ng-init="captchaInvalid=true" ></div>
+                                    </div>
+                                 </div>
+                                 <button class="btn btn-primary-black-general  btn-danger"  ng-disabled=" captchaInvalid" ng-click="enableCancel&&canselform.$invalid?errscroll():DelEvent()" style="margin: 50px 0px 80px 0px;">Cancel Event</button>
+                              </div>
+                           </div>
+                           <!-- 
+                              <div class="row ">
+                                <div class="event-description">Eligibity For Refund</div>
+                                  <div class="gray text-center">Details description about the refund policy<br/><br/><br/><br/>
+                                  </div>
+                              </div> -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div ng-include-template="/event_footer" copyright="true" id="footer123"></div>
+         <!-- ng-class="{'navbar-fixed-bottom':(step1=='cancel' || step1=='LnF')}" -->
+         <!--  Image  Invalid Modal window -->
+         <div class="modal fade" id="myModal-invalid" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Invalid Extension</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form  novalidate >
+                           <div class="row">
+                              <div class="col-md-12 bg-collaborator" ng-bind="'yara.invalidImg'| i18n">
+                                 Invalid Extension Choose jpg, jpeg and png format.
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-10">
+                                    <div  class=" text-danger">&nbsp;</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!----crop image---->
+         <div class="modal fade" id="crop-image" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+               <!-----loading indicator start------>
+                  <div class="col-md-12 position-absolute container-remove-padding general-bg-loader-pop" ng-hide="lodinghide">
+                     <img src="../../../static/dashboard/images/default5.gif" class="search-loading text-center general-loader">
+                  </div>
+               <!-----loading indicator End------>
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Crop</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form novalidate  >
+                           <div class="row"> 
+                              
+                              <div class="col-md-12 bg-general crop-popup" >
+                                 <div class="image-editor crop-popup">
+                                    <input type="file" class="cropit-image-input">
+                                    <div class="cropit-preview"></div>
+                                    <div class="image-size-label">
+                                    </div>
+                                    <div class="crop-bottom"></div>
+                                    <div class="slider-wrapper">
+                                       <input type="range" class="cropit-image-zoom-input custom" min="0" max="1" step="0.01">
+                                    </div>
+                                    <div class="crop-top"></div>
+                                 </div>
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-8">
+                                    <div  class=" text-danger">&nbsp; </div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div class="btn01 btn-primary-black-pulse01 text-hover " data-dismiss="modal" aria-label="Close"  ng-click="resetCropImg()">Cancel</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  class="btn01 btn-primary-black-pulse01 text-hover" ng-click="setCropImg()">Crop</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script type="text/javascript">
+         $(document).ready(function(){
+          function resizediv(){
+           var h =$(window).height();
+           $('.height-top').css("height",h+"px");
+          } 
+          resizediv();
+          $(window).resize(function(){
+           resizediv();
+          });
+         });
+      </script>
+      <!-- <script type="text/javascript">
+        $('.nav-tabs').on('shown.bs.tab', function () {
+             google.maps.event.trigger(window, 'resize', {});
+         });
+      </script> -->
+      <script>
+         $(document).ready(function(){
+          $('#loading').hide();
+          $('#container').fadeIn();
+         });
+      </script>
+      <script>
+         $(document).ready(function(){
+             $('[data-toggle="tooltip"]').tooltip();   
+         });
+      </script>
+      <script>
+         window.setTimeout( function() {
+             $('.textarea-des').height( $('.textarea-des')[0].scrollHeight );
+         }, 1);
+      </script>
+       <script>
+         function h(e) {
+             $(e).css({'height':'auto','overflow-y':'hidden'}).height(e.scrollHeight);
+         }
+         $('.textarea').each(function () {
+           h(this);
+         }).on('input', function () {
+           h(this);
+         });
+      </script>
+      <script>
+         $(function() {
+           
+         /*
+           $('.rotate-cw').click(function() {
+             $('.image-editor').cropit('rotateCW');
+           });
+           $('.rotate-ccw').click(function() {
+             $('.image-editor').cropit('rotateCCW');
+           });*/
+         
+           /*$('.export').click(function() {
+             var imageData = $('.image-editor').cropit('export');
+             window.open(imageData);
+           });*/
+         });
+      </script>
+      <script>
+      var map;
+      function initMap() {
+         var selevntdata=localStorage.getItem('selEventsData');
+        var currentval=angular.fromJson(selevntdata);
+        var myLatLng = {lat:Number(currentval.latitude), lng:Number(currentval.longitude)};
+
+         map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+        });
+        google.maps.event.addListenerOnce(map, 'idle', function() {
+                  google.maps.event.trigger(map, 'resize');
+               });
+      }
+
+    </script>
+      <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV9Dg0e7cZQv4kV50S9eDUFQdIUCSN7RM&libraries=places&callback=initMap"
+         async defer></script> -->   
+
+      {%endverbatim%}
+   </body>
+</html>

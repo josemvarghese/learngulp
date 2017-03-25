@@ -1,0 +1,872 @@
+<!-- <!DOCTYPE html> -->
+<html>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">      
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <title>YARA - Account</title>
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <link rel="stylesheet" href="../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <link rel="stylesheet" href="../../static/dashboard/css/customscrollbar.min.css?v=b72d1ff03f5d4322fda530affc8628fd">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <!--<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyBiLVnHVmK-3nm_MZvug6NjZmMdOQX_cm8"></script>-->
+      <script src="../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script>
+      <script src="../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script>
+      <script src="../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> 
+      <script src="../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <script src="../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script>
+      <script src="../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <script src="../../static/dashboard/scripts/customscrollbar.min.js?v=ea9f31b6e94c00a389c0f19bb9a876f2"></script>
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../static/dashboard/scripts/app.js?v=cb63d6447409374df653b8707287ee36"></script>
+      <script src="../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>
+      <script src="../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>
+      <script src="../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>                  <script src="../../static/dashboard/scripts/ng-infinite-scroll.min.js?v=299bcea502c681c68093eb86f8c1bccf"></script>
+      <!-- UI style -->
+      <link rel="stylesheet" href="../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+         <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+      <!---crop image---->
+      <script src="../../../static/dashboard/scripts/jquery.cropit.js?v=b37d29875ced18ede72940fb6b0fba52"></script>
+      <!-- Password strength checker -->
+      <link href='../../static/dashboard/css/pwdwidget.css?v=e3267d69e4819b5eca79d504f6194248' rel="stylesheet">
+      <script type="text/javascript" src="../../static/dashboard/scripts/pwdwidget.js?v=1da85ab3b56b37709c8aba0861f0b264"></script>
+   </head>
+   <body ng-app="yara" ng-controller="AccountController" class="overflow-body01">
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      {%verbatim%}
+      <div id="container">
+         <!---header-->
+         <div class="container navbar-fixed-top border" >
+            <div class="col-md-12 white text-center ">
+               <div class="col-md-1 nav-color main-header-signup01" style="text-align:left;"><a href="" back-button><img src="../../../../static/dashboard/images/yara_logo.svg?v=ce9e59e2272c030c2954deb7d56f3267" width="100%"/></a></div>
+               <div class="col-md-1 nav-color sub-header-border">&nbsp;</div>
+               <div class="col-md-1 nav-color sub-header-small-events">Account</div>
+            </div>
+         </div>
+         <!----end header---->
+         <div class=""  >
+            <div class="container"  >
+               <div class="row ">
+                  <div class="col-md-12 text-center container-remove-padding">
+                     <ul class="container nav nav-tabs ng-hide container-remove-padding" ng-show="privilege">
+                        <li class=" col-md-4 active"><a target="_self" data-toggle="tab" ng-click="scrollTop()" href="#identity" class="tab-color11 tab-color-new1 text-hover" ng-class="{'account-chg':!privilege}" ng-bind="'Voris Identity'"></a></li>
+                        <li class="col-md-4" ng-if="privilege"><a target="_self" data-toggle="tab" ng-click="scrollTop()" href="#profile" class="tab-color11 tab-color-new1 text-hover" ng-bind="'Public Profile'" ></a></li>
+                        <li class="col-md-4" ng-if="privilege"><a target="_self" data-toggle="tab" ng-click="scrollTop()" href="#details" class="tab-color11 tab-color-new1 text-hover" ng-bind="'Contact Details'" ></a></li>
+                        <!-- <li class="col-md-3"><a target="_self" data-toggle="tab" href="#settings" class="tab-color11 tab-color-new1 text-hover" ng-bind="'Settings'" ></a></li> -->
+                     </ul>
+                     <div class="tab-content">
+                        <div id="identity" class="tab-pane fade in active account-timezone">
+                           <div class="container nav-top-invitation">
+                              <div class="row">
+                                 <div class="col-md-12 text-center">
+                                    <form novalidate name="profileform" ng-submit="resetProfilepic();(profileform.$invalid)? submitted=true : UpdateProfile();" ng-init="submitted=false" accessible-form>
+                                       <div class="row">
+                                          <div class="col-md-4 col-md-offset-4 ticket-top">
+                                             <div class="sub-nav-size-signup margin-bottom20">Your Details</div>
+                                            <!--  <div class="nav-font01">Enter your personal details <br/>
+                                                Every feature is meticulously crafted in way
+                                             </div> -->
+                                             <input type="text" placeholder="Full Name"  name="Pname" required class="inputbox auto-fill" ng-model="pname" ng-disabled="!Pedit" focus="{{Pedit}}" word-valid maxlength="50" capitalize-word="true" ng-keydown="keyvalue=$event">
+                                             <span class="text-danger"  ng-show=" submitted && !profileform.Pname.hasFocus && profileform.Pname.$error.required" >
+                                             <span ng-bind="'yara.required' | i18n" >Required</span>
+                                             </span>
+                                             <span class="text-danger"  ng-show=" submitted && !profileform.Pname.hasFocus && profileform.Pname.$error.minwords" >
+                                             <span ng-bind="'yara.minWords' | i18n">Minimum 2 words</span>
+                                             </span>
+                                             <span class="text-danger"  ng-show=" submitted && !profileform.Pname.hasFocus && profileform.Pname.$error.maxwords" >
+                                             <span ng-bind="'yara.maxWords' | i18n">Maximum 3 words</span>
+                                             </span>
+                                             <br/>
+                                             <input type="text" placeholder="Job Title" name="PDesg" ng-model="PDesg" required class="inputbox  auto-fill" ng-disabled="!Pedit" capitalize-word="true" ng-keydown="keyvalue=$event">
+                                             <span class="text-danger" ng-show=" submitted && !profileform.PDesg.hasFocus && profileform.PDesg.$error.required">
+                                             <span ng-bind="'yara.required' | i18n">Required</span>
+                                             </span>
+                                             <br/> <br/>
+                                             <div class="col-md-12 ">
+                                                <div class="col-md-6 btn01 btn-primary-black-invitation text-hover text-hover" ng-init="Pedit=false" ng-hide="Pedit" ng-click="Pedit=true;">
+                                                   Edit Details
+                                                </div>
+                                                <div class="col-md-6 btn01 btn-primary-black-invitation text-hover text-hover" ng-init="Pedit=false" ng-show="Pedit" ng-click="Pedit=false;pname=currtuser.full_name;PDesg=currtuser.designation;">
+                                                   Reset Details
+                                                </div>
+                                                <div class="col-md-6 btn01 btn-primary-black-invitation text-hover text-hover " data-toggle="modal" data-target="#myModal-account" ng-click="resetChangevalues()">Change Password
+                                                </div>
+                                             </div>
+                                             <div class="sub-nav-size-signup nav-top-account">Upload your Photo  </div>
+                                             <!-- <div class="nav-font01">Enter your personal details <br/>
+                                                Every feature is meticulously crafted in way
+                                             </div> -->
+                                             <div ng-hide="imageSrc" class="logo-update-invitation" droplet  ng-model="pofilePic">
+                                                <div class="sub-nav-size-signup icon">
+                                                   <a href="" data-toggle="tooltip" data-placement="right" title="Upload&nbsp;your&nbsp;profile&nbsp;picture " >
+                                                   <img src="../../../../static/dashboard/images/info-icon.png?v=a1de70e5d3fedcbe46e85d2d41df189a" width="4%" />
+                                                   </a>
+                                                </div>
+                                                <div class="sub-heading-invitation" >
+                                                   <img src="../../../../static/dashboard/images/image_upload_placeholder.png?v=7d539c1f656434ceaec3a5ebbe66836f" class="image_upload_placeholder"/>
+                                                   <div class="sub-nav-size-invitation">Profile Picture</div>
+                                                   <div class="nav-font-invitation">Drag and drop the file</div>
+                                                   <div class="btn01 btn-primary-black-invitation text-hover black-signup01 ">
+                                                      <span>Choose an Image</span>
+                                                      <!--  <input class="" type="file" ng-file-selected1="onFileSelect($files)" file-model="pofilePic" required accept="image/*" name="pofilePic" ng-model="pofilePic" img-validate> -->
+                                                      <droplet-upload-single ng-model="pofilePic" accept="image/*" name="pofilePic" required></droplet-upload-single>
+                                                   </div>
+                                                </div>
+                                                <div class="nav-font-invitation01">Minimum resolution<br/>512 <a class="cross01">X</a> 512<br/>Aspect Ratio - 1:1<br/>Max size - 5 MB</div>
+                                             </div>
+                                             <br/>
+                                             <img ng-src="{{imageSrc|imagefilterQ1}}" class="image-width01" id="img-pofilePic" ng-show="imageSrc"  />
+                                             <div class="error-msg-10" >
+                                                <span ng-show="profileform.pofilePic.$error.invalidimg">Invalid Image File Type</span>
+                                                <span ng-show="profileform.pofilePic.$error.minsizeval" ng-bind="'yara.invalidImgSize' | i18n">File size sholud not be Max Of 5MB</span>
+                                                <span ng-show="!profileform.pofilePic.$error.minsizeval && profileform.pofilePic.$error.ratioval" ng-bind="'yara.invalidImgR' | i18n:['1','1']">Aspect Ratio Should Be 1 : 1</span>
+                                                <span ng-show="!profileform.pofilePic.$error.minsizeval && profileform.pofilePic.$error.minDimension" ng-bind="'yara.invalidImgD' | i18n:['512','512']">Minimum Size 512 * 512</span>
+                                                <!--  <span ng-show="submitted && !imageSrc">Company Logo required</span>  ng-bind="'yara.invalidImgD' | i18n:['512','512']" -->
+                                             </div>
+                                             <div class="col-md-12 signup_margin">
+                                                <div class="col-md-6 ">
+                                                   <div class="btn01 btn-primary-black-invitation text-hover black-signup01" ng-repeat="model in pofilePic.getFiles(pofilePic.FILE_TYPES.VALID)" ng-click="model.deleteFile()">
+                                                      <span>Remove</span>
+                                                   </div>
+                                                   <div class="btn01 btn-primary-black-invitation text-hover black-signup01" ng-show="(pofilePic.getFiles(pofilePic.FILE_TYPES.VALID)).length<=0 && imageSrc" ng-click="imageSrc=''">
+                                                      <span>Remove</span>
+                                                   </div>
+                                                </div>
+                                                <div class="col-md-6 ">
+                                                   <div class="btn01 btn-primary-black-invitation text-hover black-signup01" ng-repeat="model in pofilePic.getFiles(pofilePic.FILE_TYPES.VALID)" >
+                                                      <span>Change</span>
+                                                      <droplet-upload-single ng-model="pofilePic" accept="image/*" name="pofilePic1" required></droplet-upload-single>
+                                                   </div>
+                                                   <div class="btn01 btn-primary-black-invitation text-hover black-signup01" ng-show="(pofilePic.getFiles(pofilePic.FILE_TYPES.VALID)).length<=0 && imageSrc" >
+                                                      <span>Change</span>
+                                                      <droplet-upload-single ng-model="pofilePic" accept="image/*" name="pofilePic2" required></droplet-upload-single>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-md-12 text-center" style="height:25px;">
+                                                <span class="text-danger" ng-class="{'text-success-blue':data.result==1}" ng-show="errormsg">
+                                                {{data.error}}
+                                                </span>
+                                             </div>
+                                             <br/>
+                                             <div class="col-md-12 text-center">
+                                                <button class="btn btn-primary-black-signup01" type="submit" ng-disabled="!profChange" ng-init="profChange=false">Update</button>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </form>
+                                    <div class="col-md-12">&nbsp;</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div id="profile" class="tab-pane fade account-timezone">
+                           <form name="cmpypublicform" novalidate ng-submit="errorScroll();(!cmpyimageSrc||cmpypublicform.$invalid)? submitted1=true:cmpyUpdate('public');" ng-init="submitted1 = false">
+                              <div class="row">
+                              <!-- <textarea rows="1" class="textarea-input subtitle-font font-weight300 textarea-des textarea" id="cmbtext" name="cmpyabt" ng-model="cmpyabt" ng-init="cmpyabt=''" placeholder="About Company"   maxlength="750" minlength="50" required ></textarea> -->
+                                 <div class="col-md-4 col-md-offset-4 ticket-top">
+                                    <div class="sub-nav-size-signup">Organization Logo</div>
+                                   <!--  <div class="nav-font01">Logo specs and dimesntions is a <br/>Every feature is meticulously crafted in way</div> -->
+                                    <br />
+                                    <div ng-hide="cmpyimageSrc" class="logo-update" droplet  ng-model="cmpylogo">
+                                       <div class="sub-nav-size-signup icon">
+                                          <a  data-toggle="tooltip" data-placement="right" title="Upload&nbsp;the&nbsp;Organization&nbsp;Logo " >
+                                          <img src="../../../../static/dashboard/images/info-icon.png" width="4%" />
+                                          </a>
+                                       </div>
+                                       <div class="sub-heading-signup" id="img-cmpylogo">
+                                          <img src="../../../../static/dashboard/images/image_upload_placeholder.png" class="image_upload_placeholder"/>
+                                          <div class="sub-nav-size-invitation">Logo</div>
+                                          <div class="nav-font-invitation">Drag and drop the file</div>
+                                          <div class="btn01 btn-primary-black-invitation text-hover black-signup01">
+                                             <span>Choose an Image</span>
+                                             <!-- <input type="file" img-validate ng-file-select="onFileSelect($files)" placeholder="Upload" file-model="cmpylogo" required accept="image/*" name="cmpylogo" class=" " img-validate  ng-model="cmpylogo" > -->
+                                             <droplet-upload-single ng-model="cmpylogo" accept="image/*" name="cmpylogo" ></droplet-upload-single>
+                                          </div>
+                                          <div class="nav-font-invitation01">Minimum resolution<br/>1024 <a class="cross01">X</a> 1024<br/>Aspect Ratio - 1:1<br/>Max size - 5 MB</div>
+                                       </div>
+                                    </div>
+                                    <br/>
+                                    <img ng-src="{{cmpyimageSrc|imagefilterQ1}}" class="image-width"  ng-show="cmpyimageSrc"  />
+                                    <span style="color:red" >
+                                       <span ng-show="cmpypublicform.cmpylogo.$error.invalidimg">Invalid Image File Type</span>
+                                       <span ng-show="cmpypublicform.cmpylogo.$error.minsizeval" ng-bind="'yara.invalidImgSize' | i18n">File size sholud not be Max Of 5MB</span>
+                                       <span ng-show="!cmpypublicform.cmpylogo.$error.minsizeval && cmpypublicform.cmpylogo.$error.ratioval" ng-bind="'yara.invalidImgR' | i18n:['1','1']">Aspect Ratio Should Be 1 : 1</span>
+                                       <span ng-show="!cmpypublicform.cmpylogo.$error.minsizeval && cmpypublicform.cmpylogo.$error.minDimension" ng-bind="'yara.invalidImgD' | i18n:['1024','1024']">Minimum resolution should be 1024 X 1024</span>
+                                        <span ng-show="submitted1 && !cmpyimageSrc" ng-bind="'yara.required' | i18n">Company Logo required</span>
+                                    </span>
+                                    <br/>
+                                    <div class="col-md-12 signup_margin">
+                                       <div class="col-md-6 ">
+                                          <div class="btn01 btn-primary-black-invitation text-hover black-signup01" ng-repeat="model in cmpylogo.getFiles(cmpylogo.FILE_TYPES.VALID)" ng-click="model.deleteFile()">
+                                             <span>Remove</span>
+                                          </div>
+                                          <div class="btn01 btn-primary-black-invitation text-hover black-signup01" ng-show="(cmpylogo.getFiles(cmpylogo.FILE_TYPES.VALID)).length<=0 && cmpyimageSrc" ng-click="cmpyimageSrc=''">
+                                             <span>Remove</span>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-6 ">
+                                          <div class="btn01 btn-primary-black-invitation text-hover black-signup01" ng-repeat="model in cmpylogo.getFiles(cmpylogo.FILE_TYPES.VALID)" >
+                                             <span>Change</span>
+                                             <droplet-upload-single ng-model="cmpylogo" accept="image/*" name="cmpylogo1" required></droplet-upload-single>
+                                          </div>
+                                          <div class="btn01 btn-primary-black-invitation text-hover black-signup01" ng-show="(cmpylogo.getFiles(cmpylogo.FILE_TYPES.VALID)).length<=0 && cmpyimageSrc" >
+                                             <span>Change</span>
+                                             <droplet-upload-single ng-model="cmpylogo" accept="image/*" name="cmpylogo2" required></droplet-upload-single>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <br/><br/><br/>
+                                    <div class="sub-nav-size-signup col-md-12  margin-bottom40 margin-top40">Cover Image</div>
+                                    <div class="nav-font01 padding0">&nbsp;<!-- Logo specs and dimesntions is a <br/>Every feature is meticulously crafted in way --></div>
+                                    <br />
+                                    <div ng-hide="imageSrc1" class="logo-update" droplet  ng-model="coverimg">
+                                       <div class="sub-nav-size-signup icon">
+                                          <a  data-toggle="tooltip" data-placement="right" title="The&nbsp;cover&nbsp;image&nbsp;will&nbsp;be&nbsp;displayed on&nbsp;your&nbsp;event" >
+                                          <img src="../../../../static/dashboard/images/info-icon.png" width="4%" />
+                                          </a>
+                                       </div>
+                                       <div class="sub-heading-signup">
+                                          <img src="../../../../static/dashboard/images/image_upload_placeholder.png" class="image_upload_placeholder"/>
+                                          <div class="sub-nav-size-invitation">Cover Image</div>
+                                          <div class="nav-font-invitation">Drag and drop the file</div>
+                                          <div class="btn01 btn-primary-black-invitation text-hover black-signup01">
+                                             <span>Choose an Image</span>
+                                             <!-- <input type="file" img-validate ng-file-select="onFileSelect($files)" placeholder="Upload" file-model="coverimg" required accept="image/*" name="coverimg" class=" " img-validate  ng-model="coverimg" > -->
+                                             <droplet-upload-single ng-model="coverimg" accept="image/*" name="coverimg" ></droplet-upload-single>
+                                          </div>
+                                          <div class="nav-font-invitation01">Minimum resolution<br/>2048 <a class="cross01">X</a> 1024<br/>Aspect Ratio - 2:1<br/>Max size - 5 MB</div>
+                                       </div>
+                                    </div>
+                                    <br/>
+                                    <img ng-src="{{imageSrc1|imagefilterQ1}}" class="image-width" id="img-coverimg" ng-show="imageSrc1"  />
+                                    <span style="color:red" >
+                                       <span ng-show="cmpypublicform.coverimg.$error.invalidimg">Invalid Image File Type</span>
+                                       <span ng-show="cmpypublicform.coverimg.$error.minsizeval" ng-bind="'yara.invalidImgSize' | i18n">File size sholud not be Max Of 5MB</span>
+                                       <span ng-show="!cmpypublicform.coverimg.$error.minsizeval && cmpypublicform.coverimg.$error.ratioval" ng-bind="'yara.invalidImgR' | i18n:['2','1']">Aspect Ratio Should Be 2 : 1</span>
+                                       <span ng-show="!cmpypublicform.coverimg.$error.minsizeval && cmpypublicform.coverimg.$error.minDimension" ng-bind="'yara.invalidImgD' | i18n:['2048','1024']">Minimum Size 2048 X 1024</span>
+                                       <!-- <span ng-show="submitted1 && !imageSrc1">required</span> -->
+                                    </span>
+                                    <br/>
+                                    <div class="col-md-12 signup_margin">
+                                       <div class="col-md-6 ">
+                                          <div class="btn01 btn-primary-black-invitation text-hover black-signup01" ng-repeat="model in coverimg.getFiles(coverimg.FILE_TYPES.VALID)" ng-click="model.deleteFile()">
+                                             <span>Reset</span>
+                                          </div>
+                                          <div class="btn01 btn-primary-black-invitation text-hover black-signup01" ng-show="(coverimg.getFiles(coverimg.FILE_TYPES.VALID)).length<=0 && imageSrc1" ng-click="imageSrc1='';cover_img=1">
+                                             <span>Remove</span>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-6 ">
+                                          <div class="btn01 btn-primary-black-invitation text-hover black-signup01" ng-repeat="model in coverimg.getFiles(coverimg.FILE_TYPES.VALID)" >
+                                             <span>Change</span>
+                                             <droplet-upload-single ng-model="coverimg" accept="image/*" name="coverimg1" required></droplet-upload-single>
+                                          </div>
+                                          <div class="btn01 btn-primary-black-invitation text-hover black-signup01" ng-show="(coverimg.getFiles(coverimg.FILE_TYPES.VALID)).length<=0 && imageSrc1" >
+                                             <span>Change</span>
+                                             <droplet-upload-single ng-model="coverimg" accept="image/*" name="coverimg2" required></droplet-upload-single>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <br/><br/><br/>
+                                    <div class="sub-nav-size-signup margin-bottom40 margin-top40 col-md-12">Organization Description</div>
+                                    <!-- <div class="nav-font01">Should be short. a cover image and dimesntions is a <br/>
+                                       Every feature is meticulously crafted in way
+                                    </div> -->
+                                    <textarea class="new-event-des11 text-center" id="cmbtext" name="cmpyabt"  ng-model="cmpyabt" ng-init="cmpyabt=''" placeholder="About Company"   required maxlength="750" minlength="100" ng-pattern="/\D{1}/"></textarea>
+                                    <!-- <textarea ng-model="cmpyabt"  name="cmpyabt"  placeholder="About Company" ng-init="cmpyabt=''" class="text-center input_boxtext-res-new"  required  maxlength="750" minlength="100" style="min-height: 150px;"></textarea> -->
+                                    <div class="col-md-12 text-center">
+                                       <span style="color:red;" ng-show="submitted1 && !cmpypublicform.cmpyabt.hasFocus && cmpypublicform.cmpyabt.$invalid ">
+                                       <span ng-show="cmpypublicform.cmpyabt.$error.required" ng-bind="'yara.required' | i18n">Required</span>
+                                       <span ng-show="cmpypublicform.cmpyabt.$error.minlength" ng-bind="'yara.descMinLenght' | i18n:['100','750']">Should contain 100-750 characters</span>
+                                       </span>
+                                       <span class="text-danger" ng-show="submitted1 && !cmpypublicform.cmpyabt.hasFocus && cmpypublicform.cmpyabt.$error.pattern" ng-bind="'yara.textrequired' | i18n ">Required</span>
+                                    </div>
+                                    <br/>
+                                    <br/><br/><br/>
+                                    <div class="sub-nav-size-signup">Social</div>
+                                    <!-- <div class="nav-font01">Should be short. a cover image and dimesntions is a <br/>
+                                       Every feature is meticulously crafted in way
+                                    </div> -->
+                                    <div class="col-lg-3">
+                                       <span class="fa fa-globe bootstrap-font-icon  bootstrap-font-icon-gray icon-width 001" data-toggle="modal" data-target="#myModal-social" id="001" ng-click="social_type='company-website'" data-container="body" data-toggle="" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." aria-hidden="true"></span>
+                                    </div>
+                                    <div class="col-lg-3" >  <span class="fa fa-twitter bootstrap-font-icon  bootstrap-font-icon-gray icon-width  002" data-toggle="modal" data-target="#myModal-social" id="002" ng-click="social_type='twitter'" aria-hidden="true"></span></div>
+                                    <div class="col-lg-3"><span class="fa fa-facebook bootstrap-font-icon  bootstrap-font-icon-gray icon-width  003" data-toggle="modal" data-target="#myModal-social" id="003" ng-click="social_type='facebook'" aria-hidden="true"></span></div>
+                                    <div class="col-lg-3"><span class="fa fa-linkedin bootstrap-font-icon  bootstrap-font-icon-gray icon-width  004" data-toggle="modal" data-target="#myModal-social" id="004" ng-click="social_type='linkedin'" aria-hidden="true"></span><br/><br/></div>
+                                    <div class="col-lg-3"><span class="fa fa-pinterest bootstrap-font-icon  bootstrap-font-icon-gray icon-width  005" data-toggle="modal" data-target="#myModal-social" id="005" ng-click="social_type='pinterest'" aria-hidden="true"></span></div>
+                                    <div class="col-lg-3"><span class="fa fa-tumblr bootstrap-font-icon  bootstrap-font-icon-gray icon-width  006" data-toggle="modal" data-target="#myModal-social" id="006" ng-click="social_type='tumblr'" aria-hidden="true"></span></div>
+                                    <div class="col-lg-3"><span class="fa fa-github bootstrap-font-icon  bootstrap-font-icon-gray icon-width  007" data-toggle="modal" data-target="#myModal-social" id="007" ng-click="social_type='git-hub'" aria-hidden="true"></span></div>
+                                    <div class="col-lg-3"><span class="fa fa-instagram bootstrap-font-icon  bootstrap-font-icon-gray icon-width  008" data-toggle="modal" data-target="#myModal-social" id="008" ng-click="social_type='instagram'" aria-hidden="true"></span><br/><br/><br/><br/><br/></div>
+                                    <!-- Social Icons Modal Window -->
+                                    <div class="modal fade" id="myModal-social" tabindex="-1" role="dialog" data-backdrop="static"  aria-labelledby="myModalLabel">
+                                       <div class="modal-dialog" role="document" style="margin-top:15%;">
+                                          <div class="modal-content">
+                                             <div class="modal-header-signup2">
+                                                <h4 class="modal-title text-left signup2-created" id="myModalLabel" >Add Social</h4>
+                                             </div>
+                                             <div class="modal-body-account">
+                                                <div ng-show="social_type=='company-website'">
+                                                   <div class="text-left account_font">Website</div>
+                                                   <input  type="text" ng-model="Tcmpyweb" name="cmpyweb" placeholder="http://" class="inputbox-signup2" maxlength="100" id="company-website_id" web-url >
+                                                   <div class="border-top-web01"></div>
+                                                   <span style="color:red;" ng-show="cmpypublicform.cmpyweb.$dirty && cmpypublicform.cmpyweb.$invalid ">
+                                                   <span ng-show="cmpypublicform.cmpyweb.$error.required" ng-bind="'yara.required' | i18n">Organization Website Required</span>
+                                                   </span>
+                                                </div>
+                                                <div ng-show="social_type=='facebook'">
+                                                   <div class="text-left account_font">Facebook</div>
+                                                   <input  type="text" ng-model="Tcmpyfb" name="cmpyfb"  fb-url class="inputbox-signup2"  maxlength="100" id="facebook_id">
+                                                   <div class="border-top-signup2"></div>
+                                                   <span style="color:red;" ng-show="cmpypublicform.cmpyfb.$dirty && cmpypublicform.cmpyfb.$invalid ">
+                                                   <span ng-show="cmpypublicform.cmpyfb.$error.required" ng-bind="'yara.required' | i18n">Organization Facebook Required</span>
+                                                   </span>
+                                                </div>
+                                                <div ng-show="social_type=='twitter'">
+                                                   <div class="text-left account_font">Twitter</div>
+                                                   <input  type="text" ng-model="Tcmpytwitter" name="cmpytwitter" twitter-url class="inputbox-signup2" maxlength="100" id="twitter_id">
+                                                   <div class="border-top-twitter"></div>
+                                                   <span style="color:red;" ng-show="cmpypublicform.cmpytwitter.$dirty && cmpypublicform.cmpytwitter.$invalid ">
+                                                   <span ng-show="cmpypublicform.cmpytwitter.$error.required" ng-bind="'yara.required' | i18n">Organization Twitter Required</span>
+                                                   </span>
+                                                </div>
+                                                <div ng-show="social_type=='linkedin'">
+                                                   <div class="text-left account_font">LinkedIn</div>
+                                                   <input  type="text" ng-model="Tcmpylink" name="cmpylink" linkedin-url class="inputbox-signup2" maxlength="100" id="linkedin_id">
+                                                   <div class="border-top-linkedin"></div>
+                                                   <span style="color:red;" ng-show="cmpypublicform.cmpylink.$dirty && cmpypublicform.cmpylink.$invalid ">
+                                                   <span ng-show="cmpypublicform.cmpylink.$error.required" ng-bind="'yara.required' | i18n">Organization LinkedIn Required</span>
+                                                   </span>
+                                                </div>
+                                                <div ng-show="social_type=='pinterest'">
+                                                   <div class="text-left account_font">Pinterest</div>
+                                                   <input  type="text" ng-model="Tcmpypinterest" name="cmpypinterest" pinterest-url  class="inputbox-signup2" id="pinterest_id" maxlength="100">
+                                                   <div class="border-top-pint"></div>
+                                                   <span style="color:red;" ng-show="cmpypublicform.cmpypinterest.$dirty && cmpypublicform.cmpypinterest.$invalid ">
+                                                   <span ng-show="cmpypublicform.cmpypinterest.$error.required" ng-bind="'yara.required' | i18n">Organization Pinterest Required</span>
+                                                   </span>
+                                                </div>
+                                                <div ng-show="social_type=='git-hub'">
+                                                   <div class="text-left account_font">Git-Hub</div>
+                                                   <input  type="text" ng-model="Tcmpygithub" name="cmpygithub"  github-url class="inputbox-signup2" id="git-hub_id" maxlength="100">
+                                                   <div class="border-top-git"></div>
+                                                   <span style="color:red;" ng-show="cmpypublicform.cmpygithub.$dirty && cmpypublicform.cmpygithub.$invalid ">
+                                                   <span ng-show="cmpypublicform.cmpygithub.$error.required" ng-bind="'yara.required' | i18n">Organization Git-Hub Required</span>
+                                                   </span>
+                                                </div>
+                                                <div ng-show="social_type=='tumblr'">
+                                                   <div class="text-left account_font">Tumblr</div>
+                                                   <div class="col-md-12">
+                                                      <div class="resizing-input">
+                                                         <span>https://</span>
+                                                         <span id="spantext" style="display:none;">https://</span>
+                                                         <input type="text" ng-model="Tcmpytumblr" placeholder="Tumblr Url" tumblr-url class="inputbox-account"  name="cmpytumblr" placeholder=""  id="tumblr_id"/>
+                                                         <span>.tumblr.com</span>
+                                                      </div>
+                                                   </div>
+                                                   <!-- <div class="border-top-web"></div> -->
+                                                   <span style="color:red;" ng-show="cmpypublicform.cmpytumblr.$dirty && cmpypublicform.cmpytumblr.$invalid ">
+                                                   <span ng-show="cmpypublicform.cmpytumblr.$error.required" ng-bind="'yara.required' | i18n">Organization Tumblr Required</span>
+                                                   </span>
+                                                </div>
+                                                <div ng-show="social_type=='instagram'">
+                                                   <div class="text-left account_font">Instagram</div>
+                                                   <input type="text" ng-model="Tcmpyinstagram" name="cmpyinstagram" instagram-url class="inputbox-signup2" id="instagram_id" maxlength="100">
+                                                   <div class="border-top-signup2"></div>
+                                                   <span style="color:red;" ng-show="cmpypublicform.cmpyinstagram.$dirty && cmpypublicform.cmpyinstagram.$invalid ">
+                                                   <span ng-show="cmpypublicform.cmpyinstagram.$error.required" ng-bind="'yara.required' | i18n">Organization Instagram Required</span>
+                                                   </span>
+                                                </div>
+                                             </div>
+                                             <div class="row" style="margin:0 15px;">
+                                                <div class="col-md-12 border-top">
+                                                   <div class="col-md-8">&nbsp;</div>
+                                                   <div class="col-md-2 pulse-margin"><button type="button" data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Cancel</button></div>
+                                                   <div class="col-md-2"><button type="button" class="btn01 btn-primary-black-pulse01 text-hover" ng-class="{'gray-color01':!isSocialSave}" ng-click="saveSocials()" ng-disabled="!isSocialSave" >Add</button></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!---modal window End- -->
+                                    <br/>
+                                    <div class="col-md-12 text-center" style="height:25px;">
+                                       <span class="text-danger" ng-show="errormsg1" ng-class="{'text-success-blue':data.result==1}">{{data.error}}</span>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                       <button type="submit" class="btn btn-primary-black-signup01"  ng-disabled="!cmpySocialUP" ng-init="cmpySocialUP=false">Update</button> <br/><br/>
+                                    </div>
+                                    <!-- <div class="text-danger" ng-show="errormsg1" ng-class="{'text-success-blue':data.result==1}">{{data.error}}</div>
+                                       <button type="submit" class="btn btn-primary-black-signup01"  ng-disabled="!cmpySocialUP" ng-init="cmpySocialUP=false">Update</button> -->
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                        <div id="details" class="tab-pane fade account-timezone">
+                           <form  style="" name="cmpydetailsform" novalidate ng-submit="(cmpydetailsform.$invalid || (states.length>0 && ((state | isEmpty) || state=='')) || ((country | isEmpty) || country==''))? submitted2=true: cmpyUpdate('contact');" ng-init="submitted2=false" accessible-form>
+                              <div class="container">
+                                 <div class="col-md-4 col-md-offset-4">
+                                    <div class="nav-size-signup nav-top01">Organization Address</div>
+                                    <div id="country_dropdown" class="dropdown signup_input">
+                                       <nav id="primary_nav_wrap">
+                                          <ul class="over01" >
+                                             <li>
+                                                <div class="col-md-12 container-remove-padding country-down" >
+                                                   <div class="col-md-10 col-md-offset-1 container-remove-padding">
+                                                      <span  id="menutitle" ng-style="((country | isEmpty) || country=='')?{'color':'#b5b5bd'}:{'color':'#555'}" class="subtitle-font">Select Country</span><input stopccp type="text" id="menutitlesearch" placeholder="Select Country" class="inputbox-signup subtitle-font" autocomplete="off"  ng-model="countrysearch" name="countrysearch">
+                                                   </div>
+                                                   <div class="col-md-1 container-remove-padding">
+                                                      <img src="../../static/dashboard/images/arrow-down.png?v=5e51b404929f5b6be7d35478804ffb57" class="caret01">
+                                                   </div>
+                                                </div>
+                                                <ul class="font-names mrg" >
+                                                   <li  ng-repeat="c in countrydata=(countries  |  custom:countrysearch ) | orderByDayNumber:'name' track by $index" ng-click="changeCountry(c,c.country_code)" ><a >{{c.name}}</a></li>
+                                                   <li ng-show="countrydata | isEmpty" ng-click="changeCountry('','')" ><a>No Result</a></li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </nav>
+                                    </div>
+                                    <span style="color:red" ng-show="submitted2">
+                                    <span ng-show="!cmpydetailsform.countrysearch.hasFocus && ((country | isEmpty) || country=='')" ng-bind="'yara.required' | i18n">Required</span>
+                                    </span>
+                                    <div id="state_dropdown" class="dropdown signup_input" style="z-index:8;" ng-class="{'signup_input02': ((submitted2 || cmpydetailsform.countrysearch.$touched) && ((country | isEmpty) || country==''))}" ng-show="states.length> 0 && !((country | isEmpty) || country=='')">
+                                       <nav id="primary_nav_wrap">
+                                          <ul  style="width:100%">
+                                             <li  >
+                                                <div class="col-md-12 container-remove-padding" style="border-bottom: 1px solid rgb(242, 242, 242); z-index: inherit;
+                                                   width: 100%;text-align:left">
+                                                   <div class="col-md-10 col-md-offset-1  container-remove-padding">
+                                                      <span  id="menutitlestate" ng-style="((state | isEmpty) || state=='')?{'color':'#b5b5bd'}:{'color'  :'#555'}" class="subtitle-font">Select State/Province</span>
+                                                      <input stopccp autocomplete="off"  type="text" id="menutitlestatesearch" class="inputbox-signup" placeholder="Select State/Province" ng-readonly="(country | isEmpty) || country=='' " ng-model="statesearch" name="statesearch">
+                                                   </div>
+                                                   <div class="col-md-1 container-remove-padding">
+                                                      <img src="../../static/dashboard/images/arrow-down.png"class="caret01">
+                                                   </div>
+                                                </div>
+                                                <ul class="font-names" style="margin-top:28px;">
+                                                   <li  ng-repeat="c in statedata=(states  | filter:statesearch:startsWith ) | orderBy " ng-click="changeState(c)" ><a >{{c}}</a></li>
+                                                   <li ng-show="statedata | isEmpty" ng-click="changeState('')" ><a>No Result</a></li>
+                                                </ul>
+                                             </li>
+                                          </ul>
+                                       </nav>
+                                    </div>
+                                    <span style="color:red" ng-show="submitted2">
+                                    <span ng-show="!cmpydetailsform.statesearch.hasFocus && (states.length>0 && ((state | isEmpty) || state==''))" ng-bind="'yara.required' | i18n">Required</span>
+                                    </span>
+                                    <span ng-show="states.length<=0">
+                                    <br/>
+                                    <input type="text" name="state3" ng-model="state" class="inputbox" placeholder="Region" ng-show="states.length<=0"> 
+                                    </span>
+                                    <br/>
+                                    <input type="text" ng-model="Addrline1" required name="Addrline1" placeholder="Line 1" class="inputbox">
+                                    <span style="color:red" ng-show="submitted2 && !cmpydetailsform.Addrline1.hasFocus && cmpydetailsform.Addrline1.$invalid">
+                                    <span ng-show="cmpydetailsform.Addrline1.$error.required" ng-bind="'yara.required' | i18n">Address Required</span>
+                                    </span>
+                                    <br/>
+                                    <input type="text" ng-model="Addrline2"  name="Addrline2" placeholder="Line 2" class="inputbox">
+                                    <br/>
+                                    <input type="text" ng-model="city" name="city" required placeholder="City" class="inputbox" maxlength="30">
+                                    <span style="color:red" ng-show="submitted2 && !cmpydetailsform.city.hasFocus && cmpydetailsform.city.$invalid">
+                                    <span ng-show="cmpydetailsform.city.$error.required" ng-bind="'yara.required' | i18n">City Required</span>
+                                    </span>
+                                    <br/>
+                                    <input type="text" ng-model="pincode" name="pincode" required placeholder="Zip" maxlength="16" class="inputbox">
+                                    <span style="color:red" ng-show="submitted2 && !cmpydetailsform.pincode.hasFocus && cmpydetailsform.pincode.$invalid">
+                                    <span ng-show="cmpydetailsform.pincode.$error.required" ng-bind="'yara.required' | i18n">Pincode Required</span>
+                                    </span>
+                                    <br/>
+                                    <div class="nav-size-signup nav-top01">Contact Info</div>
+                                    <!-- <div class="nav-font01">Password policy Yara is a <br/>
+                                       Every feature is meticulously crafted in way
+                                    </div> -->
+                                    <input type="text" ng-model="cmpyTitle" placeholder="Company Title" name="cmpytitle" required class="inputbox" maxlength="50">
+                                    <span style="color:red;" ng-show="submitted2 && !cmpydetailsform.cmpytitle.hasFocus && cmpydetailsform.cmpytitle.$invalid ">
+                                    <span ng-show="cmpydetailsform.cmpytitle.$error.required" ng-bind="'yara.required' | i18n">Company Tiltle Required</span>
+                                    </span>
+                                    <br/>
+                                    <input type="email" ng-model="companyEmail" placeholder="Contact Email" name="cmpyemail" required class="inputbox" validate-email>
+                                    <span style="color:red;" ng-show="submitted2 && !cmpydetailsform.cmpyemail.hasFocus && cmpydetailsform.cmpyemail.$invalid ">
+                                    <span ng-show="cmpydetailsform.cmpyemail.$error.required" ng-bind="'yara.required' | i18n">Company Email Required</span>
+                                    <span ng-show="cmpydetailsform.cmpyemail.$error.email" ng-bind="'yara.invalidEmail' | i18n">Invalid Email ID</span>
+                                    </span>
+                                    <br/>
+                                    <div class="col-md-12 container-remove-padding">
+                                       <div class="col-md-3 container-remove-padding">
+                                          <input type="text" ng-model="phDailCode" placeholder="+91" isdialcode name="phDailCode" required  class="inputbox" maxlength="8" >
+                                       </div>
+                                       <div class="col-md-8 col-md-offset-1 container-remove-padding">
+                                          <input type="text" ng-model="cmpyphone" placeholder="Contact Phone" name="cmpyphone" required is-number minlength="4" class="inputbox" maxlength="15">
+                                       </div>
+                                    </div>
+                                    <span style="color:red;" ng-show="submitted2 && !cmpydetailsform.cmpyphone.hasFocus && cmpydetailsform.cmpyphone.$invalid ">
+                                    <span ng-show="cmpydetailsform.cmpyphone.$error.required" ng-bind="'yara.required' | i18n">Company Phone Number Required</span>
+                                    <span ng-show="cmpydetailsform.cmpyphone.$error.minlength" ng-bind="'yara.invalidPH' | i18n">Enter Valid Phone number</span>
+                                    </span>
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-12 text-center" style="height:25px;">
+                                       <span class="text-danger" ng-show="errormsg2" ng-class="{'text-success-blue':data.result==1}">{{data.error}}</span>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                       <button type="submit"  class=" btn btn-primary-black-signup01" ng-disabled="!CmpyUpdate" ng-init="CmpyUpdate=false" ng-click="erroe3page()">Update</button>
+                                    </div>
+                                    <div class="col-md-12">&nbsp;</div>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!---footer--->
+         <!--  Image  Invalid Modal window -->
+         <div class="modal fade" id="myModal-invalid" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog top-collaborator" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Invalid Extension</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form  novalidate  >
+                           <div class="row">
+                              <div class="col-md-12 bg-collaborator" ng-bind="'yara.invalidImg'| i18n">
+                                 Invalid Extension Choose jpg, jpeg and png format.
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-10">
+                                    <div  class=" text-danger">&nbsp;</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Account Delete Modal window -->
+         <div class="modal fade bg-color010 " id="myModal-account" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel" style="overflow-y:hidden;">
+            <div class="modal-dialog top-collaborator" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Change Password</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <form novalidate ng-submit="resetPWform.$invalid || oldpwd == pwd ? RPsubmitted=true:resetpwd()" name="resetPWform" ng-init="RPsubmitted=false">
+                        <div class="row">
+                           <div ng-hide="RP" ng-init="RP=false">
+                              <div class="col-md-12 account_popup" >
+                                 <input type="password" stopccp ng-model="oldpwd" placeholder="Old Password " name="oldpwd" required class="inputbox  auto-fill"  >
+                                 <div class="col-md-12 text-center">
+                                    <span style="color:red;" ng-show="RPsubmitted   &&   !resetPWform.oldpwd.hasFocus && resetPWform.oldpwd.$invalid ">
+                                    <span ng-show="resetPWform.oldpwd.$error.required" ng-bind="'yara.required' | i18n">Required</span>
+                                    <br/> 
+                                    </span>
+                                 </div>
+                                 <br/>
+                                 <div class='pwdwidgetdiv' id='thepwddiv'></div>
+                                 <script  type="text/javascript" >
+                                    var pwdwidget = new PasswordWidget('thepwddiv','pwd');
+                                    pwdwidget.MakePWDWidget();
+                                 </script>
+                                 <div class="col-md-12 text-center">
+                                    <span style="color:red;" ng-show="RPsubmitted  || (  resetPWform.pwd.$touched &&  (resetPWform.pwd.$invalid || oldpwd == pwd))">
+                                    <span ng-show="!resetPWform.pwd.hasFocus && resetPWform.pwd.$error.required && RPsubmitted" ng-bind="'yara.required' | i18n">Required</span>
+                                    <span ng-show="!resetPWform.pwd.hasFocus && resetPWform.pwd.$error.minlength && resetPWform.pwd.$touched" ng-bind="'yara.passwordLength' | i18n">Password must be 8 characters long</span>
+                                    <span ng-show="!resetPWform.pwd.hasFocus &&  !resetPWform.pwd.$error.required && !resetPWform.pwd.$error.minlength && resetPWform.pwd.$error.pwdpolicy" ng-bind="'yara.passwordPolicy' | i18n">At least one uppercase and number is required</span>
+                                    <span ng-show="!resetPWform.pwd.hasFocus &&  !resetPWform.pwd.$error.required && !resetPWform.pwd.$error.minlength && !resetPWform.pwd.$error.pwdpolicy &&  oldpwd == pwd" ng-bind="'yara.passwordMatch' | i18n">Should not be the old password</span>
+                                    </span>
+                                 </div>
+                                 <br/>
+                                 <input type="password" stopccp ng-model="cnfpwd" placeholder="Confirm new password" name="cnfpwd" required equals="{{pwd}}" class="inputbox  auto-fill" ng-focus="cnferr=false" ng-blur="cnferr=true" >
+                                 <div class="col-md-12 text-center">
+                                    <span style="color:red;" ng-show="RPsubmitted  ||( resetPWform.cnfpwd.$touched && resetPWform.cnfpwd.$invalid )">
+                                    <span ng-show="resetPWform.cnfpwd.$error.required && RPsubmitted" ng-bind="'yara.required' | i18n">Required</span>
+                                    <span ng-show="!resetPWform.cnfpwd.hasFocus && resetPWform.cnfpwd.$error.equals" ng-bind="'yara.passwordNotMatch' | i18n">Password don't match</span>
+                                    <br/> 
+                                    </span>
+                                    <span class="text-center text-danger"  ng-class="{'text-success-blue':data.result==1}" ng-show="RPerrormsg">
+                                    {{data.error}}
+                                    </span>
+                                 </div>
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-8">
+                                    <div class=" text-danger">&nbsp; </div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Cancel</div>
+                                 </div>
+                                 <div class="col-md-2"><button type="submit" class="btn01 btn-primary-black-pulse01 text-hover" >Save</button></div>
+                              </div>
+                           </div>
+                           <div ng-show="RP" >
+                              <div class="col-md-12 bg-border-adspace text-center">
+                                 {{data.message}}
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-10">
+                                    <div class=" text-danger"> &nbsp; </div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Close</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!----crop image---->
+         <div class="modal fade" id="crop-image" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+                  <!-----loading indicator start------>
+                     <div class="col-md-12 position-absolute container-remove-padding general-bg-loader-pop" ng-hide="lodinghide">
+                        <img src="../../../static/dashboard/images/default5.gif" class="search-loading text-center general-loader">
+                     </div>
+                  <!-----loading indicator End------>
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Crop</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form novalidate  style="margin: 0px">
+                           <div class="row">
+                              <div class="col-md-12 bg-general crop-popup " ng-class="{'circle-image': cropPic=='profile'}">
+                                 <div class="image-editor crop-popup">
+                                    <input type="file" class="cropit-image-input">
+                                    <div class="cropit-preview"></div>
+                                    <div class="image-size-label">
+                                    </div>
+                                    <div class="crop-bottom"></div>
+                                    <div class="slider-wrapper">
+                                       <input type="range" class="cropit-image-zoom-input custom" min="0" max="1" step="0.01">
+                                    </div>
+                                    <div class="crop-top"></div>
+                                 </div>
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-8">
+                                    <div  class=" text-danger">&nbsp; </div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div class="btn01 btn-primary-black-pulse01 text-hover " data-dismiss="modal" aria-label="Close"  ng-click="resetCropImg()">Cancel</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  class="btn01 btn-primary-black-pulse01 text-hover" ng-click="setCropImg()">Crop</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- start footer-->
+         <div ng-include-template="/event_footer" copyright="true"></div>
+         <!--  <div ng-include="'event_footer.html'"></div> -->
+         <!---End footer---->
+      </div>
+      <script type="text/javascript">
+         window.history.forward();
+           function noBack() {
+            window.history.forward();}
+          $(document).on('click','.subtype_dropdown .primary_nav_wrap ul li',function(){
+             $(".subtype_dropdown img").removeClass();
+             $(".subtype_dropdown img").addClass('caret02'); 
+             $( ".subtype_dropdown .primary_nav_wrap ul li ul").css({
+               display:'list-item',
+               color: '#000',
+               'z-index':100
+             });
+         });
+         $(document).on('click',function(event){
+           var $trigger = $(".subtype_dropdown .primary_nav_wrap ul li");
+               if($trigger !== event.target && !$trigger.has(event.target).length && $(".subtitlesearch").css('display')!='none'){
+                  $( ".subtype_dropdown .primary_nav_wrap ul li ul").hide({
+                 display:'none',
+                 color: 'none',
+                 background: '#fff',
+                 'z-index':100
+             });
+                $(".subtype_dropdown img").removeClass();
+                $(".subtype_dropdown img").addClass('caret01'); 
+               }   
+         });
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+          function resizediv(){
+           var h =$(window).height();
+           $('.height-top').css("height",h+"px");
+          } 
+          resizediv();
+          $(window).resize(function(){
+           resizediv();
+          });
+         });
+      </script>
+      <script>
+         $(document).ready(function(){
+             $('[data-toggle="tooltip"]').tooltip();   
+         });
+      </script>
+      <script>
+         // window.setTimeout( function() {
+         //     $('.textarea-des').height( $('.textarea-des')[0].scrollHeight );
+         // }, 1);
+      </script>
+     <!--  <script>
+      setTimeout(function() {
+         function h(e) {
+             $(e).css({'height':'auto','overflow-y':'hidden'}).height(e.scrollHeight);
+         }
+         $('.textarea').each(function () {
+           h(this);
+         }).on('input', function () {
+           h(this);
+         });
+      }, 2500);
+         
+      </script> -->
+      <script>
+         $(window).load(function() {
+             //show();
+         });
+         // $(document).ready(function(){
+         //  $('#loading').hide();
+         //  $('#container').fadeIn();
+         // });
+         function show() {
+             $('#loading').hide();
+             $('#container').fadeIn();
+         };
+         
+         //setTimeout(show, 100000);
+          
+      </script>
+      <script>
+         (function(jQuery){
+           jQuery(window).load(function(){       
+             jQuery(".font-names").mCustomScrollbar({
+               theme:"dark",
+               scrollInertia: 400,
+               scrollButtons:{enable: true},   
+               autoHideScrollbar: false, 
+         
+               autoExpandScrollbar: true,
+               keyboard:{ enable: true }
+             });       
+           });
+         })(jQuery);
+      </script>
+      <script>
+         $(document).ready(function(){
+           $("#menutitlesearch").hide();
+           $("#menutitlestatesearch").hide();
+         $(document).on('click',"#country_dropdown .font-names  li",function() {
+           
+            $("#menutitlesearch").hide();
+            $("#menutitle").show();
+            $("#country_dropdown img").removeClass();
+            $("#country_dropdown img").addClass('caret01');  
+         });  
+         $(document).on('click',"#state_dropdown .font-names  li",function() {
+           
+            $("#menutitlestatesearch").hide();
+            $("#menutitlestate").show(); 
+            $("#state_dropdown img").removeClass();
+            $("#state_dropdown img").addClass('caret01'); 
+         });  
+           
+         
+         });
+      </script>
+      <script>
+         $(document).ready(function () {
+             var $inputs = $('.resizing-input');
+         
+             // Resize based on text if text.length > 0
+             // Otherwise resize based on the placeholder
+             function resizeForText(text) {
+                 var $this = $(this);
+                 if (!text.trim()) {
+                     text = $this.attr('placeholder').trim();
+                 }
+                 var $span = $this.parent().find('#spantext');
+                 $span.text(text);
+                 var $inputSize = $span.width();
+                 $this.css("width", $inputSize);
+             }
+         
+             $inputs.find('input').keypress(function (e) {
+                 if (e.which && e.charCode) {
+                     var c = String.fromCharCode(e.keyCode | e.charCode);
+                     var $this = $(this);
+                     resizeForText.call($this, $this.val() + c);
+                 }
+             });
+         
+             // Backspace event only fires for keyup
+             $inputs.find('input').keyup(function (e) { 
+                 if (e.keyCode === 8 || e.keyCode === 46) {
+                     resizeForText.call($(this), $(this).val());
+                 }
+             });
+         
+             $inputs.find('input').each(function () {
+                 var $this = $(this);
+                 resizeForText.call($this, $this.val())
+             });
+         });
+      </script>
+      {%endverbatim%}
+   </body>
+</html>

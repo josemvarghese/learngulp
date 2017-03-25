@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+	 <head>        <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">       <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">       <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">       <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">       <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">       <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">       <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">       <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">       <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">       <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">       <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">       <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">       <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+		<noscript>
+		<META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+		</noscript>
+		<meta http-equiv="X-Frame-Options" content="allow">
+		<!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+		<script src="../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+		<script src="../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+		<script src="../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script>
+
+		
+	</head>
+	<body ng-app="yara" ng-controller="PaymentController">
+		{%verbatim%}
+<form  name="customerData" ng-submit="transcation()" >
+<table width="40%" height="100" border='1' align="center">
+<caption>
+<font size="4" color="blue"><b>Integration Kit</b></font>
+</caption>
+</table>
+<table width="40%" height="100" border='1' align="center">
+<tr>
+<td>Parameter Name:</td>
+<td>Parameter Value:</td>
+</tr>
+<tr>
+<td colspan="2">Compulsory information</td>
+</tr>
+<tr>
+				<td>Merchant Id</td>
+				<td><input type="text" name="merchant_id" id="merchant_id" value="2954" ng-model="merchant_id"/> </td>
+			</tr>
+			<tr>
+				<td>Order Id</td>
+				<td><input type="text" name="order_id" value="" ng-model="order_id"/></td>
+			</tr>
+			<tr>
+				<td>Currency</td>
+				<td><input type="text" name="currency" value="INR" ng-model="currency" /></td>
+			</tr>
+			<tr>
+				<td>Amount</td>
+				<td><input type="text" name="amount" value="1.00" ng-model="amount"/></td>
+			</tr>
+			<tr>
+				<td>Redirect URL</td>
+				<td><input type="text" name="redirect_url"
+					value="https://yara.io/ccav_response_handler/" ng-model="redirect_url" />
+				</td>
+			</tr>
+			<tr>
+				<td>Cancel URL</td>
+				<td><input type="text" name="cancel_url"
+					value="https://yara.io/ccav_response_handler/" ng-model="cancel_url" />
+				</td>
+			</tr>
+			<tr>
+				<td>Language</td>
+				<td><input type="text" name="language" id="language" value="EN" ng-model="language"/></td>
+			</tr>
+			<tr>
+				<td colspan="2">Billing information(optional):</td>
+			</tr>
+			<tr>
+				<td>Billing Name</td>
+				<td><input type="text" name="billing_name" value="Peter"  ng-model="billing_name" /></td>
+			</tr>
+			<tr>
+				<td>Billing Address:</td>
+				<td><input type="text" name="billing_address"  ng-model="billing_address"
+					value="Santacruz" /></td>
+			</tr>
+			<tr>
+				<td>Billing City:</td>
+				<td><input type="text" name="billing_city" value="Mumbai"  ng-model="billing_email" /></td>
+			</tr>
+			<tr>
+				<td>Billing State:</td>
+				<td><input type="text" name="billing_state" value="MH"  ng-model="billing_state" /></td>
+			</tr>
+			<tr>
+				<td>Billing Zip:</td>
+				<td><input type="text" name="billing_zip" value="400054"  ng-model="billing_zip" /></td>
+			</tr>
+			<tr>
+				<td>Billing Country:</td>
+				<td><input type="text" name="billing_country" value="India"  ng-model="billing_country" />
+				</td>
+			</tr>
+			<tr>
+				<td>Billing Tel:</td>
+				<td><input type="text" name="billing_tel" value="0229874789" ng-model="billing_tel" />
+				</td>
+			</tr>
+			<tr>
+				<td>Billing Email:</td>
+				<td><input type="text" name="billing_email"  ng-model="billing_email"
+					value="testing@domain.com" /></td>
+			</tr>
+			<tr>
+				<td colspan="2">Shipping information(optional):</td>
+			</tr>
+			<tr>
+				<td>Shipping Name</td>
+				<td><input type="text" name="delivery_name" value="Sam"  ng-model="delivery_name"/>
+				</td>
+			</tr>
+			<tr>
+				<td>Shipping Address:</td>
+				<td><input type="text" name="delivery_address"  ng-model="delivery_address"
+					value="Vile Parle" /></td>
+			</tr>
+			<tr>
+				<td>Shipping City:</td>
+				<td><input type="text" name="delivery_city" value="Mumbai"  ng-model="delivery_city" />
+				</td>
+			</tr>
+			<tr>
+				<td>Shipping State:</td>
+				<td><input type="text" name="delivery_state" value="Maharashtra"  ng-model="delivery_state" />
+				</td>
+			</tr>
+			<tr>
+				<td>Shipping Zip:</td>
+				<td><input type="text" name="delivery_zip" value="400038"  ng-model="delivery_zip"/></td>
+			</tr>
+			<tr>
+				<td>Shipping Country:</td>
+				<td><input type="text" name="delivery_country" value="India"  ng-model="delivery_country"/>
+				</td>
+			</tr>
+			<tr>
+				<td>Shipping Tel:</td>
+				<td><input type="text" name="delivery_tel" value="0221234321"  ng-model="delivery_tel"/>
+				</td>
+			</tr>
+			<tr>
+				<td>Merchant Param1</td>
+				<td><input type="text" name="merchant_param1"  ng-model="merchant_param1"
+					value="additional Info." /></td>
+			</tr>
+			<tr>
+				<td>Merchant Param2</td>
+				<td><input type="text" name="merchant_param2"  ng-model="merchant_param2"
+					value="additional Info." /></td>
+			</tr>
+			<tr>
+				<td>Merchant Param3</td>
+				<td><input type="text" name="merchant_param3"  ng-model="merchant_param3"
+					value="additional Info." /></td>
+			</tr>
+			<tr>
+				<td>Merchant Param4</td>
+				<td><input type="text" name="merchant_param4"  ng-model="merchant_param4"
+					value="additional Info." /></td>
+			</tr>
+			<tr>
+				<td>Merchant Param5</td>
+				<td><input type="text" name="merchant_param5" ng-model="merchant_param5"
+					value="additional Info." /></td>
+			</tr>
+			<tr>
+				<td>Integration Type:</td>
+				<td><select name="integration_type" ng-model="integration_type">
+						<option value="iframe_normal">iframe_normal</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Promo Code:</td>
+				<td><input type="text" name="promo_code" value="" ng-model="promo_code"/></td>
+			</tr>
+			<tr>
+				<td>Customer Id:</td>
+				<td><input type="text" name="customer_identifier" ng-model="customer_identifier" value=""/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Checkout"></td>
+			</tr> 
+		</table>
+	</form>
+	<div ng-bind-html="paymenthtml">
+	</div>
+	{%endverbatim%}
+	<script type="text/javascript">
+		var app=angular.module('yara',['ngSanitize']).config(function($httpProvider) {
+    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+});
+		app.controller('PaymentController',['$scope','$http','$sce',function($scope,$http,$sce){
+
+$scope.paymenthtml=$sce.trustAsHtml('<iframe src="https://www.google.co.in/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8&client=ubuntu#q=%24sce.trustAsHtml+but+iframe+x-frame-options+deny+angularjs"></iframe>');
+
+  $scope.transcation= function(){
+    $http({
+          method:'Post',
+          url:'/ccav_request_handler/', 
+          data:{
+            merchant_id : $scope.merchant_id,
+            order_id : $scope.order_id, 
+            currency : $scope.currency, 
+            amount : $scope.amount, 
+            redirect_url : $scope.redirect_url,         
+            cancel_url : $scope.cancel_url,     
+            language : $scope.language/*, 
+            billing_name : $scope.billing_name, 
+            billing_address : $scope.billing_address,  
+            billing_city : $scope.billing_city, 
+            billing_state : $scope.billing_state, 
+            billing_zip : $scope.billing_zip, 
+            billing_country : $scope.billing_country, 
+            billing_tel : $scope.billing_tel, 
+            billing_email : $scope.billing_email,    
+            delivery_name : $scope.delivery_name, 
+            delivery_address : $scope.delivery_address,
+            delivery_city : $scope.delivery_city, 
+            delivery_state : $scope.delivery_state,
+            delivery_zip : $scope.delivery_zip,
+            delivery_country : $scope.delivery_country, 
+            delivery_tel : $scope.delivery_tel, 
+            merchant_param1 : $scope.merchant_param1,
+            merchant_param2 : $scope.merchant_param2,
+            merchant_param3 : $scope.merchant_param3,
+            merchant_param4 : $scope.merchant_param4,
+            merchant_param5 : $scope.merchant_param5,
+            integration_type : $scope.integration_type,
+            promo_code : $scope.promo_code,
+            customer_identifier : $scope.customer_identifier*/
+          }
+        }).then(function success(response){
+           console.log(response.data);
+           $scope.paymenthtml=$sce.trustAsHtml(response.data.response);
+        });
+  };
+}]);
+	</script>
+</body>
+</html>

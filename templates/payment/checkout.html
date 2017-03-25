@@ -1,0 +1,327 @@
+<html>
+   <title>YARA - Checkout</title>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <link rel="stylesheet" href="../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <!--<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyBiLVnHVmK-3nm_MZvug6NjZmMdOQX_cm8"></script>-->
+      <script src="../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> <script src="../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script>
+      <script src="../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script>
+      <script src="../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <script src="../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script>
+      <script src="../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../static/dashboard/scripts/app.js?v=cb63d6447409374df653b8707287ee36"></script>
+      <script src="../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>
+      <script src="../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>
+      <script src="../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>
+      <script src="../../../static/dashboard/scripts/ng-infinite-scroll.min.js?v=299bcea502c681c68093eb86f8c1bccf"></script>
+      <!-----spin.js?v=15bd8ebab23f21d14069a56395c87086---->
+      <script src="../../../static/dashboard/scripts/spin.js"></script>
+      <script src="../../../static/dashboard/scripts/spin.min.js?v=545405225c13b2f42ab103fca31a49b1"></script>
+      <!--UI style---->
+      <link rel="stylesheet" href="../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+         <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+      <style>
+         #foo {
+         background: transprant;
+         color: black;
+         width: 100%;
+         height: 55%;
+         margin: 0 0px;
+         float: left;
+         border-radius: 10px;
+         position: relative;
+         }
+      </style>
+   </head>
+   <body ng-app="yara">
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      {%verbatim%}
+      <div id="container" class="wrap01">
+         <div class="col-md-12 container-remove-padding" style="position:fixed;">
+            <div class="col-md-6 container-remove-padding">
+               <img src="../../../static/dashboard/images/bg-checkout.png?v=9b5df8e20e7bd652c7e479d313da6e2c" width="100%" class="height-top" style="position: absolute;"/>
+               <div class="checkout-step1 height-top text-center">
+                  <div class="checkout-bg-white">
+                     <div class="checkout-padding">
+                        <div class="$display">$event_name</div>
+                        <div class="text-left checkout-header-font">YARA $item</div>
+                        <div class="text-left nav-size-checkout">$item_type $count</div>
+                     </div>
+                     <div class="text-right01 checkout-padding">
+                        <div class="nav-size-checkout-price">Charge: $price $currency</div>
+                        <div class="nav-size-checkout-price">Tax: $tax $currency</div>
+                     </div>
+                     <div class="text-right01 checkout-padding01">
+                        <div class="nav-size-checkout">Total: $total_price $currency</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-6 container-remove-padding ">
+               <!-- <div id="loading">
+                  <div id="fountainG" style="left: 73%;">
+                    <div id="fountainG_1" class="fountainG"></div>
+                    <div id="fountainG_2" class="fountainG"></div>
+                    <div id="fountainG_3" class="fountainG"></div>
+                    <div id="fountainG_4" class="fountainG"></div>
+                    <div id="fountainG_5" class="fountainG"></div>
+                  </div>
+                    <div class="bg-loader col-md-6">
+                    </div>
+                  </div> -->
+               <!-- <div class="col-md-12"  >
+                  <div  ng-hide="issue" ng-init="issue=false" class="height-step2 text-center checkout-center">
+                    <a href="http://thevoris.com" target="new" class="navbar-brand-04" >
+                      <img src="../../static/dashboard/images/yara_logo.svg?v=ce9e59e2272c030c2954deb7d56f3267" class="checkout-logo"/>
+                    </a>
+                    <div class="buy-adspace-font space-top-bottom">Select the payment method</div>
+                    <div class="cursor-poi checkout-btn" ng-click="issue=true">Credit Card</div><br/>
+                    <div class="cursor-poi checkout-btn" ng-click="issue=true">Debit Card</div>
+                    <div class="ticket-top-btn1 cursor-poi checkout-cancel">Cancel</div>
+                    <div class="ticket-top cursor-poi">Refund Policy <span class="glyphicon glyphicon-menu-right icon-top icon-size"></span></div>
+                  </div>
+                  </div> -->
+               <div class="col-md-12 container-remove-padding"  >
+                  <!-- ng-show="issue" -->
+                  <div class="height-step2 text-center checkout-center">
+                     <div class="checkout-bg-color"></div>
+                     <div class="navbar-brand-04" style="z-index:9;">
+                        <a  href="http://yara.io" target="new" >
+                        <img src="../../static/dashboard/images/yara_logo.svg" class="checkout-logo"/>
+                        </a>
+                     </div>
+                     <div class="buy-adspace-font" style="z-index:9;">Fill your card details.</div>
+                     <div class="col-md-12">
+                        <section id="foo"></section>
+                        <!--Start iframe -->
+                        <center>
+                           <iframe  width="482" height="500" scrolling="No" frameborder="0"  id="paymentFrame" src="$ccav_post_url&merchant_id=$mid&encRequest=$encReq&access_code=$xscode"></iframe>
+                        </center>
+                        <!--End iframe-->  
+                     </div>
+                     <br/><br/><br/>
+                     <!--<div class="cursor-poi checkout-btn01">Pay</div>-->
+                  </div>
+               </div>
+            </div>
+         </div>
+      <!-- Month Modal window -->
+      <div class="modal fade bg-color010 " id="checkout-month" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog gatekeeper-popup" role="document" >
+            <div class="modal-content modal-padding" >
+               <div class="modal-header-top ">
+                  <h4 class="modal-title modal-heading" id="myModalLabel" >Select Expiry Month</h4>
+               </div >
+               <div class="modal-body1">
+                  <div  >
+                     <form>
+                        <div class="row">
+                           <div class="col-md-12 bg-collaborator text-center active-pack01" >
+                              <div class="col-md-2 checkout-month active-month">Jan<br/>(01)</div>
+                              <div class="col-md-2 checkout-month active-month">Feb<br/>(02)</div>
+                              <div class="col-md-2 checkout-month active-month">Mar<br/>(03)</div>
+                              <div class="col-md-2 checkout-month active-month">Apr<br/>(04)</div>
+                              <div class="col-md-2 checkout-month active-month">May<br/>(05)</div>
+                              <div class="col-md-2 checkout-month active-month">Jun<br/>(06)</div>
+                              <div class="col-md-2 checkout-month active-month">Jul<br/>(07)</div>
+                              <div class="col-md-2 checkout-month active-month">Aug<br/>(08)</div>
+                              <div class="col-md-2 checkout-month active-month">Sep<br/>(09)</div>
+                              <div class="col-md-2 checkout-month active-month">Oct<br/>(10)</div>
+                              <div class="col-md-2 checkout-month active-month">Nov<br/>(11)</div>
+                              <div class="col-md-2 checkout-month active-month">Dec<br/>(12)</div>
+                           </div>
+                           <div class="col-md-12 border-top">
+                              <div class="col-md-10">
+                                 <div class=" text-danger">&nbsp; </div>
+                              </div>
+                              <!--
+                                 <div class="col-md-2 pulse-margin"><div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Cancel</div></div> -->
+                              <div class="col-md-2">
+                                 <div  class="btn01 btn-primary-black-pulse01 text-hover">Save</div>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Success Modal window -->
+      <div class="modal fade bg-color010 " id="checkout-success" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog gatekeeper-popup" role="document" >
+            <div class="modal-content modal-padding" >
+               <div class="modal-header-top ">
+                  <h4 class="modal-title modal-heading" id="myModalLabel" >Success</h4>
+               </div >
+               <div class="modal-body1">
+                  <div  >
+                     <form>
+                        <div class="row">
+                           <div class="col-md-12 bg-collaborator text-center" >
+                              Payment Successful
+                           </div>
+                           <div class="col-md-12 border-top">
+                              <div class="col-md-10">
+                                 <div class=" text-danger">&nbsp; </div>
+                              </div>
+                              <div class="col-md-2 pulse-margin">
+                                 <div  data-dismiss="modal" aria-label="Close" class="btn01 btn-primary-black-pulse01 text-hover">Dismiss</div>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+       <script>
+         $(window).load(function() {
+             //show();
+         });
+         $(document).ready(function(){
+          $('#loading').hide();
+          $('#container').fadeIn();
+         });
+         function show() {
+             $('#loading').hide();
+             $('#container').fadeIn();
+         };
+         
+         //setTimeout(show, 100000);
+          
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+           $('iframe#paymentFrame').load(function() {
+             window.addEventListener('message', function(e) {
+                 $("#paymentFrame").css("height",e.data['newHeight']+'px');
+                   }, false);
+             });
+         });
+      </script>
+      <script>
+         $(window).load(function() {
+             //show();
+         });
+         $('#paymentFrame').ready(function(){
+          //$('#foo').hide();
+          //$('#container').fadeIn();
+         });
+         $('#paymentFrame').load(function show() {
+             $('#foo').hide();
+             //$('#container').fadeIn();
+         });
+         
+         //setTimeout(show, 100000);
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+             $('iframe#paymentFrame').load(function() {
+                  window.addEventListener('message', function(e) {
+                      $("#paymentFrame").css("height",e.data['newHeight']+'px');
+                   }, false);
+              });
+         });
+      </script>
+      <script>
+         $(document).ready(function () {
+             $('.active-month').bind('click', function() {
+                 // remove the active class from all elements with active class
+                 $('.active').removeClass('active')
+                 // add active class to clicked element
+                 $(this).addClass('active');
+             });
+         });
+          
+      </script>
+      <script>
+         // $( ".active-month" ).click(function() {
+         //   var text = $( this ).text();
+         //   $( ".month" ).val( text );
+         // });
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+          function resizediv(){
+           var h =$(window).height();
+           $('.height-top').css("height",h+"px");
+          }
+          resizediv();
+          $(window).resize(function(){
+           resizediv();
+          });
+         });
+      </script>
+      <script>
+         var opts = {
+           lines: 17,            // The number of lines to draw
+           length: 12,            // The length of each line
+           width: 1,             // The line thickness
+           radius: 16,           // The radius of the inner circle
+           scale: 1.0,           // Scales overall size of the spinner
+           corners: 1,           // Roundness (0..1)
+           color: '#000',        // #rgb or #rrggbb
+           opacity: 1/4,         // Opacity of the lines
+           rotate: 0,            // Rotation offset
+           direction: 1,         // 1: clockwise, -1: counterclockwise
+           speed: 1,             // Rounds per second
+           trail: 100,           // Afterglow percentage
+           fps: 20,              // Frames per second when using setTimeout()
+           zIndex: 2e9,          // Use a high z-index by default
+           className: 'spinner', // CSS class to assign to the element
+           top: '50%',           // center vertically
+           left: '50%',          // center horizontally
+           shadow: false,        // Whether to render a shadow
+           hwaccel: false,       // Whether to use hardware acceleration (might be buggy)
+           position: 'absolute'  // Element positioning
+         };
+         var target = document.getElementById('foo');
+         var spinner = new Spinner(opts).spin(target);
+      </script>
+      {%endverbatim%}
+   </body>
+</html>

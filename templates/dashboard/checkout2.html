@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+	 <head>        <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">       <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">       <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">       <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">       <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">       <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">       <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">       <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">       <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">       <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">       <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">       <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">       <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+		<noscript>
+    <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+    </noscript>
+		<!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+		<script src="../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+
+		<script src="../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+		<script type="text/javascript" src="../../static/dashboard/scripts/2co.min.js?v=b923d190bb566bcf9a1860a8880d3ba9"></script>
+		
+	</head>
+	<body ng-app="yara" ng-controller="Payment2Controller">
+		<form id="myCCForm" ng-submit="requestToken()"  method="post">
+  <input name="token" type="hidden" value="" />
+  <div>
+    <label>
+      <span>Card Number</span>
+      <input id="ccNo" type="text" value=""  ng-model="ccNo" autocomplete="off" required />
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Expiration Date (MM/YYYY)</span>
+      <input id="expMonth" ng-model="expMonth" type="text" size="2" required />
+    </label>
+    <span> / </span>
+    <input id="expYear" ng-model="expYear" type="text" size="4" required />
+  </div>
+  <div>
+    <label>
+      <span>CVC</span>
+      <input id="cvv" ng-model="cvv" type="text" value="" autocomplete="off" required />
+    </label>
+  </div>
+  <input type="submit" value="Submit Payment" />
+</form>
+<script>
+var app=angular.module('yara',[]);
+app.controller('Payment2Controller',['$scope','$http',function($scope,$http){
+	var successCallback = function(data) {
+    	//var myForm = document.getElementById('myCCForm');
+    	console.log(data.response.token.token);
+    	// Set the token as the value for the token input
+    	//myForm.token.value = data.response.token.token;
+    	$http({
+          method:'Post',
+          url:'/2checkout/', 
+          data:{
+           token:data.response.token.token,
+           currency:'USD'
+          }
+        }).then(function success(response){
+           console.log(response.data);
+        },function error(response){
+        	console.log(response);
+        });
+    	// IMPORTANT: Here we call `submit()` on the form element directly instead of using jQuery to prevent and infinite token request loop.
+    	//myForm.submit();
+  	};
+
+  	// Called when token creation fails.
+  	var errorCallback = function(data) {
+  		console.log(data);
+	    if (data.errorCode === 200) {
+      	// This error code indicates that the ajax call failed. We recommend that you retry the token request.
+    	} else {
+      		alert(data.errorMsg);
+    	}
+  	};
+	TCO.loadPubKey('sandbox');
+	$scope.requestToken= function(){
+		var args = {
+      		sellerId: "102822715",
+      		publishableKey: "7A911E0C-150A-41F2-A34A-AC85C3F055F2",
+      		ccNo: $scope.ccNo,
+      		cvv: $scope.cvv,
+      		expMonth: $scope.expMonth,
+      		expYear: $scope.expMonth
+    	};
+    	//console.log(args);
+    	TCO.requestToken(successCallback, errorCallback, args);
+	};
+  
+}]);
+</script>
+	</body>
+</html>

@@ -1,0 +1,757 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <link rel="stylesheet" href="../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <!-- <script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyBiLVnHVmK-3nm_MZvug6NjZmMdOQX_cm8"></script> -->
+      <script src="../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+      <script src="../../../static/dashboard/scripts/raphael-min.js?v=33cdc826cac84b7d06034f86fce41bee"></script>
+      <!-- Chart gatekeeper-->
+      <link rel="stylesheet" href="../../../static/dashboard/xchart/xcharts.css?v=1a770f6edcda1481146fa7458c9ad5ff">
+      <link rel="stylesheet" href="../../../static/dashboard/xchart/xcharts.min.css?v=407f6ba8eca743e0e0366ba8fe0794aa">
+      <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      <script src="../../../static/dashboard/xchart/xcharts.js?v=df18d484a9b6196811aa261b5af1f03f"></script>
+      <!--End chart---->
+      <link rel="stylesheet" href="../../../static/dashboard/jprogress/jprogress.css">
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> <script src="../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script> <script src="../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> <script src="../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <script src="../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script>
+      <script src="../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../static/dashboard/scripts/app.js?v=cb63d6447409374df653b8707287ee36"></script>
+      <script src="../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script> 
+      <script src="../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>
+      <script src="../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>                  <script src="../../../static/dashboard/scripts/ng-infinite-scroll.min.js?v=299bcea502c681c68093eb86f8c1bccf"></script>
+      <script src="../../../static/dashboard/jprogress/jprogress.js" type="text/javascript"></script>        
+      <!--UI style---->
+      <link rel="stylesheet" href="../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+   </head>
+   <body ng-app="yara" ng-controller="EventDecipherCtrl">
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      {%verbatim%}
+      <div id="container" class="wrap01">
+         <!---header-->
+         <div class="container navbar-fixed-top border" >
+            <div class="col-md-12 white text-center ">
+               <div class="col-md-1 nav-color main-header-signup01" style="text-align:left;"><a href="" back-button><img src="../../../static/dashboard/images/yara_logo.svg?v=ce9e59e2272c030c2954deb7d56f3267"width="100%"/></a></div>
+               <div class="col-md-1 nav-color sub-header-border">&nbsp;</div>
+               <div class="col-md-3 nav-color sub-header-small-happy">
+                  <div class="happy-font">Decipher</div>
+                  <div class="kitName">{{dechipertotdata.name}}</div>
+                  <div class="kit-description"><span>{{setOffset(dechipertotdata.start_date, dechipertotdata.eo)|date:'MMMM dd, yyyy'}}</span><span ng-hide="checkdate(dechipertotdata.start_date,dechipertotdata.end_date,dechipertotdata.eo)"> to</span> <span ng-hide="checkdate(dechipertotdata.start_date,dechipertotdata.end_date,dechipertotdata.eo)">{{setOffset(dechipertotdata.end_date, dechipertotdata.eo)|date:'MMMM dd, yyyy'}}</span> </div>
+               </div>
+            </div>
+         </div>
+         <!----end header---->
+         <div class="container">
+            <div class="row ">
+               <div class="col-md-12 text-center" style="padding-right:0px; padding-left:0px;">
+                  <ul class="container nav nav-tabs ">
+                     <li class="active col-md-2"><a target="_self" data-toggle="tab" href="#general" class="decipher-event text-hover">General</a></li>
+                     <li class="col-md-2"><a  target="_self" data-toggle="tab" href="#people" class="decipher-event text-hover">People</a></li>
+                     <li class="col-md-2"><a  target="_self" data-toggle="tab" href="#exchanges" class="decipher-event text-hover">Exchanges</a></li>
+                     <li class="col-md-2"><a  target="_self" data-toggle="tab" href="#gatekeeper" class="decipher-event text-hover">GateKeeper</a></li>
+                     <li class="col-md-2"><a  target="_self" data-toggle="tab" href="#engagements" class="decipher-event text-hover">Engagements</a></li>
+                     <li class="col-md-2"><a  target="_self" data-toggle="tab" href="#space" class="decipher-event text-hover">AdSpace</a></li>
+                  </ul>
+                  <div class="tab-content height-top">
+                     <div id="general" class="tab-pane ticket-top-btn1 fade in active">
+                        <div class="col-md-12  ticket-top">
+                           <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-spengage"  style="cursor: auto;">
+                              <div class="col-md-12 space-decipher top-nav-header gp-padding-decipher01">Feedback from Delegates</div>
+                              <div class="col-md-12 general-bottom">
+                                 <div class="col-md-2 space-decipher">
+                                    <div class="decipher-feedback margin-auto bg-color-decipher-pink">
+                                       <div class="dashboardWell-agreement decipher-circle">{{dechiper.feedback.not_bad}}%</div>
+                                    </div>
+                                    <div class="text-center top-nav-title">Not bad</div>
+                                 </div>
+                                 <div class="col-md-2 space-decipher">
+                                    <div class="decipher-feedback margin-auto bg-color-decipher-red">
+                                       <div class="dashboardWell-agreement decipher-circle">{{dechiper.feedback.okay}}%</div>
+                                    </div>
+                                    <div class="text-center top-nav-title">Okay</div>
+                                 </div>
+                                 <div class="col-md-2 space-decipher">
+                                    <div class="decipher-feedback margin-auto bg-color-decipher-lightblue">
+                                       <div class="dashboardWell-agreement decipher-circle">{{dechiper.feedback.good}}%</div>
+                                    </div>
+                                    <div class="text-center top-nav-title">Good</div>
+                                 </div>
+                                 <div class="col-md-2 space-decipher">
+                                    <div class="decipher-feedback margin-auto bg-color-decipher-blue">
+                                       <div class="dashboardWell-agreement decipher-circle">{{dechiper.feedback.great}}%</div>
+                                    </div>
+                                    <div class="text-center top-nav-title">Great</div>
+                                 </div>
+                                 <div class="col-md-2 space-decipher">
+                                    <div class="decipher-feedback margin-auto bg-color-decipher-lightgreen">
+                                       <div class="dashboardWell-agreement decipher-circle">{{dechiper.feedback.excellent}}%</div>
+                                    </div>
+                                    <div class="text-center top-nav-title">Epic</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12  ">
+                           <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-decipher"  style="cursor: auto;">
+                              <div class="col-md-12 space-decipher top-nav-header01 decipher-padding"> Average Attendee Engagement</div>
+                              <div class="col-md-12 space-decipher">
+                                 <div class="progressbars-decipher progress_single_decipher" progress="{{dechiper.average_attendee_engagement}}%">
+                                    <span class="progress-bar-decipher" ng-bind="' '+dechiper.average_attendee_engagement+ '%'" ng-class="dechiper.average_attendee_engagement>10?'':'color-black'"></span>
+                              </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12" ng-if="dechiper.top_session!=null">
+                           <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-decipher"  style="cursor: auto;">
+                              <div class="col-md-12 space-decipher top-nav-header01 decipher-padding"> Top Rated Session</div>
+                              <div class="col-md-12 space-decipher">
+                                 <div class="top-nav-sub-header">{{is_time_format_24?(setOffset(dechiper.top_session.start_time, dechiper.event_offset)|date:'MMMM dd, yyyy HH:mm'):(setOffset(dechiper.top_session.start_time, dechiper.event_offset)|date:'MMMM dd, yyyy hh:mm a')}} to {{is_time_format_24?(setOffset(dechiper.top_session.end_time, dechiper.event_offset)|date:'HH:mm'):(setOffset(dechiper.top_session.end_time, dechiper.event_offset)|date:'hh:mm a')}}</div>
+                                 <div class="header-adspace-title">{{dechiper.top_session.tittle}}</div>
+                                 <div class="top-nav-sub-header">Speakers: <span ng-repeat="dd in dechiper.top_session.speakers">{{dd.name}}<span ng-show="!$last">, </span></span></div>
+                                 <div class="top-nav-sub-header">Track:  {{dechiper.top_session.track.name}}</div><br/>
+                                 <div class="top-nav-sub-header word-wrap-break">{{dechiper.top_session.description}}</div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12" ng-if="dechiper.top_speaker!=null">
+                           <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-decipher"  style="cursor: auto;">
+                              <div class="col-md-12 space-decipher top-nav-header01 decipher-padding"> Top Rated Speaker</div>
+                              <div class="col-md-12 space-decipher">
+                                 <div class="col-md-2" >
+                                    <img ng-src="{{dechiper.top_speaker.profile_picture|imagefilterQ1}}" class="decipher-speaker"/>
+                                 </div>
+                                 <div class="col-md-10 dacipher-speaker01">
+                                    <div class="top-nav-sub-header" ng-bind="dechiper.top_speaker.full_name">full_name</div>
+                                    <div class="top-nav-sub-header" ng-bind="dechiper.top_speaker.designation">designation</div>
+                                    <div class="top-nav-sub-header" ng-bind="dechiper.top_speaker.company">company</div>
+                                    <div class="top-nav-sub-header"  ng-bind="dechiper.top_speaker.email">email</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12" ng-show="dechiper.top_sponsor!=null">
+                           <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-decipher"  style="cursor: auto;">
+                              <div class="col-md-12 space-decipher top-nav-header01 decipher-padding"> Top Rated Sponsor</div>
+                              <div class="col-md-12 space-decipher">
+                                 <div class="top-nav-sub-header" ng-bind="dechiper.top_sponsor.name"></div>
+                                 <div class="top-nav-sub-header"  ng-bind="dechiper.top_sponsor.sponsorship_type">sponsorship_type</div>
+                                 <div class="top-nav-sub-header">Number of Posts: <span ng-bind="dechiper.top_sponsor.number_of_posts"></span></div>
+                                 <div class="top-nav-sub-header">Number of Coupons: <span ng-bind="dechiper.top_sponsor.number_of_coupons"></span></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12" ng-show="dechiper.top_exhibitor!=null">
+                           <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-decipher"  style="cursor: auto;">
+                              <div class="col-md-12 space-decipher top-nav-header01 decipher-padding"> Top Rated Exhibitor</div>
+                              <div class="col-md-12 space-decipher">
+                                 <div class="top-nav-sub-header" ng-bind="dechiper.top_exhibitor.name"> name</div>
+                                 <div class="top-nav-sub-header" ng-bind="dechiper.top_exhibitor.location">location</div>
+                                 <div class="top-nav-sub-header">Number of Posts:  <span ng-bind="dechiper.top_exhibitor.number_of_posts"></span></div>
+                                 <div class="top-nav-sub-header">Number of Coupons: <span ng-bind="dechiper.top_exhibitor.number_of_coupons"></span></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 decipher-footer-space" ng-show="dechiper.most_used_coupon!=null">
+                           <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-decipher"  style="cursor: auto;">
+                              <div class="col-md-12 space-decipher top-nav-header01 decipher-padding"> Most used Coupon</div>
+                              <div class="col-md-12 space-decipher">
+                                 <div class="top-nav-sub-header">Posted by: <span ng-bind="dechiper.most_used_coupon.created_by"></span></div>
+                                 <div class="header-adspace-title" ng-bind="dechiper.most_used_coupon.name"></div>
+                                 <div class="top-nav-sub-header">Usage Count: <span ng-bind="dechiper.most_used_coupon.number_of_redeems"></span></div><br/>
+                                 <div class="top-nav-sub-header word-wrap-break"  ng-bind="dechiper.most_used_coupon.description"></div>
+                                 
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="people" class="tab-pane ticket-top-btn1 fade">
+                        <div class="col-md-12  ticket-top">
+                           <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-spengage"  style="cursor: auto;">
+                              <div class="col-md-12 space-decipher top-nav-header gp-padding-decipher01">Status</div>
+                              <div class="col-md-12 ">
+                                 <div class="col-md-8 col-md-offset-2 general-bottom">
+                                    <div class="col-md-4">
+                                       <div class="decipher-feedback margin-auto bg-color-decipher-lightblue">
+                                          <div class="dashboardWell-agreement decipher-circle">{{dechiper.user_status.total_attendees}}</div>
+                                       </div>
+                                       <div class="text-center top-nav-title">Total</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="decipher-feedback margin-auto bg-color-decipher-lightblue">
+                                          <div class="dashboardWell-agreement decipher-circle">{{dechiper.user_status.yara_users_count}}</div>
+                                       </div>
+                                       <div class="text-center top-nav-title">Used YARA</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="decipher-feedback margin-auto bg-color-decipher-lightblue">
+                                          <div class="dashboardWell-agreement decipher-circle">{{dechiper.user_status.non_yara_users_count}}</div>
+                                       </div>
+                                       <div class="text-center top-nav-title">Not Used</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12  ">
+                           <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-decipher"  style="cursor: auto;">
+                              <div class="col-md-12 space-decipher top-nav-header01 decipher-padding">Gender</div>
+                              <div class="col-md-12 space-decipher-event">
+                                 <div class="progressbars-decipher progress_single_decipher_female" progress="{{dechiper.gender_data.female_perc}}%"><span class="progress-bar-decipher" ng-bind="' '+dechiper.gender_data.female_perc + '%'" ng-class="dechiper.gender_data.female_perc>10?'':'color-black'"></span> </div>
+                                 Female
+                              </div>
+                              <div class="col-md-12 space-decipher-event">
+                                 <div class="progressbars-decipher progress_single_decipher_male" progress="{{dechiper.gender_data.male_perc}}%"><span class="progress-bar-decipher" ng-bind="' '+dechiper.gender_data.male_perc + '%'" ng-class="dechiper.gender_data.male_perc>10?'':'color-black'"></span></div>
+                                 Male
+                              </div>
+                              <div class="col-md-12 space-decipher-event" ng-show="dechiper.gender_data.others_perc>0">
+                                 <div class="progressbars-decipher progress_single_decipher" progress="{{dechiper.gender_data.others_perc}}%"><span class="progress-bar-decipher" ng-bind="' '+dechiper.gender_data.others_perc + '%'" ng-class="dechiper.gender_data.others_perc>10?'':'color-black'"></span></div>
+                                 Other
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12" ng-show="dechiper.age_groups!=null">
+                           <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-decipher"  style="cursor: auto;">
+                              <div class="col-md-12 space-decipher top-nav-header01 decipher-padding">Age Group</div>
+                              <div class="col-md-12 space-decipher-event">
+                                 <div class="progressbars-decipher progress_single_decipher" progress="{{dechiper.age_groups.group_1.count}}%"><span class="progress-bar-decipher" ng-bind="' '+dechiper.age_groups.group_1.count+'%'"  ng-class="dechiper.age_groups.group_1.count>10?'':'color-black'"></span> </div>
+                                 13-20
+                              </div>
+                              <div class="col-md-12 space-decipher-event">
+                                 <div class="progressbars-decipher progress_single_decipher" progress="{{dechiper.age_groups.group_2.count}}%"><span class="progress-bar-decipher" ng-bind="' '+dechiper.age_groups.group_2.count+'%'" ng-class="dechiper.age_groups.group_2.count>10?'':'color-black'"></span></div>
+                                 20-25
+                              </div>
+                              <div class="col-md-12 space-decipher-event">
+                                 <div class="progressbars-decipher progress_single_decipher" progress="{{dechiper.age_groups.group_3.count}}%"><span class="progress-bar-decipher" ng-bind="' '+dechiper.age_groups.group_3.count+'%'" ng-class="dechiper.age_groups.group_3.count>10?'':'color-black'"></span></div>
+                                 25-30
+                              </div>
+                              <div class="col-md-12 space-decipher-event">
+                                 <div class="progressbars-decipher progress_single_decipher" progress="{{dechiper.age_groups.group_4.count}}%"><span class="progress-bar-decipher"  ng-bind="' '+dechiper.age_groups.group_4.count+'%'" ng-class="dechiper.age_groups.group_4.count>10?'':'color-black'"></span></div>
+                                 30-35
+                              </div>
+                              <div class="col-md-12 space-decipher-event">
+                                 <div class="progressbars-decipher progress_single_decipher" progress="{{dechiper.age_groups.group_5.count}}%"><span class="progress-bar-decipher" ng-bind="' '+dechiper.age_groups.group_5.count+'%'" ng-class="dechiper.age_groups.group_5.count>10?'':'color-black'"></span></div>
+                                 35-45
+                              </div>
+                              <div class="col-md-12 space-decipher-event">
+                                 <div class="progressbars-decipher progress_single_decipher" progress="{{dechiper.age_groups.group_6.count}}%"><span class="progress-bar-decipher" ng-bind="' '+dechiper.age_groups.group_6.count+'%'" ng-class="dechiper.age_groups.group_6.count>10?'':'color-black'"></span></div>
+                                 45-55
+                              </div>
+                              <div class="col-md-12 space-decipher-event">
+                                 <div class="progressbars-decipher progress_single_decipher" progress="{{dechiper.age_groups.group_7.count}}%"><span class="progress-bar-decipher"  ng-bind="' '+dechiper.age_groups.group_7.count+'%'" ng-class="dechiper.age_groups.group_7.count>10?'':'color-black'"></span></div>
+                                 55 Above
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 margin-bottom40" >
+                           <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-decipher"  style="cursor: auto;">
+                              <div class="col-md-12 space-decipher top-nav-header01 decipher-padding">Country</div>
+                              <div class="col-md-12 space-decipher">
+                                 <div class="col-md-12 top-nav-sub-header border-top-bottom" ng-repeat="(key, value) in dechiper.user_group_country">
+                                    <div class="col-md-11">{{key}}</div>
+                                    <div class="col-md-1">{{value}}%</div>
+                                 </div>
+                                <!--  <div class="col-md-12 top-nav-sub-header border-bottom01">
+                                    <div class="col-md-11">Canada</div>
+                                    <div class="col-md-1">40%</div>
+                                 </div>
+                                 <div class="col-md-12 top-nav-sub-header border-bottom01">
+                                    <div class="col-md-11">France</div>
+                                    <div class="col-md-1">40%</div>
+                                 </div>
+                                 <div class="col-md-12 top-nav-sub-header border-bottom01">
+                                    <div class="col-md-11">Qatar</div>
+                                    <div class="col-md-1">40%</div>
+                                 </div>
+                                 <div class="col-md-12 top-nav-sub-header border-bottom01">
+                                    <div class="col-md-11">Swaziland</div>
+                                    <div class="col-md-1">40%</div>
+                                 </div>
+                                 <div class="col-md-12 top-nav-sub-header border-bottom01">
+                                    <div class="col-md-11">Spain</div>
+                                    <div class="col-md-1">40%</div>
+                                 </div> -->
+                              </div>
+                           </div>
+                        </div>
+                       <!--  <div class="col-md-12 decipher-footer-space">
+                           <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-decipher"  style="cursor: auto;">
+                              <div class="col-md-12 space-decipher top-nav-header01 decipher-padding"> Top 5 User Interests</div>
+                              <div class="col-md-12 space-decipher">
+                                 <div class="top-nav-sub-header border-top-bottom">Photography</div>
+                                 <div class="top-nav-sub-header border-bottom01">Technology</div>
+                                 <div class="top-nav-sub-header border-bottom01">Design</div>
+                                 <div class="top-nav-sub-header border-bottom01">Defense</div>
+                                 <div class="top-nav-sub-header border-bottom01">Art</div>
+                                 <div class="top-nav-sub-header border-bottom01">Cities</div>
+                              </div>
+                           </div>
+                        </div> -->
+                     </div>
+                     <div id="exchanges" class="tab-pane ticket-top-btn1 fade ">
+                        <div class="col-md-12 decipher-footer-space">
+                           <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-decipher"  style="cursor: auto;">
+                              <div class="col-md-12 space-decipher top-nav-header01 decipher-padding"> Messages</div>
+                              <div class="col-md-12 space-decipher">
+                                 <div class="top-nav-header01">Total: {{dechiper.total_messages==0?'No':dechiper.total_messages}} Exchanges</div>
+                                 <div class="top-nav-sub-header">Both sent and received are counted</div>
+                                 <br/><br/>
+                                 <div class="top-nav-header01">Card Exchanges</div>
+                                 <div class="top-nav-sub-header">Total: {{dechiper.total_connections_flow==0?'No':dechiper.total_connections_flow}} Exchanges</div>
+                                 <br/><br/>
+                                 <div class="top-nav-header01">Connection Exchanges</div>
+                                 <div class="top-nav-sub-header">Total: {{dechiper.total_cards_flow==0?'No':dechiper.total_cards_flow}} Exchanges</div>
+                                 <br/><br/>           
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="gatekeeper" class="tab-pane fade ticket-top-btn1">
+                        <div class="col-md-12">
+                        <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left gp-padding-engagement"  style="cursor: auto;" ng-repeat="gat in dechiper.gatekeeper">
+                           <div class="col-md-1 text-center container-remove-padding top-nav-sub-header decipher-gatekeeper-person">No. of People Checked-In</div>
+                           <div class="col-md-12 text-left" >
+                              <div class="col-md-12 space-decipher top-nav-header01 decipher-padding"> {{gat.day_name}} | {{setOffset(gat.day_start, dechiper.event_offset)|date:'MMMM dd, yyyy'}}</div>
+                              <div class="col-md-12 text-left ">
+                                 <figure class="margin-auto" style="width: 800px; height: 300px;" id="example{{$index}}"></figure>
+                              </div>
+                           </div>
+                           <div class="col-md-12 text-center top-nav-sub-header margin-top10">Time</div>
+                        </div>
+                        <div class="decipher-footer-space">&nbsp;</div>
+                        </div>
+                        <div class="col-md-12 gp-width01 text-center" ng-show="dechiper.gatekeeper.length==0">
+                           <div class="col-md-6 col-md-offset-3 gp-width-not">
+                              <div class="gp-Name" >No GateKeeper Data Available</div>
+                           </div>
+                        </div>
+                        <!-- <div ng-show="dechiper.gatekeeper.length==0"> sdhbgfvzfbghzdfbgjha</div> -->
+                        <!-- <div class="decipher-footer-space">&nbsp;</div>
+                        <div class="decipher-footer-space">&nbsp;</div> -->
+                     </div>
+                     <div id="engagements" class="tab-pane fade  ticket-top-btn1">
+                        <!-- <ul class="container nav nav-tabs engagement-top">
+                           <li class="active col-md-2 col-md-offset-1"><a target="_self"data-toggle="tab" href="#session" class="decipher-event">Session</a></li>
+                           <li class="col-md-2"><a  target="_self" data-toggle="tab" href="#speakers" class="decipher-event">Speakers</a></li>
+                           <li class="col-md-2"><a  target="_self" data-toggle="tab" href="#sponsors" class="decipher-event">Sponsors</a></li>
+                           <li class="col-md-2"><a  target="_self" data-toggle="tab" href="#exhibitors" class="decipher-event">Exhibitors</a></li>
+                           <li class="col-md-2"><a  target="_self" data-toggle="tab" href="#coupons" class="decipher-event">Coupons</a></li>
+                        </ul> -->
+                        <div class="tab-content ">
+                              <div id="session" class="col-md-9 tab-pane fade in active">
+                                 <div class="col-md-12 ">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12  top-nav-header01 decipher-padding"> Sessions based on<br/>engagement and user likes</div>
+                                       <!-- <div class="col-md-12 space-decipher">
+                                          <div class="col-md-1 decipher-session01">
+                                             <div class="decipher-session">1</div>
+                                          </div>
+                                          <div class="col-md-10 dacipher-speaker01">
+                                             <div class="top-nav-sub-header">January 12 2016 | 11.30 AM to 12.30 PM</div>
+                                             <div class="top-nav-sub-header">Session Title</div>
+                                             <div class="top-nav-sub-header">Speakers</div>
+                                             <div class="top-nav-sub-header">Track</div>
+                                             <div class="top-nav-sub-header">Description</div>
+                                          </div>
+                                       </div> -->
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12" ng-repeat="sess in dechiper.sessions">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12 ">
+                                          <div class="col-md-1 decipher-session01">
+                                             <div class="decipher-session">{{$index+1}}</div>
+                                          </div>
+                                          <div class="col-md-11">
+                                             <div class="top-nav-sub-header">{{setOffset(sess.created_at, dechiper.event_offset)|date:'MMMM dd, yyyy hh:mm a'}}</div>
+                                             <div class="header-adspace-title">{{sess.tittle}}</div>
+                                             <div class="top-nav-sub-header"><span ng-repeat="s in sess.speakers">{{s.name}}<span ng-show="!$last">,</span></span></div>
+                                             <div class="top-nav-sub-header">{{sess.track.name}}</div><br/>
+                                             <div class="top-nav-sub-header word-wrap-break">{{sess.description}}</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class=" gp-width01 text-center" ng-show="dechiper.sessions.length==0">
+                                     <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                         <div class="gp-Name" >No results found</div>
+                                     </div>
+                                 </div>
+                                 <!-- <div class="col-md-12 ">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12 ">
+                                          <div class="col-md-1 decipher-session01">
+                                             <div class="decipher-session">3</div>
+                                          </div>
+                                          <div class="col-md-10 dacipher-speaker01">
+                                             <div class="top-nav-sub-header">January 12 2016 | 11.30 AM to 12.30 PM</div>
+                                             <div class="top-nav-sub-header">Session Title</div>
+                                             <div class="top-nav-sub-header">Speakers</div>
+                                             <div class="top-nav-sub-header">Track</div>
+                                             <div class="top-nav-sub-header">Description</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div> -->
+                                 <div class="decipher-footer-space">&nbsp;</div>
+                              </div>
+                              <div id="speakers" class="col-md-9 tab-pane fade">
+                                 <div class="col-md-12 ">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12  top-nav-header01 decipher-padding"> Speaker based on<br/>engagement and user likes</div>
+                                       <!-- <div class="col-md-12 ">
+                                          <div class="col-md-1 decipher-session01">
+                                             <div class="decipher-session">1</div>
+                                          </div>
+                                          <div class="col-md-10 dacipher-speaker01">
+                                             <div class="top-nav-sub-header">January 12 2016 | 11.30 AM to 12.30 PM</div>
+                                             <div class="top-nav-sub-header">Session Title</div>
+                                             <div class="top-nav-sub-header">Speakers</div>
+                                             <div class="top-nav-sub-header">Track</div>
+                                             <div class="top-nav-sub-header">Description</div>
+                                          </div>
+                                       </div> -->
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12" ng-repeat="sess in dechiper.sessions">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12 ">
+                                          <div class="col-md-1 decipher-session01">
+                                             <div class="decipher-session">{{$index+1}}</div>
+                                          </div>
+                                          <div class="col-md-11">
+                                             <div class="top-nav-sub-header">{{is_time_format_24?(setOffset(sess.created_at, dechiper.event_offset)|date:'MMMM dd, yyyy HH:mm'):(setOffset(sess.created_at, dechiper.event_offset)|date:'MMMM dd, yyyy hh:mm a')}}</div>
+                                             <div class="header-adspace-title">{{sess.tittle}}</div>
+                                             <div class="top-nav-sub-header"><span ng-repeat="s in sess.speakers">{{s.name}}</span>,</div>
+                                             <div class="top-nav-sub-header">{{sess.track.name}}</div><br/>
+                                             <div class="top-nav-sub-header word-wrap-break">{{sess.description}}</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class=" gp-width01 text-center" ng-show="dechiper.sessions.length==0">
+                                     <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                         <div class="gp-Name" >No results found</div>
+                                     </div>
+                                 </div>
+                                 <!-- <div class="col-md-12 ">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12 ">
+                                          <div class="col-md-1 decipher-session01">
+                                             <div class="decipher-session">3</div>
+                                          </div>
+                                          <div class="col-md-10 dacipher-speaker01">
+                                             <div class="top-nav-sub-header">January 12 2016 | 11.30 AM to 12.30 PM</div>
+                                             <div class="top-nav-sub-header">Session Title</div>
+                                             <div class="top-nav-sub-header">Speakers</div>
+                                             <div class="top-nav-sub-header">Track</div>
+                                             <div class="top-nav-sub-header">Description</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div> -->
+                                 <div class="decipher-footer-space">&nbsp;</div>
+                              </div>
+                              <div id="sponsors" class="col-md-9 tab-pane fade">
+                                 <div class="col-md-12 ">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12  top-nav-header01 decipher-padding"> Sponsors based on<br/>engagement and user likes</div>
+                                       <!-- <div class="col-md-12 ">
+                                          <div class="col-md-1 decipher-session01">
+                                             <div class="decipher-session">1</div>
+                                          </div>
+                                          <div class="col-md-10 dacipher-speaker01">
+                                             <div class="top-nav-sub-header">Sponsor Title</div>
+                                             <div class="top-nav-sub-header">Sponsorship Title</div>
+                                             <div class="top-nav-sub-header">Number of Posts</div>
+                                             <div class="top-nav-sub-header">Number of Coupons</div>
+                                          </div>
+                                       </div> -->
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12 " ng-repeat="spo in dechiper.sponsors">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12 ">
+                                          <div class="col-md-1">
+                                             <div class="decipher-session">{{$index+1}}</div>
+                                          </div>
+                                          <div class="col-md-11">
+                                             <div class="header-adspace-title">{{spo.name}}</div>
+                                             <div class="top-nav-sub-header">{{spo.sponsorship_type}}</div>
+                                             <div class="top-nav-sub-header">Number of Posts: {{spo.number_of_posts}}</div>
+                                             <div class="top-nav-sub-header">Number of Coupons: {{spo.number_of_coupons}}</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class=" gp-width01 text-center" ng-show="dechiper.sponsors.length==0">
+                                     <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                         <div class="gp-Name" >No results found</div>
+                                     </div>
+                                 </div>
+                                 <!-- <div class="col-md-12 ">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12 ">
+                                          <div class="col-md-1 decipher-session01">
+                                             <div class="decipher-session">3</div>
+                                          </div>
+                                          <div class="col-md-10 dacipher-speaker01">
+                                             <div class="top-nav-sub-header">Sponsor Title</div>
+                                             <div class="top-nav-sub-header">Sponsorship Title</div>
+                                             <div class="top-nav-sub-header">Number of Posts</div>
+                                             <div class="top-nav-sub-header">Number of Coupons</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div> -->
+                                 <div class="decipher-footer-space">&nbsp;</div>
+                              </div>
+                              <div id="exhibitors" class="col-md-9 tab-pane fade">
+                                 <div class="col-md-12 ">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12  top-nav-header01 decipher-padding">Exhibitors based on<br/>engagement and user likes</div>
+                                      <!--  <div class="col-md-12 ">
+                                          <div class="col-md-1 decipher-session01">
+                                             <div class="decipher-session">1</div>
+                                          </div>
+                                          <div class="col-md-10 dacipher-speaker01">
+                                             <div class="top-nav-sub-header">Exhibitor Title</div>
+                                             <div class="top-nav-sub-header">Stall Location</div>
+                                             <div class="top-nav-sub-header">Number of Posts</div>
+                                             <div class="top-nav-sub-header">Number of Coupons</div>
+                                          </div>
+                                       </div> -->
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12 " ng-repeat="exe in dechiper.exhibitors">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12 ">
+                                          <div class="col-md-1">
+                                             <div class="decipher-session">{{$index+1}}</div>
+                                          </div>
+                                          <div class="col-md-11">
+                                             <div class="header-adspace-title">{{exe.name}}</div>
+                                             <div class="top-nav-sub-header">{{exe.location}}</div>
+                                             <div class="top-nav-sub-header">Number of Posts: {{exe.number_of_posts}}</div>
+                                             <div class="top-nav-sub-header">Number of Coupons: {{exe.number_of_coupons}}</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class=" gp-width01 text-center" ng-show="dechiper.exhibitors.length==0">
+                                     <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                         <div class="gp-Name" >No results found</div>
+                                     </div>
+                                 </div>
+                                 <!-- <div class="col-md-12 ">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12 ">
+                                          <div class="col-md-1 decipher-session01">
+                                             <div class="decipher-session">3</div>
+                                          </div>
+                                          <div class="col-md-10 dacipher-speaker01">
+                                             <div class="top-nav-sub-header">Exhibitor Title</div>
+                                             <div class="top-nav-sub-header">Stall Location</div>
+                                             <div class="top-nav-sub-header">Number of Posts</div>
+                                             <div class="top-nav-sub-header">Number of Coupons</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div> -->
+                                 <div class="decipher-footer-space">&nbsp;</div>
+                              </div>
+                              <div id="coupons" class="col-md-9 tab-pane fade">
+                                 <div class="col-md-12 ">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12  top-nav-header01 decipher-padding">Coupons based on<br/>engagement and user likes</div>
+                                       <!-- <div class="col-md-12 ">
+                                          <div class="col-md-1 decipher-session01">
+                                             <div class="decipher-session">1</div>
+                                          </div>
+                                          <div class="col-md-10 dacipher-speaker01">
+                                             <div class="top-nav-sub-header">Posted by whom</div>
+                                             <div class="top-nav-sub-header">Coupon Title</div>
+                                             <div class="top-nav-sub-header">Coupon Description</div>
+                                             <div class="top-nav-sub-header">Usage Count</div>
+                                          </div>
+                                       </div> -->
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12 " ng-repeat="cupon in dechiper.coupons">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12 ">
+                                          <div class="col-md-1">
+                                             <div class="decipher-session">{{$index+1}}</div>
+                                          </div>
+                                          <div class="col-md-11">
+                                             <div class="top-nav-sub-header">Posted by: {{cupon.created_by}}</div>
+                                             <div class="header-adspace-title">{{cupon.name}}</div>
+                                             <div class="top-nav-sub-header">Usage Count: {{cupon.number_of_redeems}}</div>
+                                             <br/>
+                                             <div class="top-nav-sub-header word-wrap-break">{{cupon.description}}</div>
+                                             
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class=" gp-width01 text-center" ng-show="dechiper.coupons.length==0">
+                                     <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                         <div class="gp-Name" >No results found</div>
+                                     </div>
+                                 </div>
+                                <!--  <div class="col-md-12 ">
+                                    <div class="col-md-12 cursor-def list-group-item02 adspace-bottom text-left "  style="cursor: auto;">
+                                       <div class="col-md-12 space-decipher">
+                                          <div class="col-md-1 decipher-session01">
+                                             <div class="decipher-session">3</div>
+                                          </div>
+                                          <div class="col-md-10 dacipher-speaker01">
+                                             <div class="top-nav-sub-header">Posted by whom</div>
+                                             <div class="top-nav-sub-header">Coupon Title</div>
+                                             <div class="top-nav-sub-header">Coupon Description</div>
+                                             <div class="top-nav-sub-header">Usage Count</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div> -->
+                                 <div class="decipher-footer-space">&nbsp;</div>
+                              </div>
+                              <div class="col-md-2 col-md-offset-1">
+                                    <div class="archived-padding gp-right-showcase-new" style="position:fixed;" >
+                                       <div  class="text-left ">
+                                          <div class="gp-event-font title-color-new  ng-scope">VIEW OPTION</div>
+                                          <div class="event-font-happy gp-blue text-hover"><a target="_self" data-toggle="tab" href="#session">Session</a></div>
+                                          <div class="event-font-happy gp-blue text-hover"><a target="_self" data-toggle="tab" href="#speakers">Speakers</a></div>
+                                          <div class="event-font-happy gp-blue text-hover"><a  target="_self" data-toggle="tab" href="#sponsors">Sponsors</a></div>
+                                          <div class="event-font-happy gp-blue text-hover"><a  target="_self" data-toggle="tab" href="#exhibitors">Exhibitors</a></div>
+                                          <div class="event-font-happy gp-blue text-hover"><a  target="_self" data-toggle="tab" href="#coupons">Coupons</a></div>
+                                       </div>
+                                    </div>
+                              </div>
+                        </div>
+                     </div>
+                     <div id="space" class="tab-pane fade ticket-top-btn1">
+                        <div class="col-md-12 gp-width01 text-center"  ng-hide="dechiper.ad_spaces.length>0">
+                           <div class="col-md-6 col-md-offset-3 gp-width-not">
+                              <div class="gp-Name" ng-bind="'yara.noAdspace' | i18n" >AdSpace not available</div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 ">
+                        <div class="col-md-9 margin-bottom80">
+                           <div class="col-md-12 container-remove-padding cursor-def list-group-item02 adspace-bottom text-left gp-padding-decipher"  style="cursor: auto;" ng-repeat="ad in dechiper.ad_spaces|filter:dyanme">
+                              <div class="col-md-12 space-decipher header-adspace01">{{ad.day_name}} | {{setOffset(ad.display_time, dechiper.event_offset)|date:'MMMM dd, yyyy'}}</div>
+                              <div class="col-md-12 space-decipher header-adspace-blue"> {{is_time_format_24?(setOffset(ad.display_time, dechiper.event_offset)|date:'HH:mm'):(setOffset(ad.display_time, dechiper.event_offset)|date:'hh:mm a')}}</div>
+                              <div class="col-md-12 space-decipher container-remove-padding">
+                                 <div class="col-md-3 col-md-offset-1 dacipher-speaker01 decipher-adspace-hgt">
+                                    <img ng-src="{{ad.image}}" src="../../../static/dashboard/images/event-ready.png?v=0ef3b931ea542375ad177466d96f0d08" class="decipher-adspace"/>
+                                 </div>
+                                 <div class="col-md-6 col-md-offset-2 dacipher-speaker01 decipher-adspace-hgt">
+                                    <div class="top-nav-sub-header">Date Added: {{setOffset(ad.created_at, dechiper.event_offset)|date:'MMMM dd, yyyy'}}</div>
+                                    <div class="header-adspace-title">{{ad.tittle}}</div>
+                                    <div class="top-nav-sub-header">Delivery Time : {{is_time_format_24?(setOffset(ad.created_at, dechiper.event_offset)|date:'HH:mm'):(setOffset(ad.created_at, dechiper.event_offset)|date:'hh:mm a')}}</div>
+                                    <div class="top-nav-sub-header">App Display Time : {{is_time_format_24?(setOffset(ad.display_time, dechiper.event_offset)|date:'HH:mm'):(setOffset(ad.display_time, dechiper.event_offset)|date:'hh:mm a')}}</div>
+                                    <div class="top-nav-sub-header">App Display Duration : {{ad.display_duration/60}} minutes</div>
+                                    <br/>
+                                    <div class="top-nav-sub-header-green">Impressions : {{ad.impressions}}</div>
+                                    <div class="top-nav-sub-header-green">Clicks : {{ad.clicks}}</div>
+                                    <br/>
+                                    <!-- <div class="top-nav-sub-header-blue cursor-poi text-hover">Download Report as PDF</div> -->
+                                 </div>
+                              </div>
+                           </div>
+                           <div class=" gp-width01 text-center" ng-show="(dechiper.ad_spaces|filter:dyanme).length==0 && dechiper.ad_spaces.length!=0">
+                               <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                   <div class="gp-Name" >No results found</div>
+                               </div>
+                           </div>
+                           </div>
+                           <div class="col-md-2 col-md-offset-1"  ng-hide="dechiper.ad_spaces.length==0">
+                                    <div class="archived-padding gp-right-showcase-new" style="position:fixed;" >
+                                       <div  class="text-left ">
+                                          <div class="gp-event-font title-color-new  ng-scope">VIEW OPTION</div>
+                                          <div class="event-font-happy gp-blue text-hover" ng-repeat="day in dechipertotdata.days" ng-click="filterdname(day.dayTitle)"><a ng-class="day.dayTitle==dyanme?'color-black':''">{{day.dayTitle}}</a></div>
+                                       </div>
+                                    </div>
+                              </div>
+                           <div class="decipher-footer-space">&nbsp;</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!---footer---->
+         <!-- start footer-->
+         <div ng-include-template="/event_footer" copyright="true" id="footer123"></div>
+         <!---End footer---->
+      </div>
+      {%endverbatim%}
+          <script type="text/javascript">
+         $(document).ready(function(){
+          function resizediv(){
+           var h =$(window).height();
+           $('.height-top').css("height",h+"px");
+          } 
+          resizediv();
+          $(window).resize(function(){
+           resizediv();
+          });
+         });
+      </script>
+     <!--  <script>
+         $(window).load(function() {
+             //show();
+         });
+         
+         
+         function show() {
+             $('#loading').hide();
+             $('#container').fadeIn();
+         };
+         
+         setTimeout(show, 1000);
+         
+             
+      </script> -->
+   </body>
+</html>

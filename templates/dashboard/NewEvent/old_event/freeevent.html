@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+		<link rel="stylesheet" href="../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+		<link rel="stylesheet" href="../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+
+		<!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+		<link rel="stylesheet" href="../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+		<script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+		<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyBiLVnHVmK-3nm_MZvug6NjZmMdOQX_cm8"></script>
+		<script src="../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+
+		<!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+		<script src="../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> <script src="../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script> <script src="../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> <script src="../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+		<script src="../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+        <script src="../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script>
+		<script src="../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+
+		<!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+		<script src="../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+		<script src="../../../static/dashboard/scripts/app.js?v=cb63d6447409374df653b8707287ee36"></script>
+		<script src="../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+		<script src="../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+                <script src="../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>         <script src="../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>         <script src="../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>
+
+		<!--UI style--->
+		<link rel="stylesheet" href="../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+		<!-- Font -->
+		<link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Khula:300' rel='stylesheet' type='text/css'>
+
+	</head>
+	<body ng-app="yara">
+        {%verbatim%}
+<div class="container" ng-controller="FreeEvntController">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 text-center">
+			<div ng-show="step1">
+			<h2>Free Event ? Yara is 100% free then. Examples</h2>
+			<h1>Apply for Free Event</h1>
+			<br/>
+			<h4>How it going to work, Review Board, Conditions, What we verfiy</h4>
+			<hr>
+			<h4>Review will take 2 business day. We will mail you  the status of your application.</h4> 
+			<h4>Additionally you can see your status in yBoard</h4>
+			<button class="btn btn-lg btn-danger" ng-click="step1=false">Fill Application</button>
+			</div>
+			<div ng-show="!step1" ng-init="step2=false">
+				<h1>Application for Free Event</h1>
+				<hr>
+				<form novalidate class="text-left" name="freeEvntForm" ng-submit="changeval()" ng-show="!step2">
+				<h3>organization information</h3>
+				<div class="row">
+					<div class="col-md-6">
+						<input type="text" class="form-control" placeholder="Organization Name" ng-model="Oname" name="Oname" required>
+						<span class="text-danger" ng-show="freeEvntForm.Oname.$dirty && freeEvntForm.Oname.$invalid">
+							<span ng-show="freeEvntForm.Oname.$error.required">Organization name required</span>
+						</span>
+						<br/>
+						<textarea class="form-control" placeholder="Organization About" ng-model="Oabt" name="Oabt" required></textarea>
+						<span class="text-danger" ng-show="freeEvntForm.Oabt.$dirty && freeEvntForm.Oabt.$invalid">
+							<span ng-show="freeEvntForm.Oabt.$error.required">Organization About required</span>
+						</span>
+						<br/>
+						<input type="text" class="form-control" placeholder="Organization Website" ng-model="Oweb" name="Oweb" required>
+						<span class="text-danger" ng-show="freeEvntForm.Oweb.$dirty && freeEvntForm.Oweb.$invalid">
+							<span ng-show="freeEvntForm.Oweb.$error.required">Organization Website required</span>
+						</span>
+						<br/>
+					</div>
+				</div>
+				<hr>
+				<h3>Event Information</h3>
+				<div class="row">
+					<div class="col-md-6">
+						<input type="text" class="form-control" placeholder="Event Information Web" name="Owebinfo" ng-model="Owebinfo" required>
+						<span class="text-danger" ng-show="freeEvntForm.Owebinfo.$dirty && freeEvntForm.Owebinfo.$invalid">
+							<span ng-show="freeEvntForm.Owebinfo.$error.required">Event Information Web</span>
+						</span>
+						<br/>
+						<p>Upload any relavant document related to Event for verificaion</p>
+						<input type="file" ng-model="evntfile" name="evntfile">
+					</div>
+				</div>
+				<hr>
+				<h3>Contact Info</h3>
+				<div class="row">
+					<div class="col-md-6">
+						<i class="fa fa-envelope-o fa-5x"></i>
+                        <input type="email" name="eventemail" class="form-control" ng-model="eventemail" placeholder="Email" required>
+                        <span class="text-danger" ng-show="freeEvntForm.eventemail.$dirty &&   freeEvntForm.eventemail.$invalid">
+                            <span ng-show="freeEvntForm.eventemail.$error.required">Email Required</span>
+                            <span ng-show="freeEvntForm.eventemail.$error.email">Enter Valid Email Id</span>
+                        </span>
+                        <h4>After Review,ycode will be sent to this email </h4>
+					</div>
+					<div class="col-md-6">
+						<i class="fa fa-phone fa-5x"></i>
+                        <input type="text" name="eventphone" class="form-control" is-number ng-model="eventph" required placeholder="Phone Number">
+                        <span class="text-danger" ng-show="freeEvntForm.eventphone.$dirty &&  freeEvntForm.eventphone.$invalid">Phone Number Required</span>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-lg btn-info" ng-disabled="false && freeEvntForm.$invalid">Continue</button>
+				</form>
+				<form ng-show="step2" name="EventFormFinal" novalidate ng-submit=""class="text-left">
+					<p class="bg-danger text-center">This information cannot be modified later</p>
+					<h3 class="">General Event Information</h3>
+					<div class="row">
+						<div class="col-md-6">
+							<h4>Attendees Count</h4>
+							Minimum is 25
+							<input type="text" class="form-control" placeholder="No of Attenfees" required ng-model="evntattd" name="evntattd" is-number>
+							<span class="text-danger" ng-show="EventFormFinal.evntattd.$dirty && EventFormFinal.evntattd.$invalid">
+								<span ng-show="EventFormFinal.evntattd.$error">Attendees Count Required</span>
+							</span>
+							<br/>
+							<input type="text" class="form-control" placeholder="Event Name" name="evntname" ng-model="evntname" required>
+							<span class="text-danger" ng-show="EventFormFinal.evntname.$dirty && EventFormFinal.evntname.$invalid">
+								<span ng-show="EventFormFinal.evntname.$error.required">Event Name Required</span>
+							</span>
+							<br/>
+							<input type="text" class="form-control" placeholder="EventShort Name" required ng-model="evntshrtname" name="evntshrtname">
+							<span class="text-danger" ng-show="EventFormFinal.evntshrtname.$dirty && EventFormFinal.evntshrtname.$invalid">
+								<span ng-show="EventFormFinal.evntshrtname.$error.required">Event Short Name Required</span>
+							</span>
+							<br/>
+							<select class="form-control" ng-init="evtcatg=evtsubcatg[0].type_title" ng-model="evtcatg" PlaceHolder="Event Category">
+								<option ng-repeat="s in evtsubcatg" value="{{s.type_title}}" >{{s.type_title}}</option>
+							</select>
+							<br/>
+							<input type="text" class="form-control" placeholder="Event Sub Category" ng-model="evntsubcatg" name="evntsubcatg" required>
+							<span class="text-danger" ng-show="EventFormFinal.evntsubcatg.$dirty && EventFormFinal.evntsubcatg.$invalid">
+								<span ng-show="EventFormFinal.evntsubcatg.$error.required">Event Sub Category Required</span>
+							</span>
+							<br/>
+							<textarea class="form-control" placeholder="Event Description" ng-model="evntdesc" name="evntdesc" required></textarea>
+							<span class="text-danger" ng-show="EventFormFinal.evntdesc.$dirty && EventFormFinal.evntdesc.$invalid">
+								<span ng-show="EventFormFinal.evntdesc.$error.required">Event Description Required</span>
+							</span>
+							<p>*Keep Event Description Short</p>
+						</div>
+						<div class="col-md-6">
+							<input type="file" ng-file-select="onFileSelect($files)" accept="image/*" >
+                                 <b>Preview:</b><br />
+                                <i ng-hide="imageSrc">No image choosed</i>
+                                <img ng-src="{{imageSrc}}" class="img-responsive" /><br/>
+						</div>
+					</div>
+					<hr>
+					<p class="bg-danger text-center">This information cannot be modified later</p>
+					<h3>Event Location</h3>
+					<div class="row">
+						<div class="col-md-6">
+                            <input type="text" name="venu1" ng-model="venu" class="form-control" placeholder="venu" required>
+                            <span class="text-danger" ng-show="EventFormFinal.venu1.$dirty && EventFormFinal.venu1.$invalid">
+                                <span ng-show="EventFormFinal.venu1.$error.required">Venu Required</span>
+                            </span>
+                            <br/>
+                            <input type="text" name="addrline11" ng-model="addrline1" class="form-control" placeholder="Address Line 1" required>
+                            <span class="text-danger" ng-show="EventFormFinal.addrline11.$dirty && EventFormFinal.addrline11.$invalid">
+                                <span ng-show="EventFormFinal.addrline11.$error.required">Address Line Required</span>
+                            </span>
+                            <br/>
+                            <input type="text" name="addrline2" ng-model="addrline2" class="form-control" placeholder="Address Line 2"><br/>
+                            <input type="text" name="venucity1" ng-model="venucity" class="form-control" placeholder="City" required >
+                            <span class="text-danger" ng-show="EventFormFinal.venucity1.$dirty && EventFormFinal.venucity1.$invalid">
+                                <span ng-show="EventFormFinal.venucity1.$error.required">City Required</span>
+                            </span>
+                            <br/>
+                            <input type="text" name="venustate1" ng-model="venustate" class="form-control" placeholder="State or Province" required >
+                            <span class="text-danger" ng-show="EventFormFinal.venustate1.$dirty && EventFormFinal.venustate1.$invalid">
+                                <span ng-show="EventFormFinal.venustate1.$error.required">State Required</span>
+                            </span>
+                            <br/>
+                            <input type="text" name="venucountry1" ng-model="venucountry" class="form-control" placeholder="Country"  required >
+                            <span class="text-danger" ng-show="EventFormFinal.venucountry1.$dirty && EventFormFinal.venucountry1.$invalid">
+                                <span ng-show="EventFormFinal.venucountry1.$error.required">Country Required</span>
+                            </span>
+                            <br/>
+                            <input type="text" name="venupincode1" ng-model="venupincode" class="form-control" placeholder="Zip" required >
+                            <span class="text-danger" ng-show="EventFormFinal.venupincode1.$dirty && EventFormFinal.venupincode1.$invalid">
+                               <span ng-show="EventFormFinal.venupincode1.$error.required">Pincode Required</span>
+                            </span>
+                        </div>
+                        <div class="col-md-6">
+                            <div cust-map ng-model="searchloc" class="cust-map"></div>
+                        </div>
+					</div>
+					<br/>
+					<button class="btn btn-lg btn-info">Submit for Review</button>
+				</form>
+				<br/>
+				<br/>
+			</div>
+		</div>
+	</div>
+</div>
+        {%endverbatim%}
+    </body>
+</html>

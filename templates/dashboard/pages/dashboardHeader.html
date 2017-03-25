@@ -1,0 +1,45 @@
+<nav class="navbar navbar-inverse-dashboard navbar-fixed-top" id="my-navbar">
+			<div class="container1">
+				<div class="navbar-header">
+					
+					<a class="navbar-brand-04" >
+						<img src="../../../static/dashboard/images/yara_logo_white.png?v=a75165d9fc737d7445d83ea4a59a6701" class="navbar-brand-yara-dashboard"/>
+					</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						  <ul class="nav navbar-nav " style="margin-top:16px;font-size:17px;">
+							<li><a  style="color:#fff;opacity:0.5;">Dashboard</a></li>
+						  </ul>
+						  <ul class="nav navbar-nav navbar-right" style="font-size:17px;margin-top: 16px;">
+							<li ng-if="privilege">
+							<a href="/new-event" class="color-white-dashboard text-hover">
+							<!-- <i class="fa fa-plus fa-lg"></i> -->
+							<img src="../../../static/dashboard/images/addEvent.png?v=c1eda4f5dc0423765aa30bd11161f3c7" style="height:15px;margin-right: 10px;" >New Event</a></li>
+							<li ng-if="privilege"><a style="color:#fff;opacity:5;padding:15px 0;">|</a></li>
+							<li class="dropdown">
+							  <a  class="dropdown-toggle color-white text-hover" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ><span ng-bind="currtuser.first_name" class="text-hover">Username</span> <span class="caret text-hover"></span></a>
+							  <ul class="dropdown-menu">
+							  	<li><a href="#">Tour</a></li>
+							  	<li><a href="/resources">Guidelines</a></li>
+								<li role="separator" class="divider" ng-if="privilege"></li>
+								<li><a href="/followers" ng-if="privilege">Followers</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="/team" ng-if="privilege">Team</a></li>
+								<li><a href="/account">My Account</a></li>
+								<li><a href="/settings" >Settings</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="/bills" ng-if="privilege">Bills</a></li>
+								<li><a href="/about">About</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="/report-bug">Report Bug</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#" ng-click="Logout()">Sign out</a></li>
+							  </ul>
+							</li>
+						  </ul>
+						</div><!-- /.navbar-collapse -->
+					
+			</div>
+		</nav>

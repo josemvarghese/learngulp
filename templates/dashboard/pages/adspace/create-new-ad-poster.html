@@ -1,0 +1,430 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="../../static/dashboard/images/favicon/apple-icon-57x57.png?v=043d79a62a93381cb6f07a0a674f2dc1">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../static/dashboard/images/favicon/apple-icon-60x60.png?v=6b158af1361075132ac39e5c93b568eb">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../static/dashboard/images/favicon/apple-icon-72x72.png?v=913000199947cb13e7c65f6b73a4a600">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../static/dashboard/images/favicon/apple-icon-76x76.png?v=e0deb075e7bbdf861c8d42440967795b">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../static/dashboard/images/favicon/apple-icon-114x114.png?v=2b7031f4836ece0909dd041fab7b4acb">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../static/dashboard/images/favicon/apple-icon-120x120.png?v=6e2396a9caf2940c49ab7dfc3fe98b33">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../static/dashboard/images/favicon/apple-icon-144x144.png?v=5ba24acbb4782a06696423ba63044290">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../static/dashboard/images/favicon/apple-icon-152x152.png?v=e4ab46001af0f91f99a91988a017bca5">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../static/dashboard/images/favicon/apple-icon-180x180.png?v=67ecdeb4128648d7139489328c677b1f">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../static/dashboard/images/favicon/android-icon-192x192.png?v=904820e1d8bd3869d19056b3294d365b">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../static/dashboard/images/favicon/favicon-32x32.png?v=29d82d9c01ad85fc8b3ccd35b41b2996">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../static/dashboard/images/favicon/favicon-96x96.png?v=98b3ead44ec182b58426bc067c67c049">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../static/dashboard/images/favicon/favicon-16x16.png?v=1c4358642667863dc8e72942d2f30a58">
+      <noscript>
+         <META HTTP-EQUIV="Refresh" CONTENT="0;URL=/js-disabled">
+      </noscript>
+      <link rel="stylesheet" href="../../../../static/dashboard/css/bootstrap.min.css?v=d75f0d9cd8f53e016fdc1c02951757ef">
+      <link rel="stylesheet" href="../../../../static/dashboard/css/check-radio.css?v=6b6e567a2eaa17dc2680c02520c6c2a7">
+      <link rel="stylesheet" href="../../../../static/dashboard/css/font-awesome.min.css?v=4fbd15cb6047af93373f4f895639c8bf">
+      <link rel="stylesheet" href="../../../../static/dashboard/css/customscrollbar.min.css?v=b72d1ff03f5d4322fda530affc8628fd">
+      <!--<link rel="stylesheet" href="css/angular-datepicker.css?v=1add81b088253b5ab8747f0553355f96">-->
+      <link rel="stylesheet" href="../../../../static/dashboard/css/web_style.css?v=29ae3cab6f566f7b5e27c225b4801c0d">
+      <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+      <!--<script src="https://maps.google.com/maps/api/js?libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyBiLVnHVmK-3nm_MZvug6NjZmMdOQX_cm8"></script>-->
+      <script src="../../../../static/dashboard/scripts/angular.min.js?v=f92db09e0bdde7d9038cef646c71742f"></script>
+      <!--<script src="scripts/ng-map.js?v=fa4660ddb497d70a54579dd676cb5f57"></script>-->
+      <script src="../../../../static/dashboard/scripts/angular-route.min.js?v=fde86ccbbd3888c419d6d002d930d6db"></script> <script src="../../../../static/dashboard/scripts/angular-cookies.min.js?v=eb5752021baaa11be20ba6174708ee0c"></script> <script src="../../../../static/dashboard/scripts/angular-sanitize.min.js?v=4b77ba7d10f6b45ef27d552f70b3ff84"></script> <script src="../../../../static/dashboard/scripts/angular-localization.js?v=04ce5b438a710779bdda4c78771caf77"></script>
+      <script src="../../../../static/dashboard/scripts/angular-recaptcha.min.js?v=755358d59937bd7ef87d7a4f938a6523"></script>
+      <script src="../../../../static/dashboard/scripts/ui-bootstrap-tpls-0.14.3.js?v=4e74c1522478a99fc663d05d5e71729c"></script>
+      <script src="../../../../static/dashboard/scripts/jquery-1.11.3.min.js?v=895323ed2f7258af4fae2c738c8aea49"></script>
+      <script src="../../../../static/dashboard/scripts/customscrollbar.min.js?v=ea9f31b6e94c00a389c0f19bb9a876f2"></script>
+      <!--<script src="scripts/angular-datePicker.js?v=98891a73c6d57c0a16be1eda2f73f93f"></script>-->
+      <script src="../../../../static/dashboard/scripts/bootstrap.min.js?v=f7b127056538ea1fbd96cda9378a62cb"></script>
+      <script src="../../../../static/dashboard/scripts/app.js?v=cb63d6447409374df653b8707287ee36"></script>
+      <script src="../../../../static/dashboard/scripts/angular-image-upload.js?v=e302af94162ccd72488ceb4bd6d5beea"></script>
+      <script src="../../../../static/dashboard/scripts/moment.min.js?v=18338685047bb998815d0fce225665f4"></script> 
+      <script src="../../../../static/dashboard/scripts/directives.js?v=a43d41739288e4904df6180ab01b634f"></script>
+      <script src="../../../../static/dashboard/scripts/Service.js?v=ad7dbf9fb3ca3d53bee05effed8dce9c"></script>         
+      <script src="../../../../static/dashboard/scripts/credentials.js?v=01d3d24491e8b134a9855d83bf466b93"></script>         
+      <script src="../../../../static/dashboard/scripts/ng-droplet.js?v=7da6daf2b481c0f3d6ce5811090c524e"></script>                               
+      <script src="../../../../static/dashboard/scripts/ng-infinite-scroll.min.js?v=299bcea502c681c68093eb86f8c1bccf"></script> 
+      <!---crop image---->
+      <script src="../../../../static/dashboard/scripts/jquery.cropit.js?v=b37d29875ced18ede72940fb6b0fba52"></script>
+      <!--UI style---->
+      <link rel="stylesheet" href="../../../../static/dashboard/css/UI-style.css?v=e4955a3966eadfcff7782b7b57ba784c">
+      <link rel="stylesheet" href="../../../../static/dashboard/css/yantramanav.css">
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css?family=Yantramanav:500,400,300" rel="stylesheet">
+      <!-- <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Khula:400,300' rel='stylesheet' type='text/css'> -->
+   </head>
+   <body ng-app="yara" ng-controller="EventAdSpaceController" >
+      <div id="loading">
+         <div id="fountainG">
+            <div id="fountainG_1" class="fountainG"></div>
+            <div id="fountainG_2" class="fountainG"></div>
+            <div id="fountainG_3" class="fountainG"></div>
+            <div id="fountainG_4" class="fountainG"></div>
+            <div id="fountainG_5" class="fountainG"></div>
+         </div>
+         <div class="bg-loader">
+         </div>
+      </div>
+      {%verbatim%}
+      <div id="container">
+         <!---header-->
+         <div class="container navbar-fixed-top border" >
+            <div class="col-md-12 white text-center ">
+               <div class="col-md-1 nav-color main-header-signup01" style="text-align:left;"><a href="" back-button><img src="../../../../static/dashboard/images/yara_logo.svg?v=ce9e59e2272c030c2954deb7d56f3267"width="100%"/></a></div>
+               <div class="col-md-1 nav-color sub-header-border">&nbsp;</div>
+               <div class="col-md-3 nav-color sub-header-small-collaborator">
+                  <div class="kit-font">Create New Ad</div>
+                  <div class="kitName">{{currentval.name}}</div>
+                  <div class="kit-description">{{setOffset(currentval.start_date,currentval.eo) | date:'MMMM dd, yyyy'}} to {{setOffset(currentval.end_date,currentval.eo) | date:'MMMM dd, yyyy'}}</div>
+                  <!-- {{setOffset(currentval.start_date,currentval.eo)}} -->
+               </div>
+            </div>
+         </div>
+         <!----end header---->
+         <div class="container min-h"   >
+            <div class="row ">
+               <div class="col-md-12 text-center"  style="padding-right:0px; padding-left:0px;">
+                  <div class="gp-tab-height">
+                     <div id="active_event" >
+                        <div class="row">
+                           <div class="tab-content ">
+                              <div class="tab-pane fade in active">
+                                 <div class="col-md-12" >
+                                    <div class="col-md-12 gp-width01 text-center"  ng-if="timeSlotData.length==0">
+                                       <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                          <div class="gp-Name" >Not Purchased AdSpace</div>
+                                          <br/>
+                                          <a href="/store" class="text-hover">Buy AdSpace</a>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-12 gp-width01 text-center"  ng-show="timeSlotData.length>0 && SubOver">
+                                       <div class="col-md-6 col-md-offset-3 gp-width-not">
+                                          <div class="gp-Name" >Your add subscription is over</div>
+                                          <br/>
+                                          <a href="/store" class="text-hover">Buy AdSpace</a>
+                                       </div>
+                                    </div>
+                                    <form novalidate name="createForm" accessible-form ng-init="submitted=false" ng-submit="errorscroll();createForm.$invalid || !imageSrc ? submitted=true:CreateAD()" ng-show="timeSlotData.length>0">
+                                       <div class="col-md-8 col-md-offset-2" >
+                                          <div class="row">
+                                             <div class="col-md-12">
+                                                <br/>
+                                                <div class="nav-size-signup ticket-top">Ad Details</div>
+                                                <div class="gray">A general AdSpace where anybody can <br/>post Ads after buying a slot
+                                                </div>
+                                                <br/><br/>
+                                                <div class="row text-left ticket-top">
+                                                   <div class="col-md-6 col-md-offset-3">
+                                                      <input type="text" class="inputbox text-center" placeholder="Ad Title" required name="title" ng-model="title" minlength="2" maxlength="254">
+                                                      <div class="error-height text-center">
+                                                      <span class="text-danger" ng-show="submitted && createForm.title.$error.required" >
+                                                         <div class="text-center">Required</div>
+                                                      </span>
+                                                      <span class="text-danger text-center" ng-show="submitted && createForm.title.$error.minlength" ng-bind="'yara.ticketminlength' | i18n"></span>
+                                                      </div>
+                                                      <br/>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-md-6 col-md-offset-3" >
+                                                <div class="nav-size-signup ticket-top">Display Ad</div>
+                                                <div class="gray">Should be short. a cover         image and dimesntions is a <br/>
+                                                   Every feature is meticulously crafted in way
+                                                </div>
+                                                <br />
+                                                <div ng-hide="imageSrc" class="logo-update-invitation" droplet  ng-model="adPic">
+                                                   <div class="sub-nav-size-signup icon">
+                                                      <!-- <a href="" data-toggle="tooltip" data-placement="right" title="Upload&nbsp;your&nbsp;Ad&nbsp;image " >
+                                                      <img src="../../../../static/dashboard/images/info-icon.png?v=a1de70e5d3fedcbe46e85d2d41df189a" width="4%" />
+                                                      </a> -->
+                                                   </div>
+                                                   <div class="sub-heading-invitation" >
+                                                      <img src="../../../../static/dashboard/images/image_upload_placeholder.png?v=7d539c1f656434ceaec3a5ebbe66836f" class="image_upload_placeholder"/>
+                                                      <div class="sub-nav-size-signup2">Ad Image</div>
+                                                      <div class="nav-font-invitation">Drag and drop the file</div>
+                                                      <div class="btn01 btn-primary-black-invitation black-signup01 text-hover">
+                                                         <span>Choose an Image</span>
+                                                         <droplet-upload-single ng-model="adPic" accept="image/*" name="adPic" ></droplet-upload-single>
+                                                      </div>
+                                                      <div class="nav-font-option01 ">Minimum resolution<br/>1024 <a class="cross01">X</a> 1024<br/>Aspect Ratio:1:1<br/>Max size - 5 MB</div>
+                                                   </div>
+                                                </div>
+                                                <br/>
+                                                <img ng-src="{{imageSrc}}" class="image-width-adspace" id="img-adPic" ng-show="imageSrc"  />
+                                                <br/>
+                                                <span style="color:red">
+                                                <span ng-show="createForm.adPic.$error.invalidimg">Invalid Image File Type</span>
+                                                <span ng-show="createForm.adPic.$error.minsizeval">File size sholud not be Max Of 5MB</span>
+                                                <span ng-show="!createForm.adPic.$error.minsizeval && createForm.adPic.$error.ratioval">Aspect Ratio Should Be 1 : 1</span>
+                                                <span ng-show="!createForm.adPic.$error.minsizeval && createForm.adPic.$error.minDimension">Minimum resolution should be 1024 X 1024</span>
+                                                <span ng-show="submitted && !imageSrc && createForm.adPic.$valid" id="errorimg">Required</span>
+                                                </span>
+                                                <br/>
+                                                <div class="col-md-12 signup_margin">
+                                                   <div class="col-md-6 ">
+                                                      <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in adPic.getFiles(adPic.FILE_TYPES.VALID)" ng-click="model.deleteFile()">
+                                                         <span>Remove</span>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-md-6 ">
+                                                      <div class="btn01 btn-primary-black-invitation black-signup01 text-hover" ng-repeat="model in adPic.getFiles(adPic.FILE_TYPES.VALID)" >
+                                                         <span>Change</span>
+                                                         <droplet-upload-single ng-model="adPic" accept="image/*" name="adPic1" ></droplet-upload-single>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <br/><br/><br/>
+                                          </div>
+                                         <!--                                         <div class="col-md-12"><br/>
+                                             <div class="nav-size-signup ticket-top">Select an Event Date</div>
+                                                <div class="gray">Password policy Yara is a <br/>
+                                             Every feature is meticulously crafted in way
+                                                      </div><br/><br/>
+                                                  <div class="row">
+                                                 <div class="col-md-6 col-md-offset-3">
+                                                   <ul class="list-group  pointer" >
+                                                     <a  class="col-md-12 list-group-item tab-click-ticket ticket-border adspace-padding" ng-repeat="d in dates" ng-click="selectDate(d)">
+                                                       <div class="col-md-9 text-top">
+                                                         <div class="gray" ng-bind="(d) | date "></div>
+                                                       </div>
+                                                       <div class="col-md-3"><img src="../../../static/dashboard/images/right-blue.png?v=41202fcbacbf76f5fe8ff7f6c1a066d9" class="width-adspace-img" ng-show="SelDate==d" /></div>
+                                                     </a>
+                                                      <a  class="col-md-12 list-group-item tab-click-ticket ticket-border adspace-padding" ng-show="dates.length<=0">
+                                                       <div class="col-md-10 text-top">
+                                                         <div class="gray" >Select an Event</div>
+                                                       </div>
+                                                       <div class="col-md-2"></div>
+                                                     </a>
+                                                   </ul>
+                                                   <span class="text-danger text-center" id="dateError_id" ng-show="SelDate=='' && submitted">
+                                                     Required
+                                                   </span>
+                                                </div>
+                                               </div>
+                                             </div> -->
+                                          <div class="col-md-12">
+                                             <br/>
+                                             <div class="nav-size-signup ">Link Button Title</div>
+                                             <div class="gray">Choose a Button Title
+                                             </div>
+                                             <br/><br/>
+                                             <div class="row">
+                                                <div class="col-md-6 col-md-offset-3">
+                                                   <div id="btnLink_dropdown" class="col-md-12 dropdown signup_input btnLink_dropdown" style="border-bottom: 1px solid rgb(242, 242, 242); z-index: inherit;text-align:left">
+                                                      <nav id="primary_nav_wrap" class="primary_nav_wrap">
+                                                         <ul class="over01" >
+                                                            <li>
+                                                               <div class="col-md-12 container-remove-padding cursor-poi" >
+                                                                  <div class="col-md-10 col-md-offset-1 container-remove-padding text-hover">
+                                                                     <span ng-bind="btnLinkTitle" class="subtitle-font">Learn More</span>
+                                                                  </div>
+                                                                  <div class="col-md-1 container-remove-padding">
+                                                                     <img src="../../../../static/dashboard/images/arrow-down.png?v=5e51b404929f5b6be7d35478804ffb57" class="caret01">
+                                                                  </div>
+                                                                  <ul class="font-names margin-top5">
+                                                                     <li ng-repeat="t in  listBtnTitle"><a ng-bind="t.tittle" ng-click="changeBtnLink(t.tittle)" class="text-hover subtitle-font">Call Now</a></li>
+                                                                  </ul>
+                                                               </div>
+                                                            </li>
+                                                         </ul>
+                                                      </nav>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                           <div class="col-md-12">
+                                             <br/>
+                                             <div class="nav-size-signup ticket-top-btn">Ad Destination</div>
+                                             <div class="gray">This URL will be assigned to the Buttton Title
+                                             </div>
+                                             <br/><br/>
+                                             <div class="row text-left ticket-top">
+                                                <div class="col-md-6 col-md-offset-3">
+                                                   <input type="text" class="inputbox text-left"  ng-model="weburl" placeholder="Ad destination link " required name="weburl" web-url ng-change="urlchange()">
+                                                   <span class="text-danger " ng-show="submitted" >
+                                                      <div class="text-center" ng-show="createForm.weburl.$error.required">Ad destination link Required</div>
+                                                   </span>
+                                                   <div class="text-center" ng-show="weburl.length>7">
+                                                      <span class="text-center text-danger" ng-bing="'yara.invalidurl' | i18n" ng-show="!createForm.weburl.hasFocus && urlrequired">Invalid Url</span>
+                                                   </div>
+                                                   <br/>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-12">
+                                             <br/>
+                                             <div class="nav-size-signup ticket-top">Choose Time Slot</div>
+                                             <div class="gray">Choose an appropriate Time Slot,
+either a<br/>  Customised time or a Random Time Slot
+according<br/>  to the requirement.
+                                             </div>
+                                             <br/><br/>
+                                             <div class="col-md-8 col-md-offset-2 ticket-top" >
+                                                <!-- Nav tabs -->
+                                                <ul id="mytabs" class="nav list-security" role="tablist" >
+                                                   <li class="bg-color-newevent " ng-class="{'active':custom==true}" ng-init="custom=true">
+                                                      <a  role="tab"  ng-click="custom=true">
+                                                      Custom 
+                                                      </a>
+                                                   </li>
+                                                   <li class="bg-color-newevent " ng-class="{'active':custom==false}">
+                                                      <a  role="tab"  ng-click="custom=false">
+                                                      Random 
+                                                      </a>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                             <br/>                                       
+                                             <div class="row text-left " >
+                                                <div class="col-md-6 col-md-offset-3 ">
+                                                   <div id="subtype_dropdown" class="col-md-12 dropdown signup_input subtype_dropdown ">
+                                                      <nav id="primary_nav_wrap" class="primary_nav_wrap">
+                                                         <ul class="over01 create-adspace-border" ng-if="custom==true">
+                                                            <li>
+                                                               <div class="col-md-12 container-remove-padding cursor-poi" >
+                                                                  <div class="col-md-10 col-md-offset-1 container-remove-padding">
+                                                                     <span  id="subtitle" class="subtitle subtitle-font" ng-style="(timeslot.length<=0) ?{'color':'#ccc'}:{'color':'#555'}" >Select Time Slot</span>
+                                                                     <input stopccp type="text" id="subtitlesearch" class="inputbox-signup subtitlesearch create-adspace-position" placeholder="Select Time Slot"  autocomplete="off"  ng-model="subtitlesearch" name="subtitlesearch">
+                                                                  </div>
+                                                                  <div class="col-md-1 container-remove-padding">
+                                                                     <img src="../../../../static/dashboard/images/arrow-down.png" class="caret01">
+                                                                  </div>
+                                                                  <ul class="font-names margin-top2">
+                                                                     <li ng-repeat="c in  timeSlotData | filter:{is_used:false}" ng-if="timeNow<setOffset(c.display_time,eventOffset)" ng-click="changeSubtype(c)" ><a  ng-bind="is_time_format_24?(setOffset(c.display_time,eventOffset)|date:'HH:mm'):(setOffset(c.display_time,eventOffset)|date:'hh:mm a')"> display time</a></li>
+                                                                  </ul>
+                                                               </div>
+                                                            </li>
+                                                         </ul>
+                                                      </nav>
+                                                   </div>
+                                                   <div class="text-danger text-center" ng-show="subtitle=='' && submitted">
+                                                      Required
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-md-12  text-center margin-top-bottom150">
+                                                <div class="text-danger text-center" ng-show="errormsg" ng-bind="data.error">
+                                                </div>
+                                                <div class="col-md-6 col-md-offset-3">
+                                                   <button class="btn btn-primary-black-signup01" ng-disabled="urlrequired" type="submit" >Create Ad</button>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </form>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!---footer--->
+         <!----crop image---->
+         <div class="modal fade" id="crop-image" tabindex="-1" data-backdrop="static"  role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog gatekeeper-popup" role="document" >
+               <div class="modal-content modal-padding" >
+                  <div class="modal-header-top ">
+                     <h4 class="modal-title modal-heading" id="myModalLabel" >Crop</h4>
+                  </div >
+                  <div class="modal-body1">
+                     <div  >
+                        <form novalidate  >
+                           <div class="row">
+                              <div class="col-md-12 bg-general crop-popup" >
+                                 <div class="image-editor crop-popup">
+                                    <input type="file" class="cropit-image-input">
+                                    <div class="cropit-preview"></div>
+                                    <div class="image-size-label">
+                                    </div>
+                                    <div class="crop-bottom"></div>
+                                    <div class="slider-wrapper">
+                                       <input type="range" class="cropit-image-zoom-input custom" min="0" max="1" step="0.01">
+                                    </div>
+                                    <div class="crop-top"></div>
+                                 </div>
+                              </div>
+                              <div class="col-md-12 border-top">
+                                 <div class="col-md-8">
+                                    <div  class=" text-danger">&nbsp; </div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div class="btn01 btn-primary-black-pulse01 text-hover"data-dismiss="modal" aria-label="Close"  ng-click="resetCropImg()">Cancel</div>
+                                 </div>
+                                 <div class="col-md-2 pulse-margin">
+                                    <div  class="btn01 btn-primary-black-pulse01 text-hover" ng-click="setCropImg()">Crop</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- start footer-->
+         <div ng-include-template="/event_footer" copyright="true"></div>
+         <!---End footer---->
+      </div>
+      <script>
+         $(window).load(function() {
+             //show();
+         });
+         // $(document).ready(function(){
+         //  $('#loading').hide();
+         //  $('#container').fadeIn();
+         // });
+         function show() {
+             $('#loading').hide();
+             $('#container').fadeIn();
+         };
+         
+         //setTimeout(show, 100000);
+          
+      </script>   
+      <script>
+         $(document).ready(function(){
+           
+           $("#subtitlesearch").hide();
+         $(document).on('click',".btnLink_dropdown .font-names  li",function() {
+           
+           // $("#menutitlestatesearch").hide();
+           // $("#menutitlestate").show(); 
+            $(".state_dropdown img").removeClass();
+            $(".state_dropdown img").addClass('caret01'); 
+         });  
+          $(document).on('click',".subtype_dropdown .font-names  li",function() {
+            $("#subtitlesearch").hide();
+            $("#subtitle").show();
+            $(".subtype_dropdown img").removeClass();
+            $(".subtype_dropdown img").addClass('caret01');  
+         });   
+         
+         });
+      </script>
+      <script>
+         $(document).ready(function(){
+             $('[data-toggle="tooltip"]').tooltip(); 
+               
+         });
+      </script>
+       <script>
+         (function(jQuery){
+           jQuery(window).load(function(){       
+             jQuery(".font-names").mCustomScrollbar({
+               theme:"dark",
+               scrollInertia: 400,
+               scrollButtons:{enable: true},   
+               autoHideScrollbar: false, 
+         
+               autoExpandScrollbar: true,
+               keyboard:{ enable: true }
+             });       
+           });
+         })(jQuery);
+      </script> 
+      {%endverbatim%}
+   </body>
+</html>

@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>YARA</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script src="https://use.edgefonts.net/source-code-pro:n2.js"></script> 
+<link href='https://fonts.googleapis.com/css?family=Khula:300' rel='stylesheet' type='text/css'>
+<style type="text/css">
+    /* CLIENT-SPECIFIC STYLES */
+    #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
+    .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
+    body, table, td, a{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+    table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
+    img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
+
+    /* RESET STYLES */
+    body{margin:0; padding:0;font-family: 'Khula', sans-serif;}
+    img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+    table{border-collapse:collapse !important;}
+    body{height:100% !important; margin:0; padding:0; width:100% !important;}
+
+    /* iOS BLUE LINKS */
+    .appleBody a {color:#68440a; text-decoration: none;}
+    .appleFooter a {color:#999999; text-decoration: none;}
+
+    /* MOBILE STYLES */
+    @media screen and (max-width: 525px) {
+
+        /* ALLOWS FOR FLUID TABLES */
+        table[class="wrapper"]{
+          width:100% !important;
+        }
+
+        /* ADJUSTS LAYOUT OF LOGO IMAGE */
+        td[class="logo"]{
+          text-align: left;
+          padding: 20px 0 20px 0 !important;
+        }
+
+        td[class="logo"] img{
+          margin:0 auto!important;
+        }
+
+        /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
+        td[class="mobile-hide"]{
+          display:none;}
+
+        img[class="mobile-hide"]{
+          display: none !important;
+        }
+
+        img[class="img-max"]{
+          max-width: 100% !important;
+          height:auto !important;
+        }
+
+        /* FULL-WIDTH TABLES */
+        table[class="responsive-table"]{
+          width:100%!important;
+        }
+
+        /* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
+        td[class="padding"]{
+          padding: 10px 5% 15px 5% !important;
+        }
+
+        td[class="padding-copy"]{
+          padding: 10px 5% 10px 5% !important;
+        }
+
+        td[class="padding-meta"]{
+          padding: 30px 5% 0px 5% !important;
+          text-align: center;
+        }
+
+        td[class="no-pad"]{
+          padding: 0 0 20px 0 !important;
+        }
+
+        td[class="no-padding"]{
+          padding: 0 !important;
+        }
+
+        td[class="section-padding"]{
+          padding: 10px 15px 50px 15px !important;
+        }
+
+        td[class="section-padding-bottom-image"]{
+          padding: 50px 15px 0 15px !important;
+        }
+    }
+	.nav-text-set{
+	padding: 30px 20px 0 20px; 
+	font-size: 15px; 
+	line-height: 20px; 
+	font-family: 'Khula', sans-serif;
+	color: #666666;
+	}
+	.nav-text-set-header{
+	padding: 0px 20px 0 20px; 
+	font-size: 15px; 
+	line-height: 20px; 
+	font-family: 'Khula', sans-serif;
+	color: #666666;
+	}
+	.nav-text-set-header01{
+	padding: 100px 20px 0 20px; 
+	font-size: 18px; 
+	line-height: 20px; 
+	font-family: 'Khula', sans-serif;
+	color: #000;
+	}
+	.nav-text-set-02{
+	padding: 12px 20px; 
+	font-size: 14px;
+	line-height:16px; 
+	font-family: 'Khula', sans-serif;
+	color: #666666;
+	}
+	.nav-text-set-01{
+	padding:26px 0 18px 0;
+	background-color:#fff;
+	}
+	.nav-text-set-03{
+	padding: 15px 0 0 0; 
+	font-size: 12px; 
+	line-height: 16px; 
+	font-family: Helvetica, Arial, sans-serif; 
+	color: #666666;
+	}
+	.text-color{
+	color:#ccc;
+	font-size:11px;
+	}
+	.nav-text{
+	color:#ccc;
+	font-size:11px;
+	text-decoration: none;
+	}
+	.font-logo{
+		text-align:center;
+	    font-family: 'source-code-pro', sans-serif;
+	}
+	.heading{
+	font-family: 'Khula', sans-serif;
+	font-size:24px;
+	color:#ccc;
+	}
+	.sub-heading{
+	font-size:18px;
+	}
+	.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(185, 185, 185, 0), rgba(185, 185, 185, 0.75), rgba(185, 185, 185, 0))!important;
+	}
+	.text-center{
+	text-align: center;
+	}
+	.btn{
+     margin: 0.75em;
+    padding:.68em 1.1em;
+    width: 15em;
+	height:0px;
+	text-align:center; 
+	vertical-align:middle;
+	color:#fff;
+	font-size:15px;
+    background: #65b1f9;
+	text-decoration: none;
+    border-radius: 4px;
+	}
+	.nav-text-set-button{
+	padding: 50px 20px 0 20px; 
+	font-size: 15px; 
+	line-height: 20px; 
+	font-family: 'Khula', sans-serif;
+	color: #666666;
+	}
+</style>
+</head>
+<body style="margin: 0; padding: 0;">
+
+<!-- ONE COLUMN SECTION -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#ffffff" align="center" style="padding: 15px;" class="section-padding">
+            <table border="0" cellpadding="0" cellspacing="0" width="500" class="responsive-table">
+                <tr>
+                    <td>
+                        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>
+                                    <!-- COPY -->
+                                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" >
+										 <tr>
+                                            <td align="center"  class="padding-copy nav-text-set-01 font-logo" style="padding: 26px 0 18px 0; background-color: #fff;text-align:center;width: 100%;" >
+											<img src="https://s3-ap-southeast-1.amazonaws.com/yara-storage/static-resource/yara_logo_black.png" height="42" width="132" border="0" hspace="5" vspace="5"  style=" outline: none; text-decoration: none;"/>
+											</td>
+                                        </tr>
+										<tr>
+											<td><div style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(185, 185, 185, 0), rgba(185, 185, 185, 0.75), rgba(185, 185, 185, 0))!important;text-align:center;width: 100%;"></div></td>
+										</tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- SECOND COLUMN SECTION -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#ffffff" align="center" style="padding:140px 15px;" class="section-padding" align="center">
+            <table border="0" cellpadding="0" cellspacing="0" width="500" class="responsive-table" align="center">
+                <tr>
+                    <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>
+                                  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" >
+                                        <tr>
+                                            <td align="left" class="padding-copy nav-text-set-header heading text-center" style="font-family: 'Khula', sans-serif; font-size: 24px; color: #6f8de7;text-align: center;padding: 0px 20px 0 20px;  line-height: 20px;">{{heading}}</td>
+                                        </tr>
+										<!-- <tr>
+                                            <td align="left" class="padding-copy nav-text-set" style="padding: 30px 20px 0 20px; font-size: 15px; line-height: 20px; font-family: 'Khula', sans-serif; color: #666666;text-align: center;">12 USD</td>
+                                        </tr> -->
+                                         </table>
+                                        <table width="80%" align="center" border="0" cellspacing="0" cellpadding="0" >
+                                        <tr>
+                                            <td align="left"  class="padding-copy nav-text-set sub-heading text-center" style="padding: 30px 20px 0 20px; font-size: 15px; line-height: 20px; font-family: 'Khula', sans-serif; color: #666666;text-align: center;">
+											{{content}}.
+											</td>
+                                        </tr>
+                                         </table>
+                                        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" >
+										<tr>
+                                            <td align="left"  class="padding-copy nav-text-set-button text-center " style="padding: 50px 20px 0 20px;text-align: center; font-size: 15px; line-height: 20px; font-family: 'Khula', sans-serif; color: #666666;"><a href="http://52.74.132.241:8082/sign-in" style="margin:.75em; padding: .68em 5.1em; width: 15em; height: 0px; text-align: center; vertical-align: middle; color: #fff; font-size: 15px; background: #65b1f9; text-decoration: none; border-radius: 4px;">Sign In</a></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- FOOTER -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td bgcolor="#ffffff" align="center" style="padding: 15px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="500" class="responsive-table" style="border-top:1px solid #f2f2f2;">
+                <tr>
+                    <td>
+                        <!-- COPY -->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td align="center" style="padding: 15px 0 50px 0;font-size: 12px;line-height: 16px;font-family: Helvetica, Arial, sans-serif;color: #666666;" class="padding-copy nav-text-set-03">
+								<span class="appleFooter text-color" style="color:#cccccc;font-size:11px;" > &#169; {{current_year}} Voris Systems Pvt Ltd. <a href="http://yara.io/legal" class="zoho" id="zoho1"><span style="margin-bottom:10px;border-bottom:1px solid #cccccc;color:#cccccc;">Legal</span></a></span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

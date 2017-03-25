@@ -1,0 +1,18 @@
+ <!---header-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 " style="padding-right:0px; padding-left:0px;">
+                    <div class="container navbar-fixed-top border" >
+                     <div class="col-md-12 white text-center ">
+                    <div class="col-md-1 nav-color main-header-signup01" style="text-align:left;"><a href="" back-button><img src="../../../static/dashboard/images/yara_logo.svg?v=ce9e59e2272c030c2954deb7d56f3267"width="100%"/></a></div>
+                    <div class="col-md-1 nav-color sub-header-border">&nbsp;</div>
+                    <div class="col-md-5 nav-color sub-header-small-collaborator">
+                        <div class="kit-font" ng-bind="headerTitle"></div>
+                        <div class="kitName"  ng-bind="currentval.name "></div>
+                        <!-- <div class="kit-description">{{currentval.start_date | date}} to {{currentval.end_date | date}}</div> -->
+                        <div class="kit-description"><span ng-bind="setOffset(currentval.start_date,currentval.eo) | date:'MMMM dd, yyyy'"></span><span ng-hide="checkdate(currentval.start_date, currentval.end_date, currentval.eo)"> to</span> <span ng-hide="checkdate(currentval.start_date, currentval.end_date, currentval.eo)" ng-bind="setOffset(currentval.end_date,currentval.eo) | date:'MMMM dd, yyyy'"></span> </div>
+                    </div>
+                    
+                    </div>
+            </div>
+                <!----end header---->
